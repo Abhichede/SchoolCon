@@ -2,49 +2,264 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:standard_id) %></th>
-      <th><%= model_class.human_attribute_name(:division) %></th>
-      <th><%= model_class.human_attribute_name(:day) %></th>
-      <th><%= model_class.human_attribute_name(:start_time) %></th>
-      <th><%= model_class.human_attribute_name(:end_time) %></th>
-      <th><%= model_class.human_attribute_name(:teacher_id) %></th>
-      <th><%= model_class.human_attribute_name(:subject) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @time_tables.each do |time_table| %>
-      <tr>
-        <td><%= link_to time_table.id, time_table_path(time_table) %></td>
-        <td><%= time_table.standard_id %></td>
-        <td><%= time_table.division %></td>
-        <td><%= time_table.day %></td>
-        <td><%= time_table.start_time %></td>
-        <td><%= time_table.end_time %></td>
-        <td><%= time_table.teacher_id %></td>
-        <td><%= time_table.subject %></td>
-        <td><%=l time_table.created_at %></td>
-        <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
-                      time_table_path(time_table), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_time_table_path(time_table), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      time_table_path(time_table),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-lg-9">
+    <form actions="<%= time_tables_url %>">
+      <div class="form-group">
+        <label class="control-label col-lg-1" for="standard_id">Class</label>
+        <div class="col-lg-3">
+          <%= select_tag "standard_id", options_from_collection_for_select(Standard.all, "id", "name"), include_blank: 'Classes', class: 'form-control' %>
+        </div>
+        <label class="control-label col-lg-1" for="division">Division</label>
+        <div class="col-lg-3">
+          <%= select_tag "division", nil, class: 'form-control' %>
+        </div>
+        <div class="col-lg-3">
+          <button class="btn btn-success" id="btn-filter">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-3">
+      
+  </div>
+</div>
+<br/>
+<% if @time_tables  %>
+  <div class="row">
+    <div class="col-lg-9">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th colspan="1"></th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <%
+            start_time = @time_table_setting.school_start
+            end_time = @time_table_setting.school_end
+            intervals = @time_table_setting.breaks_after.split(', ')
+            durations = @time_table_setting.break_durations.split(', ')
+            num = 0
+          %>   
+          <%  
+            while start_time < end_time
+          %>
+          <!-- breaks --->
+          <% intervals.each do |interval| %>
+            <% if start_time == ('2000-01-01 '+ interval).to_time(:utc)  %>
+              <tr>
+                <td>
+                  <%= start_time.strftime('%I:%M %p') %><br/>
+                    To <br/>
+                  <%= (start_time + durations[num].to_i.minutes ).strftime('%I:%M %p') %>
+                </td>
+                <td colspan="6" class="text-center" style="background-color: #ababab; font-weight: 600; font-size: 20">Break</td>
+              </tr>
+              <% 
+                start_time += durations[num].to_i.minutes 
+                num += 1
+              %>
+            <% end %>
+          <%  end %>
+          <!-- end breaks -->
+          
+          <tr>
+            <td>
+              <%= start_time.strftime('%I:%M %p') %><br/>
+              To <br/>
+              <%= (start_time + 60.minutes ).strftime('%I:%M %p') %>
+            </td>
+            
+            <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + 60.minutes ), day: 'Monday').last %>
+            <% if !@period.nil? %>
+              <td style="color: #FFF; background-color: <%= @period.color %>">
+              <%= @period.subject %><br/>
+              <%= @period.teacher.name.capitalize %><br/>
+              <%= link_to 'update', 
+                  {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Monday'},
+                  class: 'btn btn-default btn-xs', 
+                  remote: true %>
+              </td>    
+            <% else %>
+              <td style="color: #000; background-color: #FFF;">
+              <%= link_to 'Add', 
+                  {controller: 'time_tables', action:'new', standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Monday'},
+                  class: 'btn btn-default btn-timetabel', 
+                  remote: true %>
+              </td>    
+            <% end %>  
+            
+            <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + 60.minutes ), day: 'Tuesday').last %>
+            <% if !@period.nil? %>
+              <td style="color: #FFF; background-color: <%= @period.color %>">
+              <%= @period.subject %><br/>
+              <%= @period.teacher.name.capitalize %><br/>
+              <%= link_to 'update', 
+                  {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Tuesday'},
+                  class: 'btn btn-default btn-xs', 
+                  remote: true %>
+              </td>    
+            <% else %>
+              <td style="color: #000; background-color: #FFF;">
+              <%= link_to 'Add', 
+                  {controller: 'time_tables', action:'new', standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Tuesday'},
+                  class: 'btn btn-default btn-timetabel', 
+                  remote: true %>
+              </td>    
+            <% end %> 
+            
+            <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + 60.minutes ), day: 'Wednesday').last %>
+            <% if !@period.nil? %>
+              <td style="color: #FFF; background-color: <%= @period.color %>">
+              <%= @period.subject %><br/>
+              <%= @period.teacher.name.capitalize %><br/>
+              <%= link_to 'update', 
+                  {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Wednesday'},
+                  class: 'btn btn-default btn-xs', 
+                  remote: true %>
+              </td>    
+            <% else %>
+              <td style="color: #000; background-color: #FFF">
+              <%= link_to 'Add', 
+                  {controller: 'time_tables', action:'new', standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Wednesday'},
+                  class: 'btn btn-default btn-timetabel', 
+                  remote: true %>
+              </td>    
+            <% end %>  
+            
+            <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + 60.minutes ), day: 'Thursday').last %>
+            <% if !@period.nil? %>
+              <td style="color: #FFF; background-color: <%= @period.color %>">
+              <%= @period.subject %><br/>
+              <%= @period.teacher.name.capitalize %><br/>
+              <%= link_to 'update', 
+                  {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Thursday'},
+                  class: 'btn btn-default btn-xs', 
+                  remote: true %>
+              </td>    
+            <% else %>
+              <td style="color: #000; background-color: #FFF">
+              <%= link_to 'Add', 
+                  {controller: 'time_tables', action:'new', standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Thursday'},
+                  class: 'btn btn-default btn-timetabel', 
+                  remote: true %>
+              </td>    
+            <% end %>  
+            
+            <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + 60.minutes ), day: 'Friday').last %>
+            <% if !@period.nil? %>
+              <td style="color: #FFF; background-color: <%= @period.color %>">
+              <%= @period.subject %><br/>
+              <%= @period.teacher.name.capitalize %><br/>
+              <%= link_to 'update', 
+                  {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Friday'},
+                  class: 'btn btn-default btn-xs', 
+                  remote: true %>
+              </td>    
+            <% else %>
+              <td style="color: #FFF; background-color: #FFF">
+              <%= link_to 'Add', 
+                  {controller: 'time_tables', action:'new', standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Friday'},
+                  class: 'btn btn-default btn-timetabel', 
+                  remote: true %>
+              </td>    
+            <% end %>  
+            
+            <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + 60.minutes ), day: 'Saturday').last %>
+            <% if !@period.nil? %>
+              <td style="color: #FFF; background-color: <%= @period.color %>">
+              <%= @period.subject %><br/>
+              <%= @period.teacher.name.capitalize %><br/>
+              <%= link_to 'update', 
+                  {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Saturday'},
+                  class: 'btn btn-default btn-xs', 
+                  remote: true %>
+              </td>    
+            <% else %>
+              <td style="color: #000; background-color: #FFF;">
+              <%= link_to 'Add', 
+                  {controller: 'time_tables', action:'new', standard_id: params[:standard_id], 
+                              division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Saturday'},
+                  class: 'btn btn-default btn-timetabel', 
+                  remote: true %>
+              </td>    
+            <% end %>  
+          </tr>
+          
+          <% 
+            start_time = start_time + 60.minutes 
+            end
+          %>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          Time-Table Settings
+        </div>
+        <div class="panel-body">
+          <% if !@time_table_setting.nil?  %>
+          <ul class="list-group">
+            <li class="list-group-item">School Start: <%= @time_table_setting.school_start.strftime('%I:%M %p') %></li>
+            <li class="list-group-item">School End: <%= @time_table_setting.school_end.strftime('%I:%M %p') %></li>
+            <li class="list-group-item">Period Duration: <%= @time_table_setting.period_duration %> minutes</li>
+            <li class="list-group-item">No. of Breaks: <%= @time_table_setting.num_breaks %></li>
+            <li class="list-group-item">Break Durations: <%= @time_table_setting.break_durations %> minutes</li>
+            <li class="list-group-item">Break After: <%= @time_table_setting.breaks_after %></li>
+          </ul>
+          <% end %>
+        </div>
+        <div class="panel-footer">
+          <%= link_to 'New Setting', 
+                  new_time_table_setting_path,
+                  class: 'btn btn-default', 
+                  remote: true if @time_table_setting.nil? %>
+          <%= link_to 'Update Setting', 
+                  edit_time_table_setting_path(@time_table_setting),
+                  class: 'btn btn-default', 
+                  remote: true if !@time_table_setting.nil? %>        
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>  
+<script type="text/javascript">
+  $(function () {
+    $('select#standard_id').on('click', function () {
+        get_divisions();
+    });
+    
+    var get_divisions = function () {
+        var standard_id = $('select#standard_id').val();
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_time_table_path,
-            :class => 'btn btn-primary' %>
+        console.log('clicked event');
+
+        $.ajax({
+            url: '<%= get_divisions_url %>',
+            data: 'standard_id='+ standard_id,
+            type: 'GET'
+        });
+    }
+  });
+</script>

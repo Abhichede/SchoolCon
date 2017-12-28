@@ -16,40 +16,4 @@
   </h1>
 </div>
 
-<%
-  no_of_divisions = @standard.no_of_divisions.to_i
-  letter = '@'
-%>
-
-<% while no_of_divisions != 0 %>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <%= letter.next.titleize %>
-    </div>
-    <div class="panel-body">
-      <table class="table table-stripped">
-        <thead>
-          <tr>
-            <th colspan="1"></th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
-          </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <%
-    letter = letter.next
-    no_of_divisions = no_of_divisions - 1
-  %>
-<% end %>
 

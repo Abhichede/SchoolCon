@@ -1,0 +1,92 @@
+<%= form_for @time_table_setting, :html => { :class => "form-horizontal time_table_setting" } do |f| %>
+
+  <% if @time_table_setting.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@time_table_setting.errors.count, "error") %> prohibited this time_table_setting from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @time_table_setting.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :school_start, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+       <div class='input-group date' id='start_time'>
+        <%= f.text_field :school_start, :class => 'form-control', autocomplete: 'off', required: true, value: @time_table_setting.school_start.strftime('%I:%M %p') %>
+        <span class="input-group-addon">
+          <i class="fa fa-clock-o"></i>
+        </span>
+      </div>
+    </div>
+    <%=f.error_span(:school_start) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :school_end, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+       <div class='input-group date' id='end_time'>
+        <%= f.text_field :school_end, :class => 'form-control', autocomplete: 'off', required: true, value: @time_table_setting.school_end.strftime('%I:%M %p') %>
+        <span class="input-group-addon">
+          <i class="fa fa-clock-o"></i>
+        </span>
+      </div>
+    </div>
+    <%=f.error_span(:school_end) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :period_duration, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :period_duration, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:period_duration) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :num_breaks, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :num_breaks, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:num_breaks) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :break_durations, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :break_durations, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:break_durations) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :breaks_after, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :breaks_after, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:breaks_after) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+    </div>
+  </div>
+
+<% end %>
+
+<script type="text/javascript">
+    $(function () {
+        $('#start_time').datetimepicker({
+            format: 'LT',
+            stepping: 15
+        });
+        
+        $('#end_time').datetimepicker({
+            format: 'LT',
+            stepping: 15
+        });
+        
+    });
+</script>

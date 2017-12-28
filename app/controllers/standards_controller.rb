@@ -10,6 +10,7 @@ class StandardsController < ApplicationController
   # GET /standards/1
   # GET /standards/1.json
   def show
+    
   end
 
   # GET /standards/new

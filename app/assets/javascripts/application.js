@@ -17,6 +17,8 @@
 //= require jquery.validate
 //= require jquery.validate.additional-methods
 //= require twitter/bootstrap
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
 
 

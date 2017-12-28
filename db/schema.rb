@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171228064405) do
+ActiveRecord::Schema.define(version: 20171228174520) do
 
   create_table "standards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -49,6 +49,17 @@ ActiveRecord::Schema.define(version: 20171228064405) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "time_table_settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.time "school_start", default: "2000-01-01 08:00:00"
+    t.time "school_end", default: "2000-01-01 18:00:00"
+    t.integer "period_duration", default: 60
+    t.integer "num_breaks", default: 3
+    t.string "break_durations", default: "30, 60, 30"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "breaks_after", default: "11:00 AM, 01:30 PM, 04:30 PM"
+  end
+
   create_table "time_tables", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "standard_id"
     t.string "division"
@@ -59,6 +70,7 @@ ActiveRecord::Schema.define(version: 20171228064405) do
     t.string "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "color", default: "BLACK"
   end
 
 end

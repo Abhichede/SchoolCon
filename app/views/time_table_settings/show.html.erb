@@ -1,0 +1,27 @@
+<%- model_class = TimeTableSetting -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:school_start) %>:</strong></dt>
+  <dd><%= @time_table_setting.school_start %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:school_end) %>:</strong></dt>
+  <dd><%= @time_table_setting.school_end %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:period_duration) %>:</strong></dt>
+  <dd><%= @time_table_setting.period_duration %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:num_breaks) %>:</strong></dt>
+  <dd><%= @time_table_setting.num_breaks %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:break_durations) %>:</strong></dt>
+  <dd><%= @time_table_setting.break_durations %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              time_table_settings_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_time_table_setting_path(@time_table_setting), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              time_table_setting_path(@time_table_setting),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
