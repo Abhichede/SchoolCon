@@ -1,0 +1,81 @@
+<%= form_for @time_table, :html => { :class => "form-horizontal time_table" } do |f| %>
+
+  <% if @time_table.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@time_table.errors.count, "error") %> prohibited this time_table from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @time_table.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :standard_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:standard_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :division, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :division, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:division) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :day, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select(:day, options_for_select([['Day'],['Monday','Monday'],['Tuesday','Tuesday'],
+                                             ['Wednesday','Wednesday'],['Thursday','Thursday'],
+                                             ['Friday','Friday'],['Saturday','Saturday'],
+                                             ['Sunday', 'Sunday']], :disabled => 'Day',
+                                            :selected=> @time_table.day),
+                   {}, class: 'form-control') %>
+    </div>
+    <%=f.error_span(:day) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :start_time, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :start_time, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:start_time) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_time, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :end_time, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:end_time) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :teacher_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :teacher_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:teacher_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :subject, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :subject, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:subject) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                time_tables_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

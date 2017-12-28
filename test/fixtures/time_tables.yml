@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  standard_id: 1
+  division: MyString
+  day: MyString
+  start_time: 2017-12-28 12:14:05
+  end_time: 2017-12-28 12:14:05
+  teacher_id: 1
+  subject: MyString
+
+two:
+  standard_id: 1
+  division: MyString
+  day: MyString
+  start_time: 2017-12-28 12:14:05
+  end_time: 2017-12-28 12:14:05
+  teacher_id: 1
+  subject: MyString
