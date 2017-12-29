@@ -21,7 +21,6 @@
 //= require bootstrap-datetimepicker
 //= require_tree .
 
-
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
@@ -36,3 +35,12 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+
+function on() {
+    $("#overlay").css('display', 'block');
+}
+
+function off() {
+    $("#overlay").css('display', "none");
+}
+

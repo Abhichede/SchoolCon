@@ -86,7 +86,7 @@
               <%= link_to 'update', 
                   {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
                               division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Monday'},
-                  class: 'btn btn-default btn-xs', 
+                  class: 'btn btn-default btn-xs btn-spinner', 
                   remote: true %>
               </td>    
             <% else %>
@@ -107,7 +107,7 @@
               <%= link_to 'update', 
                   {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
                               division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Tuesday'},
-                  class: 'btn btn-default btn-xs', 
+                  class: 'btn btn-default btn-xs btn-spinner', 
                   remote: true %>
               </td>    
             <% else %>
@@ -128,7 +128,7 @@
               <%= link_to 'update', 
                   {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
                               division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Wednesday'},
-                  class: 'btn btn-default btn-xs', 
+                  class: 'btn btn-default btn-xs btn-spinner', 
                   remote: true %>
               </td>    
             <% else %>
@@ -149,7 +149,7 @@
               <%= link_to 'update', 
                   {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
                               division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Thursday'},
-                  class: 'btn btn-default btn-xs', 
+                  class: 'btn btn-default btn-xs btn-spinner', 
                   remote: true %>
               </td>    
             <% else %>
@@ -170,7 +170,7 @@
               <%= link_to 'update', 
                   {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
                               division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Friday'},
-                  class: 'btn btn-default btn-xs', 
+                  class: 'btn btn-default btn-xs btn-spinner', 
                   remote: true %>
               </td>    
             <% else %>
@@ -191,7 +191,7 @@
               <%= link_to 'update', 
                   {controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id], 
                               division: params[:division], start_time: start_time, end_time: (start_time + 60.minutes), day: 'Saturday'},
-                  class: 'btn btn-default btn-xs', 
+                  class: 'btn btn-default btn-xs btn-spinner', 
                   remote: true %>
               </td>    
             <% else %>
@@ -261,5 +261,9 @@
             type: 'GET'
         });
     }
+    
+    $('#btn-spinner').on('click', function(){
+      on();
+    });
   });
 </script>
