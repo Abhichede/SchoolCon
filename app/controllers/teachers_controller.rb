@@ -6,7 +6,15 @@ class TeachersController < ApplicationController
   # GET /teachers
   # GET /teachers.json
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.where(:staff_type => 'Teaching')
+  end
+
+  def non_teaching
+    @teachers = Teacher.where(:staff_type => 'Non-Teaching')
+  end
+
+  def admins
+    @teachers = Teacher.where(:staff_type => 'Admin')
   end
 
   # GET /teachers/1
@@ -77,6 +85,9 @@ class TeachersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def teacher_params
-      params.require(:teacher).permit(:name, :address, :contact, {:subject_ids => []}, {:standard_ids => []})
+      params.require(:teacher).permit(:first_name, :middle_name, :last_name, :address_one,
+                                      :address_two, :city, :state, :country, :pincode,
+                                      :contact, {:subject_ids => []}, :dob, :gender, :blood_group,
+                                      :email, :staff_type)
     end
 end

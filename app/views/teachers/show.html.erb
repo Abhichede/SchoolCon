@@ -5,16 +5,41 @@
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @teacher.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
-  <dd><%= @teacher.address %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:contact) %>:</strong></dt>
-  <dd><%= @teacher.contact %></dd>
+  <dd><%= @teacher.first_name %> <%= @teacher.middle_name %> <%= @teacher.last_name %></dd>
 
-  <dt><strong><%= model_class.human_attribute_name(:standard_id) %>:</strong></dt>
-    <% @teacher.standard.each do |standard| %>
-        <dd><%= standard.name %></dd>
-    <% end %>
+  <dt><strong><%= model_class.human_attribute_name(:date_of_birth) %>:</strong></dt>
+  <dd>
+    <%= @teacher.dob %>
+  </dd>
+
+  <dt><strong><%= model_class.human_attribute_name(:gender) %>:</strong></dt>
+  <dd>
+    <%= @teacher.gender %>
+  </dd>
+
+  <dt><strong><%= model_class.human_attribute_name(:blood_group) %>:</strong></dt>
+  <dd>
+    <%= @teacher.blood_group %>
+  </dd>
+
+
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd>
+    <%= @teacher.address_one %> <%= @teacher.address_two %> <br/>
+    <%= @teacher.city %> <%= @teacher.state %> <br/>
+    <%= @teacher.country %> <%= @teacher.pincode %>
+  </dd>
+
+  <dt><strong><%= model_class.human_attribute_name(:contact) %>:</strong></dt>
+  <dd>
+    <%= @teacher.contact %>
+  </dd>
+
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd>
+    <%= @teacher.email %>
+  </dd>
+
   <dt><strong><%= model_class.human_attribute_name(:subjects) %>:</strong></dt>
   <% @teacher.subjects.each do |subject| %>
       <dd><%= subject.name %></dd>

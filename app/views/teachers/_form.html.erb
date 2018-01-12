@@ -16,46 +16,139 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :name, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :name, :class => 'form-control' %>
+    <%= f.label :staff_type, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-5">
+      <%= f.select(:staff_type, options_for_select([['Type'],['Teaching','Teaching'],['Non-Teaching','Non-Teaching'],
+                                             ['Admin','Admin']], :disabled => 'Type', :selected=> @teacher.staff_type),
+                   {}, class: 'form-control') %>
     </div>
-    <%=f.error_span(:name) %>
+    <%=f.error_span(:staff_type) %>
   </div>
+
+  <hr/>
+    <h4>Personal Details</h4>
+  <hr/>
+
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-5">
+      <%= f.text_field :first_name, :class => 'form-control', placeholder: 'First Name' %>
+    </div>
+    <%=f.error_span(:first_name) %>
+
+  </div>
+  <div class="form-group">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-5">
+      <%= f.text_field :middle_name, :class => 'form-control', placeholder: 'Middle Name' %>
+    </div>
+    <%=f.error_span(:middle_name) %>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-5">
+      <%= f.text_field :last_name, :class => 'form-control', placeholder: 'Last Name' %>
+    </div>
+    <%=f.error_span(:last_name) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :date_of_birth, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-5">
+      <%= f.text_field :dob, class: 'form-control' %>
+    </div>
+    <%=f.error_span(:type) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :gender, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-5">
+      <%= f.select(:gender, options_for_select([['Gender'],['Male','Male'],['Female','Female'],
+                                              ['Other','Other']], :disabled => 'Gender', :selected=> @teacher.gender),
+                   {}, class: 'form-control') %>
+    </div>
+    <%=f.error_span(:gender) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :blood_group, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-5">
+      <%= f.select(:blood_group, options_for_select([['Blood Group'], ['A+','A+'], ['A-','A-'], ['B+','B+'],
+                                                     ['B-','B-'], ['AB+','AB+'], ['AB-','AB-'], ['O+','O+'],
+                                                     ['O-','O-']], :disabled => 'Blood Group', :selected=> @teacher.blood_group),
+                   {}, class: 'form-control') %>
+    </div>
+    <%=f.error_span(:blood_group) %>
+  </div>
+
+  <hr/>
+    <h4>Contact Details</h4>
+  <hr/>
+
   <div class="form-group">
     <%= f.label :address, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :address, :class => 'form-control' %>
+    <div class="col-lg-5">
+      <%= f.text_field :address_one, :class => 'form-control', placeholder: 'Address Line 1'  %>
     </div>
-    <%=f.error_span(:address) %>
+    <%=f.error_span(:address_one) %>
+
+    <div class="col-lg-5">
+      <%= f.text_field :address_two, :class => 'form-control', placeholder: 'Address Line 2' %>
+    </div>
+    <%=f.error_span(:address_two) %>
   </div>
+
+  <div class="form-group">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-5">
+      <%= f.text_field :city, :class => 'form-control', placeholder: 'City'  %>
+    </div>
+    <%=f.error_span(:city) %>
+
+    <div class="col-lg-5">
+      <%= f.text_field :state, :class => 'form-control', placeholder: 'State' %>
+    </div>
+    <%=f.error_span(:state) %>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-5">
+      <%= f.text_field :country, :class => 'form-control', placeholder: 'Country'  %>
+    </div>
+    <%=f.error_span(:country) %>
+
+    <div class="col-lg-5">
+      <%= f.text_field :pincode, :class => 'form-control', placeholder: 'PIN Code' %>
+    </div>
+    <%=f.error_span(:pincode) %>
+  </div>
+
+
   <div class="form-group">
     <%= f.label :contact, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :contact, :class => 'form-control' %>
+    <div class="col-lg-5">
+      <%= f.text_field :contact, :class => 'form-control', placeholder: 'Mobile No.' %>
     </div>
     <%=f.error_span(:contact) %>
+
+    <div class="col-lg-5">
+      <%= f.text_field :email, :class => 'form-control', placeholder: 'Email' %>
+    </div>
+    <%=f.error_span(:email) %>
   </div>
-  <div class="form-group">
+
+  <hr/>
+    <h4>Other Details</h4>
+  <hr/>
+
+  <div class="form-group" id="subjects_for_teachers">
     <%= f.label :subjects, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.collection_check_boxes(:subject_ids, @subjects, :id, :name) do |b|
-        b.label(:"data-value" => b.value, class: 'checkbox-inline') { b.check_box + b.text }
-      end
-
-      %>
+      <%= f.select(:subject_ids, options_for_select(@subjects.map {|subject| [subject.name, subject.id]},
+                                                     {:selected => @teacher.subjects.map{|x| x.id } }),
+                   {}, class: 'multiselect', multiple: true) %>
     </div>
     <%=f.error_span(:subject_id) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :standards, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.collection_check_boxes(:standard_ids, @standards, :id, :name ) do |b|
-        b.label(:"data-value" => b.value, class: 'checkbox-inline') { b.check_box + b.text }
-      end
-      %>
-    </div>
-    <%=f.error_span(:standard_id) %>
   </div>
 
   <div class="form-group">
@@ -67,3 +160,26 @@
   </div>
 
 <% end %>
+
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+     $('select#teacher_staff_type').on('change', function () {
+         var self =  $('select#teacher_staff_type');
+         if(self.val() === 'Teaching'){
+             $('div#subjects_for_teachers').show();
+         }else{
+             $('div#subjects_for_teachers').hide();
+         }
+     });
+  });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#teacher_dob').datetimepicker({
+            format: 'DD-MM-YYYY'
+        });
+
+    });
+</script>

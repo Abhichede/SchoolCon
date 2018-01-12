@@ -1,0 +1,3 @@
+<% if @filtered_subjects  %>
+$('#subject').html("<%= escape_javascript options_from_collection_for_select(@subjects, :id, :name) %>");
+<% end %>

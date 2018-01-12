@@ -1,0 +1,167 @@
+<%- model_class = TimeTable -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<div class="row">
+  <div class="col-lg-9">
+    <form actions="<%= teacher_wise_timetable_url %>">
+      <div class="form-group">
+        <label class="control-label col-lg-1" for="standard_id">Teacher</label>
+        <div class="col-lg-3">
+          <%= select_tag "teacher_id", options_from_collection_for_select(Teacher.all, "id", "fullname", :selected => params[:teacher_id], disabled: 'Teachers'), include_blank: 'Teachers', class: 'form-control' %>
+        </div>
+        <div class="col-lg-3">
+          <button class="btn btn-success" id="btn-filter">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-3">
+
+  </div>
+</div>
+<br/>
+<% if @time_tables  %>
+    <% if !@time_table_setting.nil?  %>
+        <div class="row">
+          <div class="col-lg-9">
+            <table class="table table-bordered table-timetable">
+              <thead>
+              <tr>
+                <th colspan="2"></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+              </tr>
+              </thead>
+              <tbody>
+
+              <%
+                start_time = @time_table_setting.school_start
+                end_time = @time_table_setting.school_end
+                intervals = @time_table_setting.breaks_after.split(', ')
+                durations = @time_table_setting.break_durations.split(', ')
+                period_duration = @time_table_setting.period_duration.to_i
+                num = 0
+              %>
+              <%
+                while start_time < end_time
+              %>
+                  <!-- breaks --->
+                  <% intervals.each do |interval| %>
+                      <% if start_time == ('2000-01-01 '+ interval).to_time(:utc)  %>
+                          <tr>
+                            <td>
+                              <%= start_time.strftime('%I:%M %p') %><br/>
+                              To <br/>
+                              <%= (start_time + durations[num].to_i.minutes ).strftime('%I:%M %p') %>
+                            </td>
+                            <td colspan="7" class="text-center" style="background-color: #ababab; font-weight: 600; font-size: 20px;">Break</td>
+                          </tr>
+                          <%
+                            start_time += durations[num].to_i.minutes
+                            num += 1
+                          %>
+                      <% end %>
+                  <%  end %>
+                  <!-- end breaks -->
+
+                  <tr>
+                    <td colspan="2">
+                      <%= start_time.strftime('%I:%M %p') %>
+                      To
+                      <%= (start_time + period_duration.minutes ).strftime('%I:%M %p') %>
+                    </td>
+
+                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Monday').last %>
+                    <% if !@period.nil? %>
+                        <td style="color: #FFF; background-color: <%= @period.color %>">
+                          <%= @period.subject %><br/>
+                          <%= @period.standard.name %> - <%= @period.division %><br/>
+                        </td>
+                    <% else %>
+                        <td style="color: #000; background-color: #FFF;">
+                          <br/><br/><br/>
+                        </td>
+                    <% end %>
+
+                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Tuesday').last %>
+                    <% if !@period.nil? %>
+                        <td style="color: #FFF; background-color: <%= @period.color %>">
+                          <%= @period.subject %><br/>
+                          <%= @period.standard.name %> - <%= @period.division %><br/>
+                        </td>
+                    <% else %>
+                        <td style="color: #000; background-color: #FFF;">
+                          <br/><br/>
+                        </td>
+                    <% end %>
+
+                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Wednesday').last %>
+                    <% if !@period.nil? %>
+                        <td style="color: #FFF; background-color: <%= @period.color %>">
+                          <%= @period.subject %><br/>
+                          <%= @period.standard.name %> - <%= @period.division %><br/>
+                        </td>
+                    <% else %>
+                        <td style="color: #000; background-color: #FFF">
+                          <br/><br/><br/>
+                        </td>
+                    <% end %>
+
+                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Thursday').last %>
+                    <% if !@period.nil? %>
+                        <td style="color: #FFF; background-color: <%= @period.color %>">
+                          <%= @period.subject %><br/>
+                          <%= @period.standard.name %> - <%= @period.division %><br/>
+                        </td>
+                    <% else %>
+                        <td style="color: #000; background-color: #FFF">
+                         <br/><br/><br/>
+                        </td>
+                    <% end %>
+
+                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Friday').last %>
+                    <% if !@period.nil? %>
+                        <td style="color: #FFF; background-color: <%= @period.color %>">
+                          <%= @period.subject %><br/>
+                          <%= @period.standard.name %> - <%= @period.division %><br/>
+                        </td>
+                    <% else %>
+                        <td style="color: #FFF; background-color: #FFF">
+                          <br/><br/><br/>
+                        </td>
+                    <% end %>
+
+                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Saturday').last %>
+                    <% if !@period.nil? %>
+                        <td style="color: #FFF; background-color: <%= @period.color %>">
+                          <%= @period.subject %><br/>
+                          <%= @period.standard.name %> - <%= @period.division %><br/>
+                        </td>
+                    <% else %>
+                        <td style="color: #000; background-color: #FFF;">
+                          <br/><br/><br/>
+                        </td>
+                    <% end %>
+                  </tr>
+
+              <%
+                start_time = start_time + period_duration.minutes
+                end
+              %>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-3">
+          </div>
+
+        </div>
+    <% else %>
+
+    <% end %>
+<% end %>

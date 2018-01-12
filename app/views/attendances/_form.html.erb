@@ -1,0 +1,173 @@
+<%= form_for @attendance, :html => { :class => "form-horizontal attendance" } do |f| %>
+
+  <% if @attendance.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@attendance.errors.count, "error") %> prohibited this attendance from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @attendance.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :date, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :date, :class => 'form-control', required: true %>
+    </div>
+    <%=f.error_span(:date) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select(:standard_id, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
+                                                    {:selected => @attendance.standard_id }),
+                   {}, class: 'form-control', required: true) %>
+    </div>
+    <%=f.error_span(:standard_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :division_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select(:division_id, options_for_select(['Select'],
+                                                    {:selected => @attendance.division_id, include_blank: 'Subjects' }),
+                   {}, class: 'form-control', id: 'division', required: true) %>
+    </div>
+    <%=f.error_span(:division_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :teacher_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select(:teacher_id, options_for_select(Teacher.all.map {|teacher| [teacher.fullname, teacher.id]},
+                                                   {:selected => @attendance.teacher_id }),
+                   {}, class: 'form-control', required: true) %>
+    </div>
+    <%=f.error_span(:teacher_id) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :subject_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%=f.select(:subject_id, options_for_select(['Select'],
+                                                   {:selected => @attendance.subject_id }),
+                  {}, class: 'form-control', id: 'subject', required: true)  %>
+    </div>
+    <%=f.error_span(:subject_id) %>
+  </div>
+
+
+
+  <div class="form-group">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-10" style="max-height: 30rem; overflow: auto">
+      <div id="students"></div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                attendances_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
+
+<script type="text/javascript">
+
+    $(function () {
+        $(document).ready(function () {
+           $('select#attendance_standard_id option').each(function () {
+              if($(this).is(':selected')){
+                  if($(this).val() > 0){
+                      get_divisions();
+                  }
+              }
+           });
+
+            $('select#attendance_teacher_id option').each(function () {
+                if($(this).is(':selected')){
+                    if($(this).val() > 0){
+                        get_subjects();
+                    }
+                }
+            });
+
+           <% if !@attendance.division.nil? %>
+            get_students($('select#attendance_standard_id').val(), <%= @attendance.division.id %>);
+           <% end %>
+        });
+        $('select#attendance_standard_id').on('click', function () {
+            get_divisions();
+        });
+
+        var get_divisions = function () {
+            var standard_id = $('select#attendance_standard_id').val();
+
+            console.log('clicked event');
+
+            $.ajax({
+                url: '<%= get_divisions_attendance_url %>',
+                data: 'standard_id='+ standard_id +'&id=<%= @attendance.id %>',
+                type: 'GET'
+            });
+        };
+
+        $('select#division').on('click', function () {
+            get_students($('select#attendance_standard_id').val(), $('select#division').val());
+        });
+
+        var get_students = function (standard, division) {
+            var standard_id = standard;
+            var division_id = division;
+
+
+            console.log('clicked event');
+
+            $.ajax({
+                url: '<%= get_students_url %>',
+                data: 'standard_id='+ standard_id +'&division_id='+ division_id +'&id=<%= @attendance.id %>',
+                type: 'GET'
+            });
+        };
+
+        $('select#attendance_teacher_id').on('click', function () {
+            get_subjects();
+        });
+
+        var get_subjects = function () {
+            var teacher_id = $('select#attendance_teacher_id').val();
+
+            console.log('clicked event');
+
+            $.ajax({
+                url: '<%= get_subjects_attendance_url %>',
+                data: 'teacher_id='+ teacher_id,
+                type: 'GET'
+            });
+        };
+
+        $('#btn-spinner').on('click', function(){
+            on();
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#attendance_date').datetimepicker({
+            format: 'DD-MM-YYYY'
+        });
+
+        $('#attendance_time').datetimepicker({
+            format: 'LT'
+        });
+
+    });
+</script>

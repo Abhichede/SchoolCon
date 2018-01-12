@@ -1,6 +1,6 @@
 class TimeTablesController < ApplicationController
   before_action :set_time_table, only: [:show, :edit, :update, :destroy]
-  before_action :set_required
+  before_action :set_required, only: [:new, :edit]
 
   # GET /time_tables
   # GET /time_tables.json
@@ -14,6 +14,13 @@ class TimeTablesController < ApplicationController
   # GET /time_tables/1
   # GET /time_tables/1.json
   def show
+  end
+
+  def teacherwise
+    if params[:teacher_id]
+      @time_tables = Teacher.find(params[:teacher_id]).time_tables
+    end
+    @time_table_setting = TimeTableSetting.last
   end
 
   # GET /time_tables/new
@@ -70,6 +77,8 @@ class TimeTablesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
   
   def get_subjects
     @teacher = Teacher.find(params[:teacher_id])
@@ -79,15 +88,7 @@ class TimeTablesController < ApplicationController
   
   def get_divisions
     @standard = Standard.find(params[:standard_id])
-    letter = '@'
-    no_of_divisions = @standard.no_of_divisions.to_i
-    @divisions = Array.new
-    while no_of_divisions > 0
-      @divisions.push(letter.next)
-      
-      letter = letter.next
-      no_of_divisions -= 1
-    end
+    @divisions = @standard.divisions
     @filtered_divisions = true
   end
 
@@ -99,8 +100,18 @@ class TimeTablesController < ApplicationController
 
     def set_required
       @standard = Standard.all
-      @teachers = Teacher.all
-      @subjects = @time_table.nil? ? @teachers.first.subjects : @time_table.teacher.subjects
+
+      if !@time_table.nil?
+        @teachers = Teacher.where.not(id: TimeTable.where(:day => params[:day],
+                                                          :start_time => Time.parse(params[:start_time]),
+                                                          :end_time => Time.parse(params[:end_time])).map {|tt| (tt.teacher.id == @time_table.teacher_id ? nil : tt.teacher.id) }).where(:staff_type => 'Teaching')
+      else
+        @teachers = Teacher.where.not(id: TimeTable.where(:day => params[:day],
+                                                          :start_time => Time.parse(params[:start_time]),
+                                                          :end_time => Time.parse(params[:end_time])).map {|tt| tt.teacher.id}).where(:staff_type => 'Teaching')
+      end
+
+      @subjects = @time_table.nil? ? (@teachers.blank? ? nil : @teachers.first.subjects) : @time_table.teacher.subjects
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

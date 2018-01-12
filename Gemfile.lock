@@ -42,6 +42,8 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     bindex (0.5.0)
+    bootstrap-multiselect-rails (0.9.9)
+      rails (>= 4.0.0)
     bootstrap3-datetimepicker-rails (4.17.47)
       momentjs-rails (>= 2.8.1)
     builder (3.2.3)
@@ -204,6 +206,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-multiselect-rails
   bootstrap3-datetimepicker-rails (~> 4.17.47)
   byebug
   capybara (~> 2.13)

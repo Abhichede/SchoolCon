@@ -1,0 +1,445 @@
+<%= form_for @student, :html => { :class => "form-horizontal student" } do |f| %>
+
+  <% if @student.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @student.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Personal Information</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <%= f.label :full_name, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :first_name, :class => 'form-control', placeholder: 'First Name' %>
+        </div>
+        <%=f.error_span(:first_name) %>
+
+        <div class="col-lg-3">
+          <%= f.text_field :middle_name, :class => 'form-control', placeholder: 'Middle Name' %>
+        </div>
+        <%=f.error_span(:middle_name) %>
+
+        <div class="col-lg-3">
+          <%= f.text_field :last_name, :class => 'form-control', placeholder: 'Last Name' %>
+        </div>
+        <%=f.error_span(:last_name) %>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.label :date_of_birth, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :date_of_birth, :class => 'form-control datepicker', placeholder: 'Date of Birth'  %>
+        </div>
+        <%=f.error_span(:date_of_birth) %>
+
+        <%= f.label :birth_place, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :birth_place, :class => 'form-control', placeholder: 'Place of birth' %>
+        </div>
+        <%=f.error_span(:birth_place) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :gender, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.select(:gender, options_for_select([['Gender'],['Male','Male'],['Female','Female'],
+                                                    ['Other','Other']], :disabled => 'Gender', :selected=> @student.gender),
+                       {}, class: 'form-control') %>
+        </div>
+        <%=f.error_span(:gender) %>
+
+        <%= f.label :blood_group, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.select(:blood_group, options_for_select([['Blood Group'], ['A+','A+'], ['A-','A-'], ['B+','B+'],
+                                                         ['B-','B-'], ['AB+','AB+'], ['AB-','AB-'], ['O+','O+'],
+                                                         ['O-','O-']], :disabled => 'Blood Group', :selected=> @student.blood_group),
+                       {}, class: 'form-control') %>
+        </div>
+        <%=f.error_span(:blood_group) %>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.label :nationality, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :nationality, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:nationality) %>
+
+        <%= f.label :student_adhar, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :student_adhar, :class => 'form-control', placeholder: 'Student ADHAR' %>
+        </div>
+        <%=f.error_span(:student_adhar) %>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.label :mother_tongue, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :mother_tongue, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:mother_tongue) %>
+
+        <%= f.label :category_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.select(:caste_category_id, options_for_select(CasteCategory.all.map {|category| [category.category, category.id]},
+                                                              {:selected => @student.caste_category_id }),
+                       {}, class: 'form-control') %>
+        </div>
+        <%=f.error_span(:caste_category_id) %>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.label :caste_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.select(:caste_id, options_for_select(Caste.all.map {|caste| [caste.name, caste.id]},
+                                                     {:selected => @student.caste }),
+                       {}, class: 'form-control') %>
+        </div>
+        <%=f.error_span(:caste_id) %>
+
+        <%= f.label :religion_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.select(:religion_id, options_for_select(Religion.all.map {|religion| [religion.name, religion.id]},
+                                                        {:selected => @student.academic_year_id }),
+                       {}, class: 'form-control') %>
+        </div>
+        <%=f.error_span(:religion_id) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Contact Details</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <%= f.label :residential_address, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :residential_address_one, :class => 'form-control', placeholder: 'Address Line 1' %>
+        </div>
+        <%=f.error_span(:residential_address_one) %>
+
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <%= f.text_field :residential_address_two, :class => 'form-control', placeholder: 'Address Line 2' %>
+        </div>
+        <%=f.error_span(:residential_address_two) %>
+      </div>
+
+
+      <div class="form-group">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <%= f.text_field :residential_city, :class => 'form-control', placeholder: 'City' %>
+        </div>
+        <%=f.error_span(:residential_city) %>
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-4">
+          <%= f.text_field :residential_state, :class => 'form-control', placeholder: 'State' %>
+        </div>
+        <%=f.error_span(:residential_state) %>
+      </div>
+
+
+      <div class="form-group">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <%= f.text_field :residential_pincode, :class => 'form-control', placeholder: 'Pincode' %>
+        </div>
+        <%=f.error_span(:residential_pincode) %>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5">
+          <input type="checkbox" id="same_as_residential">
+          <label for="same_as_residential">Same As Residential</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :permanent_address, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :permanent_address_one, :class => 'form-control', placeholder: 'Address Line 1' %>
+        </div>
+        <%=f.error_span(:permanent_address_one) %>
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-4">
+          <%= f.text_field :permanent_address_two, :class => 'form-control', placeholder: 'Address Line 2' %>
+        </div>
+        <%=f.error_span(:permanent_address_two) %>
+      </div>
+
+
+      <div class="form-group">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <%= f.text_field :permanent_city, :class => 'form-control', placeholder: 'City' %>
+        </div>
+        <%=f.error_span(:permanent_city) %>
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-4">
+          <%= f.text_field :permanent_state, :class => 'form-control', placeholder: 'State' %>
+        </div>
+        <%=f.error_span(:permanent_state) %>
+      </div>
+
+
+      <div class="form-group">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <%= f.text_field :permanent_pincode, :class => 'form-control', placeholder: 'Pincode' %>
+        </div>
+        <%=f.error_span(:permanent_pincode) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :student_mobile, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :student_mobile, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:student_mobile) %>
+
+        <%= f.label :student_email, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :student_email, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:student_email) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Parent Details</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <%= f.label 'Father`s full name', :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :father_first_name, :class => 'form-control', placeholder: 'First Name' %>
+        </div>
+        <%=f.error_span(:father_first_name) %>
+
+        <div class="col-lg-3">
+          <%= f.text_field :father_middle_name, :class => 'form-control', placeholder: 'Middle Name' %>
+        </div>
+        <%=f.error_span(:father_middle_name) %>
+
+        <div class="col-lg-3">
+          <%= f.text_field :father_last_name, :class => 'form-control', placeholder: 'Last Name' %>
+        </div>
+        <%=f.error_span(:father_last_name) %>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.label 'Mother`s full name', :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :mother_first_name, :class => 'form-control', placeholder: 'First Name' %>
+        </div>
+        <%=f.error_span(:mother_first_name) %>
+
+        <div class="col-lg-3">
+          <%= f.text_field :mother_middle_name, :class => 'form-control', placeholder: 'Middle Name' %>
+        </div>
+        <%=f.error_span(:mother_middle_name) %>
+
+        <div class="col-lg-3">
+          <%= f.text_field :mother_last_name, :class => 'form-control', placeholder: 'Last Name' %>
+        </div>
+        <%=f.error_span(:mother_last_name) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :father_mobile, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :father_mobile, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:father_mobile) %>
+
+        <%= f.label :mother_mobile, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :mother_mobile, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:mother_mobile) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :father_occupation, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :father_occupation, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:father_occupation) %>
+
+        <%= f.label :mother_occupation, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :mother_occupation, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:mother_occupation) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :father_email, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :father_email, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:father_email) %>
+
+        <%= f.label :father_adhar, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :father_adhar, :class => 'form-control', placeholder: 'Father ADHAR' %>
+        </div>
+        <%=f.error_span(:father_adhar) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :mother_email, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :mother_email, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:mother_email) %>
+
+        <%= f.label :mother_adhar, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :mother_adhar, :class => 'form-control', placeholder: 'Mother ADHAR' %>
+        </div>
+        <%=f.error_span(:mother_adhar) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Office use</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.select(:standard_id, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
+                                                        {:selected => @student.standard_id }),
+                       {}, class: 'form-control') %>
+        </div>
+        <%=f.error_span(:standard_id) %>
+
+        <%= f.label :division_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.select(:division_id, options_for_select(['Select'],
+                                                        {:selected => @student.division_id }),
+                       {}, class: 'form-control', id: 'division') %>
+        </div>
+        <%=f.error_span(:division_id) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :prn, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :prn, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:prn) %>
+
+        <%= f.label :roll_no, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :roll_no, :class => 'form-control', placeholder: 'Roll No.' %>
+        </div>
+        <%=f.error_span(:roll_no) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :username, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :username, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:username) %>
+
+        <%= f.label :password, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :password, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:password) %>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.label :academic_year_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.select(:academic_year_id, options_for_select(AcademicYear.all.map {|academicYear| [academicYear.academic_year, academicYear.id]},
+                                                             {:selected => @student.academic_year_id }),
+                       {}, class: 'form-control') %>
+        </div>
+        <%=f.error_span(:academic_year_id) %>
+
+        <%= f.label :joining_date, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :joining_date, :class => 'form-control datepicker', placeholder: 'Joining Date'  %>
+        </div>
+        <%=f.error_span(:joining_date) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :last_school_attended, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :last_school_attended, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:last_school_attended) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                students_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
+
+<script type="text/javascript">
+    $(function () {
+        $('#student_date_of_birth').datetimepicker({
+            format: 'DD-MM-YYYY'
+        });
+
+        $('#student_joining_date').datetimepicker({
+            format: 'DD-MM-YYYY'
+        });
+
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('select#student_standard_id').on('click', function () {
+            get_divisions();
+        });
+
+        var get_divisions = function () {
+            var standard_id = $('select#student_standard_id').val();
+
+            console.log('clicked event');
+
+            $.ajax({
+                url: '<%= get_divisions_students_url %>',
+                data: 'standard_id='+ standard_id,
+                type: 'GET'
+            });
+        };
+
+        $('#btn-spinner').on('click', function(){
+            on();
+        });
+    });
+</script>

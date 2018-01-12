@@ -1,0 +1,98 @@
+<%- model_class = Attendance -%>
+<div class="page-header">
+  <h1>
+    <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
+    <span class="pull-right">
+      <%= link_to t('.new', :default => t("helpers.links.new")),
+                  new_attendance_path,
+                  :class => 'btn btn-primary' %>
+    </span>
+  </h1>
+</div>
+<hr/>
+
+<div class="row">
+  <form action="<%= attendances_path %>">
+    <div class="form-group">
+      <label class="control-label col-lg-1" for="standard_id">Class</label>
+      <div class="col-lg-2">
+        <%= select_tag "standard_id", options_from_collection_for_select(Standard.all, "id", "name", :selected => params[:standard_id], disabled: 'Classes'), include_blank: 'Classes', class: 'form-control' %>
+      </div>
+      <label class="control-label col-lg-1" for="division">Division</label>
+      <div class="col-lg-1">
+        <%= select_tag "division", options_for_select([[!params[:division].nil? ? Division.find(params[:division]).name : params[:division], params[:division]]]), include_blank: 'Subjects', class: 'form-control' %>
+      </div>
+      <label class="control-label col-lg-1" for="division">Division</label>
+      <div class="col-lg-2">
+        <%= select_tag "subject", options_from_collection_for_select(Subject.all, "id", "name", :selected => params[:subject], disabled: 'Subjects'), include_blank: 'Subjects', class: 'form-control' %>
+      </div>
+      <label class="control-label col-lg-1" for="division">Date:</label>
+      <div class="col-lg-2">
+        <%= text_field "date", nil, class: 'form-control', value: params[:date] %>
+      </div>
+      <div class="col-lg-1">
+        <button class="btn btn-success" id="btn-filter">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+<br/>
+<div class="row">
+  <% if !@students.nil? && !@attendance.nil? %>
+      <span class="pull-right"><%= link_to 'Edit', edit_attendance_path(@attendance), class: 'btn btn-info' %></span>
+  <table class="table table-stripped">
+    <thead>
+      <tr>
+        <th>Roll No.</th>
+        <th>Student</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.roll_no %></td>
+            <td> <%= student.self_full_name %> </td>
+          <td>
+            <span class="pull-right label label-<%= @attendance.att_data["#{student.id}"] === 'on' ? 'primary' : 'danger' %>"><%= @attendance["#{student.id}"] === 'on' ? 'Present' : 'Absent' %></span>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('select#standard_id').on('click', function () {
+            get_divisions();
+        });
+
+        var get_divisions = function () {
+            var standard_id = $('select#standard_id').val();
+
+            console.log('clicked event');
+
+            $.ajax({
+                url: '<%= get_divisions_attendance_url %>',
+                data: 'standard_id='+ standard_id,
+                type: 'GET'
+            });
+        };
+
+        $('#btn-spinner').on('click', function(){
+            on();
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#date_').datetimepicker({
+            format: 'DD-MM-YYYY'
+        });
+
+    });
+</script>

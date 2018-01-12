@@ -1,0 +1,86 @@
+<%= form_for @academic_year, :html => { :class => "form-horizontal academic_year" } do |f| %>
+
+  <% if @academic_year.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@academic_year.errors.count, "error") %> prohibited this academic_year from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @academic_year.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :start_month, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select(:start_month, options_for_select([['Month'],['January','January'],['February','February'],
+                                                ['March','March'], ['April','April'], ['May','May'], ['June','June'],
+                                                     ['July','July'], ['August','August'], ['September','September'], ['Octomber','Octomber'],
+                                                     ['November','November'], ['December','December']], :disabled => 'Month', :selected=> @academic_year.start_month),
+                   {}, class: 'form-control') %>
+    </div>
+    <%=f.error_span(:start_month) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :start_year, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :start_year, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:start_year) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_month, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select(:end_month, options_for_select([['Month'],['January','January'],['February','February'],
+                                                     ['March','March'], ['April','April'], ['May','May'], ['June','June'],
+                                                     ['July','July'], ['August','August'], ['September','September'], ['Octomber','Octomber'],
+                                                     ['November','November'], ['December','December']], :disabled => 'Month', :selected=> @academic_year.start_month),
+                   {}, class: 'form-control') %>
+    </div>
+    <%=f.error_span(:end_month) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_year, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :end_year, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:end_year) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :is_active, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select(:is_active, options_for_select([['Active', 1], ['Deactive', 0]],
+                                                    {:selected => @academic_year.is_active }),
+                   {}, class: 'form-control') %>
+    </div>
+    <%=f.error_span(:is_active) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                academic_years_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
+
+<script type="text/javascript">
+    $(function () {
+        $('#academic_year_start_year').datetimepicker({
+            format: 'YYYY'
+        });
+
+        $('#academic_year_end_year').datetimepicker({
+            format: 'YYYY'
+        });
+
+    });
+</script>

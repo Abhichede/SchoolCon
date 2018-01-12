@@ -1,0 +1,38 @@
+<%- model_class = Student -%>
+<div class="page-header">
+  <h1>
+    <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
+    <span class="pull-right">
+      <%= link_to t('.new', :default => t("helpers.links.new")),
+                  new_student_path,
+                  :class => 'btn btn-primary' %>
+    </span>
+  </h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:standard_id) %></th>
+      <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= link_to student.id, student_path(student) %></td>
+        <td><%= student.self_full_name %></td>
+        <td><%= student.standard.name %></td>
+        <td><%= student.academic_year.academic_year %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      student_path(student), :class => 'btn btn-default btn-xs' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

@@ -10,11 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171228174520) do
+ActiveRecord::Schema.define(version: 20180111085054) do
+
+  create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "start_month"
+    t.string "start_year"
+    t.string "end_month"
+    t.string "end_year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "is_active"
+  end
+
+  create_table "attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "date"
+    t.integer "standard_id"
+    t.integer "division_id"
+    t.integer "teacher_id"
+    t.json "att_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "subject_id"
+  end
+
+  create_table "caste_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "castes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "class_teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "division_id"
+    t.integer "teacher_id"
+    t.integer "standard_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "divisions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.integer "standard_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "religions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "standards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.integer "no_of_divisions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -24,6 +77,61 @@ ActiveRecord::Schema.define(version: 20171228174520) do
     t.bigint "teacher_id", null: false
     t.index ["standard_id", "teacher_id"], name: "index_standards_teachers_on_standard_id_and_teacher_id"
     t.index ["teacher_id", "standard_id"], name: "index_standards_teachers_on_teacher_id_and_standard_id"
+  end
+
+  create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "last_name"
+    t.string "date_of_birth"
+    t.string "birth_place"
+    t.string "gender"
+    t.string "student_mobile"
+    t.string "blood_group"
+    t.string "nationality"
+    t.string "mother_tongue"
+    t.integer "caste_category_id"
+    t.integer "caste_id"
+    t.integer "religion_id"
+    t.string "father_first_name"
+    t.string "father_middle_name"
+    t.string "father_last_name"
+    t.string "mother_first_name"
+    t.string "mother_middle_name"
+    t.string "mother_last_name"
+    t.string "residential_address_one"
+    t.string "residential_address_two"
+    t.string "residential_city"
+    t.string "residential_state"
+    t.string "residential_country"
+    t.string "residential_pincode"
+    t.string "permanent_address_one"
+    t.string "permanent_address_two"
+    t.string "permanent_city"
+    t.string "permanent_state"
+    t.string "permanent_country"
+    t.string "permanent_pincode"
+    t.string "father_mobile"
+    t.string "mother_mobile"
+    t.string "father_occupation"
+    t.string "mother_occupation"
+    t.string "father_email"
+    t.string "mother_email"
+    t.string "student_email"
+    t.integer "standard_id"
+    t.string "prn"
+    t.string "last_school_attended"
+    t.string "username"
+    t.string "password"
+    t.integer "academic_year_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "joining_date"
+    t.string "roll_no"
+    t.string "student_adhar"
+    t.string "father_adhar"
+    t.string "mother_adhar"
+    t.integer "division_id"
   end
 
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -41,12 +149,24 @@ ActiveRecord::Schema.define(version: 20171228174520) do
   end
 
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.text "address"
+    t.string "first_name"
+    t.text "address_one"
     t.string "contact"
     t.string "standard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "dob"
+    t.string "gender"
+    t.string "blood_group"
+    t.string "email"
+    t.string "last_name"
+    t.string "address_two"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.string "pincode"
+    t.string "middle_name"
+    t.string "staff_type"
   end
 
   create_table "time_table_settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

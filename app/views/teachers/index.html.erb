@@ -5,43 +5,36 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:date_of_birth) %></th>
+      <th><%= model_class.human_attribute_name(:gender) %></th>
+      <th><%= model_class.human_attribute_name(:blood_group) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
       <th><%= model_class.human_attribute_name(:contact) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
 
-      <th><%= model_class.human_attribute_name(:standard_id) %></th>
       <th><%= model_class.human_attribute_name(:subjects) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @teachers.each do |teacher| %>
       <tr>
-        <td><%= link_to teacher.id, teacher_path(teacher) %></td>
-        <td><%= teacher.name %></td>
-        <td><%= teacher.address %></td>
-        <td><%= teacher.contact %></td>
+        <td><a href="<%= teacher_path(teacher) %>"><%= teacher.first_name %> <%= teacher.middle_name %> <%= teacher.last_name %></a></td>
+        <td><%= teacher.dob %></td>
+        <td><%= teacher.gender %></td>
+        <td><%= teacher.blood_group %></td>
         <td>
-          <% teacher.standard.each do |standard| %>
-              <%= standard.name %><br/>
-          <% end %>
+          <%= teacher.address_one %>, <%= teacher.address_two %><br/>
+          <%= teacher.city %>, <%= teacher.state %><br/>
+          <%= teacher.country %>, <%= teacher.pincode %>
         </td>
+        <td><%= teacher.contact %></td>
+        <td><%= teacher.email %></td>
+
         <td>
         <% teacher.subjects.each do |subject| %>
            <%= subject.name %><br/>
         <% end %>
-        </td>
-        <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
-                      teacher_path(teacher), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_teacher_path(teacher), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      teacher_path(teacher),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
         </td>
       </tr>
     <% end %>

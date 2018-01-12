@@ -70,6 +70,6 @@ class StandardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def standard_params
-      params.require(:standard).permit(:name, :no_of_divisions)
+      params.require(:standard).permit(:name)
     end
 end

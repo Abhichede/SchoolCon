@@ -1,0 +1,28 @@
+$("#students").replaceWith('<div id="students"><table class="table table-stripped">' +
+    '<thead>' +
+    '<tr>' +
+    '<th>Roll No.</th>' +
+    '<th>Student</th>' +
+    '<th>Action</th>' +
+    '</tr>' +
+    '</thead>' +
+    '<tbody>'+
+    '<% @students.each do |student| %>\n' +
+    '<tr>' +
+    '<td><%= student.roll_no %></td>'+
+    '  <td> <%= student.self_full_name %> </td>  \n' +
+    '<td>'+
+    '  <input type="checkbox" class="form-control" <%= @attendance.nil? ?  'checked' : @attendance.att_data["#{student.id}"] === 'on' ? 'checked' : '' %> data-toggle="toggle" data-onstyle="primary" data-offstyle="danger" name="attendance[att_data][<%= student.id %>]" id="check_<%= student.id %>" >\n' +
+    '</td>' +
+    '</tr>'+
+    '<% end %>'+
+    '</tbody>'+
+    '</div>'+
+    '<input type="hidden" class="form-control" checked name="attendance[att_data][0]" value="nil"></div>');
+
+<% @students.each do |student| %>
+  $('#check_<%= student.id %>').bootstrapToggle({
+      on: 'Present',
+      off: 'Absent'
+  });
+<% end %>

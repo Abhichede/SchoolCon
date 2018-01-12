@@ -14,7 +14,6 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:no_of_divisions) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -23,10 +22,7 @@
       <tr>
         <td><%= link_to standard.id, standard_path(standard) %></td>
         <td><%= standard.name %></td>
-        <td><%= standard.no_of_divisions %></td>
         <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
-                      standard_path(standard), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_standard_path(standard), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

@@ -1,0 +1,101 @@
+<%- model_class = Student -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
+  <dd><%= @student.first_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:middle_name) %>:</strong></dt>
+  <dd><%= @student.middle_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
+  <dd><%= @student.last_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:date_of_birth) %>:</strong></dt>
+  <dd><%= @student.date_of_birth %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:birth_place) %>:</strong></dt>
+  <dd><%= @student.birth_place %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:gender) %>:</strong></dt>
+  <dd><%= @student.gender %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:student_mobile) %>:</strong></dt>
+  <dd><%= @student.student_mobile %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:blood_group) %>:</strong></dt>
+  <dd><%= @student.blood_group %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nationality) %>:</strong></dt>
+  <dd><%= @student.nationality %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mother_tongue) %>:</strong></dt>
+  <dd><%= @student.mother_tongue %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:caste_category_id) %>:</strong></dt>
+  <dd><%= @student.caste_category.category %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:caste_id) %>:</strong></dt>
+  <dd><%= @student.caste.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:religion_id) %>:</strong></dt>
+  <dd><%= @student.religion.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:father_first_name) %>:</strong></dt>
+  <dd><%= @student.father_first_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:father_middle_name) %>:</strong></dt>
+  <dd><%= @student.father_middle_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:father_last_name) %>:</strong></dt>
+  <dd><%= @student.father_last_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mother_first_name) %>:</strong></dt>
+  <dd><%= @student.mother_first_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mother_middle_name) %>:</strong></dt>
+  <dd><%= @student.mother_middle_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mother_last_name) %>:</strong></dt>
+  <dd><%= @student.mother_last_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:residential_address_one) %>:</strong></dt>
+  <dd><%= @student.residential_address_one %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:residential_address_two) %>:</strong></dt>
+  <dd><%= @student.residential_address_two %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:residential_city) %>:</strong></dt>
+  <dd><%= @student.residential_city %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:residential_state) %>:</strong></dt>
+  <dd><%= @student.residential_state %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:residential_pincode) %>:</strong></dt>
+  <dd><%= @student.residential_pincode %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:permanent_address_one) %>:</strong></dt>
+  <dd><%= @student.permanent_address_one %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:permanent_address_two) %>:</strong></dt>
+  <dd><%= @student.permanent_address_two %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:permanent_city) %>:</strong></dt>
+  <dd><%= @student.permanent_city %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:permanent_state) %>:</strong></dt>
+  <dd><%= @student.permanent_state %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:permanent_pincode) %>:</strong></dt>
+  <dd><%= @student.permanent_pincode %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:father_mobile) %>:</strong></dt>
+  <dd><%= @student.father_mobile %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mother_mobile) %>:</strong></dt>
+  <dd><%= @student.mother_mobile %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:father_occupation) %>:</strong></dt>
+  <dd><%= @student.father_occupation %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mother_occupation) %>:</strong></dt>
+  <dd><%= @student.mother_occupation %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:father_email) %>:</strong></dt>
+  <dd><%= @student.father_email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mother_email) %>:</strong></dt>
+  <dd><%= @student.mother_email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:student_email) %>:</strong></dt>
+  <dd><%= @student.student_email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:standard_id) %>:</strong></dt>
+  <dd><%= @student.standard_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:prn) %>:</strong></dt>
+  <dd><%= @student.prn %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:last_school_attended) %>:</strong></dt>
+  <dd><%= @student.last_school_attended %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:username) %>:</strong></dt>
+  <dd><%= @student.username %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:password) %>:</strong></dt>
+  <dd><%= @student.password %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:academic_year_id) %>:</strong></dt>
+  <dd><%= @student.academic_year_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              students_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_student_path(@student), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              student_path(@student),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
