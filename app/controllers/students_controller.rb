@@ -65,6 +65,21 @@ class StudentsController < ApplicationController
     @standard = Standard.find(params[:standard_id])
     @divisions = @standard.divisions
     @filtered_divisions = true
+
+    if !params[:id].blank?
+      @student = Student.find(params[:id])
+    end
+  end
+
+  def get_fee_structures
+    if params[:standard_id]
+      @standard = Standard.find(params[:standard_id])
+      @fee_structures = @standard.fee_categories
+    end
+
+    if !params[:id].blank?
+      @student = Student.find(params[:id])
+    end
   end
 
   private
@@ -87,6 +102,6 @@ class StudentsController < ApplicationController
                                       :father_email, :mother_email, :student_email, :standard_id, :prn,
                                       :last_school_attended, :username, :password, :academic_year_id,
                                       :division_id, :joining_date, :roll_no, :student_adhar, :father_adhar,
-                                      :mother_adhar)
+                                      :mother_adhar, :fee_category_ids => [])
     end
 end

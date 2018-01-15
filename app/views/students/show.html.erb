@@ -1,94 +1,191 @@
 <%- model_class = Student -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div>
+<div class="row">
+  <div class="row">
+    <!-- Nav tabs -->
+    <div class="card">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#personal_info" aria-controls="personal_info" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Personal Info</a></li>
+        <li role="presentation"><a href="#parent_info" aria-controls="parent_info" role="tab" data-toggle="tab"><i class="fa fa-user-circle-o"></i> Parent Info</a></li>
+        <li role="presentation"><a href="#contact_info" aria-controls="contact_info" role="tab" data-toggle="tab"><i class="fa fa-phone"></i> Contact Details</a></li>
+        <li role="presentation"><a href="#academic_info" aria-controls="academic_info" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i> Academic Details</a></li>
+        <li role="presentation"><a href="#fee_details" aria-controls="fee_details" role="tab" data-toggle="tab"><i class="fa fa-inr"></i> Fee Details</a></li>
+      </ul>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
-  <dd><%= @student.first_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:middle_name) %>:</strong></dt>
-  <dd><%= @student.middle_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
-  <dd><%= @student.last_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:date_of_birth) %>:</strong></dt>
-  <dd><%= @student.date_of_birth %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:birth_place) %>:</strong></dt>
-  <dd><%= @student.birth_place %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:gender) %>:</strong></dt>
-  <dd><%= @student.gender %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:student_mobile) %>:</strong></dt>
-  <dd><%= @student.student_mobile %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:blood_group) %>:</strong></dt>
-  <dd><%= @student.blood_group %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nationality) %>:</strong></dt>
-  <dd><%= @student.nationality %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:mother_tongue) %>:</strong></dt>
-  <dd><%= @student.mother_tongue %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:caste_category_id) %>:</strong></dt>
-  <dd><%= @student.caste_category.category %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:caste_id) %>:</strong></dt>
-  <dd><%= @student.caste.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:religion_id) %>:</strong></dt>
-  <dd><%= @student.religion.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:father_first_name) %>:</strong></dt>
-  <dd><%= @student.father_first_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:father_middle_name) %>:</strong></dt>
-  <dd><%= @student.father_middle_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:father_last_name) %>:</strong></dt>
-  <dd><%= @student.father_last_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:mother_first_name) %>:</strong></dt>
-  <dd><%= @student.mother_first_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:mother_middle_name) %>:</strong></dt>
-  <dd><%= @student.mother_middle_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:mother_last_name) %>:</strong></dt>
-  <dd><%= @student.mother_last_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:residential_address_one) %>:</strong></dt>
-  <dd><%= @student.residential_address_one %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:residential_address_two) %>:</strong></dt>
-  <dd><%= @student.residential_address_two %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:residential_city) %>:</strong></dt>
-  <dd><%= @student.residential_city %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:residential_state) %>:</strong></dt>
-  <dd><%= @student.residential_state %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:residential_pincode) %>:</strong></dt>
-  <dd><%= @student.residential_pincode %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:permanent_address_one) %>:</strong></dt>
-  <dd><%= @student.permanent_address_one %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:permanent_address_two) %>:</strong></dt>
-  <dd><%= @student.permanent_address_two %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:permanent_city) %>:</strong></dt>
-  <dd><%= @student.permanent_city %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:permanent_state) %>:</strong></dt>
-  <dd><%= @student.permanent_state %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:permanent_pincode) %>:</strong></dt>
-  <dd><%= @student.permanent_pincode %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:father_mobile) %>:</strong></dt>
-  <dd><%= @student.father_mobile %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:mother_mobile) %>:</strong></dt>
-  <dd><%= @student.mother_mobile %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:father_occupation) %>:</strong></dt>
-  <dd><%= @student.father_occupation %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:mother_occupation) %>:</strong></dt>
-  <dd><%= @student.mother_occupation %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:father_email) %>:</strong></dt>
-  <dd><%= @student.father_email %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:mother_email) %>:</strong></dt>
-  <dd><%= @student.mother_email %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:student_email) %>:</strong></dt>
-  <dd><%= @student.student_email %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:standard_id) %>:</strong></dt>
-  <dd><%= @student.standard_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:prn) %>:</strong></dt>
-  <dd><%= @student.prn %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:last_school_attended) %>:</strong></dt>
-  <dd><%= @student.last_school_attended %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:username) %>:</strong></dt>
-  <dd><%= @student.username %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:password) %>:</strong></dt>
-  <dd><%= @student.password %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:academic_year_id) %>:</strong></dt>
-  <dd><%= @student.academic_year_id %></dd>
-</dl>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="personal_info">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Name: </th>
+                <td><%= @student.self_full_name %></td>
+              </tr>
+              <tr>
+                <th>Date of birth: </th>
+                <td><%= @student.date_of_birth %></td>
+              </tr>
+              <tr>
+                <th>Birth Place: </th>
+                <td><%= @student.birth_place %></td>
+              </tr>
+              <tr>
+                <th>Gender: </th>
+                <td><%= @student.gender %></td>
+              </tr>
+              <tr>
+                <th>Blood group: </th>
+                <td><%= @student.blood_group %></td>
+              </tr>
+              <tr>
+                <th>Nationality: </th>
+                <td><%= @student.nationality %></td>
+              </tr>
+              <tr>
+                <th>Mother tongue: </th>
+                <td><%= @student.mother_tongue %></td>
+              </tr>
+              <tr>
+                <th>Adhar: </th>
+                <td><%= @student.student_adhar %></td>
+              </tr>
+              <tr>
+                <th>Caste Category: </th>
+                <td><%= @student.caste_category.category %></td>
+              </tr>
+              <tr>
+                <th>Caste: </th>
+                <td><%= @student.caste.name %></td>
+              </tr>
+              <tr>
+                <th>Religion: </th>
+                <td><%= @student.religion.name %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="parent_info">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th>Father Name: </th>
+              <td><%= @student.father_full_name %></td>
+            </tr>
+            <tr>
+              <th>Mother Name: </th>
+              <td><%= @student.mother_full_name %></td>
+            </tr>
+            <tr>
+              <th>Father Occupation: </th>
+              <td><%= @student.father_occupation %></td>
+            </tr>
+            <tr>
+              <th>Mother Occupation: </th>
+              <td><%= @student.mother_occupation %></td>
+            </tr>
+            <tr>
+              <th>Father ADHAR: </th>
+              <td><%= @student.father_adhar %></td>
+            </tr>
+            <tr>
+              <th>Mother ADHAR: </th>
+              <td><%= @student.mother_adhar %></td>
+            </tr>
+            <tr>
+              <th>Father Mobile: </th>
+              <td><%= @student.father_mobile %></td>
+            </tr>
+            <tr>
+              <th>Mother Mobile: </th>
+              <td><%= @student.mother_mobile %></td>
+            </tr>
+            <tr>
+              <th>Father Email: </th>
+              <td><%= @student.father_email %></td>
+            </tr>
+            <tr>
+              <th>Mother Email: </th>
+              <td><%= @student.mother_email %></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="contact_info">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th>Residential Address: </th>
+              <td><%= @student.residential_address %></td>
+            </tr>
+            <tr>
+              <th>Permanent Address: </th>
+              <td><%= @student.permanent_address %></td>
+            </tr>
+            <tr>
+              <th>Mobile: </th>
+              <td><%= @student.student_mobile %></td>
+            </tr>
+            <tr>
+              <th>Email: </th>
+              <td><%= @student.student_email %></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="academic_info">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th>Academic Year: </th>
+              <td><%= @student.academic_year.academic_year %></td>
+            </tr>
+            <tr>
+              <th>Standard: </th>
+              <td><%= @student.standard.name %></td>
+            </tr>
+            <tr>
+              <th>Division: </th>
+              <td><%= @student.division.name %></td>
+            </tr>
+            <tr>
+              <th>Roll NO: </th>
+              <td><%= @student.roll_no %></td>
+            </tr>
+            <tr>
+              <th>PRN: </th>
+              <td><%= @student.prn %></td>
+            </tr>
+            <tr>
+              <th>Last Attended school: </th>
+              <td><%= @student.last_school_attended %></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="fee_details">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              Fees
+            </div>
+            <div class="panel-body">
+              <ul class="list-group">
+                <% @student.fee_categories.each do |fee| %>
+                    <li class="list-group-item">
+                      <%= fee.name %> <span class="label label-info pull-right"><%= fee.amount %></span>
+                    </li>
+                <% end %>
+
+                <li class="list-group-item">
+                  <strong>Total: </strong> <span class="label label-danger pull-right"><%= @student.total_fee %></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               students_path, :class => 'btn btn-default'  %>

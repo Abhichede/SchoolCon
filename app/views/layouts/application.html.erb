@@ -69,6 +69,7 @@
                 <li><%= link_to 'ACADEMIC-YEAR', academic_years_path %></li>
                 <li><%= link_to 'CLASS-TEACHER', class_teachers_path %></li>
                 <li><%= link_to 'ATTENDANCE', attendances_path %></li>
+                <li><%= link_to 'FEE CATEGORIES', fee_categories_path %></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -100,12 +101,13 @@
       </div>
     </div>
 
+
     <div class="container" id="mainPage">
       <div class="row">
         <%= bootstrap_flash %>
         <%= yield %>
         <div id='remote_container'></div>
-        
+
         <div id="overlay">
           <div class="spinner" id="spinner">
             <div class="rect1"></div>
@@ -115,7 +117,7 @@
             <div class="rect5"></div>
           </div>
         </div>
-      
+
       </div><!--/row-->
 
       <footer class="footer">

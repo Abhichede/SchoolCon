@@ -5,8 +5,12 @@ class AttendancesController < ApplicationController
   # GET /attendances.json
   def index
     if params[:standard_id] && params[:division] && params[:date] && params[:subject]
-      @attendance = Attendance.where(:standard_id => params[:standard_id], :division_id => params[:division], :date => params[:date], :subject_id => params[:subject]).limit(1).last
-      @students = Division.find(params[:division]).students
+      @attendance = Attendance.where(:standard_id => params[:standard_id],
+                                     :division_id => params[:division],
+                                     :date => params[:date], :subject_id => params[:subject]).limit(1).last
+      @standard = Standard.find(params[:standard_id])
+      @division = Division.find(params[:division])
+      @students = @division.students
     else
       @attendances = Attendance.all
     end
@@ -34,7 +38,9 @@ class AttendancesController < ApplicationController
 
     respond_to do |format|
       if @attendance.save
-        format.html { redirect_to @attendance, notice: 'Attendance was successfully created.' }
+        format.html { redirect_to controller: 'attendances', action: 'index',
+                                  standard_id: @attendance.standard_id, division: @attendance.division_id,
+                                  subject: @attendance.subject_id, date: @attendance.date, notice: 'Attendance was successfully created.' }
         format.json { render :show, status: :created, location: @attendance }
       else
         format.html { render :new }

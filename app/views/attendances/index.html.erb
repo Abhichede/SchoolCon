@@ -9,8 +9,6 @@
     </span>
   </h1>
 </div>
-<hr/>
-
 <div class="row">
   <form action="<%= attendances_path %>">
     <div class="form-group">
@@ -38,8 +36,22 @@
 </div>
 <br/>
 <div class="row">
+  <div class="col-lg-6"></div>
+  <div class="col-lg-6">
+    <% if params[:standard_id] && params[:division] && params[:date] && params[:subject] %>
+        <h4>
+          <ul class="list-group">
+            <li class="list-group-item">Showing result for: <span class="pull-right"><%= @attendance.standard.name %> - <%= @attendance.division.name %></span></li>
+            <li class="list-group-item">Date: <span class="pull-right"><%= @attendance.date %></span> </li>
+            <li class="list-group-item">Subject: <span class="pull-right"><%= @attendance.subject.name %></span></li>
+            <li class="list-group-item"><span><%= link_to 'Edit', edit_attendance_path(@attendance), class: 'btn btn-info btn-block' %></span></li>
+          </ul>
+        </h4>
+    <% end %>
+  </div>
+</div>
+<div class="row" style="overflow: auto; max-height: 30rem;">
   <% if !@students.nil? && !@attendance.nil? %>
-      <span class="pull-right"><%= link_to 'Edit', edit_attendance_path(@attendance), class: 'btn btn-info' %></span>
   <table class="table table-stripped">
     <thead>
       <tr>
@@ -54,7 +66,9 @@
           <td><%= student.roll_no %></td>
             <td> <%= student.self_full_name %> </td>
           <td>
-            <span class="pull-right label label-<%= @attendance.att_data["#{student.id}"] === 'on' ? 'primary' : 'danger' %>"><%= @attendance["#{student.id}"] === 'on' ? 'Present' : 'Absent' %></span>
+            <span class="pull-right label label-<%= @attendance.att_data["#{student.id}"] === 'on' ? 'primary' : 'danger' %>">
+              <%= @attendance.att_data["#{student.id}"] === 'on' ? 'Present' : 'Absent' %>
+            </span>
           </td>
         </tr>
       <% end %>
@@ -66,6 +80,16 @@
 
 <script type="text/javascript">
     $(function () {
+        $(document).ready(function () {
+            $('select#standard_id option').each(function () {
+                if ($(this).is(':selected')) {
+                    if ($(this).val() > 0) {
+                        get_divisions();
+                    }
+                }
+            });
+        });
+
         $('select#standard_id').on('click', function () {
             get_divisions();
         });

@@ -397,6 +397,11 @@
     </div>
   </div>
 
+    <div id="student_fees">
+
+    </div>
+
+
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
@@ -422,8 +427,14 @@
 
 <script type="text/javascript">
     $(function () {
+        $(document).ready(function () {
+          get_divisions();
+          get_fee_structure();
+        });
+
         $('select#student_standard_id').on('click', function () {
             get_divisions();
+            get_fee_structure();
         });
 
         var get_divisions = function () {
@@ -433,7 +444,19 @@
 
             $.ajax({
                 url: '<%= get_divisions_students_url %>',
-                data: 'standard_id='+ standard_id,
+                data: 'standard_id='+ standard_id + '&id=<%= @student.id %>',
+                type: 'GET'
+            });
+        };
+
+        var get_fee_structure = function () {
+            var standard_id = $('select#student_standard_id').val();
+
+            console.log('clicked event');
+
+            $.ajax({
+                url: '<%= get_fee_structures_url %>',
+                data: 'standard_id='+ standard_id + '&id=<%= @student.id %>',
                 type: 'GET'
             });
         };

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fee_categories
   resources :attendances
   resources :class_teachers
   resources :castes
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   get 'get_subjects_attendance', to: 'attendances#get_subjects_attendance'
 
   get 'get_divisions_students', to: 'students#get_divisions_students'
+  get 'get_fee_structures', to: 'students#get_fee_structures'
 
   get 'teacher_wise_timetable', to: 'time_tables#teacherwise'
   get 'non_teaching_staff', to: 'teachers#non_teaching'
