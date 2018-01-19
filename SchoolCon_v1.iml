@@ -67,16 +67,13 @@
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.4.10, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.2.0, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.8.1, ruby-2.3.5-p376 (1)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="pg (v1.0.0, ruby-2.3.5-p376 (1)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.4, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v3.11.0, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.0.3, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v5.0.6, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, ruby-2.3.5-p376 (1)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails_12factor (v0.0.3, ruby-2.3.5-p376 (1)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails_serve_static_assets (v0.0.5, ruby-2.3.5-p376 (1)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails_stdout_logging (v0.0.5, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v5.0.6, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v12.3.0, ruby-2.3.5-p376 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.10.2, ruby-2.3.5-p376 (1)) [gem]" level="application" />

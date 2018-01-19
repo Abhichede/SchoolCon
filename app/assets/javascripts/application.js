@@ -11,7 +11,6 @@
 // about supported directives.
 //
 // require rails-ujs
-// require turbolinks
 //= require jquery
 //= require jquery_ujs
 //= require jquery.validate
@@ -20,6 +19,7 @@
 //= require bootstrap-multiselect
 //= require moment
 //= require bootstrap-datetimepicker
+//= require turbolinks
 //= require_tree .
 
 var getUrlParameter = function getUrlParameter(sParam) {
