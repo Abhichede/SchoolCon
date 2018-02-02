@@ -387,13 +387,39 @@
         </div>
         <%=f.error_span(:joining_date) %>
       </div>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Previous Details</div>
+    <div class="panel-body">
       <div class="form-group">
         <%= f.label :last_school_attended, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :last_school_attended, :class => 'form-control' %>
         </div>
         <%=f.error_span(:last_school_attended) %>
+
+        <%= f.label :prev_standard, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :prev_standard, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:prev_standard) %>
       </div>
+      <div class="form-group">
+        <%= f.label :prev_year, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :prev_year, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:prev_year) %>
+
+        <%= f.label :prev_marks, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :prev_marks, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:prev_marks) %>
+      </div>
+
     </div>
   </div>
 

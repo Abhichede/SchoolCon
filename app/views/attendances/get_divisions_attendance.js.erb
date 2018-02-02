@@ -1,7 +1,3 @@
 <% if @filtered_divisions  %>
-$('#division').html("<%= escape_javascript options_for_select(@divisions.map {|division| [division.name, division.id]}.insert(0, '')) %>");
-<% end %>
-
-<% if !@attendance.nil? %>
-  $('#division').val(<%= @attendance.division.id %>);
+$('#division').html("<%= escape_javascript options_from_collection_for_select(@divisions, :id, :name) %>");
 <% end %>

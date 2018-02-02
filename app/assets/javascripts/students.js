@@ -1,7 +1,6 @@
 $(function () {
    $('input#same_as_residential').on('change', function () {
        var self = $('input#same_as_residential');
-
        if(self.is(':checked')){
            $('#student_permanent_address_one').val($('#student_residential_address_one').val());
            $('#student_permanent_address_two').val($('#student_residential_address_two').val());

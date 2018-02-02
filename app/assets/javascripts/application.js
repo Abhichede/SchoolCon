@@ -19,7 +19,7 @@
 //= require bootstrap-multiselect
 //= require moment
 //= require bootstrap-datetimepicker
-//= require turbolinks
+// require turbolinks
 //= require_tree .
 
 var getUrlParameter = function getUrlParameter(sParam) {

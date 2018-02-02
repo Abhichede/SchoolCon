@@ -1,191 +1,243 @@
 <%- model_class = Student -%>
-<div class="row">
-  <div class="row">
-    <!-- Nav tabs -->
-    <div class="card">
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#personal_info" aria-controls="personal_info" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Personal Info</a></li>
-        <li role="presentation"><a href="#parent_info" aria-controls="parent_info" role="tab" data-toggle="tab"><i class="fa fa-user-circle-o"></i> Parent Info</a></li>
-        <li role="presentation"><a href="#contact_info" aria-controls="contact_info" role="tab" data-toggle="tab"><i class="fa fa-phone"></i> Contact Details</a></li>
-        <li role="presentation"><a href="#academic_info" aria-controls="academic_info" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i> Academic Details</a></li>
-        <li role="presentation"><a href="#fee_details" aria-controls="fee_details" role="tab" data-toggle="tab"><i class="fa fa-inr"></i> Fee Details</a></li>
-      </ul>
+  <!-- Nav tabs -->
+  <div class="card">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#personal_info" aria-controls="personal_info" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Personal Info</a></li>
+      <li role="presentation"><a href="#parent_info" aria-controls="parent_info" role="tab" data-toggle="tab"><i class="fa fa-user-circle-o"></i> Parent Info</a></li>
+      <li role="presentation"><a href="#contact_info" aria-controls="contact_info" role="tab" data-toggle="tab"><i class="fa fa-phone"></i> Contact Details</a></li>
+      <li role="presentation"><a href="#academic_info" aria-controls="academic_info" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i> Academic Details</a></li>
+      <li role="presentation"><a href="#previous_info" aria-controls="previous_info" role="tab" data-toggle="tab"><i class="fa fa-backward"></i> Previous Details</a></li>
+      <li role="presentation"><a href="#fee_details" aria-controls="fee_details" role="tab" data-toggle="tab"><i class="fa fa-inr"></i> Fee Details</a></li>
+    </ul>
 
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="personal_info">
-          <table class="table table-bordered">
-            <tbody>
-              <tr>
-                <th>Name: </th>
-                <td><%= @student.self_full_name %></td>
-              </tr>
-              <tr>
-                <th>Date of birth: </th>
-                <td><%= @student.date_of_birth %></td>
-              </tr>
-              <tr>
-                <th>Birth Place: </th>
-                <td><%= @student.birth_place %></td>
-              </tr>
-              <tr>
-                <th>Gender: </th>
-                <td><%= @student.gender %></td>
-              </tr>
-              <tr>
-                <th>Blood group: </th>
-                <td><%= @student.blood_group %></td>
-              </tr>
-              <tr>
-                <th>Nationality: </th>
-                <td><%= @student.nationality %></td>
-              </tr>
-              <tr>
-                <th>Mother tongue: </th>
-                <td><%= @student.mother_tongue %></td>
-              </tr>
-              <tr>
-                <th>Adhar: </th>
-                <td><%= @student.student_adhar %></td>
-              </tr>
-              <tr>
-                <th>Caste Category: </th>
-                <td><%= @student.caste_category.category %></td>
-              </tr>
-              <tr>
-                <th>Caste: </th>
-                <td><%= @student.caste.name %></td>
-              </tr>
-              <tr>
-                <th>Religion: </th>
-                <td><%= @student.religion.name %></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="parent_info">
-          <table class="table table-bordered">
-            <tbody>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="personal_info">
+        <table class="table table-bordered">
+          <tbody>
             <tr>
-              <th>Father Name: </th>
-              <td><%= @student.father_full_name %></td>
+              <th>Name: </th>
+              <td><%= @student.self_full_name %></td>
             </tr>
             <tr>
-              <th>Mother Name: </th>
-              <td><%= @student.mother_full_name %></td>
+              <th>Date of birth: </th>
+              <td><%= @student.date_of_birth %></td>
             </tr>
             <tr>
-              <th>Father Occupation: </th>
-              <td><%= @student.father_occupation %></td>
+              <th>Birth Place: </th>
+              <td><%= @student.birth_place %></td>
             </tr>
             <tr>
-              <th>Mother Occupation: </th>
-              <td><%= @student.mother_occupation %></td>
+              <th>Gender: </th>
+              <td><%= @student.gender %></td>
             </tr>
             <tr>
-              <th>Father ADHAR: </th>
-              <td><%= @student.father_adhar %></td>
+              <th>Blood group: </th>
+              <td><%= @student.blood_group %></td>
             </tr>
             <tr>
-              <th>Mother ADHAR: </th>
-              <td><%= @student.mother_adhar %></td>
+              <th>Nationality: </th>
+              <td><%= @student.nationality %></td>
             </tr>
             <tr>
-              <th>Father Mobile: </th>
-              <td><%= @student.father_mobile %></td>
+              <th>Mother tongue: </th>
+              <td><%= @student.mother_tongue %></td>
             </tr>
             <tr>
-              <th>Mother Mobile: </th>
-              <td><%= @student.mother_mobile %></td>
+              <th>Adhar: </th>
+              <td><%= @student.student_adhar %></td>
             </tr>
             <tr>
-              <th>Father Email: </th>
-              <td><%= @student.father_email %></td>
+              <th>Caste Category: </th>
+              <td><%= @student.caste_category.category %></td>
             </tr>
             <tr>
-              <th>Mother Email: </th>
-              <td><%= @student.mother_email %></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="contact_info">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th>Residential Address: </th>
-              <td><%= @student.residential_address %></td>
+              <th>Caste: </th>
+              <td><%= @student.caste.name %></td>
             </tr>
             <tr>
-              <th>Permanent Address: </th>
-              <td><%= @student.permanent_address %></td>
+              <th>Religion: </th>
+              <td><%= @student.religion.name %></td>
             </tr>
-            <tr>
-              <th>Mobile: </th>
-              <td><%= @student.student_mobile %></td>
-            </tr>
-            <tr>
-              <th>Email: </th>
-              <td><%= @student.student_email %></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="academic_info">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th>Academic Year: </th>
-              <td><%= @student.academic_year.academic_year %></td>
-            </tr>
-            <tr>
-              <th>Standard: </th>
-              <td><%= @student.standard.name %></td>
-            </tr>
-            <tr>
-              <th>Division: </th>
-              <td><%= @student.division.name %></td>
-            </tr>
-            <tr>
-              <th>Roll NO: </th>
-              <td><%= @student.roll_no %></td>
-            </tr>
-            <tr>
-              <th>PRN: </th>
-              <td><%= @student.prn %></td>
-            </tr>
-            <tr>
-              <th>Last Attended school: </th>
-              <td><%= @student.last_school_attended %></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="fee_details">
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              Fees
-            </div>
-            <div class="panel-body">
-              <ul class="list-group">
-                <% @student.fee_categories.each do |fee| %>
-                    <li class="list-group-item">
-                      <%= fee.name %> <span class="label label-info pull-right"><%= fee.amount %></span>
-                    </li>
-                <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="parent_info">
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th>Father Name: </th>
+            <td><%= @student.father_full_name %></td>
+          </tr>
+          <tr>
+            <th>Mother Name: </th>
+            <td><%= @student.mother_full_name %></td>
+          </tr>
+          <tr>
+            <th>Father Occupation: </th>
+            <td><%= @student.father_occupation %></td>
+          </tr>
+          <tr>
+            <th>Mother Occupation: </th>
+            <td><%= @student.mother_occupation %></td>
+          </tr>
+          <tr>
+            <th>Father ADHAR: </th>
+            <td><%= @student.father_adhar %></td>
+          </tr>
+          <tr>
+            <th>Mother ADHAR: </th>
+            <td><%= @student.mother_adhar %></td>
+          </tr>
+          <tr>
+            <th>Father Mobile: </th>
+            <td><%= @student.father_mobile %></td>
+          </tr>
+          <tr>
+            <th>Mother Mobile: </th>
+            <td><%= @student.mother_mobile %></td>
+          </tr>
+          <tr>
+            <th>Father Email: </th>
+            <td><%= @student.father_email %></td>
+          </tr>
+          <tr>
+            <th>Mother Email: </th>
+            <td><%= @student.mother_email %></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="contact_info">
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th>Residential Address: </th>
+            <td><%= @student.residential_address %></td>
+          </tr>
+          <tr>
+            <th>Permanent Address: </th>
+            <td><%= @student.permanent_address %></td>
+          </tr>
+          <tr>
+            <th>Mobile: </th>
+            <td><%= @student.student_mobile %></td>
+          </tr>
+          <tr>
+            <th>Email: </th>
+            <td><%= @student.student_email %></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="academic_info">
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th>Academic Year: </th>
+            <td><%= @student.academic_year.academic_year %></td>
+          </tr>
+          <tr>
+            <th>Standard: </th>
+            <td><%= @student.standard.name %></td>
+          </tr>
+          <tr>
+            <th>Division: </th>
+            <td><%= @student.division.name %></td>
+          </tr>
+          <tr>
+            <th>Roll NO: </th>
+            <td><%= @student.roll_no %></td>
+          </tr>
+          <tr>
+            <th>PRN: </th>
+            <td><%= @student.prn %></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="previous_info">
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th>Last Attended school: </th>
+            <td><%= @student.last_school_attended %></td>
+          </tr>
+          <tr>
+            <th>Previous Standard: </th>
+            <td><%= @student.prev_standard %></td>
+          </tr>
+          <tr>
+            <th>Previous Year: </th>
+            <td><%= @student.prev_year %></td>
+          </tr>
+          <tr>
+            <th>Previous Marks: </th>
+            <td><%= @student.prev_marks %></td>
+          </tr>
 
-                <li class="list-group-item">
-                  <strong>Total: </strong> <span class="label label-danger pull-right"><%= @student.total_fee %></span>
-                </li>
-              </ul>
-            </div>
+          </tbody>
+        </table>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="fee_details">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            Fees
           </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <% @student.student_wise_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+                  <li class="list-group-item">
+                    <%= fee.fee_category %> <span class="label label-info pull-right"><%= fee.amount %></span>
+                  </li>
+              <% end %>
 
+              <li class="list-group-item">
+                <strong>Total: </strong> <span class="label label-danger pull-right"><%= @student.current_total_fee %></span>
+              </li>
+            </ul>
+
+            <span class="pull-right">
+              <%= link_to 'Fee Payment', {controller: 'student_fee_payments', action: 'new', fee_type: 'student_wise', student_id: @student.id}, class: 'btn btn-primary' %>
+            </span>
+          </div>
         </div>
+
+        <% if @student.current_total_paid > 0 %>
+          <div class="panel panel-primary">
+          <div class="panel-heading">
+            Paid Transactions
+          </div>
+          <div class="panel-body">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>Payment Date</th>
+                <th>Payment Mode</th>
+                <th>Payment Notes</th>
+                <th>Amount</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% counter = 0 %>
+              <% @student.student_fee_payments.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+                  <tr>
+                    <td><%= counter += 1 %></td>
+                    <td><%= fee.payment_date %></td>
+                    <td><%= fee.payment_mode %></td>
+                    <td><%= fee.payment_desc %></td>
+                    <td><%= fee.amount %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
-</div>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               students_path, :class => 'btn btn-default'  %>

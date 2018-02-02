@@ -9,7 +9,7 @@
     </span>
   </h1>
 </div>
-<div class="row">
+<div class="row well">
   <form action="<%= attendances_path %>">
     <div class="form-group">
       <label class="control-label col-lg-1" for="standard_id">Class</label>
@@ -18,7 +18,7 @@
       </div>
       <label class="control-label col-lg-1" for="division">Division</label>
       <div class="col-lg-1">
-        <%= select_tag "division", options_for_select([[!params[:division].nil? ? Division.find(params[:division]).name : params[:division], params[:division]]]), include_blank: 'Subjects', class: 'form-control' %>
+        <%= select_tag "division", options_from_collection_for_select(Division.all, "id", "name", :selected => params[:division], disabled: 'Divisions'), include_blank: 'Divisions', class: 'form-control' %>
       </div>
       <label class="control-label col-lg-1" for="division">Division</label>
       <div class="col-lg-2">
@@ -38,21 +38,27 @@
 <div class="row">
   <div class="col-lg-6"></div>
   <div class="col-lg-6">
-    <% if params[:standard_id] && params[:division] && params[:date] && params[:subject] %>
+    <% if !@attendance.nil? %>
+      <h4>
+        <ul class="list-group">
+          <li class="list-group-item">Showing result for: <span class="pull-right"><%= @attendance.standard.name %> - <%= @attendance.division.name %></span></li>
+          <li class="list-group-item">Date: <span class="pull-right"><%= @attendance.date %></span> </li>
+          <li class="list-group-item">Subject: <span class="pull-right"><%= @attendance.subject.name %></span></li>
+          <li class="list-group-item"><span><%= link_to 'Edit', edit_attendance_path(@attendance), class: 'btn btn-info btn-block' %></span></li>
+        </ul>
+      </h4>
+    <% else %>
         <h4>
           <ul class="list-group">
-            <li class="list-group-item">Showing result for: <span class="pull-right"><%= @attendance.standard.name %> - <%= @attendance.division.name %></span></li>
-            <li class="list-group-item">Date: <span class="pull-right"><%= @attendance.date %></span> </li>
-            <li class="list-group-item">Subject: <span class="pull-right"><%= @attendance.subject.name %></span></li>
-            <li class="list-group-item"><span><%= link_to 'Edit', edit_attendance_path(@attendance), class: 'btn btn-info btn-block' %></span></li>
+            <li class="list-group-item">Nothing Found</li>
           </ul>
         </h4>
     <% end %>
   </div>
 </div>
-<div class="row" style="overflow: auto; max-height: 30rem;">
+<div class="row well" style="overflow: auto; max-height: 30rem;">
   <% if !@students.nil? && !@attendance.nil? %>
-  <table class="table table-stripped">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Roll No.</th>
@@ -66,7 +72,7 @@
           <td><%= student.roll_no %></td>
             <td> <%= student.self_full_name %> </td>
           <td>
-            <span class="pull-right label label-<%= @attendance.att_data["#{student.id}"] === 'on' ? 'primary' : 'danger' %>">
+            <span class="label label-<%= @attendance.att_data["#{student.id}"] === 'on' ? 'primary' : 'danger' %>">
               <%= @attendance.att_data["#{student.id}"] === 'on' ? 'Present' : 'Absent' %>
             </span>
           </td>

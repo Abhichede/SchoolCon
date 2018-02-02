@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :set_student, only: %i[show edit update destroy]
 
   # GET /students
   # GET /students.json
@@ -9,8 +9,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1
   # GET /students/1.json
-  def show
-  end
+  def show; end
 
   # GET /students/new
   def new
@@ -18,8 +17,7 @@ class StudentsController < ApplicationController
   end
 
   # GET /students/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /students
   # POST /students.json
@@ -28,6 +26,7 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
+        update_student_wise_fee(@student)
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
       else
@@ -41,7 +40,12 @@ class StudentsController < ApplicationController
   # PATCH/PUT /students/1.json
   def update
     respond_to do |format|
+      if !@student.student_wise_fees.nil?
+        StudentWiseFee.where(student_id: @student.id,
+                             academic_year_id: @student.academic_year_id).each(&:destroy)
+      end
       if @student.update(student_params)
+        update_student_wise_fee(@student)
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
       else
@@ -66,9 +70,7 @@ class StudentsController < ApplicationController
     @divisions = @standard.divisions
     @filtered_divisions = true
 
-    if !params[:id].blank?
-      @student = Student.find(params[:id])
-    end
+    @student = Student.find(params[:id]) unless params[:id].blank?
   end
 
   def get_fee_structures
@@ -77,31 +79,41 @@ class StudentsController < ApplicationController
       @fee_structures = @standard.fee_categories
     end
 
-    if !params[:id].blank?
-      @student = Student.find(params[:id])
+    @student = Student.find(params[:id]) unless params[:id].blank?
+  end
+
+  def update_student_wise_fee(student)
+    @student = student
+    @student.fee_categories.each do |fee|
+      @student_wise = StudentWiseFee.new(student_id: @student.id, fee_category: fee.name,
+                                         amount: fee.amount, academic_year_id: @student.academic_year.id,
+                                         is_paid: false)
+      @student_wise.save
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_student
-      @student = Student.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def student_params
-      params.require(:student).permit(:first_name, :middle_name, :last_name, :date_of_birth, :birth_place,
-                                      :gender, :student_mobile, :blood_group, :nationality, :mother_tongue,
-                                      :caste_category_id, :caste_id, :religion_id, :father_first_name, :father_middle_name,
-                                      :father_last_name, :mother_first_name, :mother_middle_name,
-                                      :mother_last_name, :residential_address_one, :residential_address_two,
-                                      :residential_city, :residential_state, :residential_country,
-                                      :residential_pincode, :permanent_address_one, :permanent_address_two,
-                                      :permanent_city, :permanent_state, :permanent_country, :permanent_pincode,
-                                      :father_mobile, :mother_mobile, :father_occupation, :mother_occupation,
-                                      :father_email, :mother_email, :student_email, :standard_id, :prn,
-                                      :last_school_attended, :username, :password, :academic_year_id,
-                                      :division_id, :joining_date, :roll_no, :student_adhar, :father_adhar,
-                                      :mother_adhar, :fee_category_ids => [])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_student
+    @student = Student.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def student_params
+    params.require(:student).permit(:first_name, :middle_name, :last_name, :date_of_birth, :birth_place,
+                                    :gender, :student_mobile, :blood_group, :nationality, :mother_tongue,
+                                    :caste_category_id, :caste_id, :religion_id, :father_first_name, :father_middle_name,
+                                    :father_last_name, :mother_first_name, :mother_middle_name,
+                                    :mother_last_name, :residential_address_one, :residential_address_two,
+                                    :residential_city, :residential_state, :residential_country,
+                                    :residential_pincode, :permanent_address_one, :permanent_address_two,
+                                    :permanent_city, :permanent_state, :permanent_country, :permanent_pincode,
+                                    :father_mobile, :mother_mobile, :father_occupation, :mother_occupation,
+                                    :father_email, :mother_email, :student_email, :standard_id, :prn,
+                                    :last_school_attended, :username, :password, :academic_year_id,
+                                    :division_id, :joining_date, :roll_no, :student_adhar, :father_adhar,
+                                    :prev_standard, :prev_year, :prev_marks,
+                                    :mother_adhar, fee_category_ids: [])
+  end
 end

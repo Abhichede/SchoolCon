@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180112133707) do
+ActiveRecord::Schema.define(version: 20180201081311) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -94,6 +94,38 @@ ActiveRecord::Schema.define(version: 20180112133707) do
     t.index ["teacher_id", "standard_id"], name: "index_standards_teachers_on_teacher_id_and_standard_id"
   end
 
+  create_table "student_fee_payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "student_id"
+    t.integer "academic_year_id"
+    t.date "payment_date"
+    t.string "payment_mode"
+    t.text "payment_desc"
+    t.string "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "student_wise_discounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "student_id"
+    t.string "description"
+    t.string "amount"
+    t.integer "academic_year_id"
+    t.boolean "is_payment_done"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "student_wise_fees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "student_id"
+    t.string "fee_category"
+    t.string "description"
+    t.string "amount"
+    t.integer "academic_year_id"
+    t.boolean "is_paid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "first_name"
     t.string "middle_name"
@@ -147,6 +179,9 @@ ActiveRecord::Schema.define(version: 20180112133707) do
     t.string "father_adhar"
     t.string "mother_adhar"
     t.integer "division_id"
+    t.string "prev_standard"
+    t.string "prev_year"
+    t.string "prev_marks"
   end
 
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

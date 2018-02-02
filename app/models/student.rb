@@ -8,6 +8,10 @@ class Student < ApplicationRecord
 
   has_and_belongs_to_many :fee_categories
 
+  has_many :student_wise_fees
+  has_many :student_wise_discounts
+  has_many :student_fee_payments
+
   def self_full_name
     "#{first_name} #{middle_name} #{last_name}"
   end
@@ -40,5 +44,39 @@ class Student < ApplicationRecord
     #{permanent_city}, #{permanent_state} \n
     #{permanent_country}, #{permanent_pincode}"
   end
+
+  def current_total_fee
+    total_amount = 0.0
+    student_wise_fees.where(academic_year_id: academic_year_id).each do |fee|
+      total_amount += fee.amount.to_f
+    end
+    total_amount
+  end
+
+  def current_total_paid
+    total_amount = 0.0
+    student_fee_payments.where(academic_year_id: academic_year_id).each do |fee|
+      total_amount += fee.amount.to_f
+    end
+    total_amount
+  end
+
+  def current_total_discount
+    total_amount = 0.0
+    student_wise_discounts.where(academic_year_id: academic_year_id).each do |fee|
+      total_amount += fee.amount.to_f
+    end
+    total_amount
+  end
+
+  def total_fee_with_discount_fine
+    total_amount = (current_total_fee - current_total_discount)
+  end
+
+  def current_balance_amount
+    total_amount = (total_fee_with_discount_fine - current_total_paid)
+  end
+
+
 
 end

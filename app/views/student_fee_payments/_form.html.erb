@@ -1,0 +1,139 @@
+<% if params[:fee_type] === 'student_wise' && !params[:student_id].nil? %>
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Sr. No.</th>
+              <th>Particulars</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% counter = 0 %>
+          <% @student.student_wise_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+              <tr>
+                <td><%= counter += 1 %></td>
+                <td><%= fee.fee_category %></td>
+                <td><%= fee.amount %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th>Total fees: </th> <td><%= @student.current_total_fee %></td>
+            </tr>
+            <tr>
+              <th>Total Discount: </th><td><%= @student.current_total_discount %></td>
+            </tr>
+            <tr>
+              <th>Total Fine: </th><td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel-danger">
+      <div class="panel-heading text-center">
+        Summary
+      </div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th><span class="pull-right">Total Amount to pay: </span></th> <td><%= @student.total_fee_with_discount_fine %></td>
+          </tr>
+          <tr>
+            <th><span class="pull-right">Total amount paid: </span></th><td><%= @student.current_total_paid %></td>
+          </tr>
+          <tr>
+            <th><span class="pull-right">Total Balance: </span></th><td><%= @student.current_balance_amount %></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <% if @student.current_balance_amount > 0 %>
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center text-capitalize">Little information about payment</div>
+          <div class="panel-body">
+            <%= form_for @student_fee_payment, :html => { :class => "form-horizontal student_fee_payment" } do |f| %>
+
+              <% if @student_fee_payment.errors.any? %>
+                  <div id="error_expl" class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title"><%= pluralize(@student_fee_payment.errors.count, "error") %> prohibited this student_fee_payment from being saved:</h3>
+                    </div>
+                    <div class="panel-body">
+                      <ul>
+                        <% @student_fee_payment.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+              <% end %>
+
+              <div class="form-group">
+                <%= f.label :payment_mode, :class => 'control-label col-lg-2' %>
+                <div class="col-lg-4">
+                  <%= f.select(:payment_mode, options_for_select([['Payment Mode'],['CASH','CASH'],['CHEQUE','CHEQUE'], ['RTGS','RTGS'], ['IMPS','IMPS'], ['Bank Transfer','Bank Transfer']],
+                                                                   :disabled=> 'Payment Mode', selected: @student_fee_payment.payment_mode),
+                               {}, class: 'form-control') %>
+                </div>
+                <%=f.error_span(:payment_mode) %>
+
+
+                <%= f.label :payment_date, :class => 'control-label col-lg-2' %>
+                <div class="col-lg-4">
+                  <%= f.text_field :payment_date, :class => 'form-control datepicker' %>
+                </div>
+                <%=f.error_span(:payment_date) %>
+              </div>
+              <div class="form-group">
+                <%= f.label :payment_desc, :class => 'control-label col-lg-2' %>
+                <div class="col-lg-4">
+                  <%= f.text_area :payment_desc, :class => 'form-control' %>
+                </div>
+                <%=f.error_span(:payment_desc) %>
+
+                <%= f.label :amount, :class => 'control-label col-lg-2' %>
+                <div class="col-lg-4">
+                  <%= f.text_field :amount, :class => 'form-control' %>
+                </div>
+                <%=f.error_span(:amount) %>
+              </div>
+
+                <%= f.hidden_field :student_id, value: @student.id %>
+                <%= f.hidden_field :academic_year_id, value: @student.academic_year.id %>
+
+              <div class="form-group">
+                <div class="col-lg-offset-10 col-lg-2">
+                  <%= f.submit 'Pay Fee', :class => 'btn btn-primary' %>
+                  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                              student_fee_payments_path, :class => 'btn btn-default' %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
+<% end %>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#student_fee_payment_payment_date').datetimepicker({
+            format: 'DD-MM-YYYY'
+        });
+    });
+</script>

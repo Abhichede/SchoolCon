@@ -1,0 +1,2 @@
+module StudentFeePaymentsHelper
+end
