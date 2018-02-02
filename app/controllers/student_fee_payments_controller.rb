@@ -31,7 +31,7 @@ class StudentFeePaymentsController < ApplicationController
 
     respond_to do |format|
       if @student_fee_payment.save
-        format.html { redirect_to @student_fee_payment, notice: 'Student fee payment was successfully created.' }
+        format.html { redirect_to student_path(@student_fee_payment.student), notice: 'Student fee payment was successfully created.' }
         format.json { render :show, status: :created, location: @student_fee_payment }
       else
         format.html { render :new }

@@ -120,7 +120,7 @@
                 <div class="col-lg-offset-10 col-lg-2">
                   <%= f.submit 'Pay Fee', :class => 'btn btn-primary' %>
                   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                              student_fee_payments_path, :class => 'btn btn-default' %>
+                              student_path(@student), :class => 'btn btn-default' %>
                 </div>
               </div>
             <% end %>
