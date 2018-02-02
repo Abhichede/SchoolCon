@@ -44,9 +44,6 @@ GEM
       rails (>= 4.0.0)
     bootstrap3-datetimepicker-rails (4.17.47)
       momentjs-rails (>= 2.8.1)
-    bootstrap_sb_admin_base_v2 (0.3.6)
-      font-awesome-rails
-      jquery-rails
     builder (3.2.3)
     byebug (9.1.0)
     coffee-rails (4.2.2)
@@ -194,7 +191,6 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-multiselect-rails
   bootstrap3-datetimepicker-rails (~> 4.17.47)
-  bootstrap_sb_admin_base_v2
   byebug
   coffee-rails (~> 4.2)
   font-awesome-rails
