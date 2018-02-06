@@ -3,13 +3,11 @@
 one:
   student_id: 1
   academic_year_id: 1
-  description: MyText
+  desciption: MyText
   amount: MyString
-  is_payment_done: false
 
 two:
   student_id: 1
   academic_year_id: 1
-  description: MyText
+  desciption: MyText
   amount: MyString
-  is_payment_done: false

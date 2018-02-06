@@ -11,6 +11,8 @@ class Student < ApplicationRecord
   has_many :student_wise_fees
   has_many :student_wise_discounts
   has_many :student_fee_payments
+  has_many :student_wise_fines
+  has_many :student_wise_instant_fees
 
   def self_full_name
     "#{first_name} #{middle_name} #{last_name}"
@@ -69,8 +71,24 @@ class Student < ApplicationRecord
     total_amount
   end
 
+  def current_total_fine
+    total_amount = 0.0
+    student_wise_fines.where(academic_year_id: academic_year_id).each do |fee|
+      total_amount += fee.amount.to_f
+    end
+    total_amount
+  end
+
+  def current_total_instant_fee
+    total_amount = 0.0
+    student_wise_instant_fees.where(academic_year_id: academic_year_id).each do |fee|
+      total_amount += fee.amount.to_f
+    end
+    total_amount
+  end
+
   def total_fee_with_discount_fine
-    total_amount = (current_total_fee - current_total_discount)
+    total_amount = (current_total_fee - current_total_discount) + current_total_fine + current_total_instant_fee
   end
 
   def current_balance_amount

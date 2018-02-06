@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  wtf: "What the f*ck"
+  students: 'Students'
+  teachers: 'Teachers'
+  standards: 'Standards'
+  fee_collected: 'Fee Collected'

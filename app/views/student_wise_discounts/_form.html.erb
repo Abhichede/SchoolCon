@@ -1,0 +1,44 @@
+<%= form_for @student_wise_discount, :html => { :class => "form-horizontal student_wise_discount" } do |f| %>
+
+  <% if @student_wise_discount.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@student_wise_discount.errors.count, "error") %> prohibited this student_wise_discount from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @student_wise_discount.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :student_id, value: @student.id  %>
+  <%= f.hidden_field :academic_year_id, value: @student.academic_year.id %>
+
+
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :description, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:description) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :amount, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :amount, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:amount) %>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit 'Save', :class => 'btn btn-primary' %>
+    </div>
+  </div>
+
+<% end %>

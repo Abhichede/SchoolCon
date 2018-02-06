@@ -18,6 +18,10 @@ class StudentFeePaymentsController < ApplicationController
     if !params[:student_id].nil? || !params[:student_id].blank?
       @student = Student.find(params[:student_id])
     end
+
+    @student_wise_discount = StudentWiseDiscount.new
+    @student_wise_fine = StudentWiseFine.new
+    @student_wise_instant_fee = StudentWiseInstantFee.new
   end
 
   # GET /student_fee_payments/1/edit

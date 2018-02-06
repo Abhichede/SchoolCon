@@ -1,0 +1,80 @@
+<div class="panel panel-primary">
+  <div class="panel-body">
+    <div class="col-lg-3">
+      <button class="btn btn-primary btn-lg" style="width: 100%; height: 140px">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <span class="fa fa-graduation-cap " style="font-size: 50px;"></span>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <span style="font-size: 35px;"><%= @students.count %></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <%= t('students').upcase %>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="col-lg-3">
+      <button class="btn btn-primary btn-lg" style="width: 100%; height: 140px">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <span class="fa fa-user-circle " style="font-size: 50px;"></span>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <span style="font-size: 35px;"><%= @teachers.count %></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <%= t('teachers').upcase %>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="col-lg-3">
+      <button class="btn btn-primary btn-lg" style="width: 100%; height: 140px">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <span class="fa fa-book " style="font-size: 50px;"></span>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <span style="font-size: 35px;"><%= @standards.count %></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <%= t('standards').upcase %>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="col-lg-3">
+      <button class="btn btn-primary btn-lg" style="width: 100%; height: 140px;">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <span class="fa fa-money" style="font-size: 50px;"></span>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <span style="font-size: 25px;">
+              <%
+                amount = 0.0
+                @student_fee.each do |f|
+                   amount += f.amount.to_f
+                end
+              %>
+              &#8377; <%= amount %>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <%= t('fee_collected').upcase %>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

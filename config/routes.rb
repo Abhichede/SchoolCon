@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :student_wise_instant_fees
+  resources :student_wise_fines
+  resources :student_wise_discounts
+  root 'dashboard#index'
+
   resources :student_fee_payments
   resources :fee_categories
   resources :attendances
@@ -13,7 +18,6 @@ Rails.application.routes.draw do
 
   resources :time_tables
   resources :teachers
-  root 'standards#index'
   resources :subjects
   resources :standards
   
