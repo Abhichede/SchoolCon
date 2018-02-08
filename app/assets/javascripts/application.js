@@ -19,6 +19,8 @@
 //= require bootstrap-multiselect
 //= require moment
 //= require bootstrap-datetimepicker
+//= require fullcalendar
+//= require chartkick
 // require turbolinks
 //= require_tree .
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :student_wise_instant_fees
   resources :student_wise_fines
   resources :student_wise_discounts

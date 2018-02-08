@@ -37,6 +37,7 @@
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.3, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.16.1, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="byebug (v9.1.0, RVM: ruby-2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chartkick (v2.2.5, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.2.2, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.12.2, RVM: ruby-2.4.1) [gem]" level="application" />
@@ -47,10 +48,14 @@
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.18, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="font-awesome-rails (v4.7.0.2, RVM: ruby-2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="fullcalendar-rails (v3.4.0.0, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.1, RVM: ruby-2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gretel (v3.0.9, RVM: ruby-2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="groupdate (v3.2.0, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.9.3, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.7.0, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.3.1, RVM: ruby-2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jquery-ui-rails (v6.0.1, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-validation-rails (v1.16.0, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="less (v2.6.0, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="less-rails (v2.8.0, RVM: ruby-2.4.1) [gem]" level="application" />

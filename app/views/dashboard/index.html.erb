@@ -1,80 +1,189 @@
-<div class="panel panel-primary">
-  <div class="panel-body">
-    <div class="col-lg-3">
-      <button class="btn btn-primary btn-lg" style="width: 100%; height: 140px">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <span class="fa fa-graduation-cap " style="font-size: 50px;"></span>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <span style="font-size: 35px;"><%= @students.count %></span>
-          </div>
+<% breadcrumb :root %>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div class="col-lg-4 col-md-4">
+          <span class="fa fa-graduation-cap " style="font-size: 50px;"></span>
         </div>
-        <div class="row">
-          <div class="text-center">
-            <%= t('students').upcase %>
-          </div>
+        <div class="col-lg-8 col-md-8">
+          <span style="font-size: 35px;"><%= @students.count %></span>
         </div>
-      </button>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          <%= t('students').upcase %>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-3">
-      <button class="btn btn-primary btn-lg" style="width: 100%; height: 140px">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <span class="fa fa-user-circle " style="font-size: 50px;"></span>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <span style="font-size: 35px;"><%= @teachers.count %></span>
-          </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div class="col-lg-4 col-md-4">
+          <span class="fa fa-user-circle " style="font-size: 50px;"></span>
         </div>
-        <div class="row">
-          <div class="text-center">
-            <%= t('teachers').upcase %>
-          </div>
+        <div class="col-lg-8 col-md-8">
+          <span style="font-size: 35px;"><%= @teachers.count %></span>
         </div>
-      </button>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          <%= t('teachers').upcase %>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-3">
-      <button class="btn btn-primary btn-lg" style="width: 100%; height: 140px">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <span class="fa fa-book " style="font-size: 50px;"></span>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <span style="font-size: 35px;"><%= @standards.count %></span>
-          </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div class="col-lg-4 col-md-4">
+          <span class="fa fa-book " style="font-size: 50px;"></span>
         </div>
-        <div class="row">
-          <div class="text-center">
-            <%= t('standards').upcase %>
-          </div>
+        <div class="col-lg-8 col-md-8">
+          <span style="font-size: 35px;"><%= @standards.count %></span>
         </div>
-      </button>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          <%= t('standards').upcase %>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-3">
-      <button class="btn btn-primary btn-lg" style="width: 100%; height: 140px;">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <span class="fa fa-money" style="font-size: 50px;"></span>
-          </div>
-          <div class="col-lg-6 col-md-6">
+  </div>
+  <div class="col-lg-3">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div class="col-lg-4 col-md-4">
+          <span class="fa fa-money" style="font-size: 50px;"></span>
+        </div>
+        <div class="col-lg-8 col-md-8">
             <span style="font-size: 25px;">
               <%
                 amount = 0.0
                 @student_fee.each do |f|
-                   amount += f.amount.to_f
+                  amount += f.amount.to_f
                 end
               %>
               &#8377; <%= amount %>
             </span>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          <%= t('fee_collected').upcase %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#calendar-tab" aria-controls="fee_details" role="tab" data-toggle="tab">
+        <i class="fa fa-calendar"></i>
+        Schedules
+      </a>
+    </li>
+    <li role="presentation" >
+      <a href="#daily_attendance" aria-controls="personal_info" role="tab" data-toggle="tab">
+        <i class="fa fa-bars"></i>
+        Activity
+      </a>
+    </li>
+    <li role="presentation">
+      <a href="#fee_collection_tab" aria-controls="fee_details" role="tab" data-toggle="tab">
+        <i class="fa fa-money"></i>
+        Fee Collection
+      </a>
+    </li>
+  </ul>
+
+  <div class="row">
+    <div class="col-lg-8 col-md-8">
+      <div class="tab-content">
+    <div role="tabpanel" class="tab-pane" id="daily_attendance">
+      <div class="panel panel-default" >
+        <div class="panel-heading">
+          <h5>
+            Daily Attendance Overview
+            <span class="pull-right">
+              <a class="" data-toggle="collapse" href="#attendance_body">
+                <i class="fa fa-chevron-down"></i>
+              </a>
+            </span>
+          </h5>
+        </div>
+        <div class="panel-body collapse in" id="attendance_body">
+          <%= column_chart high_chart, stacked: true %>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane active" id="calendar-tab">
+      <div class="panel panel-default" >
+        <div class="panel-heading">
+          <h5>
+            Calendar
+            <span class="pull-right">
+              <a class="" data-toggle="collapse" href="#calendar_body">
+                <i class="fa fa-chevron-down"></i>
+              </a>
+            </span>
+          </h5>
+        </div>
+        <div class="panel-body collapse in" id="calendar_body">
+          <div class='calendar' id='calendar'></div>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="fee_collection_tab">
+      <div class="panel panel-default" >
+        <div class="panel-heading">
+          <h5>
+            Fee Collection Summary
+            <span class="pull-right">
+              <a class="" data-toggle="collapse" href="#fee_collection_body">
+                <i class="fa fa-chevron-down"></i>
+              </a>
+            </span>
+          </h5>
+        </div>
+        <div class="panel-body collapse in" id="fee_collection_body">
+          <% if !high_chart_fee.nil? %>
+              <%= line_chart high_chart_fee %>
+          <% else %>
+              No data found for this month
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4">
+      <div class="tab-content">
+        <div class="panel panel-default" style="max-height: 100%;">
+          <div class="panel-heading">
+            <h4>
+              <i class="fa fa-birthday-cake" style="font-size: 30px; color: #730E15"></i>
+              <span class="pull-right"> Today's Birthday</span>
+            </h4>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <% if !birthday_today_students.nil? %>
+                  <% birthday_today_students.each do |birth_stud| %>
+                      <li class="list-group-item"><%= link_to birth_stud.self_full_name, student_path(birth_stud) %></li>
+                  <% end %>
+              <% else %>
+                  <li class="list-group-item">nobuddy</li>
+              <% end %>
+            </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="text-center">
-            <%= t('fee_collected').upcase %>
-          </div>
-        </div>
-      </button>
+      </div>
     </div>
   </div>
 </div>
