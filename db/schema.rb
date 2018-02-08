@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208053947) do
+ActiveRecord::Schema.define(version: 20180208132808) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(version: 20180208053947) do
     t.date "payment_date"
     t.string "payment_mode"
     t.text "payment_desc"
-    t.string "amount"
+    t.float "amount", limit: 53
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
