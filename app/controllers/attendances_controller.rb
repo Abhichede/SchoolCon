@@ -1,6 +1,8 @@
 class AttendancesController < ApplicationController
   before_action :set_attendance, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb 'Attendances', :attendances_path
+
   # GET /attendances
   # GET /attendances.json
   def index

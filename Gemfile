@@ -50,10 +50,10 @@ gem "font-awesome-rails"
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'bootstrap-multiselect-rails'
-gem "gretel"
 gem 'chartkick'
 gem 'groupdate'
 gem 'fullcalendar-rails'
+gem "breadcrumbs_on_rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

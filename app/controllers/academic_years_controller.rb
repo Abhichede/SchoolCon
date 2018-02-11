@@ -1,6 +1,8 @@
 class AcademicYearsController < ApplicationController
   before_action :set_academic_year, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb 'Academic years', :academic_years_path
+
   # GET /academic_years
   # GET /academic_years.json
   def index

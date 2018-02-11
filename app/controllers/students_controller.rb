@@ -1,6 +1,8 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: %i[show edit update destroy]
 
+  add_breadcrumb 'Students', :students_path
+
   # GET /students
   # GET /students.json
   def index

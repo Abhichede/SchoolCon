@@ -5,6 +5,7 @@ class TimeTablesController < ApplicationController
   # GET /time_tables
   # GET /time_tables.json
   def index
+    add_breadcrumb 'Class-wise Timetable', :time_tables_path
     if params[:standard_id] || params[:division]
       @time_tables = TimeTable.where(:standard_id => params[:standard_id], :division => params[:division])
     end
@@ -17,6 +18,7 @@ class TimeTablesController < ApplicationController
   end
 
   def teacherwise
+    add_breadcrumb 'Teacher-wise Timetable', :teacher_wise_timetable_path
     if params[:teacher_id]
       @time_tables = Teacher.find(params[:teacher_id]).time_tables
     end

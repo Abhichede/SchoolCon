@@ -1,6 +1,7 @@
 class StandardsController < ApplicationController
   before_action :set_standard, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb 'Standards', :standards_path
   # GET /standards
   # GET /standards.json
   def index

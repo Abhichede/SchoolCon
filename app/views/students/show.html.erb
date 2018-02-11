@@ -1,4 +1,4 @@
-<% breadcrumb :student, @student %>
+<% add_breadcrumb @student.self_full_name, student_path(@student) %>
 <%- model_class = Student -%>
   <!-- Nav tabs -->
   <div class="card">
