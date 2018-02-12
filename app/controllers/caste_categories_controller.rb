@@ -1,6 +1,8 @@
 class CasteCategoriesController < ApplicationController
   before_action :set_caste_category, only: [:show, :edit, :update, :destroy]
 
+
+  add_breadcrumb 'Caste Categories', :caste_categories_path
   # GET /caste_categories
   # GET /caste_categories.json
   def index

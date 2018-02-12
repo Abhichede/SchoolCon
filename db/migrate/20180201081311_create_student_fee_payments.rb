@@ -6,7 +6,7 @@ class CreateStudentFeePayments < ActiveRecord::Migration[5.1]
       t.date :payment_date
       t.string :payment_mode
       t.text :payment_desc
-      t.string :amount
+      t.double :amount
 
       t.timestamps
     end

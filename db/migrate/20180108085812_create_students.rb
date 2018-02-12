@@ -11,9 +11,9 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string :blood_group
       t.string :nationality
       t.string :mother_tongue
-      t.integer :category_id
-      t.string :caste
-      t.string :religion
+      t.integer :caste_category_id
+      t.integer :caste_id
+      t.integer :religion_id
       t.string :father_first_name
       t.string :father_middle_name
       t.string :father_last_name
@@ -45,6 +45,16 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string :username
       t.string :password
       t.integer :academic_year_id
+      t.string :prev_standard
+      t.string :prev_year
+      t.string :prev_marks
+
+      t.integer :division_id
+      t.string :joining_date
+      t.string :roll_no
+      t.string :student_adhar
+      t.string :father_adhar
+      t.string :mother_adhar
 
       t.timestamps
     end

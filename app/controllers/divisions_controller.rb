@@ -2,6 +2,7 @@ class DivisionsController < ApplicationController
   before_action :set_division, only: [:show, :edit, :update, :destroy]
   before_action :get_standards
 
+  add_breadcrumb 'Divisions', :divisions_path
   # GET /divisions
   # GET /divisions.json
   def index

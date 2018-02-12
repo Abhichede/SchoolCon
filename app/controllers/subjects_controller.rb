@@ -2,6 +2,7 @@ class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
   before_action :set_standards, only: [:new, :edit]
 
+  add_breadcrumb 'Subjects', :subjects_path
   # GET /subjects
   # GET /subjects.json
   def index

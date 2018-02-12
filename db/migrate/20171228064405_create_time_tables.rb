@@ -8,6 +8,7 @@ class CreateTimeTables < ActiveRecord::Migration[5.1]
       t.time :end_time
       t.integer :teacher_id
       t.string :subject
+      t.string :color, default: 'BLACK'
 
       t.timestamps
     end

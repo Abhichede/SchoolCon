@@ -6,6 +6,7 @@ class CreateTimeTableSettings < ActiveRecord::Migration[5.1]
       t.integer :period_duration, default: 60
       t.integer :num_breaks, default: 3
       t.string :break_durations, default: '30, 60, 30'
+      t.string :breaks_after, default: '11:00 AM, 01:30 PM, 04:30 PM'
 
       t.timestamps
     end
