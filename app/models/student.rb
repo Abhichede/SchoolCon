@@ -14,6 +14,8 @@ class Student < ApplicationRecord
   has_many :student_wise_fines
   has_many :student_wise_instant_fees
 
+  mount_uploader :profile_photo, StudentProfileUploader
+
   def self_full_name
     "#{first_name} #{middle_name} #{last_name}"
   end
