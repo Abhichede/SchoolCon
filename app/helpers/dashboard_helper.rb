@@ -21,7 +21,8 @@ module DashboardHelper
           end
         end
       end
-        data.append_merge!(week_s.strftime('%Y-%m-%d'),counter)
+        data[week_s.strftime('%Y-%m-%d')] = counter
+
         week_s += 1
       end
 

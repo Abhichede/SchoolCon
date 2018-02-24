@@ -4,37 +4,80 @@
     <h3>
       <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
       <span class="pull-right">
-        <%= link_to t('.new', :default => t("helpers.links.new")),
+        <%= link_to 'New Admission',
                     new_student_path,
                     :class => 'btn btn-primary' %>
+        <%= link_to 'New Enquiry',
+                    {controller: 'students', action: 'new', is_enquiry: true},
+                    :class => 'btn btn-info' %>
       </span>
     </h3>
   </div>
   <div class="panel-body">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th><%= model_class.human_attribute_name(:id) %></th>
-          <th><%= model_class.human_attribute_name(:name) %></th>
-          <th><%= model_class.human_attribute_name(:standard_id) %></th>
-          <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
-          <th><%=t '.actions', :default => t("helpers.actions") %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @students.each do |student| %>
-          <tr>
-            <td><%= link_to student.id, student_path(student) %></td>
-            <td><%= student.self_full_name %></td>
-            <td><%= student.standard.name %></td>
-            <td><%= student.academic_year.academic_year %></td>
-            <td>
-              <%= link_to t('.show', :default => t("helpers.links.show")),
-                          student_path(student), :class => 'btn btn-default btn-xs' %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <div class="card">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#admitted_students" aria-controls="admitted_students" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Admitted Students</a></li>
+        <li role="presentation"><a href="#enquired_students" aria-controls="enquired_students" role="tab" data-toggle="tab"><i class="fa fa-user-circle-o"></i> Enquired Students</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="admitted_students">
+          <table class="table table-striped" id="admitted_students_table">
+            <thead>
+              <tr>
+                <th><%= model_class.human_attribute_name(:id) %></th>
+                <th><%= model_class.human_attribute_name(:name) %></th>
+                <th><%= model_class.human_attribute_name(:standard_id) %></th>
+                <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
+                <th><%=t '.actions', :default => t("helpers.actions") %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @students.where(is_enquiry: false).each do |student| %>
+                <tr>
+                  <td><%= link_to student.id, student_path(student) %></td>
+                  <td><%= student.self_full_name %></td>
+                  <td><%= student.standard.name %></td>
+                  <td><%= student.academic_year.academic_year %></td>
+                  <td>
+                    <%= link_to t('.show', :default => t("helpers.links.show")),
+                                student_path(student), :class => 'btn btn-default btn-xs' %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="enquired_students">
+          <table class="table table-striped" id="enquired_students_table">
+            <thead>
+            <tr>
+              <th><%= model_class.human_attribute_name(:id) %></th>
+              <th><%= model_class.human_attribute_name(:name) %></th>
+              <th><%= model_class.human_attribute_name(:standard_id) %></th>
+              <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
+              <th><%=t '.actions', :default => t("helpers.actions") %></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @students.where(is_enquiry: true).each do |student| %>
+                <tr>
+                  <td><%= link_to student.id, student_path(student) %></td>
+                  <td><%= student.self_full_name %></td>
+                  <td><%= student.standard.name %></td>
+                  <td><%= student.academic_year.academic_year %></td>
+                  <td>
+                    <%= link_to t('.show', :default => t("helpers.links.show")),
+                                student_path(student), :class => 'btn btn-default btn-xs' %>
+                  </td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

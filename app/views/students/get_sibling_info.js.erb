@@ -1,0 +1,33 @@
+<% if @sibling.nil? %>
+  alert("This is not valid sibling");
+<% else %>
+console.log("Student Name: <%= @sibling.self_full_name %>");
+
+$("#student_nationality").val("<%= @sibling.nationality %>");
+$("#student_mother_tongue").val("<%= @sibling.mother_tongue %>");
+$("#student_residential_address_one").val("<%= @sibling.residential_address_one %>");
+$("#student_residential_address_two").val("<%= @sibling.residential_address_two %>");
+$("#student_residential_city").val("<%= @sibling.residential_city %>");
+$("#student_residential_state").val("<%= @sibling.residential_state %>");
+$("#student_residential_pincode").val("<%= @sibling.residential_pincode %>");
+$("#student_permanent_address_one").val("<%= @sibling.permanent_address_one %>");
+$("#student_permanent_address_two").val("<%= @sibling.permanent_address_two %>");
+$("#student_permanent_city").val("<%= @sibling.permanent_city %>");
+$("#student_permanent_state").val("<%= @sibling.permanent_state %>");
+$("#student_permanent_pincode").val("<%= @sibling.permanent_pincode %>");
+$("#student_father_first_name").val("<%= @sibling.father_first_name %>");
+$("#student_father_middle_name").val("<%= @sibling.father_middle_name %>");
+$("#student_father_last_name").val("<%= @sibling.father_last_name %>");
+$("#student_mother_first_name").val("<%= @sibling.mother_first_name %>");
+$("#student_mother_middle_name").val("<%= @sibling.mother_middle_name %>");
+$("#student_mother_last_name").val("<%= @sibling.mother_last_name %>");
+$("#student_father_mobile").val("<%= @sibling.father_mobile %>");
+$("#student_mother_mobile").val("<%= @sibling.mother_mobile %>");
+$("#student_father_occupation").val("<%= @sibling.father_occupation %>");
+$("#student_mother_occupation").val("<%= @sibling.mother_occupation %>");
+$("#student_father_email").val("<%= @sibling.father_email %>");
+$("#student_father_adhar").val("<%= @sibling.father_adhar %>");
+$("#student_mother_email").val("<%= @sibling.mother_email %>");
+$("#student_mother_adhar").val("<%= @sibling.mother_adhar %>");
+
+<% end %>

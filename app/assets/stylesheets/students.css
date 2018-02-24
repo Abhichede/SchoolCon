@@ -1,3 +1,11 @@
 .panel.panel-success  .panel-body{
     background-color: #dff0d8;
 }
+
+.form-group.required label.required:after {
+    content:"*";
+    color:red;
+}
+.panel-heading .required{
+    color:red;
+}

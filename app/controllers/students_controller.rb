@@ -29,6 +29,14 @@ class StudentsController < ApplicationController
     respond_to do |format|
       if @student.save
         update_student_wise_fee(@student)
+        # send_sms_to_parent(@student)
+        if Parent.find_by_mobile(@student.father_mobile).nil?
+          @parent = Parent.new(name: "#{@student.father_first_name} #{@student.father_middle_name} #{@student.father_last_name}",
+                     mobile: @student.father_mobile)
+          @parent.save
+        end
+        @parent = Parent.find_by_mobile(@student.father_mobile)
+        @student.update(prn: "PRN#{@student.id}", parent_id: @parent.id)
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
       else
@@ -94,6 +102,23 @@ class StudentsController < ApplicationController
     end
   end
 
+  def get_sibling_info
+    @sibling = Student.find(params[:sibling_id]) unless params[:sibling_id].blank?
+  end
+
+  def send_sms_to_parent(student)
+    puts student.father_mobile
+    response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=abhichede777&password=abhijit123@&mobile=#{student.father_mobile}&message=regstr success PRN=#{student.prn} &sender=DNYNDP&type=3"
+      case response.code
+      when 400
+        puts response
+      when 200
+        puts response
+      else
+        fail "Invalid response #{response} received."
+      end
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -113,9 +138,9 @@ class StudentsController < ApplicationController
                                     :permanent_city, :permanent_state, :permanent_country, :permanent_pincode,
                                     :father_mobile, :mother_mobile, :father_occupation, :mother_occupation,
                                     :father_email, :mother_email, :student_email, :standard_id, :prn,
-                                    :last_school_attended, :username, :password, :academic_year_id,
+                                    :last_school_attended, :academic_year_id,
                                     :division_id, :joining_date, :roll_no, :student_adhar, :father_adhar,
                                     :prev_standard, :prev_year, :prev_marks,
-                                    :mother_adhar, :profile_photo, fee_category_ids: [])
+                                    :mother_adhar, :profile_photo, :is_enquiry, fee_category_ids: [])
   end
 end

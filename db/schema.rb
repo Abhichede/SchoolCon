@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212093015) do
+ActiveRecord::Schema.define(version: 20180222065354) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -84,6 +84,13 @@ ActiveRecord::Schema.define(version: 20180212093015) do
     t.index ["student_id", "fee_category_id"], name: "index_fee_categories_students_on_student_id_and_fee_category_id"
   end
 
+  create_table "parents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "mobile"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "religions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -94,6 +101,14 @@ ActiveRecord::Schema.define(version: 20180212093015) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "desc"
+  end
+
+  create_table "standards_subjects", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "subject_id", null: false
+    t.bigint "standard_id", null: false
+    t.index ["standard_id", "subject_id"], name: "index_standards_subjects_on_standard_id_and_subject_id"
+    t.index ["subject_id", "standard_id"], name: "index_standards_subjects_on_subject_id_and_standard_id"
   end
 
   create_table "standards_teachers", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -210,13 +225,16 @@ ActiveRecord::Schema.define(version: 20180212093015) do
     t.string "prev_year"
     t.string "prev_marks"
     t.string "profile_photo"
+    t.integer "parent_id"
+    t.boolean "is_enquiry", default: false
   end
 
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.integer "standard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "desc"
+    t.string "code"
   end
 
   create_table "subjects_teachers", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

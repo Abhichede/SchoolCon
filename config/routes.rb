@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :parents
   resources :events
   resources :student_wise_instant_fees
   resources :student_wise_fines
@@ -30,10 +31,15 @@ Rails.application.routes.draw do
 
   get 'get_divisions_students', to: 'students#get_divisions_students'
   get 'get_fee_structures', to: 'students#get_fee_structures'
+  get 'get_sibling_info', to: 'students#get_sibling_info'
 
   get 'teacher_wise_timetable', to: 'time_tables#teacherwise'
   get 'non_teaching_staff', to: 'teachers#non_teaching'
   get 'admins_staff', to: 'teachers#admins'
+
+  # assign subjects
+  get 'new_assign_subject', to: 'standards#new_assign_subject'
+  post 'assign_subjects', to: 'standards#assign_subjects'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

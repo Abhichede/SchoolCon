@@ -1,86 +1,88 @@
 <%- model_class = Attendance -%>
-<div class="page-header">
-  <h1>
-    <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
-    <span class="pull-right">
-      <%= link_to t('.new', :default => t("helpers.links.new")),
-                  new_attendance_path,
-                  :class => 'btn btn-primary' %>
-    </span>
-  </h1>
-</div>
-<div class="row well">
-  <form action="<%= attendances_path %>">
-    <div class="form-group">
-      <label class="control-label col-lg-1" for="standard_id">Class</label>
-      <div class="col-lg-2">
-        <%= select_tag "standard_id", options_from_collection_for_select(Standard.all, "id", "name", :selected => params[:standard_id], disabled: 'Classes'), include_blank: 'Classes', class: 'form-control' %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>
+      <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
+      <span class="pull-right">
+        <%= link_to t('.new', :default => t("helpers.links.new")),
+                    new_attendance_path,
+                    :class => 'btn btn-primary' %>
+      </span>
+    </h1>
+  </div>
+  <div class="">
+    <form action="<%= attendances_path %>">
+      <div class="form-group">
+        <label class="control-label col-lg-1" for="standard_id">Class</label>
+        <div class="col-lg-2">
+          <%= select_tag "standard_id", options_from_collection_for_select(Standard.all, "id", "name", :selected => params[:standard_id], disabled: 'Classes'), include_blank: 'Classes', class: 'form-control' %>
+        </div>
+        <label class="control-label col-lg-1" for="division">Division</label>
+        <div class="col-lg-1">
+          <%= select_tag "division", options_from_collection_for_select(Division.all, "id", "name", :selected => params[:division], disabled: 'Divisions'), include_blank: 'Divisions', class: 'form-control' %>
+        </div>
+        <label class="control-label col-lg-1" for="division">Division</label>
+        <div class="col-lg-2">
+          <%= select_tag "subject", options_from_collection_for_select(Subject.all, "id", "name", :selected => params[:subject], disabled: 'Subjects'), include_blank: 'Subjects', class: 'form-control' %>
+        </div>
+        <label class="control-label col-lg-1" for="division">Date:</label>
+        <div class="col-lg-2">
+          <%= text_field "date", nil, class: 'form-control', value: params[:date] %>
+        </div>
+        <div class="col-lg-1">
+          <button class="btn btn-success" id="btn-filter">Search</button>
+        </div>
       </div>
-      <label class="control-label col-lg-1" for="division">Division</label>
-      <div class="col-lg-1">
-        <%= select_tag "division", options_from_collection_for_select(Division.all, "id", "name", :selected => params[:division], disabled: 'Divisions'), include_blank: 'Divisions', class: 'form-control' %>
-      </div>
-      <label class="control-label col-lg-1" for="division">Division</label>
-      <div class="col-lg-2">
-        <%= select_tag "subject", options_from_collection_for_select(Subject.all, "id", "name", :selected => params[:subject], disabled: 'Subjects'), include_blank: 'Subjects', class: 'form-control' %>
-      </div>
-      <label class="control-label col-lg-1" for="division">Date:</label>
-      <div class="col-lg-2">
-        <%= text_field "date", nil, class: 'form-control', value: params[:date] %>
-      </div>
-      <div class="col-lg-1">
-        <button class="btn btn-success" id="btn-filter">Search</button>
-      </div>
-    </div>
-  </form>
-</div>
-<br/>
-<div class="row">
-  <div class="col-lg-6"></div>
-  <div class="col-lg-6">
-    <% if !@attendance.nil? %>
-      <h4>
-        <ul class="list-group">
-          <li class="list-group-item">Showing result for: <span class="pull-right"><%= @attendance.standard.name %> - <%= @attendance.division.name %></span></li>
-          <li class="list-group-item">Date: <span class="pull-right"><%= @attendance.date %></span> </li>
-          <li class="list-group-item">Subject: <span class="pull-right"><%= @attendance.subject.name %></span></li>
-          <li class="list-group-item"><span><%= link_to 'Edit', edit_attendance_path(@attendance), class: 'btn btn-info btn-block' %></span></li>
-        </ul>
-      </h4>
-    <% else %>
+    </form>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-lg-6"></div>
+    <div class="col-lg-6">
+      <% if !@attendance.nil? %>
         <h4>
           <ul class="list-group">
-            <li class="list-group-item">Nothing Found</li>
+            <li class="list-group-item">Showing result for: <span class="pull-right"><%= @attendance.standard.name %> - <%= @attendance.division.name %></span></li>
+            <li class="list-group-item">Date: <span class="pull-right"><%= @attendance.date %></span> </li>
+            <li class="list-group-item">Subject: <span class="pull-right"><%= @attendance.subject.name %></span></li>
+            <li class="list-group-item"><span><%= link_to 'Edit', edit_attendance_path(@attendance), class: 'btn btn-info btn-block' %></span></li>
           </ul>
         </h4>
+      <% else %>
+          <h4>
+            <ul class="list-group">
+              <li class="list-group-item">Nothing Found</li>
+            </ul>
+          </h4>
+      <% end %>
+    </div>
+  </div>
+  <div class="well" style="overflow: auto; max-height: 30rem;">
+    <% if !@students.nil? && !@attendance.nil? %>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Roll No.</th>
+          <th>Student</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @students.each do |student| %>
+          <tr>
+            <td><%= student.roll_no %></td>
+              <td> <%= student.self_full_name %> </td>
+            <td>
+              <span class="label label-<%= @attendance.att_data["#{student.id}"] === 'on' ? 'primary' : 'danger' %>">
+                <%= @attendance.att_data["#{student.id}"] === 'on' ? 'Present' : 'Absent' %>
+              </span>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
     <% end %>
   </div>
-</div>
-<div class="row well" style="overflow: auto; max-height: 30rem;">
-  <% if !@students.nil? && !@attendance.nil? %>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Roll No.</th>
-        <th>Student</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @students.each do |student| %>
-        <tr>
-          <td><%= student.roll_no %></td>
-            <td> <%= student.self_full_name %> </td>
-          <td>
-            <span class="label label-<%= @attendance.att_data["#{student.id}"] === 'on' ? 'primary' : 'danger' %>">
-              <%= @attendance.att_data["#{student.id}"] === 'on' ? 'Present' : 'Absent' %>
-            </span>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <% end %>
 </div>
 
 

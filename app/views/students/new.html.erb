@@ -1,6 +1,10 @@
-<% add_breadcrumb 'New Student', new_student_path %>
+<% add_breadcrumb params[:is_enquiry].blank? ? 'New Student Admission' : 'New enquiry', new_student_path %>
 <%- model_class = Student -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3><%= params[:is_enquiry].blank? ? 'New Student Admission' : 'New enquiry' %></h3>
+  </div>
+  <div class="panel-body">
+    <%= render :partial => 'form' %>
+  </div>
 </div>
-<%= render :partial => 'form' %>

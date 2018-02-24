@@ -5,6 +5,7 @@ class Student < ApplicationRecord
   belongs_to :division
   belongs_to :caste
   belongs_to :religion
+  belongs_to :parent
 
   has_and_belongs_to_many :fee_categories
 
@@ -13,6 +14,8 @@ class Student < ApplicationRecord
   has_many :student_fee_payments
   has_many :student_wise_fines
   has_many :student_wise_instant_fees
+
+  attr_accessor :siblings
 
   mount_uploader :profile_photo, StudentProfileUploader
 

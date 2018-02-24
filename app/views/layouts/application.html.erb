@@ -7,8 +7,6 @@
     <title><%= content_for?(:title) ? yield(:title) : "SchoolCon" %></title>
     <%= csrf_meta_tags %>
 
-
-
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
     <% #favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
@@ -43,6 +41,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
   </head>
   <body>
 
@@ -114,6 +115,7 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+
   <div class="wrapper">
 
       <nav id="sidebar">
@@ -135,6 +137,7 @@
               <li><%= link_to 'STANDARDS', standards_path %></li>
               <li><%= link_to 'DIVISIONS', divisions_path %></li>
               <li><%= link_to 'SUBJECTS', subjects_path %></li>
+              <li><%= link_to 'Assign Subject', new_assign_subject_path %></li>
               <li><%= link_to 'CATEGORIES', caste_categories_path %></li>
               <li><%= link_to 'CASTES', castes_path %></li>
               <li><%= link_to 'RELIGIONS', religions_path %></li>
@@ -181,7 +184,7 @@
 
       <div id="content">
         <div id="mainPage">
-            <%= bootstrap_flash %>
+            <% #bootstrap_flash %>
           <div class="well">
             You are here » <%= render_breadcrumbs %>
           </div>

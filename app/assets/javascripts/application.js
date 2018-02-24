@@ -13,6 +13,8 @@
 // require rails-ujs
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require jquery.validate
 //= require jquery.validate.additional-methods
 //= require twitter/bootstrap

@@ -3,7 +3,8 @@ CarrierWave.configure do |config|
   config.fog_credentials = {
       :provider               => 'AWS',
       :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
-      :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
+      :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],
+      :region                 => 'ap-south-1'
   }
   config.fog_directory  = ENV['AWS_S3_BUCKET'] # bucket name
 end
@@ -44,9 +45,9 @@ class StudentProfileUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
 
-  version :medium do
-    process :resize_to_fit => [150, 150]
-  end
+  # version :medium do
+  #   process :resize_to_fit => [150, 150]
+  # end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

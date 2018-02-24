@@ -1,11 +1,13 @@
 $("#student_fees").replaceWith('<div id="student_fees">' +
-    '<div class="panel panel-primary">\n' +
-    '<div class="panel-heading">Fee Structure</div>\n' +
+    '<div class="panel panel-default">\n' +
+    '<div class="panel-heading">Fee Structure <span class="required">*</span> </div>\n' +
     '<div class="panel-body">' +
-    '<div class="form-group col-lg-6">' +
+    '<div class="form-group required col-lg-6">' +
+    '<div class="checkbox checkbox-primary">' +
     '<%= collection_check_boxes :student, :fee_category_ids, @fee_structures.all, :id, :name_amount, {checked: (!@student.nil? ? @student.fee_categories.map {|fee| fee.id} : '')} do |b|
       b.check_box+ (' '.html_safe+b.label+'<br/>'.html_safe)
      end %>' +
+    '</div>'+
     '</div>' +
     '</div>' +
     '</div>' +

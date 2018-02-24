@@ -63,6 +63,19 @@ class StandardsController < ApplicationController
     end
   end
 
+  def new_assign_subject
+    @standards = Standard.all
+  end
+
+  def assign_subjects
+    @standard = Standard.find(params[:standard_id])
+    respond_to do |format|
+      if @standard.update(subject_ids: params[:subject_ids])
+        format.html { redirect_to new_assign_subject_path, notice: 'Standard was successfully updated.' }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_standard
@@ -71,6 +84,6 @@ class StandardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def standard_params
-      params.require(:standard).permit(:name)
+      params.require(:standard).permit(:name, :desc)
     end
 end

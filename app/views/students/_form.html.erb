@@ -15,13 +15,24 @@
     </div>
   <% end %>
 
-  <div class="panel panel-primary">
+  <div class="panel panel-default">
     <div class="panel-heading">Personal Information</div>
     <div class="panel-body">
       <div class="form-group">
-        <%= f.label :full_name, :class => 'control-label col-lg-2' %>
+        <%= f.label 'Select sibling if any', :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
-          <%= f.text_field :first_name, :class => 'form-control', placeholder: 'First Name' %>
+          <%= f.select :siblings, options_for_select(Student.all.map {|student| [student.self_full_name, student.id]}),
+                       {include_blank: 'Siblings', disabled: 'Siblings'}, class: 'selectpicker ', 'data-live-search': true %>
+        </div>
+      </div>
+
+      <%= f.hidden_field :is_enquiry, value: (params[:is_enquiry].blank? ? false : params[:is_enquiry]) %>
+
+      <div class="form-group required">
+        <%= f.label :full_name, :class => 'control-label required col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :first_name, :class => 'form-control',
+                           placeholder: 'First Name' %>
         </div>
         <%=f.error_span(:first_name) %>
 
@@ -37,8 +48,8 @@
       </div>
 
 
-      <div class="form-group">
-        <%= f.label :date_of_birth, :class => 'control-label col-lg-2' %>
+      <div class="form-group required">
+        <%= f.label :date_of_birth, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :date_of_birth, :class => 'form-control datepicker', placeholder: 'Date of Birth'  %>
         </div>
@@ -118,25 +129,25 @@
                                                         {:selected => @student.academic_year_id }),
                        {}, class: 'form-control') %>
         </div>
-        <%=f.error_span(:religion_id) %>
+        <%= f.error_span(:religion_id) %>
       </div>
 
       <div class="form-group">
         <%= f.label :profile_photo, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
-          <%= f.file_field :profile_photo, class: 'form-control' %>
+          <%= f.file_field :profile_photo, class: 'form-control', value: @student.profile_photo %>
         </div>
-        <%=f.error_span(:profile_photo) %>
+        <%= f.error_span(:profile_photo) %>
       </div>
 
     </div>
   </div>
 
-  <div class="panel panel-primary">
+  <div class="panel panel-default">
     <div class="panel-heading">Contact Details</div>
     <div class="panel-body">
-      <div class="form-group">
-        <%= f.label :residential_address, :class => 'control-label col-lg-2' %>
+      <div class="form-group required">
+        <%= f.label :residential_address, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :residential_address_one, :class => 'form-control', placeholder: 'Address Line 1' %>
         </div>
@@ -150,7 +161,7 @@
       </div>
 
 
-      <div class="form-group">
+      <div class="form-group required">
         <div class="col-lg-2"></div>
         <div class="col-lg-4">
           <%= f.text_field :residential_city, :class => 'form-control', placeholder: 'City' %>
@@ -166,7 +177,7 @@
       </div>
 
 
-      <div class="form-group">
+      <div class="form-group required">
         <div class="col-lg-2"></div>
         <div class="col-lg-4">
           <%= f.text_field :residential_pincode, :class => 'form-control', placeholder: 'Pincode' %>
@@ -177,12 +188,14 @@
       <div class="form-group">
         <div class="col-lg-2"></div>
         <div class="col-lg-5">
-          <input type="checkbox" id="same_as_residential">
-          <label for="same_as_residential">Same As Residential</label>
+          <div class="checkbox checkbox-primary">
+            <input type="checkbox" id="same_as_residential">
+            <label for="same_as_residential">Same As Residential</label>
+          </div>
         </div>
       </div>
-      <div class="form-group">
-        <%= f.label :permanent_address, :class => 'control-label col-lg-2' %>
+      <div class="form-group required">
+        <%= f.label :permanent_address, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :permanent_address_one, :class => 'form-control', placeholder: 'Address Line 1' %>
         </div>
@@ -196,7 +209,7 @@
       </div>
 
 
-      <div class="form-group">
+      <div class="form-group required">
         <div class="col-lg-2"></div>
         <div class="col-lg-4">
           <%= f.text_field :permanent_city, :class => 'form-control', placeholder: 'City' %>
@@ -211,7 +224,7 @@
       </div>
 
 
-      <div class="form-group">
+      <div class="form-group required">
         <div class="col-lg-2"></div>
         <div class="col-lg-4">
           <%= f.text_field :permanent_pincode, :class => 'form-control', placeholder: 'Pincode' %>
@@ -219,7 +232,7 @@
         <%=f.error_span(:permanent_pincode) %>
       </div>
 
-      <div class="form-group">
+      <div class="form-group required">
         <%= f.label :student_mobile, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :student_mobile, :class => 'form-control' %>
@@ -235,11 +248,11 @@
     </div>
   </div>
 
-  <div class="panel panel-primary">
+  <div class="panel panel-default">
     <div class="panel-heading">Parent Details</div>
     <div class="panel-body">
-      <div class="form-group">
-        <%= f.label 'Father`s full name', :class => 'control-label col-lg-2' %>
+      <div class="form-group required">
+        <%= f.label 'Father`s full name', :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :father_first_name, :class => 'form-control', placeholder: 'First Name' %>
         </div>
@@ -257,8 +270,8 @@
       </div>
 
 
-      <div class="form-group">
-        <%= f.label 'Mother`s full name', :class => 'control-label col-lg-2' %>
+      <div class="form-group required">
+        <%= f.label 'Mother`s full name', :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :mother_first_name, :class => 'form-control', placeholder: 'First Name' %>
         </div>
@@ -274,8 +287,8 @@
         </div>
         <%=f.error_span(:mother_last_name) %>
       </div>
-      <div class="form-group">
-        <%= f.label :father_mobile, :class => 'control-label col-lg-2' %>
+      <div class="form-group required">
+        <%= f.label :father_mobile, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :father_mobile, :class => 'form-control' %>
         </div>
@@ -331,11 +344,11 @@
     </div>
   </div>
 
-  <div class="panel panel-primary">
+  <div class="panel panel-default">
     <div class="panel-heading">Office use</div>
     <div class="panel-body">
-      <div class="form-group">
-        <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
+      <div class="form-group required">
+        <%= f.label :standard_id, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.select(:standard_id, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
                                                         {:selected => @student.standard_id }),
@@ -343,7 +356,7 @@
         </div>
         <%=f.error_span(:standard_id) %>
 
-        <%= f.label :division_id, :class => 'control-label col-lg-2' %>
+        <%= f.label :division_id, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.select(:division_id, options_for_select(['Select'],
                                                         {:selected => @student.division_id }),
@@ -352,36 +365,16 @@
         <%=f.error_span(:division_id) %>
       </div>
 
-      <div class="form-group">
-        <%= f.label :prn, :class => 'control-label col-lg-2' %>
-        <div class="col-lg-4">
-          <%= f.text_field :prn, :class => 'form-control' %>
-        </div>
-        <%=f.error_span(:prn) %>
-
-        <%= f.label :roll_no, :class => 'control-label col-lg-2' %>
+      <div class="form-group required">
+        <%= f.label :roll_no, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :roll_no, :class => 'form-control', placeholder: 'Roll No.' %>
         </div>
         <%=f.error_span(:roll_no) %>
       </div>
 
-      <div class="form-group">
-        <%= f.label :username, :class => 'control-label col-lg-2' %>
-        <div class="col-lg-4">
-          <%= f.text_field :username, :class => 'form-control' %>
-        </div>
-        <%=f.error_span(:username) %>
 
-        <%= f.label :password, :class => 'control-label col-lg-2' %>
-        <div class="col-lg-4">
-          <%= f.text_field :password, :class => 'form-control' %>
-        </div>
-        <%=f.error_span(:password) %>
-      </div>
-
-
-      <div class="form-group">
+      <div class="form-group required">
         <%= f.label :academic_year_id, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
           <%= f.select(:academic_year_id, options_for_select(AcademicYear.all.map {|academicYear| [academicYear.academic_year, academicYear.id]},
@@ -399,7 +392,7 @@
     </div>
   </div>
 
-  <div class="panel panel-primary">
+  <div class="panel panel-default">
     <div class="panel-heading">Previous Details</div>
     <div class="panel-body">
       <div class="form-group">
@@ -472,6 +465,11 @@
             get_fee_structure();
         });
 
+        $("select#student_siblings").on('change', function () {
+          get_sibling_info();
+        });
+
+
         var get_divisions = function () {
             var standard_id = $('select#student_standard_id').val();
 
@@ -492,6 +490,18 @@
             $.ajax({
                 url: '<%= get_fee_structures_url %>',
                 data: 'standard_id='+ standard_id + '&id=<%= @student.id %>',
+                type: 'GET'
+            });
+        };
+
+        var get_sibling_info = function () {
+            var sibling_id = $('select#student_siblings').val();
+
+            console.log('Sibling id: '+ sibling_id);
+
+            $.ajax({
+                url: '<%= get_sibling_info_url %>',
+                data: 'sibling_id='+ sibling_id,
                 type: 'GET'
             });
         };
