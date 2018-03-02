@@ -5,10 +5,11 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #f7f7f7;
-    color: #000;
+    background-color: #333333;
+    color: #eeeeee;
     padding: 1rem;
     border-top: 1px solid #ddd;
+    z-index: 99;
 }
 
 #mainPage{
@@ -103,4 +104,3 @@ table.table-timetable tr {
 .tab-content{padding:20px}
 
 .card {background: #FFF none repeat scroll 0 0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); margin-bottom: 30px; }
-

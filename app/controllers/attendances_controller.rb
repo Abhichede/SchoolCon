@@ -38,15 +38,26 @@ class AttendancesController < ApplicationController
   def create
     @attendance = Attendance.new(attendance_params)
 
+    @duplicate = Attendance.where(:standard_id => attendance_params[:standard_id],
+                                  :division_id => attendance_params[:division_id],
+                                  :date => attendance_params[:date], :subject_id => attendance_params[:subject_id])
+
     respond_to do |format|
-      if @attendance.save
+      if @duplicate.count > 0
+        @attendance = @duplicate.first
         format.html { redirect_to controller: 'attendances', action: 'index',
                                   standard_id: @attendance.standard_id, division: @attendance.division_id,
-                                  subject: @attendance.subject_id, date: @attendance.date, notice: 'Attendance was successfully created.' }
-        format.json { render :show, status: :created, location: @attendance }
+                                  subject: @attendance.subject_id, date: @attendance.date, alert: "Attendance already been taken." }
       else
-        format.html { render :new }
-        format.json { render json: @attendance.errors, status: :unprocessable_entity }
+        if @attendance.save
+          format.html { redirect_to controller: 'attendances', action: 'index',
+                                    standard_id: @attendance.standard_id, division: @attendance.division_id,
+                                    subject: @attendance.subject_id, date: @attendance.date, notice: 'Attendance was successfully created.' }
+          format.json { render :show, status: :created, location: @attendance }
+        else
+          format.html { render :new }
+          format.json { render json: @attendance.errors, status: :unprocessable_entity }
+        end
       end
     end
   end

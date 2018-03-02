@@ -47,167 +47,138 @@
   </head>
   <body>
 
-  <nav class="navbar navbar-default navbar-static-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header" id="navbar_header">
+      <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <span class="navbar-brand">
-          <span class="heading-h3"><a href="<%= root_path %>" style="color: #FFFFFF; text-decoration: none">SchoolCon</a></span>
-          <strong><a href="<%= root_path %>" style="color: #FFFFFF; text-decoration: none">sCon</a></strong>
-        </span>
+        <a class="navbar-brand" href="<%= root_path %>">SchoolCon</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li>
-            <a id="sidebarCollapse">
-              <i class="fa fa-bars"></i>
-            </a>
-          </li>
-          <li><span class="navbar-text"><span class="label label-primary">Academic Year: ( <%= AcademicYear.find_by(:is_active => true).academic_year %> )</span></span></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">
-              <i class="fa fa-search"></i>
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+            <button class="dropbtn">MASTER DATA
+              <i class="fa fa-caret-down"></i>
             </button>
-          </form>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-               role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="fa fa-envelope"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
+            <div class="dropdown-content container">
+              <div class="header">
+                <h3 class="text-center">Master Data</h3>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <h4>ACADEMICS</h4>
+                  <%= link_to 'Academic Years', academic_years_path %>
+                  <%= link_to 'Standards', standards_path %>
+                  <%= link_to 'Divisions', divisions_path %>
+                  <%= link_to 'Subjects', subjects_path %>
+                </div>
+                <div class="column">
+                  <h4>INFORMATIVE</h4>
+                  <%= link_to 'Caste Categories', caste_categories_path %>
+                  <%= link_to 'Castes', castes_path %>
+                  <%= link_to 'Religions', religions_path %>
+                </div>
+                <div class="column">
+                  <h4>OTHERS</h4>
+                  <%= link_to 'Fee Categories', fee_categories_path %>
+                </div>
+              </div>
+            </div>
           </li>
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-               role="button" aria-haspopup="true" aria-expanded="false">
-              User
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
+            <button class="dropbtn">STUDENTS
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content container">
+              <div class="header">
+                <h3 class="text-center">Students</h3>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <h4>ADMINISTRATION</h4>
+                  <%= link_to 'All Students', students_path %>
+                  <%= link_to 'New Student', new_student_path %>
+                  <%= link_to 'New Enquiry', new_student_path( is_enquiry: true ) %>
+                </div>
+                <div class="column">
+                  <h4>FINANCE</h4>
+                  <%= link_to 'Fee Collection', caste_categories_path %>
+                  <%= link_to 'Fee Payment', castes_path %>
+                </div>
+                <div class="column">
+                  <h4>Other</h4>
+                  <%= link_to 'Attendance', attendances_path %>
+                  <%= link_to 'TimeTable', time_tables_path %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <button class="dropbtn">STAFF
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content container">
+              <div class="header">
+                <h3 class="text-center">Staff</h3>
+              </div>
+              <div class="row">
+                <div class="column">
+                </div>
+                <div class="column">
+                  <h4>ADMINISTRATION</h4>
+                  <%= link_to 'All Teachers', teachers_path %>
+                  <%= link_to 'All non-Teaching', non_teaching_staff_path %>
+                  <%= link_to 'New Staff', new_teacher_path %>
+                </div>
+
+                <div class="column">
+                  <h4>Other</h4>
+                  <%= link_to 'Assign Class-teacher', class_teachers_path %>
+                  <%= link_to 'TimeTable', teacher_wise_timetable_path %>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-
-  <div class="wrapper">
-
-      <nav id="sidebar">
-        <!--&lt;!&ndash; Sidebar Header &ndash;&gt;-->
-        <!--<div class="sidebar-header">-->
-          <!--<h3><a href="<% root_path %>" style="color: #FFFFFF; text-decoration: none">SchoolCon</a></h3>-->
-          <!--<strong><a href="<% root_path %>" style="color: #FFFFFF; text-decoration: none">sCon</a></strong>-->
-        <!--</div>-->
-
-        <!-- Sidebar Links -->
-        <ul class="list-unstyled components">
-          <li class="active" id="sidebar-nav">
-            <a href="#Master_Data" data-toggle="collapse" aria-expanded="false">
-              <i class="glyphicon glyphicon-home"></i>
-              Master Data
-            </a>
-
-            <ul class="collapse list-unstyled" id="Master_Data">
-              <li><%= link_to 'STANDARDS', standards_path %></li>
-              <li><%= link_to 'DIVISIONS', divisions_path %></li>
-              <li><%= link_to 'SUBJECTS', subjects_path %></li>
-              <li><%= link_to 'Assign Subject', new_assign_subject_path %></li>
-              <li><%= link_to 'CATEGORIES', caste_categories_path %></li>
-              <li><%= link_to 'CASTES', castes_path %></li>
-              <li><%= link_to 'RELIGIONS', religions_path %></li>
-              <li><%= link_to 'ACADEMIC-YEAR', academic_years_path %></li>
-              <li><%= link_to 'CLASS-TEACHER', class_teachers_path %></li>
-              <li><%= link_to 'ATTENDANCE', attendances_path %></li>
-              <li><%= link_to 'FEE CATEGORIES', fee_categories_path %></li>
-            </ul>
-          </li>
-          <li id="sidebar-nav">
-            <a href="#staff_menu" data-toggle="collapse" aria-expanded="false">
-              <i class="fa fa-users"></i>
-              Staff
-            </a>
-
-            <ul class="collapse list-unstyled" id="staff_menu">
-              <li><%= link_to 'TEACHERS', teachers_path %></li>
-              <li><%= link_to 'NON-TEACHING', non_teaching_staff_path %></li>
-              <li><%= link_to 'ADMINS', admins_staff_path %></li>
-            </ul>
-          </li>
-
-          <li id="sidebar-nav">
-            <a href="#timetable_menu" data-toggle="collapse" aria-expanded="false">
-              <i class="fa fa-calendar"></i>
-              Timetable
-            </a>
-
-            <ul class="collapse list-unstyled" id="timetable_menu">
-              <li><%= link_to 'CLASS', time_tables_path %></li>
-              <li><%= link_to 'TEACHER-WISE', teacher_wise_timetable_path %></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="<%= students_path %>">
-              <i class="fa fa-graduation-cap"></i>
-              Students
-            </a>
-          </li>
-
-        </ul>
-      </nav>
-
-      <div id="content">
-        <div id="mainPage">
-            <% #bootstrap_flash %>
-          <div class="well">
-            You are here » <%= render_breadcrumbs %>
-          </div>
-            <%= yield %>
-            <div id='remote_container'></div>
-
-            <div id="overlay">
-              <div class="spinner" id="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-              </div>
-            </div>
-
-          </div><!--/row-->
-
-          <footer class="footer">
-            <p>&copy; Company 2017</p>
-          </footer>
+  <div class="container-fluid">
+    <div id="mainPage">
+      <%= bootstrap_flash %>
+      <div class="panel panel-default">
+        <div class="panel-footer">
+          You are here » <%= render_breadcrumbs %>
+        </div>
       </div>
-    </div>
+      <%= yield %>
+      <div id='remote_container'></div>
+
+      <div id="overlay">
+        <div class="spinner" id="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+
+    </div><!--/row-->
+
+    <footer class="footer">
+      <p>&copy; Company 2017</p>
+    </footer>
+  </div>
 
 
 

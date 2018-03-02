@@ -1,0 +1,122 @@
+#mainPage{
+    margin-top: 6rem;
+}
+body{
+    background-color: #CCCCCC !important;
+}
+
+/*********** custom navbar dropdown megamenu ********/
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #333333;
+    font-family: Arial, serif !important;
+}
+
+.navbar-brand{
+    color: #eeeeee !important;
+}
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, serif !important;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    font-size: 16px;
+    /*margin: 0; !* Important for vertical align on mobile phones *!*/
+
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #CCCCCC;
+    color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+/* Mega Menu header, if needed */
+/*.dropdown-content .header {*/
+    /*background: #eeeeee;*/
+    /*color: black;*/
+/*}*/
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #CCCCCC;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 16px;
+    height: inherit;
+}
+
+/* Style links inside the columns */
+.column a {
+    float: none;
+    color: black;
+    padding: 6px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a background color on hover */
+.column a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column h4{
+    color: black;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+    .dropdown-content{
+        height: 50rem;
+        overflow: auto;
+    }
+}
