@@ -23,6 +23,7 @@
 //= require bootstrap-datetimepicker
 //= require fullcalendar
 //= require chartkick
+//= require toastr
 // require turbolinks
 //= require_tree .
 
@@ -48,4 +49,5 @@ function on() {
 function off() {
     $("#overlay").css('display', "none");
 }
+
 
