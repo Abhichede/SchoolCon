@@ -26,9 +26,12 @@ class CastesController < ApplicationController
   def create
     @caste = Caste.new(caste_params)
 
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @caste.save
-        format.html { redirect_to @caste, notice: 'Caste was successfully created.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Caste was successfully created.' }
         format.json { render :show, status: :created, location: @caste }
       else
         format.html { render :new }
@@ -40,9 +43,13 @@ class CastesController < ApplicationController
   # PATCH/PUT /castes/1
   # PATCH/PUT /castes/1.json
   def update
+
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @caste.update(caste_params)
-        format.html { redirect_to @caste, notice: 'Caste was successfully updated.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Caste was successfully updated.' }
         format.json { render :show, status: :ok, location: @caste }
       else
         format.html { render :edit }

@@ -1,45 +1,52 @@
 <%- model_class = Division -%>
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1>
-      <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
-      <span class="pull-right">
+<h3 class="page-header">
+  <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
+
+</h3>
+<div class="row">
+  <div class="col-md-2">
+    <div class="panel panel-default">
+      <div class="panel-body">
         <%= link_to t('.new', :default => t("helpers.links.new")),
-                  new_division_path,
-                  :class => 'btn btn-primary' %>
-      </span>
-    </h1>
+                    new_division_path,
+                    :class => 'custom-link' %>
+      </div>
+    </div>
   </div>
-  <div class="panel-body">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th><%= model_class.human_attribute_name(:id) %></th>
-          <th><%= model_class.human_attribute_name(:name) %></th>
-          <th><%= model_class.human_attribute_name(:standard_id) %></th>
-          <th><%= model_class.human_attribute_name(:created_at) %></th>
-          <th><%=t '.actions', :default => t("helpers.actions") %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @divisions.each do |division| %>
-          <tr>
-            <td><%= link_to division.id, division_path(division) %></td>
-            <td><%= division.name %></td>
-            <td><%= division.standard_id %></td>
-            <td><%=l division.created_at %></td>
-            <td>
-              <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                          edit_division_path(division), :class => 'btn btn-default btn-xs' %>
-              <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                          division_path(division),
-                          :method => :delete,
-                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                          :class => 'btn btn-xs btn-danger' %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <div class="col-md-10">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th><%= model_class.human_attribute_name(:id) %></th>
+              <th><%= model_class.human_attribute_name(:name) %></th>
+              <th><%= model_class.human_attribute_name(:standard_id) %></th>
+              <th><%= model_class.human_attribute_name(:created_at) %></th>
+              <th><%=t '.actions', :default => t("helpers.actions") %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @divisions.each do |division| %>
+              <tr>
+                <td><%= link_to division.id, division_path(division) %></td>
+                <td><%= division.name %></td>
+                <td><%= division.standard_id %></td>
+                <td><%=l division.created_at %></td>
+                <td>
+                  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                              edit_division_path(division), :class => 'btn btn-default btn-xs' %>
+                  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                              division_path(division),
+                              :method => :delete,
+                              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                              :class => 'btn btn-xs btn-danger' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

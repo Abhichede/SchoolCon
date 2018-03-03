@@ -1,84 +1,86 @@
-<%= form_for @attendance, :html => { :class => "form-horizontal attendance" } do |f| %>
+<div class="row">
+  <%= form_for @attendance, :html => { :class => "form-horizontal attendance" } do |f| %>
 
-  <% if @attendance.errors.any? %>
-    <div id="error_expl" class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@attendance.errors.count, "error") %> prohibited this attendance from being saved:</h3>
+    <% if @attendance.errors.any? %>
+      <div id="error_expl" class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= pluralize(@attendance.errors.count, "error") %> prohibited this attendance from being saved:</h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+          <% @attendance.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
       </div>
-      <div class="panel-body">
-        <ul>
-        <% @attendance.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
+    <% end %>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :date, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :date, :class => 'form-control', required: true %>
+        </div>
+        <%=f.error_span(:date) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.select(:standard_id, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
+                                                        {:selected => @attendance.standard_id }),
+                       {}, class: 'form-control', required: true) %>
+        </div>
+        <%=f.error_span(:standard_id) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :division_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.select(:division_id, options_for_select(['Select'],
+                                                        {:selected => @attendance.division_id, include_blank: 'Subjects' }),
+                       {}, class: 'form-control', id: 'division', required: true) %>
+        </div>
+        <%=f.error_span(:division_id) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :teacher_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.select(:teacher_id, options_for_select(Teacher.all.map {|teacher| [teacher.fullname, teacher.id]},
+                                                       {:selected => @attendance.teacher_id }),
+                       {}, class: 'form-control', required: true) %>
+        </div>
+        <%=f.error_span(:teacher_id) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :subject_id, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%=f.select(:subject_id, options_for_select(['Select'],
+                                                       {:selected => @attendance.subject_id }),
+                      {}, class: 'form-control', id: 'subject', required: true)  %>
+        </div>
+        <%=f.error_span(:subject_id) %>
       </div>
     </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-10" style="max-height: 30rem; overflow: auto">
+          <div id="students"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-offset-2 col-lg-10">
+        <%= f.submit nil, :class => 'btn btn-primary' %>
+        <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  attendances_path, :class => 'btn btn-default' %>
+      </div>
+    </div>
+
   <% end %>
-
-  <div class="form-group">
-    <%= f.label :date, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :date, :class => 'form-control', required: true %>
-    </div>
-    <%=f.error_span(:date) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.select(:standard_id, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
-                                                    {:selected => @attendance.standard_id }),
-                   {}, class: 'form-control', required: true) %>
-    </div>
-    <%=f.error_span(:standard_id) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :division_id, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.select(:division_id, options_for_select(['Select'],
-                                                    {:selected => @attendance.division_id, include_blank: 'Subjects' }),
-                   {}, class: 'form-control', id: 'division', required: true) %>
-    </div>
-    <%=f.error_span(:division_id) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :teacher_id, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.select(:teacher_id, options_for_select(Teacher.all.map {|teacher| [teacher.fullname, teacher.id]},
-                                                   {:selected => @attendance.teacher_id }),
-                   {}, class: 'form-control', required: true) %>
-    </div>
-    <%=f.error_span(:teacher_id) %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :subject_id, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%=f.select(:subject_id, options_for_select(['Select'],
-                                                   {:selected => @attendance.subject_id }),
-                  {}, class: 'form-control', id: 'subject', required: true)  %>
-    </div>
-    <%=f.error_span(:subject_id) %>
-  </div>
-
-
-
-  <div class="form-group">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-10" style="max-height: 30rem; overflow: auto">
-      <div id="students"></div>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                attendances_path, :class => 'btn btn-default' %>
-    </div>
-  </div>
-
-<% end %>
-
+</div>
 <script type="text/javascript">
 
     $(function () {

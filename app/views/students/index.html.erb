@@ -1,19 +1,23 @@
 <%- model_class = Student -%>
-<div class="">
-  <div class="">
-    <h3>
-      <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
-      <span class="pull-right">
+<div class="page-header">
+  <h3>
+    <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
+  </h3>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
         <%= link_to 'New Admission',
                     new_student_path,
-                    :class => 'btn btn-primary' %>
+                    :class => 'custom-link' %>
         <%= link_to 'New Enquiry',
                     {controller: 'students', action: 'new', is_enquiry: true},
-                    :class => 'btn btn-info' %>
-      </span>
-    </h3>
+                    :class => 'custom-link' %>
+      </div>
+    </div>
   </div>
-  <div class="">
+  <div class="col-md-9">
     <div class="card">
       <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#admitted_students" aria-controls="admitted_students" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Admitted Students</a></li>

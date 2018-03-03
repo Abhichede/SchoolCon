@@ -26,9 +26,12 @@ class FeeCategoriesController < ApplicationController
   def create
     @fee_category = FeeCategory.new(fee_category_params)
 
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @fee_category.save
-        format.html { redirect_to @fee_category, notice: 'Fee category was successfully created.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Fee category was successfully created.' }
         format.json { render :show, status: :created, location: @fee_category }
       else
         format.html { render :new }
@@ -40,9 +43,13 @@ class FeeCategoriesController < ApplicationController
   # PATCH/PUT /fee_categories/1
   # PATCH/PUT /fee_categories/1.json
   def update
+
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @fee_category.update(fee_category_params)
-        format.html { redirect_to @fee_category, notice: 'Fee category was successfully updated.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Fee category was successfully updated.' }
         format.json { render :show, status: :ok, location: @fee_category }
       else
         format.html { render :edit }
