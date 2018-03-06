@@ -276,7 +276,11 @@
                 Leaving Certificate
               </div>
               <div class="panel-body">
-                <%= image_tag @student.leaving_certificate %>
+                <% if File.extname(@student.leaving_certificate.to_s) == ".pdf" %>
+                  <iframe src="<%= @student.leaving_certificate %>" height="400" style="border: none; width: 100%; margin: 0"> </iframe>
+                <% else %>
+                  <%= image_tag @student.leaving_certificate %>
+                <% end %>
               </div>
             </div>
           </div>
