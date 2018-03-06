@@ -1,11 +1,22 @@
+# encoding: utf-8
+CarrierWave.configure do |config|
+  config.fog_credentials = {
+      :provider               => 'AWS',
+      :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
+      :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],
+      :region                 => 'ap-south-1'
+  }
+  config.fog_directory  = ENV['AWS_S3_BUCKET'] # bucket name
+end
+
 class LeavingCertificateUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+  # storage :file
+   storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -42,6 +53,6 @@ class LeavingCertificateUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    "#{model.class.to_s.underscore}_#{model.id}_leving_certificate#{File.extname(original_filename)}" if original_filename
+    "#{model.class.to_s.underscore}_#{mounted_as}#{File.extname(original_filename)}" if original_filename
   end
 end
