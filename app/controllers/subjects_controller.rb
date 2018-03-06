@@ -28,9 +28,12 @@ class SubjectsController < ApplicationController
   def create
     @subject = Subject.new(subject_params)
 
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @subject.save
-        format.html { redirect_to @subject, notice: 'Subject was successfully created.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Subject was successfully created.' }
         format.json { render :show, status: :created, location: @subject }
       else
         format.html { render :new }
@@ -42,9 +45,13 @@ class SubjectsController < ApplicationController
   # PATCH/PUT /subjects/1
   # PATCH/PUT /subjects/1.json
   def update
+
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @subject.update(subject_params)
-        format.html { redirect_to @subject, notice: 'Subject was successfully updated.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Subject was successfully updated.' }
         format.json { render :show, status: :ok, location: @subject }
       else
         format.html { render :edit }

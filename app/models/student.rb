@@ -18,6 +18,7 @@ class Student < ApplicationRecord
   attr_accessor :siblings
 
   mount_uploader :profile_photo, StudentProfileUploader
+  mount_uploader :leaving_certificate, LeavingCertificateUploader
 
   def self_full_name
     "#{first_name} #{middle_name} #{last_name}"

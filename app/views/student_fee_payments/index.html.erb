@@ -2,47 +2,43 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:student_id) %></th>
-      <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
-      <th><%= model_class.human_attribute_name(:payment_date) %></th>
-      <th><%= model_class.human_attribute_name(:payment_mode) %></th>
-      <th><%= model_class.human_attribute_name(:payment_desc) %></th>
-      <th><%= model_class.human_attribute_name(:amount) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @student_fee_payments.each do |student_fee_payment| %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
       <tr>
-        <td><%= link_to student_fee_payment.id, student_fee_payment_path(student_fee_payment) %></td>
-        <td><%= student_fee_payment.student_id %></td>
-        <td><%= student_fee_payment.academic_year_id %></td>
-        <td><%= student_fee_payment.payment_date %></td>
-        <td><%= student_fee_payment.payment_mode %></td>
-        <td><%= student_fee_payment.payment_desc %></td>
-        <td><%= student_fee_payment.amount %></td>
-        <td><%=l student_fee_payment.created_at %></td>
-        <td>
-          <%= link_to t('.show', :default => t("helpers.links.show")),
-                      student_fee_payment_path(student_fee_payment), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_student_fee_payment_path(student_fee_payment), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      student_fee_payment_path(student_fee_payment),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
+        <th><%= model_class.human_attribute_name(:id) %></th>
+        <th><%= model_class.human_attribute_name(:student_id) %></th>
+        <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
+        <th><%= model_class.human_attribute_name(:payment_date) %></th>
+        <th><%= model_class.human_attribute_name(:payment_mode) %></th>
+        <th><%= model_class.human_attribute_name(:payment_desc) %></th>
+        <th><%= model_class.human_attribute_name(:amount) %></th>
+        <th><%= model_class.human_attribute_name(:created_at) %></th>
+        <th><%=t '.actions', :default => t("helpers.actions") %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_student_fee_payment_path,
-            :class => 'btn btn-primary' %>
+      </thead>
+      <tbody>
+      <% @student_fee_payments.each do |student_fee_payment| %>
+          <tr>
+            <td><%= link_to student_fee_payment.id, student_fee_payment_path(student_fee_payment) %></td>
+            <td><%= student_fee_payment.student_id %></td>
+            <td><%= student_fee_payment.academic_year_id %></td>
+            <td><%= student_fee_payment.payment_date %></td>
+            <td><%= student_fee_payment.payment_mode %></td>
+            <td><%= student_fee_payment.payment_desc %></td>
+            <td><%= student_fee_payment.amount %></td>
+            <td><%=l student_fee_payment.created_at %></td>
+            <td>
+              <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                          student_fee_payment_path(student_fee_payment),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-xs btn-danger' %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

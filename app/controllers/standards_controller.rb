@@ -28,9 +28,12 @@ class StandardsController < ApplicationController
   def create
     @standard = Standard.new(standard_params)
 
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @standard.save
-        format.html { redirect_to @standard, notice: 'Standard was successfully created.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Standard was successfully created.' }
         format.json { render :show, status: :created, location: @standard }
       else
         format.html { render :new }
@@ -42,9 +45,13 @@ class StandardsController < ApplicationController
   # PATCH/PUT /standards/1
   # PATCH/PUT /standards/1.json
   def update
+
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @standard.update(standard_params)
-        format.html { redirect_to @standard, notice: 'Standard was successfully updated.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Standard was successfully updated.' }
         format.json { render :show, status: :ok, location: @standard }
       else
         format.html { render :edit }

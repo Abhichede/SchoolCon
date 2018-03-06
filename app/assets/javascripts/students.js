@@ -26,8 +26,14 @@ $(function () {
            // The key name on the left side is the name attribute
            // of an input field. Validation rules are defined
            // on the right side
-           "student[first_name]": {required: true},
-           "student[last_name]": {required: true},
+           "student[first_name]": {
+               required: true,
+               pattern: /^[A-Z][a-zA-Z]*$/
+           },
+           "student[last_name]": {
+               required: true,
+               pattern: /^[A-Z][a-zA-Z]*$/
+           },
            "student[date_of_birth]":{required: true},
            "student[residential_address_one]":{required: true},
            "student[residential_city]":{required: true},
@@ -47,10 +53,22 @@ $(function () {
                minlength: 6,
                maxlength: 6
            },
-           "student[father_first_name]":{required: true},
-           "student[father_last_name]":{required: true},
-           "student[mother_first_name]":{required: true},
-           "student[mother_last_name]":{required: true},
+           "student[father_first_name]":{
+               required: true,
+               pattern: /^[A-Z][a-zA-Z]*$/
+           },
+           "student[father_last_name]":{
+               required: true,
+               pattern: /^[A-Z][a-zA-Z]*$/
+           },
+           "student[mother_first_name]":{
+               required: true,
+               pattern: /^[A-Z][a-zA-Z]*$/
+           },
+           "student[mother_last_name]":{
+               required: true,
+               pattern: /^[A-Z][a-zA-Z]*$/
+           },
            "student[father_mobile]":{
                required: true,
                pattern: /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/

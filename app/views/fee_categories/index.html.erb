@@ -30,7 +30,7 @@
           <tbody>
           <% @fee_categories.each do |fee_category| %>
               <tr>
-                <td><%= link_to fee_category.id, fee_category_path(fee_category) %></td>
+                <td><%= fee_category.id %></td>
                 <td><%= fee_category.name %></td>
                 <td><%= fee_category.standard.name %></td>
                 <td><%= fee_category.amount %></td>

@@ -18,6 +18,9 @@
                                       action: 'new', fee_type: 'student_wise',
                                       student_id: @student.id},
                       class: 'custom-link' %>
+          <%= link_to '<i class="fa fa-certificate"> </i> Add Leaving Cert'.html_safe, {controller: 'students',
+                                                                             action: 'add_leaving_certificate', id: @student.id},
+                      class: 'custom-link', remote: true %>
         </div>
       </div>
     </div>
@@ -30,6 +33,7 @@
           <li role="presentation"><a href="#academic_info" aria-controls="academic_info" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i> Academic Details</a></li>
           <li role="presentation"><a href="#previous_info" aria-controls="previous_info" role="tab" data-toggle="tab"><i class="fa fa-backward"></i> Previous Details</a></li>
           <li role="presentation"><a href="#fee_details" aria-controls="fee_details" role="tab" data-toggle="tab"><i class="fa fa-inr"></i> Fee Details</a></li>
+          <li role="presentation"><a href="#certificates" aria-controls="fee_details" role="tab" data-toggle="tab"><i class="fa fa-certificate"></i> Certificates</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -265,6 +269,16 @@
                   </div>
                 </div>
             <% end %>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="certificates">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                Leaving Certificate
+              </div>
+              <div class="panel-body">
+                <%= image_tag @student.leaving_certificate %>
+              </div>
+            </div>
           </div>
         </div>
       </div>

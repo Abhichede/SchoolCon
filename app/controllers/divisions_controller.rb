@@ -28,9 +28,12 @@ class DivisionsController < ApplicationController
   def create
     @division = Division.new(division_params)
 
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @division.save
-        format.html { redirect_to @division, notice: 'Division was successfully created.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Division was successfully created.' }
         format.json { render :show, status: :created, location: @division }
       else
         format.html { render :new }
@@ -42,9 +45,13 @@ class DivisionsController < ApplicationController
   # PATCH/PUT /divisions/1
   # PATCH/PUT /divisions/1.json
   def update
+
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @division.update(division_params)
-        format.html { redirect_to @division, notice: 'Division was successfully updated.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Division was successfully updated.' }
         format.json { render :show, status: :ok, location: @division }
       else
         format.html { render :edit }

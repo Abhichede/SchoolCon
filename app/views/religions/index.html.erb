@@ -20,16 +20,14 @@
           <tr>
             <th><%= model_class.human_attribute_name(:id) %></th>
             <th><%= model_class.human_attribute_name(:name) %></th>
-            <th><%= model_class.human_attribute_name(:created_at) %></th>
             <th><%=t '.actions', :default => t("helpers.actions") %></th>
           </tr>
           </thead>
           <tbody>
           <% @religions.each do |religion| %>
               <tr>
-                <td><%= link_to religion.id, religion_path(religion) %></td>
+                <td><%= religion.id %></td>
                 <td><%= religion.name %></td>
-                <td><%=l religion.created_at %></td>
                 <td>
                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
                               edit_religion_path(religion), :class => 'btn btn-default btn-xs', remote: true %>

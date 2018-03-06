@@ -1,4 +1,9 @@
 <% if params[:fee_type] === 'student_wise' && !params[:student_id].nil? %>
+    <div class="panel panel-default" data-spy="affix" data-offset-top="205">
+      <div class="panel-body">
+        <h3>Payments for: <%= @student.self_full_name %></h3>
+      </div>
+    </div>
     <div class="panel panel-primary">
       <div class="panel-heading text-center">
         General Fees

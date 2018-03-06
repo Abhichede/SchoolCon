@@ -27,7 +27,7 @@
           <tbody>
           <% @castes.each do |caste| %>
               <tr>
-                <td><%= link_to caste.id, caste_path(caste) %></td>
+                <td><%= caste.id %></td>
                 <td><%= caste.name %></td>
                 <td><%=l caste.created_at %></td>
                 <td>

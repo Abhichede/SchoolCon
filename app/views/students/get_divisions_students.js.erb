@@ -1,5 +1,5 @@
 <% if @filtered_divisions  %>
-  $('#division').html("<%= escape_javascript options_for_select(@divisions.map {|division| [division.name, division.id]}) %>");
+  $('#division').html("<%= escape_javascript options_for_select(@divisions.map {|division| [division.name, division.id]}.insert(0, '')) %>");
 <% end %>
 
 <% if !@student.nil? %>

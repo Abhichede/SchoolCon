@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h3>Fee Payments</h3>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body text-center">
+    <%= form_tag({controller: 'student_fee_payments',
+                  action: 'new'}, method: 'get', :html => { :class => "form-horizontal student" }) do %>
+      <%= text_field_tag :fee_type, nil, type: 'hidden', value: 'student_wise' %>
+      <div class="form-group">
+        <%= label_tag 'Select Student', nil, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= select_tag :student_id, options_for_select(Student.all.map {|student| [student.self_full_name, student.id]}),
+                       { class: 'selectpicker ', 'data-live-search': true} %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-4">
+          <%= submit_tag 'Next', class: 'btn btn-primary ' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

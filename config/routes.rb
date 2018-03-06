@@ -40,6 +40,12 @@ Rails.application.routes.draw do
   # assign subjects
   get 'new_assign_subject', to: 'standards#new_assign_subject'
   post 'assign_subjects', to: 'standards#assign_subjects'
+
+  # fee
+  get 'fee_payment', to: 'student_fee_payments#fee_payment'
+
+  # certificates
+  get 'add_leaving_certificate', to: 'students#add_leaving_certificate'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

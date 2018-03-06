@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: %i[show edit update destroy]
+  before_action :set_student, only: %i[show edit update destroy add_leaving_certificate]
 
   add_breadcrumb 'Students', :students_path
 
@@ -119,6 +119,10 @@ class StudentsController < ApplicationController
       end
   end
 
+  def add_leaving_certificate
+
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -141,6 +145,6 @@ class StudentsController < ApplicationController
                                     :last_school_attended, :academic_year_id,
                                     :division_id, :joining_date, :roll_no, :student_adhar, :father_adhar,
                                     :prev_standard, :prev_year, :prev_marks,
-                                    :mother_adhar, :profile_photo, :is_enquiry, fee_category_ids: [])
+                                    :mother_adhar, :profile_photo, :is_enquiry, :leaving_certificate, fee_category_ids: [])
   end
 end

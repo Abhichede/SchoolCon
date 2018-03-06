@@ -9,7 +9,7 @@
       <div class="panel-body">
         <%= link_to t('.new', :default => t("helpers.links.new")),
                     new_standard_path,
-                    :class => 'custom-link' %>
+                    :class => 'custom-link', remote: true %>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@
                 <td><%= standard.name %></td>
                 <td>
                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                              edit_standard_path(standard), :class => 'btn btn-default btn-xs' %>
+                              edit_standard_path(standard), :class => 'btn btn-default btn-xs', remote: true %>
                   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                               standard_path(standard),
                               :method => :delete,

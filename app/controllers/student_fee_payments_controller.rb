@@ -68,6 +68,10 @@ class StudentFeePaymentsController < ApplicationController
     end
   end
 
+  def fee_payment
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student_fee_payment
