@@ -28,7 +28,7 @@ class StudentCertificatesController < ApplicationController
 
     respond_to do |format|
       if @student_certificate.save
-        format.html { redirect_to @student_certificate, notice: 'Student certificate was successfully created.' }
+        format.html { redirect_to student_path(@student_certificate.student), notice: 'Student certificate was successfully created.' }
         format.json { render :show, status: :created, location: @student_certificate }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class StudentCertificatesController < ApplicationController
   def update
     respond_to do |format|
       if @student_certificate.update(student_certificate_params)
-        format.html { redirect_to @student_certificate, notice: 'Student certificate was successfully updated.' }
+        format.html { redirect_to student_path(@student_certificate.student), notice: 'Student certificate was successfully updated.' }
         format.json { render :show, status: :ok, location: @student_certificate }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class StudentCertificatesController < ApplicationController
   def destroy
     @student_certificate.destroy
     respond_to do |format|
-      format.html { redirect_to student_certificates_url, notice: 'Student certificate was successfully destroyed.' }
+      format.html { redirect_to student_path(@student_certificate.student), notice: 'Student certificate was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

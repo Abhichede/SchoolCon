@@ -39,12 +39,11 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="personal_info">
+            <span class="pull-right">
+              <%= image_tag @student.profile_photo, class: 'img-circle', width: '150px', height: '150px' %>
+            </span>
             <table class="table table-bordered">
               <tbody>
-              <tr>
-                <th>Photo: </th>
-                <td><%= image_tag @student.profile_photo %></td>
-              </tr>
               <tr>
                 <th>Name: </th>
                 <td><%= @student.self_full_name %></td>

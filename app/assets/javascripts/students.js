@@ -30,6 +30,9 @@ $(function () {
                required: true,
                pattern: /^[A-Z][a-zA-Z]*$/
            },
+           "student[middle_name]": {
+               pattern: /^[a-zA-Z]*$/
+           },
            "student[last_name]": {
                required: true,
                pattern: /^[A-Z][a-zA-Z]*$/
@@ -57,6 +60,9 @@ $(function () {
                required: true,
                pattern: /^[A-Z][a-zA-Z]*$/
            },
+           "student[father_middle_name]": {
+               pattern: /^[a-zA-Z]*$/
+           },
            "student[father_last_name]":{
                required: true,
                pattern: /^[A-Z][a-zA-Z]*$/
@@ -65,12 +71,18 @@ $(function () {
                required: true,
                pattern: /^[A-Z][a-zA-Z]*$/
            },
+           "student[mother_middle_name]": {
+               pattern: /^[a-zA-Z]*$/
+           },
            "student[mother_last_name]":{
                required: true,
                pattern: /^[A-Z][a-zA-Z]*$/
            },
            "student[father_mobile]":{
                required: true,
+               pattern: /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/
+           },
+           "student[mother_mobile]": {
                pattern: /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/
            },
            "student[standard_id]":{required: true},
@@ -88,6 +100,36 @@ $(function () {
            },
            "student[mother_email]": {
                pattern: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+           },
+           "student[student_adhar]": {
+               pattern: /^[0-9]{12}$/
+           },
+           "student[father_adhar]": {
+               pattern: /^[0-9]{12}$/
+           },
+           "student[mother_adhar]": {
+               pattern: /^[0-9]{12}$/
+           },
+           "student[mother_tongue]": {
+               pattern: /^[a-zA-Z]*$/
+           },
+           "student[father_occupation]": {
+               pattern: /^[a-zA-Z]*$/
+           },
+           "student[mother_occupation]": {
+               pattern: /^[a-zA-Z]*$/
+           },
+           "student[last_school_attended]": {
+               pattern: /^[a-zA-Z]*$/
+           },
+           "student[prev_standard]": {
+               pattern: /^[a-zA-Z]*$/
+           },
+           "student[prev_year]": {
+               pattern: /^[0-9]{4}-[0-9]{4}$/
+           },
+           "student[prev_marks]": {
+               pattern: /^[0-9]*[%]$/
            }
        },
        // Specify validation error messages
@@ -112,6 +154,15 @@ $(function () {
            },
            "student[mother_email]": {
                pattern: "It seems invalid Email"
+           },
+           "student[student_adhar]": {
+               pattern: "Please enter valid ADHAR eg. Only allowed 12 digits"
+           },
+           "student[prev_marks]": {
+               pattern: "please enter valid marks with % sign"
+           },
+           "student[prev_year]": {
+               pattern: "Please enter year in format xxxx-xxxx eg. 2018-2019"
            }
 
 
