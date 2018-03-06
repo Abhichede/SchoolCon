@@ -280,7 +280,7 @@
                   <iframe src="<%= @student.leaving_certificate %>" height="400" style="border: none; width: 100%; margin: 0"> </iframe>
                 <% else %>
                   <%= image_tag @student.leaving_certificate %>
-                <% end %>
+                <% end unless !@student.leaving_certificate.blank? %>
               </div>
             </div>
           </div>
