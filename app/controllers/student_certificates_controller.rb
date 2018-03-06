@@ -31,7 +31,7 @@ class StudentCertificatesController < ApplicationController
         format.html { redirect_to student_path(@student_certificate.student), notice: 'Student certificate was successfully created.' }
         format.json { render :show, status: :created, location: @student_certificate }
       else
-        format.html { render :new }
+        format.html { redirect_to student_path(@student_certificate.student), alert: 'Some errors occured while saving Student Document. That might be invalid file type.' }
         format.json { render json: @student_certificate.errors, status: :unprocessable_entity }
       end
     end

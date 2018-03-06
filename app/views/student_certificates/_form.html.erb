@@ -30,6 +30,7 @@
     <%= f.label :path, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.file_field :path, :class => 'form-control', required: true %>
+      <p class="help-block">Only allowed file types are: jpg, png, jpeg, pdf</p>
     </div>
     <%=f.error_span(:path) %>
   </div>
