@@ -53,6 +53,6 @@ class LeavingCertificateUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    "#{model.class.to_s.underscore}_#{mounted_as}#{File.extname(original_filename)}" if original_filename
+    "#{model.class.to_s.underscore}_#{model.name}_#{mounted_as}#{File.extname(original_filename)}" if original_filename
   end
 end

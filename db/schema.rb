@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305114027) do
+ActiveRecord::Schema.define(version: 20180306151328) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -116,6 +116,14 @@ ActiveRecord::Schema.define(version: 20180305114027) do
     t.bigint "teacher_id", null: false
     t.index ["standard_id", "teacher_id"], name: "index_standards_teachers_on_standard_id_and_teacher_id"
     t.index ["teacher_id", "standard_id"], name: "index_standards_teachers_on_teacher_id_and_standard_id"
+  end
+
+  create_table "student_certificates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "student_id"
+    t.string "name"
+    t.string "path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "student_fee_payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -18,7 +18,7 @@
                                       action: 'new', fee_type: 'student_wise',
                                       student_id: @student.id},
                       class: 'custom-link' %>
-          <%= link_to '<i class="fa fa-certificate"> </i> Add Leaving Cert'.html_safe, {controller: 'students',
+          <%= link_to '<i class="fa fa-certificate"> </i> Add Document'.html_safe, {controller: 'students',
                                                                              action: 'add_leaving_certificate', id: @student.id},
                       class: 'custom-link', remote: true %>
         </div>
@@ -271,18 +271,27 @@
             <% end %>
           </div>
           <div role="tabpanel" class="tab-pane" id="certificates">
-            <div class="panel panel-danger">
-              <div class="panel-heading">
-                Leaving Certificate
+            <% @student.student_certificates.each do |cert| %>
+              <div class="panel panel-danger">
+                <div class="panel-heading">
+                  <%= cert.name %>
+                  <span class="pull-right">
+                    <%= link_to '<i class="fa fa-trash"> </i> '.html_safe + t('.destroy', :default => t("helpers.links.destroy")),
+                                     student_certificate_path(cert),
+                                     :method => 'delete',
+                                     :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }
+                    %>
+                  </span>
+                </div>
+                <div class="panel-body">
+                  <% if File.extname(cert.path.to_s) == ".pdf" %>
+                      <iframe src="<%= cert.path %>" height="400" style="border: none; width: 100%; margin: 0"> </iframe>
+                  <% else %>
+                      <%= image_tag cert.path %>
+                  <% end %>
+                </div>
               </div>
-              <div class="panel-body">
-                <% if File.extname(@student.leaving_certificate.to_s) == ".pdf" %>
-                  <iframe src="<%= @student.leaving_certificate %>" height="400" style="border: none; width: 100%; margin: 0"> </iframe>
-                <% else %>
-                  <%= image_tag @student.leaving_certificate %>
-                <% end unless @student.leaving_certificate.nil? %>
-              </div>
-            </div>
+            <% end unless @student.student_certificates.nil? %>
           </div>
         </div>
       </div>

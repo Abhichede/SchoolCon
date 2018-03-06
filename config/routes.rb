@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :student_certificates
   resources :parents
   resources :events
   resources :student_wise_instant_fees

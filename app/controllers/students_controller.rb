@@ -120,7 +120,7 @@ class StudentsController < ApplicationController
   end
 
   def add_leaving_certificate
-
+    @student_certificate = StudentCertificate.new
   end
 
   private
@@ -145,6 +145,6 @@ class StudentsController < ApplicationController
                                     :last_school_attended, :academic_year_id,
                                     :division_id, :joining_date, :roll_no, :student_adhar, :father_adhar,
                                     :prev_standard, :prev_year, :prev_marks,
-                                    :mother_adhar, :profile_photo, :is_enquiry, :leaving_certificate, fee_category_ids: [])
+                                    :mother_adhar, :profile_photo, :is_enquiry, fee_category_ids: [])
   end
 end

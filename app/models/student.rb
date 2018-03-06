@@ -14,11 +14,11 @@ class Student < ApplicationRecord
   has_many :student_fee_payments
   has_many :student_wise_fines
   has_many :student_wise_instant_fees
+  has_many :student_certificates
 
   attr_accessor :siblings
 
   mount_uploader :profile_photo, StudentProfileUploader
-  mount_uploader :leaving_certificate, LeavingCertificateUploader
 
   def self_full_name
     "#{first_name} #{middle_name} #{last_name}"
