@@ -1,0 +1,165 @@
+<% if params[:fee_type] === 'student_wise' && !params[:student_id].nil? %>
+    <div class="panel panel-default" data-spy="affix" data-offset-top="205">
+      <div class="panel-body">
+        <h3>Payments for: <%= @student.self_full_name %></h3>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">
+        General Fees
+      </div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Particulars</th>
+            <th>Amount</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% counter = 0 %>
+          <% @student.student_wise_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+              <tr>
+                <td><%= counter += 1 %></td>
+                <td><%= fee.fee_category %></td>
+                <td><%= fee.amount %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <% if @student.current_total_instant_fee > 0.0 %>
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            Instant fees
+          </div>
+          <div class="panel-body">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>Particulars</th>
+                <th>Amount</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% counter = 0 %>
+              <% @student.student_wise_instant_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+                  <tr>
+                    <td><%= counter += 1 %></td>
+                    <td><%= fee.description %></td>
+                    <td><%= fee.amount %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    <% end %>
+
+    <% if @student.current_total_discount > 0.0 %>
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            Discounts
+          </div>
+          <div class="panel-body">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>Particulars</th>
+                <th>Amount</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% counter = 0 %>
+              <% @student.student_wise_discounts.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+                  <tr>
+                    <td><%= counter += 1 %></td>
+                    <td><%= fee.description %></td>
+                    <td><%= fee.amount %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    <% end %>
+
+    <% if @student.current_total_fine > 0.0 %>
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            Fine
+          </div>
+          <div class="panel-body">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>Particulars</th>
+                <th>Amount</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% counter = 0 %>
+              <% @student.student_wise_fines.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+                  <tr>
+                    <td><%= counter += 1 %></td>
+                    <td><%= fee.desciption %></td>
+                    <td><%= fee.amount %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    <% end %>
+
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th>Total fees: </th> <td><%= @student.current_total_fee + @student.current_total_instant_fee %></td>
+          </tr>
+          <tr>
+            <th>Total Discount: </th>
+            <td>
+              <%= @student.current_total_discount %>
+            </td>
+          </tr>
+          <tr>
+            <th>Total Fine: </th>
+            <td>
+              <%= @student.current_total_fine %>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel-danger">
+      <div class="panel-heading text-center">
+        Summary
+      </div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th><span class="pull-right">Total Amount to pay: </span></th> <td><%= @student.total_fee_with_discount_fine %></td>
+          </tr>
+          <tr>
+            <th><span class="pull-right">Total amount paid: </span></th><td><%= @student.current_total_paid %></td>
+          </tr>
+          <tr>
+            <th><span class="pull-right">Total Balance: </span></th><td><%= @student.current_balance_amount %></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<% end %>

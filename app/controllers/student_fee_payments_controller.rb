@@ -35,7 +35,7 @@ class StudentFeePaymentsController < ApplicationController
 
     respond_to do |format|
       if @student_fee_payment.save
-        format.html { redirect_to student_path(@student_fee_payment.student), notice: 'Student fee payment was successfully created.' }
+        format.html { redirect_to controller: 'student_fee_payments', action: 'fee_receipt', student_id: @student_fee_payment.student.id, fee_type: 'student_wise', notice: 'Student fee payment was successfully created.' }
         format.json { render :show, status: :created, location: @student_fee_payment }
       else
         format.html { render :new }
@@ -70,6 +70,17 @@ class StudentFeePaymentsController < ApplicationController
 
   def fee_payment
 
+  end
+
+  def fee_receipt
+    if !params[:student_id].blank?
+      @student = Student.find(params[:student_id])
+    else
+      respond_to do |format|
+        format.html { redirect_to :back, alert: 'Student student not found.' }
+        format.json { head :no_content }
+      end
+    end
   end
 
   private
