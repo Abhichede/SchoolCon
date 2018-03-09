@@ -55,8 +55,7 @@
       <div class="form-group">
         <%= f.label :subject_id, :class => 'control-label col-lg-2' %>
         <div class="col-lg-10">
-          <%=f.select(:subject_id, options_for_select(['Select'],
-                                                       {:selected => @attendance.subject_id }),
+          <%=f.select(:subject_id, options_for_select(['Select']),
                       {}, class: 'form-control', id: 'subject', required: true)  %>
         </div>
         <%=f.error_span(:subject_id) %>

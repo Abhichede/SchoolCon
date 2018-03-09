@@ -120,10 +120,10 @@ $(function () {
                pattern: /^[a-zA-Z]*$/
            },
            "student[last_school_attended]": {
-               pattern: /^[a-zA-Z]*$/
+               pattern: /^[a-zA-Z,\s.]*$/
            },
            "student[prev_standard]": {
-               pattern: /^[a-zA-Z]*$/
+               pattern: /^[0-9a-zA-Z\-]*$/
            },
            "student[prev_year]": {
                pattern: /^[0-9]{4}-[0-9]{4}$/

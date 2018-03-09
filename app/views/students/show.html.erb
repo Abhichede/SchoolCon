@@ -1,5 +1,11 @@
 <% add_breadcrumb @student.self_full_name, student_path(@student) %>
-<%- model_class = Student -%>
+<% if @student.student_certificates.count < 1 %>
+    <div class="panel panel-danger">
+      <div class="panel-heading text-center">
+        Documents Not Uploaded yet. <br/> It is recommended to upload required documents first.
+      </div>
+    </div>
+<% end %>
   <!-- Nav tabs -->
   <div class="row">
     <div class="col-md-3">
@@ -18,9 +24,12 @@
                                       action: 'new', fee_type: 'student_wise',
                                       student_id: @student.id},
                       class: 'custom-link' %>
-          <%= link_to '<i class="fa fa-certificate"> </i> Add Document'.html_safe, {controller: 'students',
+          <%= link_to '<i class="fa fa-file-text"> </i> Add Document'.html_safe, {controller: 'students',
                                                                              action: 'add_leaving_certificate', id: @student.id},
                       class: 'custom-link', remote: true %>
+          <%= link_to '<i class="fa fa-file-text"> </i> Attendance'.html_safe, {controller: 'attendances',
+                                                                                  action: 'index', standard_id: @student.standard_id, division_id: @student.division_id},
+                      class: 'custom-link' %>
         </div>
       </div>
     </div>
@@ -33,7 +42,8 @@
           <li role="presentation"><a href="#academic_info" aria-controls="academic_info" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i> Academic Details</a></li>
           <li role="presentation"><a href="#previous_info" aria-controls="previous_info" role="tab" data-toggle="tab"><i class="fa fa-backward"></i> Previous Details</a></li>
           <li role="presentation"><a href="#fee_details" aria-controls="fee_details" role="tab" data-toggle="tab"><i class="fa fa-inr"></i> Fee Details</a></li>
-          <li role="presentation"><a href="#certificates" aria-controls="fee_details" role="tab" data-toggle="tab"><i class="fa fa-certificate"></i> Certificates</a></li>
+          <li role="presentation"><a href="#certificates" aria-controls="certificates" role="tab" data-toggle="tab"><i class="fa fa-file-text"></i> Documents</a></li>
+          <li role="presentation"><a href="#attendances" aria-controls="attendances" role="tab" data-toggle="tab"><i class="fa fa-file-text"></i> Attendance</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -270,6 +280,15 @@
             <% end %>
           </div>
           <div role="tabpanel" class="tab-pane" id="certificates">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <span class="pull-right">
+              <%= link_to '<i class="fa fa-certificate"> </i> Add Document'.html_safe, {controller: 'students',
+                                                                                        action: 'add_leaving_certificate', id: @student.id},
+                          class: 'btn btn-default', remote: true %>
+            </span>
+              </div>
+            </div>
             <% @student.student_certificates.each do |cert| %>
               <div class="panel panel-danger">
                 <div class="panel-heading">
@@ -291,6 +310,33 @@
                 </div>
               </div>
             <% end unless @student.student_certificates.nil? %>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="attendances">
+            <table class="table table-bordered">
+              <tbody>
+              <% @student.attendance.each do |month, attendance| %>
+                  <tr>
+                    <th><%= month.strftime('%B') %></th>
+                    <td>
+                      <table class="table table-bordered">
+                        <% for att in attendance %>
+                          <tr>
+                            <th> <%= att.date %> </th>
+                            <th> <%= att.subject.name %> </th>
+                            <td>
+                              <span class="label label-<%= att.att_data["#{@student.id}"] === 'on' ? 'primary' : 'danger' %>">
+                                <%= att.att_data["#{@student.id}"] === 'on' ? 'Present' : 'Absent' %>
+                              </span>
+                            </td>
+                          </tr>
+                        <% end %>
+                      </table>
+                    </td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

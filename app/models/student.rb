@@ -102,5 +102,9 @@ class Student < ApplicationRecord
   end
 
 
+  def attendance
+    @attendances = division.attendances.group_by {|a| Date.parse(a.date).beginning_of_month}
+  end
+
 
 end
