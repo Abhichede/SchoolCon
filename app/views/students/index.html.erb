@@ -10,10 +10,10 @@
       <div class="panel-body">
         <%= link_to 'New Admission',
                     new_student_path,
-                    :class => 'custom-link' %>
+                    :class => 'custom-link btn btn-primary' %>
         <%= link_to 'New Enquiry',
                     {controller: 'students', action: 'new', is_enquiry: true},
-                    :class => 'custom-link' %>
+                    :class => 'custom-link btn btn-success' %>
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
                   <td><%= student.academic_year.academic_year %></td>
                   <td>
                     <%= link_to t('.show', :default => t("helpers.links.show")),
-                                student_path(student), :class => 'btn btn-default btn-xs' %>
+                                student_path(student), :class => 'btn btn-success btn-xs' %>
                   </td>
                 </tr>
               <% end %>
@@ -73,8 +73,8 @@
                   <td><%= student.standard.name %></td>
                   <td><%= student.academic_year.academic_year %></td>
                   <td>
-                    <%= link_to t('.show', :default => t("helpers.links.show")),
-                                student_path(student), :class => 'btn btn-default btn-xs' %>
+                    <%= link_to 'Confirm Admission',
+                                edit_student_path(student), :class => 'btn btn-success btn-xs' %>
                   </td>
                 </tr>
             <% end %>

@@ -1,46 +1,59 @@
 <%- model_class = Teacher -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h3><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h3>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:date_of_birth) %></th>
-      <th><%= model_class.human_attribute_name(:gender) %></th>
-      <th><%= model_class.human_attribute_name(:blood_group) %></th>
-      <th><%= model_class.human_attribute_name(:address) %></th>
-      <th><%= model_class.human_attribute_name(:contact) %></th>
-      <th><%= model_class.human_attribute_name(:email) %></th>
+<div class="row">
+  <div class="col-lg-2">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= link_to t('.new', :default => t("helpers.links.new")),
+                    new_teacher_path,
+                    :class => 'custom-link btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-10">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th><%= model_class.human_attribute_name(:name) %></th>
+            <th><%= model_class.human_attribute_name(:date_of_birth) %></th>
+            <th><%= model_class.human_attribute_name(:gender) %></th>
+            <th><%= model_class.human_attribute_name(:blood_group) %></th>
+            <th><%= model_class.human_attribute_name(:address) %></th>
+            <th><%= model_class.human_attribute_name(:contact) %></th>
+            <th><%= model_class.human_attribute_name(:email) %></th>
 
-      <th><%= model_class.human_attribute_name(:subjects) %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @teachers.each do |teacher| %>
-      <tr>
-        <td><a href="<%= teacher_path(teacher) %>"><%= teacher.first_name %> <%= teacher.middle_name %> <%= teacher.last_name %></a></td>
-        <td><%= teacher.dob %></td>
-        <td><%= teacher.gender %></td>
-        <td><%= teacher.blood_group %></td>
-        <td>
-          <%= teacher.address_one %>, <%= teacher.address_two %><br/>
-          <%= teacher.city %>, <%= teacher.state %><br/>
-          <%= teacher.country %>, <%= teacher.pincode %>
-        </td>
-        <td><%= teacher.contact %></td>
-        <td><%= teacher.email %></td>
+            <th><%= model_class.human_attribute_name(:subjects) %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @teachers.each do |teacher| %>
+              <tr>
+                <td><a href="<%= teacher_path(teacher) %>"><%= teacher.first_name %> <%= teacher.middle_name %> <%= teacher.last_name %></a></td>
+                <td><%= teacher.dob %></td>
+                <td><%= teacher.gender %></td>
+                <td><%= teacher.blood_group %></td>
+                <td>
+                  <%= teacher.address_one %>, <%= teacher.address_two %><br/>
+                  <%= teacher.city %>, <%= teacher.state %><br/>
+                  <%= teacher.country %>, <%= teacher.pincode %>
+                </td>
+                <td><%= teacher.contact %></td>
+                <td><%= teacher.email %></td>
 
-        <td>
-        <% teacher.subjects.each do |subject| %>
-           <%= subject.name %><br/>
-        <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_teacher_path,
-            :class => 'btn btn-primary' %>
+                <td>
+                  <% teacher.subjects.each do |subject| %>
+                      <%= subject.name %><br/>
+                  <% end %>
+                </td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,7 +21,7 @@
       <div class="form-group">
         <%= f.label 'Select sibling if any', :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
-          <%= f.select :siblings, options_for_select(Student.all.map {|student| [student.self_full_name, student.id]}),
+          <%= f.select :siblings, options_for_select(Student.where(is_enquiry: false).map {|student| [student.self_full_name, student.id]}),
                        {include_blank: 'Siblings', disabled: 'Siblings'}, class: 'selectpicker ', 'data-live-search': true %>
         </div>
       </div>

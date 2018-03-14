@@ -1,2 +1,3 @@
 class ClassTeacher < ApplicationRecord
+
 end

@@ -87,7 +87,9 @@ $(function () {
            },
            "student[standard_id]":{required: true},
            "student[division_id]":{required: true},
-           "student[roll_no]":{required: true},
+           "student[roll_no]":{
+               pattern: /^[0-9]*$/
+           },
            "student[student_mobile]": {
                required: true,
                pattern: /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/
@@ -161,8 +163,59 @@ $(function () {
            "student[prev_marks]": {
                pattern: "please enter valid marks with % sign"
            },
+           "student[last_school_attended]": {
+               pattern: "please enter valid name, only allowed , or . with a-z A-z characters"
+           },
            "student[prev_year]": {
                pattern: "Please enter year in format xxxx-xxxx eg. 2018-2019"
+           },
+           "student[prev_standard]": {
+               pattern: 'Invalid format, only letters or "-" allowed'
+           },
+           "student[father_first_name]":{
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[father_middle_name]": {
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[father_last_name]":{
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[mother_first_name]":{
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[mother_middle_name]": {
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[mother_last_name]":{
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[first_name]": {
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[middle_name]": {
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[last_name]": {
+               pattern: 'Name should be start with Capital letter and can only contains letters'
+           },
+           "student[father_adhar]": {
+               pattern: "Please enter valid ADHAR eg. Only allowed 12 digits"
+           },
+           "student[mother_adhar]": {
+               pattern: "Please enter valid ADHAR eg. Only allowed 12 digits"
+           },
+           "student[mother_tongue]": {
+               pattern: 'Invalid format, allowed a-z or A-Z letters'
+           },
+           "student[father_occupation]": {
+               pattern: 'Invalid format, allowed a-z or A-Z letters'
+           },
+           "student[mother_occupation]": {
+               pattern: 'Invalid format, allowed a-z or A-Z letters'
+           },
+           "student[roll_no]":{
+               pattern: "Invalid Format, only numbers allowed"
            }
 
 

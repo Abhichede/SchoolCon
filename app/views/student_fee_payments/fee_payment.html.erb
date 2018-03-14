@@ -9,7 +9,7 @@
       <div class="form-group">
         <%= label_tag 'Select Student', nil, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
-          <%= select_tag :student_id, options_for_select(Student.all.map {|student| [student.self_full_name, student.id]}),
+          <%= select_tag :student_id, options_for_select(Student.where(is_enquiry: false).map {|student| [student.self_full_name, student.id]}),
                        { class: 'selectpicker ', 'data-live-search': true} %>
         </div>
       </div>

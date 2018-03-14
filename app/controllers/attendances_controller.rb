@@ -92,7 +92,7 @@ class AttendancesController < ApplicationController
     @standard = Standard.find(params[:standard_id])
     @division = @standard.divisions.find(params[:division_id])
 
-    @students = @division.students
+    @students = @division.students.where(is_enquiry: false)
     if !params[:id].blank?
       @attendance = Attendance.find(params[:id])
     end

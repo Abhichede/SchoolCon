@@ -9,7 +9,7 @@
       <div class="panel-body">
         <%= link_to t('.new', :default => t("helpers.links.new")),
                     new_division_path,
-                    :class => 'custom-link', remote: true %>
+                    :class => 'custom-link btn btn-primary', remote: true %>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
               <tr>
                 <td><%= division.id %></td>
                 <td><%= division.name %></td>
-                <td><%= division.standard_id %></td>
+                <td><%= division.standard.name %></td>
                 <td>
                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
                               edit_division_path(division), :class => 'btn btn-default btn-xs', remote: true %>
