@@ -12,11 +12,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address:              'mx1.hostinger.in',
+      address:              'smtp.sendgrid.net',
       port:                 587,
-      domain:               'linkeritsolutions.com',
-      user_name:            'sales@linkeritsolutions.com',
-      password:             'Abhichede777@',
+      domain:               'heroku.com',
+      user_name:             ENV['SENDGRID_USERNAME'],
+      password:             ENV['SENDGRID_PASSWORD'],
       authentication:       'plain',
       enable_starttls_auto: true  }
 
