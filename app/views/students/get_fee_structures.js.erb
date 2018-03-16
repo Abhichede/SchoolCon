@@ -3,7 +3,11 @@ $("#student_fees").replaceWith('<div id="student_fees">' +
     '<div class="panel-heading">Fee Structure <span class="required">*</span> </div>\n' +
     '<div class="panel-body">' +
     '<div class="form-group required col-lg-6">' +
-    '<div class="checkbox checkbox-primary">' +
+    '<div class="checkbox checkbox-danger">' +
+    '<input type="checkbox" id="select_all_fees">' +
+    '<label for="select_all_fees">Select All</label>' +
+    '</div>'+
+    '<div class="checkbox checkbox-primary" id="fee_category_ids_checkboxes">' +
     '<%= collection_check_boxes :student, :fee_category_ids, @fee_structures.all, :id, :name_amount, {checked: (!@student.nil? ? @student.fee_categories.map {|fee| fee.id} : '')} do |b|
       b.check_box+ (b.label+'<br/>'.html_safe)
      end %>' +
@@ -13,3 +17,11 @@ $("#student_fees").replaceWith('<div id="student_fees">' +
     '</div>' +
     '</div>'+
     '</div>');
+
+$('#select_all_fees').change(function () {
+    if (this.checked) {
+        $('#fee_category_ids_checkboxes').find('input:checkbox').prop('checked', this.checked);
+    } else {
+        $('#fee_category_ids_checkboxes').find('input:checkbox').removeAttr('checked');
+    }
+});

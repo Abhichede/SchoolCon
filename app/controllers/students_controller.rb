@@ -50,9 +50,9 @@ class StudentsController < ApplicationController
   # PATCH/PUT /students/1.json
   def update
     respond_to do |format|
-      if !@student.student_wise_fees.nil?
+      unless @student.student_wise_fees.nil?
         StudentWiseFee.where(student_id: @student.id,
-                             academic_year_id: @student.academic_year_id).each(&:destroy)
+                             academic_year_id: @student.academic_years.where(is_active: true).first.id).each(&:destroy)
       end
       if @student.update(student_params)
         update_student_wise_fee(@student)
@@ -96,7 +96,7 @@ class StudentsController < ApplicationController
     @student = student
     @student.fee_categories.each do |fee|
       @student_wise = StudentWiseFee.new(student_id: @student.id, fee_category: fee.name,
-                                         amount: fee.amount, academic_year_id: @student.academic_year.id,
+                                         amount: fee.amount, academic_year_id: @student.academic_years.where(is_active: true).first.id,
                                          is_paid: false)
       @student_wise.save
     end
@@ -141,9 +141,9 @@ class StudentsController < ApplicationController
                                     :residential_pincode, :permanent_address_one, :permanent_address_two,
                                     :permanent_city, :permanent_state, :permanent_country, :permanent_pincode,
                                     :father_mobile, :mother_mobile, :father_occupation, :mother_occupation,
-                                    :father_email, :mother_email, :student_email, :standard_id, :prn,
-                                    :last_school_attended, :academic_year_id,
-                                    :division_id, :joining_date, :roll_no, :student_adhar, :father_adhar,
+                                    :father_email, :mother_email, :student_email, :standard_ids, :prn,
+                                    :last_school_attended, :academic_year_ids,
+                                    :division_ids, :joining_date, :roll_no, :student_adhar, :father_adhar,
                                     :prev_standard, :prev_year, :prev_marks,
                                     :mother_adhar, :profile_photo, :is_enquiry, fee_category_ids: [])
   end

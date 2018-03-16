@@ -42,11 +42,14 @@
                 <tr>
                   <td><%= link_to student.id, student_path(student) %></td>
                   <td><%= student.self_full_name %></td>
-                  <td><%= student.standard.name %></td>
-                  <td><%= student.academic_year.academic_year %></td>
+                  <td><%= student.standards.last.name %></td>
+                  <td><%= student.academic_years.where(is_active: true).first.academic_year if student.academic_years.where(is_active: true).first %></td>
                   <td>
                     <%= link_to t('.show', :default => t("helpers.links.show")),
                                 student_path(student), :class => 'btn btn-success btn-xs' %>
+                    <%= link_to 'Send Message',
+                                new_notification_path(student_id: student.id),
+                                :class => 'btn btn-primary btn-xs', remote: true %>
                   </td>
                 </tr>
               <% end %>
@@ -70,8 +73,8 @@
                 <tr>
                   <td><%= link_to student.id, student_path(student) %></td>
                   <td><%= student.self_full_name %></td>
-                  <td><%= student.standard.name %></td>
-                  <td><%= student.academic_year.academic_year %></td>
+                  <td><%= student.standards.last.name %></td>
+                  <td><%= student.academic_years.where(is_active: true).first.academic_year if student.academic_years.where(is_active: true).first %></td>
                   <td>
                     <%= link_to 'Confirm Admission',
                                 edit_student_path(student), :class => 'btn btn-success btn-xs' %>

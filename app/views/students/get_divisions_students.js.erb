@@ -3,5 +3,5 @@
 <% end %>
 
 <% if !@student.nil? %>
-  $('#division').val(<%= @student.division.id %>);
+  $('#division').val(<%= @student.divisions.last.id if @student.divisions.nil? %>);
 <% end %>

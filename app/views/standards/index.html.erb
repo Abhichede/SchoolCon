@@ -30,6 +30,8 @@
                 <td><%= standard.id %></td>
                 <td><%= standard.name %></td>
                 <td>
+                  <%= link_to t('.show', :default => t("helpers.links.show")),
+                              standard_path(standard), :class => 'btn btn-success btn-xs' %>
                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
                               edit_standard_path(standard), :class => 'btn btn-default btn-xs', remote: true %>
                   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
@@ -37,6 +39,9 @@
                               :method => :delete,
                               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                               :class => 'btn btn-xs btn-danger' %>
+                  <%= link_to 'Message to All',
+                              new_notification_path(notification_type: 'standard_wise', type_data: standard.id),
+                              :class => 'btn btn-primary btn-xs', remote: true %>
                 </td>
               </tr>
           <% end %>

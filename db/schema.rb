@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180306151328) do
+ActiveRecord::Schema.define(version: 20180316093230) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20180306151328) do
     t.boolean "is_active"
   end
 
+  create_table "academic_years_students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "academic_year_id"
+    t.bigint "student_id"
+    t.index ["academic_year_id"], name: "index_academic_years_students_on_academic_year_id"
+    t.index ["student_id"], name: "index_academic_years_students_on_student_id"
+  end
+
   create_table "attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "date"
     t.integer "standard_id"
@@ -31,6 +38,7 @@ ActiveRecord::Schema.define(version: 20180306151328) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "subject_id"
+    t.integer "academic_year_id"
   end
 
   create_table "caste_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -60,6 +68,13 @@ ActiveRecord::Schema.define(version: 20180306151328) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "divisions_students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "division_id"
+    t.bigint "student_id"
+    t.index ["division_id"], name: "index_divisions_students_on_division_id"
+    t.index ["student_id"], name: "index_divisions_students_on_student_id"
+  end
+
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
     t.datetime "start"
@@ -84,6 +99,15 @@ ActiveRecord::Schema.define(version: 20180306151328) do
     t.index ["student_id", "fee_category_id"], name: "index_fee_categories_students_on_student_id_and_fee_category_id"
   end
 
+  create_table "notifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "title"
+    t.text "message"
+    t.string "from"
+    t.integer "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "parents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "mobile"
@@ -102,6 +126,13 @@ ActiveRecord::Schema.define(version: 20180306151328) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "desc"
+  end
+
+  create_table "standards_students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "standard_id"
+    t.bigint "student_id"
+    t.index ["standard_id"], name: "index_standards_students_on_standard_id"
+    t.index ["student_id"], name: "index_standards_students_on_student_id"
   end
 
   create_table "standards_subjects", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

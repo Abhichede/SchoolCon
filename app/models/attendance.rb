@@ -3,4 +3,5 @@ class Attendance < ApplicationRecord
   belongs_to :division
   belongs_to :teacher
   belongs_to :subject
+  belongs_to :academic_year
 end

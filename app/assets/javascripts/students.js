@@ -31,7 +31,7 @@ $(function () {
                pattern: /^[A-Z][a-zA-Z]*$/
            },
            "student[middle_name]": {
-               pattern: /^[a-zA-Z]*$/
+               pattern: /^[A-Z][a-zA-Z]*$/
            },
            "student[last_name]": {
                required: true,
@@ -61,7 +61,7 @@ $(function () {
                pattern: /^[A-Z][a-zA-Z]*$/
            },
            "student[father_middle_name]": {
-               pattern: /^[a-zA-Z]*$/
+               pattern: /^[A-Z][a-zA-Z]*$/
            },
            "student[father_last_name]":{
                required: true,
@@ -72,7 +72,7 @@ $(function () {
                pattern: /^[A-Z][a-zA-Z]*$/
            },
            "student[mother_middle_name]": {
-               pattern: /^[a-zA-Z]*$/
+               pattern: /^[A-Z][a-zA-Z]*$/
            },
            "student[mother_last_name]":{
                required: true,

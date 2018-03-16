@@ -350,7 +350,7 @@
       <div class="form-group required">
         <%= f.label :standard_id, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
-          <%= f.select(:standard_id, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]}.insert(0, ''),
+          <%= f.select(:standard_ids, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]}.insert(0, ''),
                                                         {:selected => @student.standard_id }),
                        {}, class: 'form-control') %>
         </div>
@@ -358,7 +358,7 @@
 
         <%= f.label :division_id, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
-          <%= f.select(:division_id, options_for_select(['Select'],
+          <%= f.select(:division_ids, options_for_select(['Select'],
                                                         {:selected => @student.division_id }),
                        {}, class: 'form-control', id: 'division') %>
         </div>
@@ -375,13 +375,13 @@
 
 
       <div class="form-group required">
-        <%= f.label :academic_year_id, :class => 'control-label col-lg-2' %>
+        <%= f.label :academic_year_ids, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
-          <%= f.select(:academic_year_id, options_for_select(AcademicYear.all.map {|academicYear| [academicYear.academic_year, academicYear.id]},
-                                                             {:selected => @student.academic_year_id }),
+          <%= f.select(:academic_year_ids, options_for_select(AcademicYear.all.where(is_active: true).map {|academicYear| [academicYear.academic_year, academicYear.id]},
+                                                             {:selected => (@student.academic_years.where(is_active: true).first.id if @student.academic_years.nil?) }),
                        {}, class: 'form-control') %>
         </div>
-        <%=f.error_span(:academic_year_id) %>
+        <%=f.error_span(:academic_year_ids) %>
 
         <%= f.label :joining_date, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
@@ -460,7 +460,7 @@
           get_fee_structure();
         });
 
-        $('select#student_standard_id').on('click', function () {
+        $('select#student_standard_ids').on('click', function () {
             get_divisions();
             get_fee_structure();
         });
@@ -471,27 +471,27 @@
 
 
         var get_divisions = function () {
-            var standard_id = $('select#student_standard_id').val();
+            var standard_id = $('select#student_standard_ids').val();
 
-            console.log('clicked event');
-
-            $.ajax({
-                url: '<%= get_divisions_students_url %>',
-                data: 'standard_id='+ standard_id + '&id=<%= @student.id %>',
-                type: 'GET'
-            });
+            if(standard_id) {
+                $.ajax({
+                    url: '<%= get_divisions_students_url %>',
+                    data: 'standard_id=' + standard_id + '&id=<%= @student.id %>',
+                    type: 'GET'
+                });
+            }
         };
 
         var get_fee_structure = function () {
-            var standard_id = $('select#student_standard_id').val();
+            var standard_id = $('select#student_standard_ids').val();
 
-            console.log('clicked event');
-
-            $.ajax({
-                url: '<%= get_fee_structures_url %>',
-                data: 'standard_id='+ standard_id + '&id=<%= @student.id %>',
-                type: 'GET'
-            });
+            if(standard_id) {
+                $.ajax({
+                    url: '<%= get_fee_structures_url %>',
+                    data: 'standard_id=' + standard_id + '&id=<%= @student.id %>',
+                    type: 'GET'
+                });
+            }
         };
 
         var get_sibling_info = function () {

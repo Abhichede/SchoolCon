@@ -1,13 +1,13 @@
 class Student < ApplicationRecord
-  belongs_to :academic_year
   belongs_to :caste_category
-  belongs_to :standard
-  belongs_to :division
   belongs_to :caste
   belongs_to :religion
   belongs_to :parent
 
   has_and_belongs_to_many :fee_categories
+  has_and_belongs_to_many :academic_years
+  has_and_belongs_to_many :standards
+  has_and_belongs_to_many :divisions
 
   has_many :student_wise_fees
   has_many :student_wise_discounts
@@ -15,6 +15,7 @@ class Student < ApplicationRecord
   has_many :student_wise_fines
   has_many :student_wise_instant_fees
   has_many :student_certificates
+  has_many :notifications
 
   attr_accessor :siblings
 
@@ -55,7 +56,7 @@ class Student < ApplicationRecord
 
   def current_total_fee
     total_amount = 0.0
-    student_wise_fees.where(academic_year_id: academic_year_id).each do |fee|
+    student_wise_fees.where(academic_year_id: academic_years.where(is_active: true).first.id).each do |fee|
       total_amount += fee.amount.to_f
     end
     total_amount
@@ -63,7 +64,7 @@ class Student < ApplicationRecord
 
   def current_total_paid
     total_amount = 0.0
-    student_fee_payments.where(academic_year_id: academic_year_id).each do |fee|
+    student_fee_payments.where(academic_year_id: academic_years.where(is_active: true).first.id).each do |fee|
       total_amount += fee.amount.to_f
     end
     total_amount
@@ -71,7 +72,7 @@ class Student < ApplicationRecord
 
   def current_total_discount
     total_amount = 0.0
-    student_wise_discounts.where(academic_year_id: academic_year_id).each do |fee|
+    student_wise_discounts.where(academic_year_id: academic_years.where(is_active: true).first.id).each do |fee|
       total_amount += fee.amount.to_f
     end
     total_amount
@@ -79,7 +80,7 @@ class Student < ApplicationRecord
 
   def current_total_fine
     total_amount = 0.0
-    student_wise_fines.where(academic_year_id: academic_year_id).each do |fee|
+    student_wise_fines.where(academic_year_id: academic_years.where(is_active: true).first.id).each do |fee|
       total_amount += fee.amount.to_f
     end
     total_amount
@@ -87,7 +88,7 @@ class Student < ApplicationRecord
 
   def current_total_instant_fee
     total_amount = 0.0
-    student_wise_instant_fees.where(academic_year_id: academic_year_id).each do |fee|
+    student_wise_instant_fees.where(academic_year_id: academic_years.where(is_active: true).first.id).each do |fee|
       total_amount += fee.amount.to_f
     end
     total_amount
@@ -103,7 +104,7 @@ class Student < ApplicationRecord
 
 
   def attendance
-    @attendances = division.attendances.group_by {|a| Date.parse(a.date).beginning_of_month}
+    @attendances = divisions.last.attendances.group_by {|a| Date.parse(a.date).beginning_of_month}
   end
 
 

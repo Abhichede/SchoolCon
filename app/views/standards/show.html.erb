@@ -1,19 +1,93 @@
 <%- model_class = Standard -%>
 <div class="page-header">
-  <h1>
+  <h3>
     <%=t '.title', :default => @standard.name.titleize + ' Standard' %>
-    <span class="pull-right">
-      <%= link_to t('.back', :default => t("helpers.links.back")),
-                  standards_path, :class => 'btn btn-default'  %>
-      <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                  edit_standard_path(@standard), :class => 'btn btn-default' %>
-      <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                  standard_path(@standard),
-                  :method => 'delete',
-                  :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                  :class => 'btn btn-danger' %>
-    </span>
-  </h1>
+  </h3>
+</div>
+
+<div class="row">
+  <div class="col-lg-2">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= link_to t('.back', :default => t("helpers.links.back")),
+                    standards_path, :class => 'btn btn-default custom-link'  %>
+        <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                    edit_standard_path(@standard), :class => 'btn btn-default custom-link' %>
+        <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                    standard_path(@standard),
+                    :method => 'delete',
+                    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                    :class => 'btn btn-danger custom-link' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-10">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="card">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#students" aria-controls="students" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Students</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="students">
+              <% @standard.divisions.each do |division| %>
+                  <div class="panel panel-default" >
+                    <div class="panel-heading">
+                      <h5>
+                        Division: <%= division.name %>
+
+                        <span class="pull-right">
+                          <a class="btn btn-xs" data-toggle="collapse" href="#division_<%= division.name %>">
+                            <i class="fa fa-chevron-down"></i>
+                          </a>
+                        </span>
+                        <span class="pull-right">
+                          <%= link_to 'Message to All',
+                                      new_notification_path(notification_type: 'division_wise', type_data: division.id),
+                                      :class => 'btn btn-primary btn-xs', remote: true %>
+                        </span>
+                      </h5>
+                    </div>
+                    <div class="panel-body collapse" id="division_<%= division.name %>">
+                      <table class="table table-bordered table-responsive">
+                        <thead>
+                          <tr>
+                            <th>Roll no.</th>
+                            <th>Name</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% if division.students.blank? %>
+                            <tr>
+                              <td colspan="3">No Students</td>
+                            </tr>
+                          <% end %>
+                          <% division.students.each do |student| %>
+                            <tr>
+                              <td><%= student.roll_no %></td>
+                              <td><%= student.self_full_name %></td>
+                              <td>
+                                <%= link_to 'Show', student_path(student), class: 'btn btn-success btn-xs' %>
+                                <%= link_to 'Send Message',
+                                            new_notification_path(student_id: student.id, notification_type: 'student_wise'),
+                                            :class => 'btn btn-primary btn-xs', remote: true %>
+                              </td>
+
+                            </tr>
+                          <% end %>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 

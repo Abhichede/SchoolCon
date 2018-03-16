@@ -33,6 +33,13 @@ class AcademicYearsController < ApplicationController
 
     respond_to do |format|
       if @academic_year.save
+        if @academic_year.is_active
+          AcademicYear.all.each do |year|
+            if year != @academic_year
+              year.update(is_active: false)
+            end
+          end
+        end
         format.html { redirect_to session.delete(:return_to), notice: 'Academic year was successfully created.' }
         format.json { render :show, status: :created, location: @academic_year }
       else
@@ -50,6 +57,13 @@ class AcademicYearsController < ApplicationController
 
     respond_to do |format|
       if @academic_year.update(academic_year_params)
+        if @academic_year.is_active
+          AcademicYear.all.each do |year|
+            if year != @academic_year
+              year.update(is_active: false)
+            end
+          end
+        end
         format.html { redirect_to session.delete(:return_to), notice: 'Academic year was successfully updated.' }
         format.json { render :show, status: :ok, location: @academic_year }
       else
@@ -62,6 +76,9 @@ class AcademicYearsController < ApplicationController
   # DELETE /academic_years/1
   # DELETE /academic_years/1.json
   def destroy
+    if @academic_year.is_active
+      AcademicYear.last.update(is_active: true)
+    end
     @academic_year.destroy
     respond_to do |format|
       format.html { redirect_to academic_years_url, notice: 'Academic year was successfully destroyed.' }

@@ -1,5 +1,6 @@
 class AttendancesController < ApplicationController
   before_action :set_attendance, only: [:show, :edit, :update, :destroy]
+  before_action :set_academic_year
 
   add_breadcrumb 'Attendances', :attendances_path
 
@@ -124,8 +125,12 @@ class AttendancesController < ApplicationController
       @attendance = Attendance.find(params[:id])
     end
 
+    def set_academic_year
+      @academic_year = AcademicYear.find_by(is_active: true)
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def attendance_params
-      params.require(:attendance).permit(:date, :subject_id, :standard_id, :division_id, :teacher_id, :att_data => [].to_h)
+      params.require(:attendance).permit(:date, :subject_id, :standard_id, :division_id, :academic_year_id, :teacher_id, :att_data => [].to_h)
     end
 end
