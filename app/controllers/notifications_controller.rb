@@ -36,7 +36,12 @@ class NotificationsController < ApplicationController
                                          from: notification_params[:from], student_id: student.id)
 
         @notification.save
-        NotificationMailer.notify_student(@notification.student, @notification).deliver
+        if notification_params[:by_mail] == '1'
+          NotificationMailer.notify_student(@notification.student, @notification).deliver
+        end
+        if notification_params[:by_sms] == '1'
+          #send_sms_to_parent(@notification.student, @notification)
+        end
       end
 
       respond_to do |format|
@@ -52,7 +57,12 @@ class NotificationsController < ApplicationController
                                            from: notification_params[:from], student_id: student.id)
 
           @notification.save
-          NotificationMailer.notify_student(@notification.student, @notification).deliver
+          if notification_params[:by_mail] == '1'
+            NotificationMailer.notify_student(@notification.student, @notification).deliver
+          end
+          if notification_params[:by_sms] == '1'
+            #send_sms_to_parent(@notification.student, @notification)
+          end
         end
       end
         respond_to do |format|
@@ -66,7 +76,12 @@ class NotificationsController < ApplicationController
                                          from: notification_params[:from], student_id: student.id)
 
         @notification.save
-        NotificationMailer.notify_student(@notification.student, @notification).deliver
+        if notification_params[:by_mail] == '1'
+          NotificationMailer.notify_student(@notification.student, @notification).deliver
+        end
+        if notification_params[:by_sms] == '1'
+          #send_sms_to_parent(@notification.student, @notification)
+        end
       end
 
       respond_to do |format|
@@ -77,7 +92,13 @@ class NotificationsController < ApplicationController
       @notification = Notification.new(notification_params)
 
       @notification.save
-      NotificationMailer.notify_student(@notification.student, @notification).deliver
+      puts "By Mail #{notification_params[:by_mail]}"
+      if notification_params[:by_mail] == '1'
+        NotificationMailer.notify_student(@notification.student, @notification).deliver
+      end
+      if notification_params[:by_sms] == '1'
+        #send_sms_to_parent(@notification.student, @notification)
+      end
       respond_to do |format|
         format.html { redirect_to session.delete(:return_to), notice: "Notification was sent successfully." }
         format.json { render :show, status: :created, location: @notification }
@@ -118,6 +139,6 @@ class NotificationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def notification_params
-      params.require(:notification).permit(:title, :message, :from, :student_id, :notification_type, :type_data)
+      params.require(:notification).permit(:title, :message, :from, :student_id, :notification_type, :type_data, :by_sms, :by_mail)
     end
 end

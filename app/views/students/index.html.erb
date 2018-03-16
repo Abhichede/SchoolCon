@@ -48,7 +48,7 @@
                     <%= link_to t('.show', :default => t("helpers.links.show")),
                                 student_path(student), :class => 'btn btn-success btn-xs' %>
                     <%= link_to 'Send Message',
-                                new_notification_path(student_id: student.id),
+                                new_notification_path(student_id: student.id, notification_type: 'student_wise'),
                                 :class => 'btn btn-primary btn-xs', remote: true %>
                   </td>
                 </tr>

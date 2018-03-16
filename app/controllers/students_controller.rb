@@ -106,19 +106,6 @@ class StudentsController < ApplicationController
     @sibling = Student.find(params[:sibling_id]) unless params[:sibling_id].blank?
   end
 
-  def send_sms_to_parent(student)
-    puts student.father_mobile
-    response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=abhichede777&password=abhijit123@&mobile=#{student.father_mobile}&message=regstr success PRN=#{student.prn} &sender=DNYNDP&type=3"
-      case response.code
-      when 400
-        puts response
-      when 200
-        puts response
-      else
-        fail "Invalid response #{response} received."
-      end
-  end
-
   def add_leaving_certificate
     @student_certificate = StudentCertificate.new
   end

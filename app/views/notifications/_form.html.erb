@@ -37,6 +37,22 @@
     <%=f.error_span(:from) %>
   </div>
 
+  <div class="form-group">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-5">
+      <div class="checkbox checkbox-danger">
+        <%= f.check_box :by_sms %>
+        <%= f.label 'SMS', for: 'notification_by_sms' %>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="checkbox checkbox-danger">
+        <%= f.check_box :by_mail %>
+        <%= f.label :mail, for: 'notification_by_mail' %>
+      </div>
+    </div>
+  </div>
+
     <!-- hidden required field-->
     <%= f.hidden_field :student_id, value: (params[:student_id] if params[:student_id]) %>
     <%= f.hidden_field :notification_type, value: (params[:notification_type] if params[:notification_type]) %>
