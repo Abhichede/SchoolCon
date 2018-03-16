@@ -350,17 +350,17 @@
       <div class="form-group required">
         <%= f.label :standard_id, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
-          <%= f.select(:standard_ids, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]}.insert(0, ''),
-                                                        {:selected => @student.standards.last.id }),
-                       {}, class: 'form-control') %>
+          <%= f.select(:standard_ids, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
+                                                        {:selected => (@student.standards.last.id unless @student.standards.last.nil?)}),
+                       {}, class: 'form-control', required: true) %>
         </div>
         <%=f.error_span(:standard_id) %>
 
         <%= f.label :division_id, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.select(:division_ids, options_for_select(['Select'],
-                                                        {:selected => @student.divisions.last.id }),
-                       {}, class: 'form-control', id: 'division') %>
+                                                        {:selected => (@student.divisions.last.id if @student.divisions.nil?) }),
+                       {}, class: 'form-control', id: 'division', required: true) %>
         </div>
         <%=f.error_span(:division_id) %>
       </div>
