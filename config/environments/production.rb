@@ -10,6 +10,16 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address:              'mx1.hostinger.in',
+      port:                 587,
+      domain:               'linkeritsolutions.com',
+      user_name:            'sales@linkeritsolutions.com',
+      password:             'Abhichede777@',
+      authentication:       'plain',
+      enable_starttls_auto: true  }
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
