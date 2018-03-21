@@ -1,14 +1,27 @@
 <% if params[:fee_type] === 'student_wise' && !params[:student_id].nil? %>
-    <div class="panel panel-default" data-spy="affix" data-offset-top="205">
-      <div class="panel-body">
-        <h3>Payments for: <%= @student.self_full_name %></h3>
-      </div>
-    </div>
-    <div class="panel panel-primary">
-      <div class="panel-heading text-center">
-        General Fees
-      </div>
-      <div class="panel-body">
+    <h4 class="text-center">General fee</h4>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Particulars</th>
+        <th>Amount</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% counter = 0 %>
+      <% @student.student_wise_fees.where(academic_year_id: @student.academic_years.where(is_active: true).first.id).each do |fee| %>
+          <tr>
+            <td><%= counter += 1 %></td>
+            <td><%= fee.fee_category %></td>
+            <td><%= fee.amount %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <% if @student.current_total_instant_fee > 0.0 %>
+        <h4 class="text-center">Instant fees</h4>
         <table class="table table-bordered">
           <thead>
           <tr>
@@ -19,103 +32,61 @@
           </thead>
           <tbody>
           <% counter = 0 %>
-          <% @student.student_wise_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+          <% @student.student_wise_instant_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
               <tr>
                 <td><%= counter += 1 %></td>
-                <td><%= fee.fee_category %></td>
+                <td><%= fee.description %></td>
                 <td><%= fee.amount %></td>
               </tr>
           <% end %>
           </tbody>
         </table>
-      </div>
-    </div>
-
-    <% if @student.current_total_instant_fee > 0.0 %>
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            Instant fees
-          </div>
-          <div class="panel-body">
-            <table class="table table-bordered">
-              <thead>
-              <tr>
-                <th>Sr. No.</th>
-                <th>Particulars</th>
-                <th>Amount</th>
-              </tr>
-              </thead>
-              <tbody>
-              <% counter = 0 %>
-              <% @student.student_wise_instant_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
-                  <tr>
-                    <td><%= counter += 1 %></td>
-                    <td><%= fee.description %></td>
-                    <td><%= fee.amount %></td>
-                  </tr>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
-        </div>
     <% end %>
 
     <% if @student.current_total_discount > 0.0 %>
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            Discounts
-          </div>
-          <div class="panel-body">
-            <table class="table table-bordered">
-              <thead>
+        <h4 class="text-center">Discount</h4>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Particulars</th>
+            <th>Amount</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% counter = 0 %>
+          <% @student.student_wise_discounts.where(academic_year_id: @student.academic_year_id).each do |fee| %>
               <tr>
-                <th>Sr. No.</th>
-                <th>Particulars</th>
-                <th>Amount</th>
+                <td><%= counter += 1 %></td>
+                <td><%= fee.description %></td>
+                <td><%= fee.amount %></td>
               </tr>
-              </thead>
-              <tbody>
-              <% counter = 0 %>
-              <% @student.student_wise_discounts.where(academic_year_id: @student.academic_year_id).each do |fee| %>
-                  <tr>
-                    <td><%= counter += 1 %></td>
-                    <td><%= fee.description %></td>
-                    <td><%= fee.amount %></td>
-                  </tr>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
-        </div>
+          <% end %>
+          </tbody>
+        </table>
     <% end %>
 
     <% if @student.current_total_fine > 0.0 %>
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            Fine
-          </div>
-          <div class="panel-body">
-            <table class="table table-bordered">
-              <thead>
+        <h4 class="text-center">Fine</h4>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Particulars</th>
+            <th>Amount</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% counter = 0 %>
+          <% @student.student_wise_fines.where(academic_year_id: @student.academic_year_id).each do |fee| %>
               <tr>
-                <th>Sr. No.</th>
-                <th>Particulars</th>
-                <th>Amount</th>
+                <td><%= counter += 1 %></td>
+                <td><%= fee.desciption %></td>
+                <td><%= fee.amount %></td>
               </tr>
-              </thead>
-              <tbody>
-              <% counter = 0 %>
-              <% @student.student_wise_fines.where(academic_year_id: @student.academic_year_id).each do |fee| %>
-                  <tr>
-                    <td><%= counter += 1 %></td>
-                    <td><%= fee.desciption %></td>
-                    <td><%= fee.amount %></td>
-                  </tr>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
-        </div>
+          <% end %>
+          </tbody>
+        </table>
     <% end %>
 
     <div class="panel panel-primary">
@@ -162,4 +133,22 @@
         </table>
       </div>
     </div>
+
+    <div class="panel panel-success">
+      <div class="panel-heading text-center">
+        Receipt
+      </div>
+      <div class="panel-body">
+        <% @receipt_template.desc["$school logo$"] = image_tag('favicon.ico', height: 150, width: 150) %>
+        <% @receipt_template.desc["$school name$"] = "DnyanDeep Classes" %>
+        <% @receipt_template.desc["$school address$"] = "Dindori" %>
+        <% @receipt_template.desc["$school contact$"] = "022 25425. 9865986598" %>
+        <% @receipt_template.desc["$student name$"] = @student.self_full_name %>
+        <% @receipt_template.desc["$amount paid$"] = @student.student_fee_payments.last.amount.to_s %>
+        <% @receipt_template.desc["$amount balance$"] = @student.current_balance_amount.to_s %>
+
+        <%= @receipt_template.desc.html_safe %>
+      </div>
+    </div>
+
 <% end %>

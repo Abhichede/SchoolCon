@@ -19,7 +19,7 @@
           </thead>
           <tbody>
           <% counter = 0 %>
-          <% @student.student_wise_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+          <% @student.student_wise_fees.where(academic_year_id: @student.academic_years.where(is_active: true).last.id).each do |fee| %>
               <tr>
                 <td><%= counter += 1 %></td>
                 <td><%= fee.fee_category %></td>
@@ -52,7 +52,7 @@
               </thead>
               <tbody>
               <% counter = 0 %>
-              <% @student.student_wise_instant_fees.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+              <% @student.student_wise_instant_fees.where(academic_year_id: @student.academic_years.where(is_active: true).last.id).each do |fee| %>
                   <tr>
                     <td><%= counter += 1 %></td>
                     <td><%= fee.description %></td>
@@ -93,7 +93,7 @@
             </thead>
             <tbody>
             <% counter = 0 %>
-            <% @student.student_wise_discounts.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+            <% @student.student_wise_discounts.where(academic_year_id: @student.academic_years.where(is_active: true).last.id).each do |fee| %>
                 <tr>
                   <td><%= counter += 1 %></td>
                   <td><%= fee.description %></td>
@@ -134,7 +134,7 @@
               </thead>
               <tbody>
               <% counter = 0 %>
-              <% @student.student_wise_fines.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+              <% @student.student_wise_fines.where(academic_year_id: @student.academic_years.where(is_active: true).last.id).each do |fee| %>
                   <tr>
                     <td><%= counter += 1 %></td>
                     <td><%= fee.desciption %></td>
@@ -261,7 +261,7 @@
               </div>
 
                 <%= f.hidden_field :student_id, value: @student.id %>
-                <%= f.hidden_field :academic_year_id, value: @student.academic_year.id %>
+                <%= f.hidden_field :academic_year_id, value: @student.academic_years.where(is_active: true).last.id %>
 
               <div class="form-group">
                 <div class="col-lg-offset-10 col-lg-2">

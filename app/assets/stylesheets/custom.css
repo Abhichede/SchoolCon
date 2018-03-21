@@ -5,6 +5,10 @@ body{
     background-color: #CCCCCC !important;
 }
 
+hr{
+    border-top: 1px solid #000000 !important;
+}
+
 /*********** custom navbar dropdown megamenu ********/
 
 /* Navbar container */

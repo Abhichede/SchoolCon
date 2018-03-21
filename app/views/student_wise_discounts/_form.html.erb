@@ -16,7 +16,7 @@
   <% end %>
 
   <%= f.hidden_field :student_id, value: @student.id  %>
-  <%= f.hidden_field :academic_year_id, value: @student.academic_year.id %>
+  <%= f.hidden_field :academic_year_id, value: @student.academic_years.where(is_active: true).last.id %>
 
 
   <div class="form-group">

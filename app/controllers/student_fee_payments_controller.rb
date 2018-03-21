@@ -73,11 +73,15 @@ class StudentFeePaymentsController < ApplicationController
   end
 
   def fee_receipt
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     if !params[:student_id].blank?
+      @receipt_template = MyTemplate.first
       @student = Student.find(params[:student_id])
     else
       respond_to do |format|
-        format.html { redirect_to :back, alert: 'Student student not found.' }
+        format.html { redirect_to session.delete(:return_to), alert: 'Student student not found.' }
         format.json { head :no_content }
       end
     end

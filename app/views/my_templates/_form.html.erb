@@ -1,0 +1,47 @@
+<%= form_for @my_template, :html => { :class => "form-horizontal my_template" } do |f| %>
+
+  <% if @my_template.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@my_template.errors.count, "error") %> prohibited this my_template from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @my_template.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:name) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :desc, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_area :desc, class: '', style: 'width: 72rem !important; height: 30rem !important;' %>
+    </div>
+    <%=f.error_span(:desc) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                my_templates_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("Dom loadedd");
+        new nicEditor({fullPanel: true}).panelInstance('my_template_desc');
+    });
+</script>
