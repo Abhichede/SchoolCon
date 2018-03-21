@@ -9,3 +9,7 @@
 .panel-heading .required{
     color:red;
 }
+
+input[type='search'].input-sm{
+    height: 20px;
+}

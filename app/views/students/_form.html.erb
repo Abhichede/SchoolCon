@@ -85,7 +85,7 @@
       <div class="form-group">
         <%= f.label :nationality, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
-          <%= f.country_select :nationality, {priority_countries: ["IN", "US", "PK"], include_blank: ''}, {:class => 'form-control'} %>
+          <%= f.country_select :nationality, {priority_countries: ["IN", "US", "PK"]}, {:class => 'form-control'} %>
         </div>
         <%=f.error_span(:nationality) %>
 

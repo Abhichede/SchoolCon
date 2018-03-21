@@ -50,7 +50,7 @@
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="personal_info">
             <span class="pull-right">
-              <%= image_tag @student.profile_photo, class: 'img-circle', width: '150px', height: '150px' %>
+              <%= image_tag @student.profile_photo.blank? ? 'student-default.png' : @student.profile_photo, class: 'img-circle', width: '150px', height: '150px' %>
             </span>
             <table class="table table-bordered">
               <tbody>

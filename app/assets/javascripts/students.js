@@ -226,4 +226,24 @@ $(function () {
            form.submit();
        }
    });
+
+    /**
+     * auto fill father name and last names
+     */
+
+    $('#student_middle_name').on('keyup', function () {
+       var father_name = $(this).val();
+        $('#student_father_first_name').val(father_name);
+        $('#student_mother_middle_name').val(father_name);
+    });
+
+    $('#student_last_name').on('keyup', function () {
+        var last_name = $(this).val();
+        $('#student_father_last_name').val(last_name);
+        $('#student_mother_last_name').val(last_name);
+    });
+
+    /**
+     * END
+     */
 });
