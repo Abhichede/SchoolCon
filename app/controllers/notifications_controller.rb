@@ -37,7 +37,9 @@ class NotificationsController < ApplicationController
 
         @notification.save
         if notification_params[:by_mail] == '1'
-          NotificationMailer.notify_student(@notification.student, @notification).deliver
+          unless @notification.student.student_email
+            NotificationMailer.notify_student(@notification.student, @notification).deliver
+          end
         end
         if notification_params[:by_sms] == '1'
           #send_sms_to_parent(@notification.student, @notification)
@@ -58,7 +60,9 @@ class NotificationsController < ApplicationController
 
           @notification.save
           if notification_params[:by_mail] == '1'
-            NotificationMailer.notify_student(@notification.student, @notification).deliver
+            unless @notification.student.student_email
+              NotificationMailer.notify_student(@notification.student, @notification).deliver
+            end
           end
           if notification_params[:by_sms] == '1'
             #send_sms_to_parent(@notification.student, @notification)
@@ -77,7 +81,9 @@ class NotificationsController < ApplicationController
 
         @notification.save
         if notification_params[:by_mail] == '1'
-          NotificationMailer.notify_student(@notification.student, @notification).deliver
+          unless @notification.student.student_email
+            NotificationMailer.notify_student(@notification.student, @notification).deliver
+          end
         end
         if notification_params[:by_sms] == '1'
           #send_sms_to_parent(@notification.student, @notification)
@@ -92,9 +98,10 @@ class NotificationsController < ApplicationController
       @notification = Notification.new(notification_params)
 
       @notification.save
-      puts "By Mail #{notification_params[:by_mail]}"
       if notification_params[:by_mail] == '1'
-        NotificationMailer.notify_student(@notification.student, @notification).deliver
+        unless @notification.student.student_email
+          NotificationMailer.notify_student(@notification.student, @notification).deliver
+        end
       end
       if notification_params[:by_sms] == '1'
         #send_sms_to_parent(@notification.student, @notification)

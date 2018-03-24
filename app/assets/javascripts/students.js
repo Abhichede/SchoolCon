@@ -80,10 +80,10 @@ $(function () {
            },
            "student[father_mobile]":{
                required: true,
-               pattern: /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/
+               pattern: /^[7-9][0-9]{9}$/
            },
            "student[mother_mobile]": {
-               pattern: /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/
+               pattern: /^[7-9][0-9]{9}$/
            },
            "student[standard_id]":{required: true},
            "student[division_id]":{required: true},
@@ -92,7 +92,7 @@ $(function () {
            },
            "student[student_mobile]": {
                required: true,
-               pattern: /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/
+               pattern: /^[7-9][0-9]{9}$/
            },
            "student[student_email]": {
                pattern: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -137,10 +137,13 @@ $(function () {
        // Specify validation error messages
        messages: {
            "student[student_mobile]":{
-            pattern: "It seems invalid mobile number"
+            pattern: "It seems invalid mobile number, number should not contain +91 or 0 at start"
            },
            "student[father_mobile]": {
-               pattern: "It seems invalid mobile number"
+               pattern: "It seems invalid mobile number, number should not contain +91 or 0 at start"
+           },
+           "student[mother_mobile]": {
+               pattern: "It seems invalid mobile number, number should not contain +91 or 0 at start"
            },
            "student[residential_pincode]": {
                pattern: "It seems invalid PIN code"
