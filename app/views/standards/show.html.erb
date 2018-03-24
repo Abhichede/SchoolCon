@@ -27,6 +27,8 @@
         <div class="card">
           <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#students" aria-controls="students" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Students</a></li>
+            <li role="presentation"><a href="#fee_structures" aria-controls="fee_structures" role="tab" data-toggle="tab"><i class="fa fa-money"></i> Fee Structures</a></li>
+            <li role="presentation"><a href="#fee_payments" aria-controls="fee_payments" role="tab" data-toggle="tab"><i class="fa fa-card"></i> Fee Payments</a></li>
           </ul>
 
           <div class="tab-content">
@@ -50,11 +52,12 @@
                       </h5>
                     </div>
                     <div class="panel-body collapse" id="division_<%= division.name %>">
-                      <table class="table table-bordered table-responsive">
+                      <table class="table table-bordered table-responsive" id="admitted_students_table_<%= division.name %>">
                         <thead>
                           <tr>
                             <th>Roll no.</th>
                             <th>Name</th>
+                            <th>Fee</th>
                             <th></th>
                           </tr>
                         </thead>
@@ -68,6 +71,32 @@
                             <tr>
                               <td><%= student.roll_no %></td>
                               <td><%= student.self_full_name %></td>
+                              <td>
+                                <table class="table table-bordered">
+                                  <tbody>
+                                    <tr>
+                                      <th>Allocated Fee</th>
+                                      <td><%= student.current_total_fee %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Discount</th>
+                                      <td><%= student.current_total_discount %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Fine</th>
+                                      <td><%= student.current_total_fine %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Paid Fee</th>
+                                      <td><%= student.current_total_paid %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Balance</th>
+                                      <td><%= student.current_balance_amount %></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
                               <td>
                                 <%= link_to 'Show', student_path(student), class: 'btn btn-success btn-xs' %>
                                 <%= link_to 'Send Message',
@@ -83,11 +112,70 @@
                   </div>
               <% end %>
             </div>
+            <div class="tab-pane" id="fee_payments" role="tabpanel">
+              <table class="table table-bordered table-responsive">
+                <tbody>
+                <tr>
+                  <th>Total Allocated</th>
+                  <td><%= @standard.total_allocated_fee %></td>
+                </tr>
+                <tr>
+                  <th>Total Discount</th>
+                  <td><%= @standard.total_discount %></td>
+                </tr>
+
+                <tr>
+                  <th>Total Fine</th>
+                  <td><%= @standard.total_fine %></td>
+                </tr>
+                <tr>
+                  <th>Total Instant Fee</th>
+                  <td><%= @standard.total_instant_fee %></td>
+                </tr>
+                <tr>
+                  <th>Total Paid</th>
+                  <td><%= @standard.total_paid_fee %></td>
+                </tr>
+                <tr>
+                  <th>Total Balance Fee</th>
+                  <td><%= @standard.total_balance_amount %></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane" id="fee_structures" role="tabpanel">
+              <table class="table table-bordered table-responsive">
+                <thead>
+                  <tr>
+                    <th>Fee Category</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% @standard.fee_categories.each do |fee_category| %>
+                  <tr>
+                    <td><%= fee_category.name %></td>
+                    <td><%= fee_category.amount %></td>
+                  </tr>
+                <% end %>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+      <% @standard.divisions.each do |division| %>
+        <% unless division.students.blank? %>
+          $("#admitted_students_table_<%= division.name %>").dataTable();
+        <% end %>
+      <% end %>
+  });
+</script>
 
 
