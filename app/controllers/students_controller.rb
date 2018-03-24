@@ -30,13 +30,13 @@ class StudentsController < ApplicationController
       if @student.save
         update_student_wise_fee(@student)
         # send_sms_to_parent(@student)
-        if Parent.find_by_mobile(@student.father_mobile).nil?
+        unless Parent.find_by_mobile(@student.father_mobile)
           @parent = Parent.new(name: "#{@student.father_first_name} #{@student.father_middle_name} #{@student.father_last_name}",
-                     mobile: @student.father_mobile)
+                               mobile: @student.father_mobile)
           @parent.save
         end
         @parent = Parent.find_by_mobile(@student.father_mobile)
-        @student.update(prn: "PRN#{@student.id}", parent_id: @parent.id)
+        @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}", parent_id: @parent.id)
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
       else

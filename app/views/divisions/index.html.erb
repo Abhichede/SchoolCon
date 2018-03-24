@@ -34,11 +34,15 @@
                 <td>
                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
                               edit_division_path(division), :class => 'btn btn-default btn-xs', remote: true %>
+                  <%= link_to 'Message to All',
+                              new_notification_path(notification_type: 'division_wise', type_data: division.id),
+                              :class => 'btn btn-primary btn-xs', remote: true %>
                   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                               division_path(division),
                               :method => :delete,
                               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                               :class => 'btn btn-xs btn-danger' %>
+
                 </td>
               </tr>
             <% end %>

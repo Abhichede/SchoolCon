@@ -1,0 +1,59 @@
+<%- model_class = SchoolInfo -%>
+<div class="page-header">
+  <h3>Institute Details</h3>
+</div>
+<div class="row">
+  <div class="col-md-2">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                    edit_school_info_path(@school_info), :class => 'custom-link btn btn-default' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <span class="pull-right">
+
+        </span>
+        <table class="table table-bordered table-responsive">
+          <tbody>
+            <tr>
+              <th></th>
+              <td><%= image_tag @school_info.logo, class: 'img-circle', width: '150px', height: '150px' %></td>
+            </tr>
+            <tr>
+              <th><strong><%= model_class.human_attribute_name(:name) %></strong></th>
+              <td><%= @school_info.name %></td>
+            </tr>
+            <tr>
+              <th><strong><%= model_class.human_attribute_name(:address) %></strong></th>
+              <td><%= @school_info.address %></td>
+            </tr>
+            <tr>
+              <th><strong><%= model_class.human_attribute_name(:contact) %></strong></th>
+              <td><%= @school_info.contact %></td>
+            </tr>
+            <tr>
+              <th><strong><%= model_class.human_attribute_name(:registration_no) %></strong></th>
+              <td><%= @school_info.registration_no %></td>
+            </tr>
+            <tr>
+              <th><strong><%= model_class.human_attribute_name(:gst_no) %></strong></th>
+              <td><%= @school_info.gst_no %></td>
+            </tr>
+            <tr>
+              <th><strong><%= model_class.human_attribute_name(:email) %></strong></th>
+              <td><%= @school_info.email %></td>
+            </tr>
+            <tr>
+              <th><strong><%= model_class.human_attribute_name(:code) %></strong></th>
+              <td><%= @school_info.code %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

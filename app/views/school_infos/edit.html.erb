@@ -1,0 +1,16 @@
+<% add_breadcrumb "Editing Institute Details", edit_school_info_path(@school_info) %>
+<%- model_class = SchoolInfo -%>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %>
+      </div>
+      <div class="panel-body">
+        <%= render :partial => 'form' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>

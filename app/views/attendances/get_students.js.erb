@@ -18,6 +18,7 @@ $("#students").replaceWith('<div id="students"><table class="table table-strippe
     '<% end %>'+
     '</tbody>'+
     '</div>'+
+    '<input type="checkbox" class="form-control" id="select_all_students" checked data-toggle="toggle" data-onstyle="primary" data-offstyle="danger">' +
     '<input type="hidden" class="form-control" checked name="attendance[att_data][0]" value="nil"></div>');
 
 <% @students.each do |student| %>
@@ -26,3 +27,17 @@ $("#students").replaceWith('<div id="students"><table class="table table-strippe
       off: 'Absent'
   });
 <% end %>
+
+$('#select_all_students').bootstrapToggle({
+    on: 'Present All',
+    off: 'Absent All'
+});
+
+$('#select_all_students').change(function () {
+    console.log('checked');
+    if (this.checked) {
+        $('td').find('input:checkbox').bootstrapToggle('on');
+    } else {
+        $('td').find('input:checkbox').bootstrapToggle('off');
+    }
+});

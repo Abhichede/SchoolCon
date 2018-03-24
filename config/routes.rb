@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :school_infos
   resources :my_templates
   resources :notifications
   resources :student_certificates
