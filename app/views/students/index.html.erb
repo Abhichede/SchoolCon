@@ -26,6 +26,7 @@
             <thead>
               <tr>
                 <th><%= model_class.human_attribute_name(:id) %></th>
+                <th>Photo</th>
                 <th><%= model_class.human_attribute_name(:name) %></th>
                 <th><%= model_class.human_attribute_name(:standard_id) %></th>
                 <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
@@ -36,6 +37,9 @@
               <% @students.where(is_enquiry: false).each do |student| %>
                 <tr>
                   <td><%= link_to student.id, student_path(student) %></td>
+                  <td>
+                    <%= image_tag student.profile_photo.blank? ? 'student-default.png' : student.profile_photo, class: 'img-circle', width: '50px', height: '50px' %>
+                  </td>
                   <td><%= student.self_full_name %></td>
                   <td><%= student.standards.last.name %></td>
                   <td><%= student.academic_years.where(is_active: true).first.academic_year if student.academic_years.where(is_active: true).first %></td>
