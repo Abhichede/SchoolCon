@@ -26,20 +26,34 @@ class StudentFeePaymentsController < ApplicationController
 
   # GET /student_fee_payments/1/edit
   def edit
+    if !params[:student_id].nil? || !params[:student_id].blank?
+      @student = Student.find(params[:student_id])
+    end
+
+    @student_wise_discount = StudentWiseDiscount.new
+    @student_wise_fine = StudentWiseFine.new
+    @student_wise_instant_fee = StudentWiseInstantFee.new
   end
 
   # POST /student_fee_payments
   # POST /student_fee_payments.json
   def create
     @student_fee_payment = StudentFeePayment.new(student_fee_payment_params)
+    @student = Student.find(student_fee_payment_params[:student_id])
+    if @student.current_balance_amount >= student_fee_payment_params[:amount].to_f
+      respond_to do |format|
+        if @student_fee_payment.save
+          format.html { redirect_to fee_receipt_path(id: @student_fee_payment.id, student_id: @student_fee_payment.student.id, fee_type: 'student_wise'), notice: 'Student fee payment was successfully created.' }
+          format.json { render :show, status: :created, location: @student_fee_payment }
+        else
+          format.html { render :new }
+          format.json { render json: @student_fee_payment.errors, status: :unprocessable_entity }
+        end
+      end
 
-    respond_to do |format|
-      if @student_fee_payment.save
-        format.html { redirect_to controller: 'student_fee_payments', action: 'fee_receipt', id: @student_fee_payment.id,student_id: @student_fee_payment.student.id, fee_type: 'student_wise', notice: 'Student fee payment was successfully created.' }
-        format.json { render :show, status: :created, location: @student_fee_payment }
-      else
-        format.html { render :new }
-        format.json { render json: @student_fee_payment.errors, status: :unprocessable_entity }
+    else
+      respond_to do |format|
+        format.html { redirect_to student_path(id: @student.id),  alert: 'Fee is greater than balance amount.' }
       end
     end
   end
@@ -47,13 +61,20 @@ class StudentFeePaymentsController < ApplicationController
   # PATCH/PUT /student_fee_payments/1
   # PATCH/PUT /student_fee_payments/1.json
   def update
-    respond_to do |format|
-      if @student_fee_payment.update(student_fee_payment_params)
-        format.html { redirect_to @student_fee_payment, notice: 'Student fee payment was successfully updated.' }
-        format.json { render :show, status: :ok, location: @student_fee_payment }
-      else
-        format.html { render :edit }
-        format.json { render json: @student_fee_payment.errors, status: :unprocessable_entity }
+    @student = Student.find(student_fee_payment_params[:student_id])
+    if (@student.current_balance_amount + @student_fee_payment.amount.to_f) >= student_fee_payment_params[:amount].to_f
+      respond_to do |format|
+        if @student_fee_payment.update(student_fee_payment_params)
+          format.html { redirect_to fee_receipt_path(id: @student_fee_payment.id, student_id: @student_fee_payment.student.id, fee_type: 'student_wise'), notice: 'Student fee payment was successfully updated.' }
+          format.json { render :show, status: :ok, location: @student_fee_payment }
+        else
+          format.html { render :edit }
+          format.json { render json: @student_fee_payment.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to student_path(id: @student.id),  alert: 'Fee is greater than balance amount.' }
       end
     end
   end
@@ -61,9 +82,12 @@ class StudentFeePaymentsController < ApplicationController
   # DELETE /student_fee_payments/1
   # DELETE /student_fee_payments/1.json
   def destroy
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     @student_fee_payment.destroy
     respond_to do |format|
-      format.html { redirect_to student_fee_payments_url, notice: 'Student fee payment was successfully destroyed.' }
+      format.html { redirect_to session.delete(:return_to), notice: 'Student fee payment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

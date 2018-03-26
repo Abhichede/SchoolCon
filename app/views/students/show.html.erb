@@ -269,14 +269,27 @@
                       </thead>
                       <tbody>
                       <% counter = 0 %>
-                      <% @student.student_fee_payments.where(academic_year_id: @student.academic_years.last.id).each do |fee| %>
+                      <% @student.student_fee_payments.where(academic_year_id: @student.academic_years.where(is_active: true).last.id).each do |fee| %>
                           <tr>
                             <td><%= counter += 1 %></td>
                             <td><%= fee.payment_date %></td>
                             <td><%= fee.payment_mode %></td>
                             <td><%= fee.payment_desc %></td>
                             <td><%= fee.amount %></td>
-                            <td><%= link_to 'View', {controller: 'student_fee_payments', action: 'fee_receipt', id: fee.id, student_id: @student.id, fee_type: 'student_wise'}, class: 'btn btn-info btn-xs' %></td>
+                            <td>
+                              <%= link_to 'View', {controller: 'student_fee_payments',
+                                                   action: 'fee_receipt', id: fee.id, student_id: @student.id,
+                                                   fee_type: 'student_wise'}, class: 'btn btn-info btn-xs' %>
+                              <%= link_to 'Edit', {controller: 'student_fee_payments',
+                                                          action: 'edit', fee_type: 'student_wise',
+                                                          student_id: @student.id, id: fee.id},
+                                          class: 'btn btn-success btn-xs' %>
+                              <%= link_to 'Delete', student_fee_payment_path(fee),
+                                          :method => 'delete',
+                                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                                          class: 'btn btn-danger btn-xs' %>
+                            </td>
+
                           </tr>
                       <% end %>
                       </tbody>
