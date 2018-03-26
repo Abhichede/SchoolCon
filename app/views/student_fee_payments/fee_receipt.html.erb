@@ -139,15 +139,15 @@
         Receipt
       </div>
       <div class="panel-body">
-        <% @receipt_template.desc["$school logo$"] = image_tag('favicon.ico', height: 150, width: 150) %>
-        <% @receipt_template.desc["$school name$"] = "DnyanDeep Classes" %>
-        <% @receipt_template.desc["$school address$"] = "Dindori" %>
-        <% @receipt_template.desc["$school contact$"] = "022 25425. 9865986598" %>
-        <% @receipt_template.desc["$student name$"] = @student.self_full_name %>
-        <% @receipt_template.desc["$amount paid$"] = @student.student_fee_payments.last.amount.to_s %>
-        <% @receipt_template.desc["$amount balance$"] = @student.current_balance_amount.to_s %>
+        <!--<% #@receipt_template.desc["$school logo$"] = image_tag('favicon.ico', height: 150, width: 150) %>-->
+        <!--<% #@receipt_template.desc["$school name$"] = "DnyanDeep Classes" %>-->
+        <!--<% #@receipt_template.desc["$school address$"] = "Dindori" %>-->
+        <!--<% #@receipt_template.desc["$school contact$"] = "022 25425. 9865986598" %>-->
+        <!--<% #@receipt_template.desc["$student name$"] = @student.self_full_name %>-->
+        <!--<% #@receipt_template.desc["$amount paid$"] = @student.student_fee_payments.last.amount.to_s %>-->
+        <!--<% #@receipt_template.desc["$amount balance$"] = @student.current_balance_amount.to_s %>-->
 
-        <%= @receipt_template.desc.html_safe %>
+        <% #@receipt_template.desc.html_safe %>
       </div>
     </div>
 
