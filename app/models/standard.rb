@@ -55,7 +55,7 @@ class Standard < ApplicationRecord
   def total_balance_amount
     fee = 0
     students.each do |student|
-      fee += student.current_total_paid
+      fee += student.current_balance_amount
     end
 
     fee
