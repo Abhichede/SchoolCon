@@ -264,17 +264,19 @@
                         <th>Payment Mode</th>
                         <th>Payment Notes</th>
                         <th>Amount</th>
+                        <th></th>
                       </tr>
                       </thead>
                       <tbody>
                       <% counter = 0 %>
-                      <% @student.student_fee_payments.where(academic_year_id: @student.academic_year_id).each do |fee| %>
+                      <% @student.student_fee_payments.where(academic_year_id: @student.academic_years.last.id).each do |fee| %>
                           <tr>
                             <td><%= counter += 1 %></td>
                             <td><%= fee.payment_date %></td>
                             <td><%= fee.payment_mode %></td>
                             <td><%= fee.payment_desc %></td>
                             <td><%= fee.amount %></td>
+                            <td><%= link_to 'View', {controller: 'student_fee_payments', action: 'fee_receipt', id: fee.id, student_id: @student.id, fee_type: 'student_wise'}, class: 'btn btn-info btn-xs' %></td>
                           </tr>
                       <% end %>
                       </tbody>

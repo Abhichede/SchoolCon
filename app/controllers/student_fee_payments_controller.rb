@@ -1,5 +1,5 @@
 class StudentFeePaymentsController < ApplicationController
-  before_action :set_student_fee_payment, only: [:show, :edit, :update, :destroy]
+  before_action :set_student_fee_payment, only: [:show, :edit, :update, :destroy, :fee_receipt]
 
   # GET /student_fee_payments
   # GET /student_fee_payments.json
@@ -35,7 +35,7 @@ class StudentFeePaymentsController < ApplicationController
 
     respond_to do |format|
       if @student_fee_payment.save
-        format.html { redirect_to controller: 'student_fee_payments', action: 'fee_receipt', student_id: @student_fee_payment.student.id, fee_type: 'student_wise', notice: 'Student fee payment was successfully created.' }
+        format.html { redirect_to controller: 'student_fee_payments', action: 'fee_receipt', id: @student_fee_payment.id,student_id: @student_fee_payment.student.id, fee_type: 'student_wise', notice: 'Student fee payment was successfully created.' }
         format.json { render :show, status: :created, location: @student_fee_payment }
       else
         format.html { render :new }
@@ -76,8 +76,9 @@ class StudentFeePaymentsController < ApplicationController
     session.delete(:return_to)
     session[:return_to] ||= request.referer
 
+
     if !params[:student_id].blank?
-      @receipt_template = MyTemplate.first
+      @receipt_template = MyTemplate.find_by_name('Fee Receipt')
       @student = Student.find(params[:student_id])
     else
       respond_to do |format|
