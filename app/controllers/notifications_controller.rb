@@ -37,7 +37,7 @@ class NotificationsController < ApplicationController
 
         @notification.save
         if notification_params[:by_mail] == '1'
-          unless @notification.student.student_email
+          unless @notification.student.student_email.blank?
             NotificationMailer.notify_student(@notification.student, @notification).deliver
           end
         end
@@ -60,7 +60,7 @@ class NotificationsController < ApplicationController
 
           @notification.save
           if notification_params[:by_mail] == '1'
-            unless @notification.student.student_email
+            unless @notification.student.student_email.blank?
               NotificationMailer.notify_student(@notification.student, @notification).deliver
             end
           end
@@ -81,7 +81,7 @@ class NotificationsController < ApplicationController
 
         @notification.save
         if notification_params[:by_mail] == '1'
-          unless @notification.student.student_email
+          unless @notification.student.student_email.blank?
             NotificationMailer.notify_student(@notification.student, @notification).deliver
           end
         end
@@ -99,7 +99,7 @@ class NotificationsController < ApplicationController
 
       @notification.save
       if notification_params[:by_mail] == '1'
-        unless @notification.student.student_email
+        unless @notification.student.student_email.blank?
           NotificationMailer.notify_student(@notification.student, @notification).deliver
         end
       end

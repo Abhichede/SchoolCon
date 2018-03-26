@@ -16,8 +16,12 @@ $(function () {
        }
    }) ;
 
-   $("#admitted_students_table").dataTable();
-   $("#enquired_students_table").dataTable();
+   $("#admitted_students_table").dataTable({
+       'pageLength': 25
+   });
+   $("#enquired_students_table").dataTable({
+       'pageLength': 25
+   });
 
    $('form.student').validate({
        debug: true,
