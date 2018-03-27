@@ -58,7 +58,7 @@ class StudentProfileUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    "school_logo.jpg" if original_filename
+    "student_profile.jpg" if original_filename
   end
 
 end

@@ -61,7 +61,9 @@ gem 'mini_magick'
 gem 'jquery-datatables-rails'
 gem 'toastr-rails'
 gem 'country_select'
-
+gem 'devise_token_auth'
+gem 'devise-bootstrap-views'
+gem 'cancancan'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

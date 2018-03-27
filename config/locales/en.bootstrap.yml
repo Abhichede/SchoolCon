@@ -12,7 +12,7 @@ en:
     links:
       back: "Back"
       cancel: "Cancel"
-      confirm: "Are you sure?"
+      confirm: "Deleting student will delete all related data permanently, this action can not revert. Are you sure?"
       destroy: "Delete"
       new: "New"
       edit: "Edit"

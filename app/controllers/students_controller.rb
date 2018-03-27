@@ -1,6 +1,8 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: %i[show edit update destroy add_leaving_certificate]
 
+  load_and_authorize_resource
+
   add_breadcrumb 'Students', :students_path
 
   # GET /students

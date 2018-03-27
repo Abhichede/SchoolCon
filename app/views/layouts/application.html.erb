@@ -68,7 +68,8 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% if user_signed_in? %>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-left">
           <li class="dropdown">
             <button class="dropbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MASTER DATA
@@ -148,7 +149,27 @@
             </div>
           </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <button class="dropbtn" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+              <%= current_user.email %>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content container">
+              <div class="row">
+                <div class="column"></div>
+                <div class="column">
+                  <h4>Profile</h4>
+                  <%= link_to 'Log out', destroy_user_session_path , method: :delete %>
+                </div>
+                <div class="column"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div><!-- /.navbar-collapse -->
+      <% end %>
     </div><!-- /.container-fluid -->
   </nav>
   <div class="container-fluid">
@@ -161,11 +182,13 @@
               <% end %>
           </script>
       <% end %>
+      <% if user_signed_in? %>
       <div class="panel panel-default">
         <div class="panel-footer">
           You are here » <%= render_breadcrumbs %>
         </div>
       </div>
+      <% end %>
       <%= yield %>
       <div id='remote_container'></div>
 

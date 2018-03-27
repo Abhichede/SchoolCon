@@ -49,5 +49,3 @@ function on() {
 function off() {
     $("#overlay").css('display', "none");
 }
-
-
