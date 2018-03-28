@@ -1,0 +1,27 @@
+<%= form_for(:users, url: profile_path(@user), html: { method: :put, class: '' }) do |f| %>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="card" style="padding: 20px">
+          <div class="form-group">
+            <%= f.label @user.email %>
+            <div class="checkbox checkbox-danger">
+              <%= f.check_box :approved, checked: @user.approved? %>
+              <%= f.label :approved %>
+            </div>
+            <br/>
+            <div class="form-group">
+              <%= f.button 'Submit', class: 'btn btn-primary btn-sm' %>
+              <%= link_to 'Cancel', profiles_path, class: 'btn btn-default btn-sm' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4">
+
+      </div>
+    </div>
+<% end %>

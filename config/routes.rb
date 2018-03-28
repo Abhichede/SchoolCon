@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
+  # get 'profiles', to: 'profiles#index'
+  # get 'edit_profile', to: 'profiles#edit'
+  # post 'update_profile', to: 'profiles#update'
+
+  resources :profiles, only: [:index, :update, :edit]
+
   namespace :api, defaults: { format: 'json' } do
     mount_devise_token_auth_for 'User', at: 'auth'
   end

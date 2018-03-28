@@ -14,7 +14,8 @@ class ApplicationController < ActionController::Base
 
   def send_sms_to_parent(student, notification)
     puts student.father_mobile
-    response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=abhichede777&password=abhijit123@&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
+    #response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=abhichede777&password=abhijit123@&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
+    response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=pravinapsunde&password=Pra23402&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
     case response.code
       when 400
         puts response
