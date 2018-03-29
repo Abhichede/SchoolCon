@@ -5,6 +5,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   include DeviseTokenAuth::Concerns::User
 
+  after_create :force_mail_confirmation
+
+  def force_mail_confirmation
+    self.send_confirmation_instructions
+  end
+
   ROLES = %i[admin teacher parent]
 
   def roles=(roles)
@@ -33,4 +39,5 @@ class User < ActiveRecord::Base
       super # Use whatever other message
     end
   end
+
 end
