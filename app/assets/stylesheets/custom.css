@@ -2,11 +2,16 @@
     margin-top: 6rem;
 }
 body{
-    background-color: #CCCCCC !important;
+    background-color: #F7F7F7 !important;
+
+}
+
+body, html{
+    height: 100%;
 }
 
 hr{
-    border-top: 1px solid #000000 !important;
+    border-top: 1px solid #aaaaaa !important;
 }
 
 /*********** custom navbar dropdown megamenu ********/

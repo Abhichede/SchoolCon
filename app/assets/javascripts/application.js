@@ -49,3 +49,22 @@ function on() {
 function off() {
     $("#overlay").css('display', "none");
 }
+
+$(document).ready(function () {
+
+    /***
+     * login start
+     */
+
+    $('input[type="password"]').on('focus', function () {
+        $('*').addClass('password');
+    }).on('focusout', function () {
+        $('*').removeClass('password');
+    });
+
+
+
+    /***
+     *  end login
+     */
+});
