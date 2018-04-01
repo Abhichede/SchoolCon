@@ -102,7 +102,7 @@ class StudentFeePaymentsController < ApplicationController
 
 
     if !params[:student_id].blank?
-      @receipt_template = MyTemplate.find_by_name('Fee Receipt')
+      @receipt_template = MyTemplate.find_by_name('Receipt')
       @student = Student.find(params[:student_id])
     else
       respond_to do |format|

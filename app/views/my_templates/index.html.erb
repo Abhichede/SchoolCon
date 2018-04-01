@@ -7,7 +7,6 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:desc) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -17,8 +16,6 @@
       <tr>
         <td><%= link_to my_template.id, my_template_path(my_template) %></td>
         <td><%= my_template.name %></td>
-          <% my_template.desc["$student name$"] = Student.first.self_full_name %>
-        <td><%= my_template.desc.html_safe %></td>
         <td><%=l my_template.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

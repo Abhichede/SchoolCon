@@ -25,7 +25,7 @@
   <div class="form-group">
     <%= f.label :desc, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_area :desc, class: '', style: 'width: 72rem !important; height: 30rem !important;' %>
+      <%= f.text_area :desc, class: 'form-control', rows: 20 %>
     </div>
     <%=f.error_span(:desc) %>
   </div>
@@ -41,7 +41,18 @@
 <% end %>
 <script type="text/javascript">
     $(document).ready(function () {
-        console.log("Dom loadedd");
-        new nicEditor({fullPanel: true}).panelInstance('my_template_desc');
+        $('#my_template_desc').summernote({
+            maxHeight: 300,
+            toolbar: [
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph', 'h1']],
+                ['height', ['height']],
+                ['insert', ['picture', 'hr']],
+                ['misc', ['codeview']]
+            ]
+        });
     });
 </script>
