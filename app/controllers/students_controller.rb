@@ -133,7 +133,7 @@ class StudentsController < ApplicationController
   def print_students_list
     if params[:type] === 'standard_wise'
       @standard = Standard.find(params[:id])
-      @students = @standard.students
+      @students = @standard.students.order('roll_no ASC')
 
     elsif params[:type] === 'division_wise'
       @division = Division.find(params[:id])
