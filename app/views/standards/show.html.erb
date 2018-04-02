@@ -48,6 +48,9 @@
                           <%= link_to 'Message to All',
                                       new_notification_path(notification_type: 'division_wise', type_data: division.id),
                                       :class => 'btn btn-primary btn-xs', remote: true %>
+                          <%= link_to 'Print List',
+                                      students_list_path(type: 'division_wise', id: division.id, format: 'pdf'),
+                                      :class => 'btn btn-info btn-xs' %>
                         </span>
                       </h5>
                     </div>

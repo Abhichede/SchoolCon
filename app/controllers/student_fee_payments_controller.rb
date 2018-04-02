@@ -100,12 +100,15 @@ class StudentFeePaymentsController < ApplicationController
     session.delete(:return_to)
     session[:return_to] ||= request.referer
 
-
-    if !params[:student_id].blank?
-      @receipt_template = MyTemplate.find_by_name('Receipt')
-      @student = Student.find(params[:student_id])
-    else
-      respond_to do |format|
+    respond_to do |format|
+      if !params[:student_id].blank?
+        @receipt_template = MyTemplate.find_by_name('Receipt')
+        @student = Student.find(params[:student_id])
+        format.html
+        format.pdf do
+          render pdf: "file_name"   # Excluding ".pdf" extension.
+        end
+      else
         format.html { redirect_to session.delete(:return_to), alert: 'Student student not found.' }
         format.json { head :no_content }
       end

@@ -130,6 +130,22 @@ class StudentsController < ApplicationController
     @student_certificate = StudentCertificate.new
   end
 
+  def print_students_list
+    if params[:type] === 'standard_wise'
+      @standard = Standard.find(params[:id])
+      @students = @standard.students
+
+    elsif params[:type] === 'division_wise'
+      @division = Division.find(params[:id])
+      @students = @division.students
+    end
+    respond_to do |format|
+      format.pdf do
+        render pdf: "students"   # Excluding ".pdf" extension.
+      end
+    end
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

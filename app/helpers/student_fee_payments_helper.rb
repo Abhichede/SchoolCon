@@ -11,7 +11,8 @@ module StudentFeePaymentsHelper
     @receipt_template.desc.gsub! '#{student_contact}', @student.student_mobile
     @receipt_template.desc.gsub! '#{student_standard}', @student.standards.last.name
     @receipt_template.desc.gsub! '#{student_division}', @student.divisions.last.name
-    @receipt_template.desc.gsub! '#{amount}', @student.student_fee_payments.last.amount.to_s
+    @receipt_template.desc.gsub! '#{amount}', @student_fee_payment.amount.to_s
+    @receipt_template.desc.gsub! '#{amount_in_words}', @student_fee_payment.amount.to_words
     @receipt_template.desc.gsub! '#{balance_amount}', @student.current_balance_amount.to_s
 
     @receipt_template.desc.gsub! '#{receipt_no}', @student_fee_payment.id.to_s

@@ -1,0 +1,5 @@
+<%= wicked_pdf_stylesheet_link_tag 'application' %>
+<% unless @receipt_template.nil? %>
+    <% fill_receipt %>
+    <%= @receipt_template.desc.html_safe %>
+<% end %>

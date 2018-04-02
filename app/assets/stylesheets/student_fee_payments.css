@@ -1,0 +1,7 @@
+
+@media print {
+    .panel-default, .panel-primary, .panel-danger, .footer{
+        display: none;
+    }
+
+}

@@ -63,6 +63,9 @@ Rails.application.routes.draw do
 
   # certificates
   get 'add_leaving_certificate', to: 'students#add_leaving_certificate'
+
+  ## Students list
+  get 'students_list', to: 'students#print_students_list'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
