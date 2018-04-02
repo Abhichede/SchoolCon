@@ -1,4 +1,9 @@
 <%= wicked_pdf_stylesheet_link_tag 'application' %>
+<style>
+  table, tr, td, th, tbody, thead, tfoot {
+    page-break-inside: avoid !important;
+  }
+</style>
 <h4 class="text-center"><%= current_institute.name %></h4>
 <hr>
 <div class="row">
