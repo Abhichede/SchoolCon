@@ -137,7 +137,7 @@ class StudentsController < ApplicationController
 
     elsif params[:type] === 'division_wise'
       @division = Division.find(params[:id])
-      @students = @division.students.order('roll_no ASC')
+      @students = @division.students.order('CAST(roll_no AS UNSIGNED) ASC')
     end
     respond_to do |format|
       format.pdf do
