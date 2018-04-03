@@ -9,13 +9,13 @@ class Student < ApplicationRecord
   has_and_belongs_to_many :standards
   has_and_belongs_to_many :divisions
 
-  has_many :student_wise_fees
-  has_many :student_wise_discounts
-  has_many :student_fee_payments
-  has_many :student_wise_fines
-  has_many :student_wise_instant_fees
-  has_many :student_certificates
-  has_many :notifications
+  has_many :student_wise_fees, dependent: :destroy
+  has_many :student_wise_discounts, dependent: :destroy
+  has_many :student_fee_payments, dependent: :destroy
+  has_many :student_wise_fines, dependent: :destroy
+  has_many :student_wise_instant_fees, dependent: :destroy
+  has_many :student_certificates, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
   attr_accessor :siblings
 

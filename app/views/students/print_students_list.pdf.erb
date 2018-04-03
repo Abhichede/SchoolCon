@@ -34,7 +34,7 @@
 <table class="table table-striped" id="admitted_students_table">
   <thead>
   <tr>
-    <th>Roll#</th>
+    <th>Sr#</th>
     <th>Name</th>
     <th>Total Fee</th>
     <th>Paid</th>
@@ -42,9 +42,10 @@
   </tr>
   </thead>
   <tbody>
+  <% counter = 0 %>
   <% @students.where(is_enquiry: false).each do |student| %>
       <tr>
-        <td><%= student.roll_no %></td>
+        <td><%= counter += 1 %></td>
         <td><%= student.self_full_name %></td>
         <td><%= student.total_fee_with_discount_fine %></td>
         <td><%= student.current_total_paid %></td>

@@ -70,24 +70,6 @@ class StudentsController < ApplicationController
   # DELETE /students/1
   # DELETE /students/1.json
   def destroy
-    @student.student_wise_fees.each do |s|
-      s.destroy
-    end
-    @student.student_wise_discounts.each do |s|
-      s.destroy
-    end
-    @student.student_wise_fines.each do |s|
-      s.destroy
-    end
-    @student.student_wise_instant_fees.each do |s|
-      s.destroy
-    end
-    @student.student_certificates.each do |s|
-      s.destroy
-    end
-    @student.student_fee_payments.each do |s|
-      s.destroy
-    end
     @student.destroy
     respond_to do |format|
       format.html { redirect_to students_url, notice: 'Student was successfully destroyed.' }
@@ -133,11 +115,11 @@ class StudentsController < ApplicationController
   def print_students_list
     if params[:type] === 'standard_wise'
       @standard = Standard.find(params[:id])
-      @students = @standard.students.order('roll_no ASC')
+      @students = @standard.students
 
     elsif params[:type] === 'division_wise'
       @division = Division.find(params[:id])
-      @students = @division.students.order('CAST(roll_no AS UNSIGNED) ASC')
+      @students = @division.students
     end
     respond_to do |format|
       format.pdf do
