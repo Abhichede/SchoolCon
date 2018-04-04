@@ -1,4 +1,6 @@
 class Student < ApplicationRecord
+  acts_as_paranoid
+
   belongs_to :caste_category
   belongs_to :caste
   belongs_to :religion

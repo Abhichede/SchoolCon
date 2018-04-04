@@ -1,10 +1,12 @@
 class NotificationsController < ApplicationController
   before_action :set_notification, only: [:show, :edit, :update, :destroy]
 
+  load_and_authorize_resource
+
   # GET /notifications
   # GET /notifications.json
   def index
-    @notifications = Notification.all
+    @notifications = Notification.with_deleted.all
   end
 
   # GET /notifications/1

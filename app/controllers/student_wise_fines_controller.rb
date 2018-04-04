@@ -1,6 +1,6 @@
 class StudentWiseFinesController < ApplicationController
   before_action :set_student_wise_fine, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /student_wise_fines
   # GET /student_wise_fines.json
   def index

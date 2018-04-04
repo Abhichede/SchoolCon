@@ -1,6 +1,6 @@
 class MyTemplatesController < ApplicationController
   before_action :set_my_template, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /my_templates
   # GET /my_templates.json
   def index

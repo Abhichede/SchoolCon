@@ -1,6 +1,6 @@
 class StudentFeePaymentsController < ApplicationController
   before_action :set_student_fee_payment, only: [:show, :edit, :update, :destroy, :fee_receipt]
-
+  load_and_authorize_resource
   # GET /student_fee_payments
   # GET /student_fee_payments.json
   def index

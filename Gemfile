@@ -50,25 +50,44 @@ gem "font-awesome-rails"
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'bootstrap-multiselect-rails'
+
+# google calendar, charts and related gems
 gem 'chartkick'
 gem 'groupdate'
 gem 'fullcalendar-rails'
+# END
+
 gem "breadcrumbs_on_rails"
+
+# File uploaders to aws
 gem 'carrierwave'
 gem 'fog'
 gem 'figaro'
 gem 'mini_magick'
+# END
+
 gem 'jquery-datatables-rails'
 gem 'toastr-rails'
 gem 'country_select'
+
+# authentication and authorisations with roles
 gem 'devise_token_auth'
 gem 'devise-bootstrap-views'
 gem 'cancancan'
+# END
 
+# number to word
 gem 'numbers_and_words'
+# END
 
+## html to pdf gems
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+# END
+
+## Soft delete
+gem "paranoia"
+# END
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

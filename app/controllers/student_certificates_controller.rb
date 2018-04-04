@@ -1,6 +1,6 @@
 class StudentCertificatesController < ApplicationController
   before_action :set_student_certificate, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /student_certificates
   # GET /student_certificates.json
   def index

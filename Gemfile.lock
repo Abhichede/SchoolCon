@@ -316,6 +316,8 @@ GEM
     numbers_and_words (0.11.3)
       i18n
     orm_adapter (0.5.0)
+    paranoia (2.4.0)
+      activerecord (>= 4.0, < 5.2)
     pg (0.18.4)
     puma (3.11.2)
     rack (2.0.4)
@@ -460,6 +462,7 @@ DEPENDENCIES
   momentjs-rails (>= 2.9.0)
   mysql2 (>= 0.3.18, < 0.5)
   numbers_and_words
+  paranoia
   pg (~> 0.18.4)
   puma (~> 3.0)
   rails (~> 5.1.4)

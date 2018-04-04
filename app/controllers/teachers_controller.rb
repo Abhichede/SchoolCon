@@ -2,7 +2,7 @@ class TeachersController < ApplicationController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
   before_action :set_standards, only: [:new, :edit]
   before_action :set_subjects, only: [:new, :edit]
-
+  load_and_authorize_resource
   # GET /teachers
   # GET /teachers.json
   def index

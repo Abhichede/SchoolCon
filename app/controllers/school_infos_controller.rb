@@ -1,6 +1,6 @@
 class SchoolInfosController < ApplicationController
   before_action :set_school_info, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   add_breadcrumb 'Institute Details', :school_infos_path
 
   # GET /school_infos

@@ -1,6 +1,6 @@
 class StudentWiseDiscountsController < ApplicationController
   before_action :set_student_wise_discount, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /student_wise_discounts
   # GET /student_wise_discounts.json
   def index

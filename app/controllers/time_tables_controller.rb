@@ -1,7 +1,7 @@
 class TimeTablesController < ApplicationController
   before_action :set_time_table, only: [:show, :edit, :update, :destroy]
   before_action :set_required, only: [:new, :edit]
-
+  load_and_authorize_resource
   # GET /time_tables
   # GET /time_tables.json
   def index

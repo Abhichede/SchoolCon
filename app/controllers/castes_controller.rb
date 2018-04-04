@@ -1,6 +1,8 @@
 class CastesController < ApplicationController
   before_action :set_caste, only: [:show, :edit, :update, :destroy]
 
+  load_and_authorize_resource
+
   # GET /castes
   # GET /castes.json
   def index

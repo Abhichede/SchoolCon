@@ -1,6 +1,6 @@
 class StudentWiseInstantFeesController < ApplicationController
   before_action :set_student_wise_instant_fee, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /student_wise_instant_fees
   # GET /student_wise_instant_fees.json
   def index

@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   add_breadcrumb 'Home', :root_path
+  # load_and_authorize_resource
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
@@ -29,10 +30,9 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     session.delete(:return_to)
     session[:return_to] ||= request.referer
-
     respond_to do |format|
       format.json { head :forbidden }
-      format.html { redirect_to session.delete(:return_to), :alert => exception.message }
+      format.html { redirect_to session.delete(:return_to).nil? ? session.delete(:return_to) : (current_user.has_role?(:parent) ? students_url : root_url), :alert => exception.message }
     end
   end
 

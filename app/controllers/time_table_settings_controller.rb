@@ -1,6 +1,6 @@
 class TimeTableSettingsController < ApplicationController
   before_action :set_time_table_setting, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /time_table_settings
   # GET /time_table_settings.json
   def index

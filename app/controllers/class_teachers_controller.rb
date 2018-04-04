@@ -1,6 +1,8 @@
 class ClassTeachersController < ApplicationController
   before_action :set_class_teacher, only: [:show, :edit, :update, :destroy]
 
+  load_and_authorize_resource
+
   # GET /class_teachers
   # GET /class_teachers.json
   def index

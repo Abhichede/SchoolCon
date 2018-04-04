@@ -1,6 +1,7 @@
 class AcademicYearsController < ApplicationController
   before_action :set_academic_year, only: [:show, :edit, :update, :destroy]
 
+  load_and_authorize_resource
   add_breadcrumb 'Academic years', :academic_years_path
 
   # GET /academic_years

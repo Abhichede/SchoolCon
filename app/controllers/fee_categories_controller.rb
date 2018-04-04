@@ -1,6 +1,6 @@
 class FeeCategoriesController < ApplicationController
   before_action :set_fee_category, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /fee_categories
   # GET /fee_categories.json
   def index

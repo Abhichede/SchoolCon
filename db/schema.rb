@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328131712) do
+ActiveRecord::Schema.define(version: 20180403130215) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_active"
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_academic_years_on_deleted_at"
   end
 
   create_table "academic_years_students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -39,6 +41,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.datetime "updated_at", null: false
     t.integer "subject_id"
     t.integer "academic_year_id"
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_attendances_on_deleted_at"
   end
 
   create_table "caste_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -66,6 +70,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.integer "standard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_divisions_on_deleted_at"
   end
 
   create_table "divisions_students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -90,6 +96,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.string "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_fee_categories_on_deleted_at"
   end
 
   create_table "fee_categories_students", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -113,6 +121,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.integer "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_notifications_on_deleted_at"
   end
 
   create_table "parents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -126,6 +136,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_religions_on_deleted_at"
   end
 
   create_table "school_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -146,6 +158,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "desc"
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_standards_on_deleted_at"
   end
 
   create_table "standards_students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -175,6 +189,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.string "path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_student_certificates_on_deleted_at"
   end
 
   create_table "student_fee_payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -186,6 +202,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.float "amount", limit: 53
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_student_fee_payments_on_deleted_at"
   end
 
   create_table "student_wise_discounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -196,6 +214,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.boolean "is_payment_done"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_student_wise_discounts_on_deleted_at"
   end
 
   create_table "student_wise_fees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -207,6 +227,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.boolean "is_paid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_student_wise_fees_on_deleted_at"
   end
 
   create_table "student_wise_fines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -216,6 +238,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.string "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_student_wise_fines_on_deleted_at"
   end
 
   create_table "student_wise_instant_fees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -225,6 +249,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.string "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_student_wise_instant_fees_on_deleted_at"
   end
 
   create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -287,6 +313,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.integer "parent_id"
     t.boolean "is_enquiry", default: false
     t.string "leaving_certificate"
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_students_on_deleted_at"
   end
 
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -347,6 +375,8 @@ ActiveRecord::Schema.define(version: 20180328131712) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "color", default: "BLACK"
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_time_tables_on_deleted_at"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

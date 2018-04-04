@@ -1,11 +1,13 @@
 class Standard < ApplicationRecord
+  acts_as_paranoid
+
   has_and_belongs_to_many :subjects
-  has_many :time_tables
+  has_many :time_tables, dependent: :destroy
   has_and_belongs_to_many :students
-  has_many :divisions
+  has_many :divisions, dependent: :destroy
 
   has_many :attendances
-  has_many :fee_categories
+  has_many :fee_categories, dependent: :destroy
 
   def total_allocated_fee
     fee = 0
