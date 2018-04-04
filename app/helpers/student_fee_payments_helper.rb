@@ -1,7 +1,7 @@
 module StudentFeePaymentsHelper
 
   def fill_receipt
-    @receipt_template.desc.gsub! '#{institute_logo}', image_tag(current_institute.logo, height: 100, width: 100)
+    @receipt_template.desc.gsub! '#{institute_logo}', image_tag(current_institute.logo, height: 80, width: 180)
     @receipt_template.desc.gsub! '#{institute_name}', current_institute.name
     @receipt_template.desc.gsub! '#{institute_address}', current_institute.address
     @receipt_template.desc.gsub! '#{institute_contact}', current_institute.contact
@@ -12,6 +12,9 @@ module StudentFeePaymentsHelper
     @receipt_template.desc.gsub! '#{student_standard}', @student.standards.last.name
     @receipt_template.desc.gsub! '#{student_division}', @student.divisions.last.name
     @receipt_template.desc.gsub! '#{amount}', @student_fee_payment.amount.to_s
+    @receipt_template.desc.gsub! '#{payment_mode}', @student_fee_payment.payment_mode
+    @receipt_template.desc.gsub! '#{payment_date}', @student_fee_payment.payment_date.to_s
+    @receipt_template.desc.gsub! '#{date}', Date.today.to_s
     @receipt_template.desc.gsub! '#{amount_in_words}', @student_fee_payment.amount.to_words
     @receipt_template.desc.gsub! '#{balance_amount}', @student.current_balance_amount.to_s
 

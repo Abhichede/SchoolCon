@@ -2,4 +2,8 @@
 <% unless @receipt_template.nil? %>
     <% fill_receipt %>
     <%= @receipt_template.desc.html_safe %>
+    <br/>
+    <hr style="border-top-style: dashed !important;">
+    <br/>
+    <%= @receipt_template.desc.html_safe %>
 <% end %>
