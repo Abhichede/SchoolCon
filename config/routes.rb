@@ -60,6 +60,7 @@ Rails.application.routes.draw do
   # fee
   get 'fee_payment', to: 'student_fee_payments#fee_payment'
   get 'fee_receipt', to: 'student_fee_payments#fee_receipt'
+  get 'fee_statement', to: 'student_fee_payments#fee_statement'
 
   # certificates
   get 'add_leaving_certificate', to: 'students#add_leaving_certificate'

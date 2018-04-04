@@ -147,3 +147,23 @@ hr{
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
 }
+
+/**
+  END
+ */
+
+/**
+  Bootstrap Buttons
+ */
+
+.btn{
+    text-transform: uppercase;
+}
+
+.btn-xs{
+    font-size: small !important;
+}
+
+/**
+END
+ */

@@ -115,6 +115,16 @@ class StudentFeePaymentsController < ApplicationController
     end
   end
 
+  def fee_statement
+    @student = Student.find(params[:student_id]) unless params[:student_id].blank?
+
+    respond_to do |format|
+      format.pdf do
+        render pdf: "students_statement"   # Excluding ".pdf" extension.
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student_fee_payment

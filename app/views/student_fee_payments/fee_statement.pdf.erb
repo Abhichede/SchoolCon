@@ -1,0 +1,54 @@
+<%= wicked_pdf_stylesheet_link_tag 'application' %>
+<style>
+  table, tr, td, th, tbody, thead, tfoot {
+    page-break-inside: avoid !important;
+  }
+</style>
+<h4 class="text-center"><%= current_institute.name %></h4>
+<hr>
+<% unless @student.nil? %>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <strong>Student Name: </strong>
+      <%= @student.self_full_name %>
+      <br/>
+      <strong>Total Paid: </strong>
+      <%= @student.current_total_paid %>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <span class="text-center"><strong>Fee Statement</strong></span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <strong>Date: </strong>
+      <%= Date.today %>
+      <br/>
+      <strong>Total Balance: </strong>
+      <%= @student.current_balance_amount %>
+    </div>
+  </div>
+  <hr>
+
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Sr.#</th>
+      <th>Payment Date</th>
+      <th>Payment Mode</th>
+      <th>Payment Notes</th>
+      <th>Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% counter = 0 %>
+    <% @student.student_fee_payments.where(academic_year_id: @student.academic_years.where(is_active: true).last.id).each do |fee| %>
+        <tr>
+          <td><%= counter += 1 %></td>
+          <td><%= fee.payment_date %></td>
+          <td><%= fee.payment_mode %></td>
+          <td><%= fee.payment_desc %></td>
+          <td><%= fee.amount %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
