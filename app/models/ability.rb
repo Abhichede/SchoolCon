@@ -32,9 +32,10 @@ class Ability
     user ||= User.new
     if user.has_role? :admin
       can [:create, :update, :read], :all
+      can [:fee_payment, :fee_receipt], StudentFeePayment
     elsif user.has_role? :teacher
       can [:create, :update, :read], :all # author can create status
-      can :fee_payment, StudentFeePayment
+      can [:fee_payment, :fee_receipt], StudentFeePayment
       # can :destroy, Status # #uncomment this line, author can destroy status
     elsif user.has_role? :parent
       can :read, Student
