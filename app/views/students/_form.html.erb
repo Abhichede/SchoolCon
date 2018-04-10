@@ -236,6 +236,7 @@
         <%= f.label :student_mobile, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :student_mobile, :class => 'form-control' %>
+          <div class="text-muted">WhatsApp number preferred.</div>
         </div>
         <%=f.error_span(:student_mobile) %>
 
@@ -291,12 +292,14 @@
         <%= f.label :father_mobile, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :father_mobile, :class => 'form-control' %>
+          <div class="text-muted">WhatsApp number preferred.</div>
         </div>
         <%=f.error_span(:father_mobile) %>
 
         <%= f.label :mother_mobile, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :mother_mobile, :class => 'form-control' %>
+          <div class="text-muted">WhatsApp number preferred.</div>
         </div>
         <%=f.error_span(:mother_mobile) %>
       </div>
