@@ -31,9 +31,9 @@ class Ability
 
     user ||= User.new
     if user.has_role? :admin
-      can [:create, :update, :read], :all
-      can [:fee_payment, :fee_receipt, :fee_statement], StudentFeePayment
-      can [:print_students_list], Student
+      can :manage, :all
+      # can [:fee_payment, :fee_receipt, :fee_statement], StudentFeePayment
+      # can [:print_students_list], Student
     elsif user.has_role? :teacher
       can [:create, :update, :read], :all # author can create status
       can [:fee_payment, :fee_receipt, :fee_statement], StudentFeePayment

@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :set_locale
 
+  before_action :set_mailer_host
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   add_breadcrumb 'Home', :root_path
@@ -34,6 +36,10 @@ class ApplicationController < ActionController::Base
       format.json { head :forbidden }
       format.html { redirect_to session.delete(:return_to).nil? ? session.delete(:return_to) : (current_user.has_role?(:parent) ? students_url : root_url), :alert => exception.message }
     end
+  end
+
+  def set_mailer_host
+    ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
 
   protected
