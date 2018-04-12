@@ -25,7 +25,7 @@
 
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
-    <%= favicon_link_tag SchoolInfo.first.logo.blank? ? 'favicon.ico' : SchoolInfo.first.logo, :rel => 'shortcut icon' %>
+      <%= favicon_link_tag SchoolInfo.first.logo.blank? ? 'favicon.ico' : SchoolInfo.first.logo, :rel => 'shortcut icon' %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -70,7 +70,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-left">
           <li class="dropdown">
-            <button class="dropbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MASTER DATA
+            <button class="dropbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Settings
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content container">
@@ -99,7 +100,8 @@
           </li>
 
           <li class="dropdown">
-            <button class="dropbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STUDENTS
+            <button class="dropbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Students
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content container">
@@ -125,7 +127,8 @@
           </li>
 
           <li class="dropdown">
-            <button class="dropbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STAFF
+            <button class="dropbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              STAFF
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content container">

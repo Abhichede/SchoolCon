@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
 
-  before_action :authenticate_user!
+  before_action :skip_authenticate
   before_action :set_locale
 
   before_action :set_mailer_host
@@ -41,6 +41,13 @@ class ApplicationController < ActionController::Base
   def set_mailer_host
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
+
+  private
+    def skip_authenticate
+      unless params[:controller].split('/')[0] == 'devise_token_auth'
+        authenticate_user!
+      end
+    end
 
   protected
 
