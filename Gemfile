@@ -67,7 +67,7 @@ gem 'mini_magick'
 # END
 
 gem 'jquery-datatables-rails'
-gem 'toastr-rails'
+#gem 'toastr-rails'
 gem 'country_select'
 
 # authentication and authorisations with roles

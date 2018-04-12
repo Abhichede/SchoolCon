@@ -23,7 +23,7 @@
 //= require bootstrap-datetimepicker
 //= require fullcalendar
 //= require chartkick
-//= require toastr
+// require toastr
 // require turbolinks
 //= require_tree .
 
@@ -67,4 +67,12 @@ $(document).ready(function () {
     /***
      *  end login
      */
+
+    /**
+     * Toastr
+     */
+
+
+
+    console.log('toastr');
 });
