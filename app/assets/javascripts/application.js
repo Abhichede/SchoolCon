@@ -73,7 +73,4 @@ $(document).ready(function () {
      * Toastr
      */
 
-
-
-    console.log('toastr');
 });
