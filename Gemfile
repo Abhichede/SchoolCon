@@ -69,7 +69,6 @@ gem 'mini_magick'
 gem 'jquery-datatables-rails'
 #gem 'toastr-rails'
 gem 'country_select'
-gem 'jquery-ui-rails'
 
 # authentication and authorisations with roles
 gem 'devise_token_auth'
