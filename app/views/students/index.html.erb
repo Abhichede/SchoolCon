@@ -1,89 +1,73 @@
 <%- model_class = Student -%>
-<div class="row">
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <%= link_to 'New Admission',
-                    new_student_path,
-                    :class => 'custom-link btn btn-primary' %>
-        <%= link_to 'New Enquiry',
-                    {controller: 'students', action: 'new', is_enquiry: true},
-                    :class => 'custom-link btn btn-success' %>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-9">
-    <div class="card">
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#admitted_students" aria-controls="admitted_students" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Admitted Students</a></li>
-        <li role="presentation"><a href="#enquired_students" aria-controls="enquired_students" role="tab" data-toggle="tab"><i class="fa fa-user-circle-o"></i> Enquired Students</a></li>
-      </ul>
+<div class="card">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#admitted_students" aria-controls="admitted_students" role="tab" data-toggle="tab"><i class="fa fa-user"></i> Admitted Students</a></li>
+    <li role="presentation"><a href="#enquired_students" aria-controls="enquired_students" role="tab" data-toggle="tab"><i class="fa fa-user-circle-o"></i> Enquired Students</a></li>
+  </ul>
 
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="admitted_students">
-          <table class="table table-striped" id="admitted_students_table">
-            <thead>
-              <tr>
-                <th><%= model_class.human_attribute_name(:id) %></th>
-                <th>Photo</th>
-                <th><%= model_class.human_attribute_name(:name) %></th>
-                <th><%= model_class.human_attribute_name(:standard_id) %></th>
-                <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
-                <th><%=t '.actions', :default => t("helpers.actions") %></th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @students.where(is_enquiry: false).each do |student| %>
-                <tr>
-                  <td><%= link_to student.id, student_path(student) %></td>
-                  <td>
-                    <%= image_tag student.profile_photo.blank? ? 'student-default.png' : student.profile_photo, class: 'img-circle', width: '50px', height: '50px' %>
-                  </td>
-                  <td><%= student.self_full_name %></td>
-                  <td><%= student.standards.last.name %></td>
-                  <td><%= student.academic_years.where(is_active: true).first.academic_year if student.academic_years.where(is_active: true).first %></td>
-                  <td>
-                    <%= link_to t('.show', :default => t("helpers.links.show")),
-                                student_path(student), :class => 'btn btn-success btn-xs' %>
-                    <%= link_to 'Send Message',
-                                new_notification_path(student_id: student.id, notification_type: 'student_wise'),
-                                :class => 'btn btn-primary btn-xs', remote: true %>
-                  </td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
-
-        <div role="tabpanel" class="tab-pane" id="enquired_students">
-          <table class="table table-striped" id="enquired_students_table">
-            <thead>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="admitted_students">
+      <table class="table table-striped" id="admitted_students_table">
+        <thead>
+        <tr>
+          <th><%= model_class.human_attribute_name(:id) %></th>
+          <th>Photo</th>
+          <th><%= model_class.human_attribute_name(:name) %></th>
+          <th><%= model_class.human_attribute_name(:standard_id) %></th>
+          <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
+          <th><%=t '.actions', :default => t("helpers.actions") %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @students.where(is_enquiry: false).each do |student| %>
             <tr>
-              <th><%= model_class.human_attribute_name(:id) %></th>
-              <th><%= model_class.human_attribute_name(:name) %></th>
-              <th><%= model_class.human_attribute_name(:standard_id) %></th>
-              <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
-              <th><%=t '.actions', :default => t("helpers.actions") %></th>
+              <td><%= link_to student.id, student_path(student) %></td>
+              <td>
+                <%= image_tag student.profile_photo.blank? ? 'student-default.png' : student.profile_photo, class: 'img-circle', width: '50px', height: '50px' %>
+              </td>
+              <td><%= student.self_full_name %></td>
+              <td><%= student.standards.last.name %></td>
+              <td><%= student.academic_years.where(is_active: true).first.academic_year if student.academic_years.where(is_active: true).first %></td>
+              <td>
+                <%= link_to t('.show', :default => t("helpers.links.show")),
+                            student_path(student), :class => 'btn btn-success btn-xs' %>
+                <%= link_to 'Send Message',
+                            new_notification_path(student_id: student.id, notification_type: 'student_wise'),
+                            :class => 'btn btn-primary btn-xs', remote: true %>
+              </td>
             </tr>
-            </thead>
-            <tbody>
-            <% @students.where(is_enquiry: true).each do |student| %>
-                <tr>
-                  <td><%= link_to student.id, student_path(student) %></td>
-                  <td><%= student.self_full_name %></td>
-                  <td><%= student.standards.last.name %></td>
-                  <td><%= student.academic_years.where(is_active: true).first.academic_year if student.academic_years.where(is_active: true).first %></td>
-                  <td>
-                    <%= link_to 'Confirm Admission',
-                                edit_student_path(student), :class => 'btn btn-success btn-xs' %>
-                  </td>
-                </tr>
-            <% end %>
-            </tbody>
-          </table>
-        </div>
-      </div>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="enquired_students">
+      <table class="table table-striped" id="enquired_students_table">
+        <thead>
+        <tr>
+          <th><%= model_class.human_attribute_name(:id) %></th>
+          <th><%= model_class.human_attribute_name(:name) %></th>
+          <th><%= model_class.human_attribute_name(:standard_id) %></th>
+          <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
+          <th><%=t '.actions', :default => t("helpers.actions") %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @students.where(is_enquiry: true).each do |student| %>
+            <tr>
+              <td><%= link_to student.id, student_path(student) %></td>
+              <td><%= student.self_full_name %></td>
+              <td><%= student.standards.last.name %></td>
+              <td><%= student.academic_years.where(is_active: true).first.academic_year if student.academic_years.where(is_active: true).first %></td>
+              <td>
+                <%= link_to 'Confirm Admission',
+                            edit_student_path(student), :class => 'btn btn-success btn-xs' %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

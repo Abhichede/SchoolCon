@@ -99,87 +99,153 @@
   </ul>
 
   <div class="row">
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-8 col-md-8">
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="calendar-tab">
-          <div class="panel panel-default" >
-            <div class="panel-heading">
-              <h5>
-                Calendar
-                <span class="pull-right">
-              <a class="" data-toggle="collapse" href="#calendar_body">
-                <i class="fa fa-chevron-down"></i>
-              </a>
-            </span>
-              </h5>
-            </div>
-            <div class="panel-body collapse in" id="calendar_body">
-              <div class='calendar' id='calendar'></div>
+
+          <div class="">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2><i class="fa fa-calendar"></i> Events <small>Calendar</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Settings 1</a>
+                      </li>
+                      <li><a href="#">Settings 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <div class='calendar' id='calendar'></div>
+              </div>
             </div>
           </div>
+          <div class="clearfix"></div>
         </div>
         <div role="tabpanel" class="tab-pane" id="daily_attendance">
-          <div class="panel panel-default" >
-            <div class="panel-heading">
-              <h5>
-                Daily Attendance Overview
-                <span class="pull-right">
-                  <a class="" data-toggle="collapse" href="#attendance_body">
-                    <i class="fa fa-chevron-down"></i>
-                  </a>
-                </span>
-              </h5>
-            </div>
-            <div class="panel-body collapse in" id="attendance_body">
-              <%= column_chart high_chart, stacked: true %>
+
+          <div class="">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2><i class="fa fa-check"></i> Daily Attendance <small>Subject wise</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Settings 1</a>
+                      </li>
+                      <li><a href="#">Settings 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <%= column_chart high_chart, stacked: true %>
+              </div>
             </div>
           </div>
+          <div class="clearfix"></div>
         </div>
         <div role="tabpanel" class="tab-pane" id="fee_collection_tab">
-      <div class="panel panel-default" >
-        <div class="panel-heading">
-          <h5>
-            Fee Collection Summary
-            <span class="pull-right">
-              <a class="" data-toggle="collapse" href="#fee_collection_body">
-                <i class="fa fa-chevron-down"></i>
-              </a>
-            </span>
-          </h5>
-        </div>
-        <div class="panel-body collapse in" id="fee_collection_body">
-          <% if !high_chart_fee.nil? %>
-              <%= line_chart high_chart_fee %>
-          <% else %>
-              No data found for this month
-          <% end %>
-        </div>
-      </div>
+
+          <div class="">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2><i class="fa fa-money"></i> Fee Collection Summary <small>Date wise</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Settings 1</a>
+                      </li>
+                      <li><a href="#">Settings 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <% if !high_chart_fee.nil? %>
+                    <%= line_chart high_chart_fee %>
+                <% else %>
+                    No data found for this month
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
     </div>
       </div>
     </div>
 
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-4 col-md-4">
       <div class="tab-content">
-        <div class="panel panel-default" style="max-height: 100%;">
-          <div class="panel-heading">
-            <h4>
-              <i class="fa fa-birthday-cake" style="font-size: 30px; color: #ec407a"></i>
-              <span class="pull-right"> Today's Birthdays</span>
-            </h4>
-          </div>
-          <div class="panel-body">
-            <ul class="list-group">
-              <% if !birthday_today_students.blank? %>
-                  <% birthday_today_students.each do |birth_stud| %>
-                      <li class="list-group-item"><%= link_to birth_stud.self_full_name, student_path(birth_stud) %></li>
-                  <% end %>
-              <% else %>
-                  <li class="list-group-item">nobuddy</li>
-              <% end %>
-            </ul>
+
+        <div class="">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2><i class="fa fa-birthday-cake"></i> Today's Birthday</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a>
+                    </li>
+                    <li><a href="#">Settings 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <ul class="list-unstyled msg_list">
+                <% if !birthday_today_students.blank? %>
+                    <% birthday_today_students.each do |birth_stud| %>
+                        <li class="">
+                          <a href="<%= student_path(birth_stud) %>">
+                            <span class="image">
+                              <img src="<%= birth_stud.profile_photo %>" alt="img" />
+                            </span>
+                            <span>
+                              <span><%= birth_stud.self_full_name %></span>
+                              <span class="time"><%= birth_stud.current_age %> Years Old</span>
+                            </span>
+                          </a>
+                        </li>
+                    <% end %>
+                <% else %>
+                    <li class="">nobuddy</li>
+                <% end %>
+              </ul>
+            </div>
           </div>
         </div>
+        <div class="clearfix"></div>
       </div>
     </div>
   </div>

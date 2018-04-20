@@ -1,22 +1,16 @@
 
-
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333333;
-    color: #eeeeee;
-    padding: 1rem;
-    border-top: 1px solid #ddd;
-    z-index: 99;
+footer{
+    background: #fff;
+    padding: 5px 0;
 }
-
-
 .error{
     color: #bb2e2c;
 }
 
+.mainpage{
+    margin: 60px 0 35px 0;
+    padding-bottom: 5px;
+}
 #overlay {
     position: fixed;
     display: none;

@@ -35,6 +35,12 @@ class Student < ApplicationRecord
     "#{mother_first_name} #{mother_middle_name} #{mother_last_name}"
   end
 
+  def current_age
+    dob = date_of_birth.to_date
+    now = Time.now.utc.to_date
+    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+  end
+
   def total_fee
     amount = 0
     fee_categories.each do |fee|
