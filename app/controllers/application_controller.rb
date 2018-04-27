@@ -45,7 +45,7 @@ class ApplicationController < ActionController::Base
 
   private
     def skip_authenticate
-      unless params[:controller].split('/')[0] == 'devise_token_auth'|| params[:controller].split('/')[0] == 'api'
+      unless params[:controller].split('/')[0] == 'devise_token_auth' #|| params[:controller].split('/')[0] == 'api'
         authenticate_user!
       end
     end
@@ -53,6 +53,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:email,:password, :password_confirmation, roles: []])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email,:password, :password_confirmation, :student_id, roles: []])
   end
 end

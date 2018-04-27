@@ -38,6 +38,7 @@ class StudentsController < ApplicationController
           @parent.save
         end
         @parent = Parent.find_by_mobile(@student.father_mobile)
+        User.create(email: @student.father_email, password: "#{@student.first_name}#{@student.father_mobile}", password_confirmation: "#{@student.first_name}#{@student.father_mobile}", student_id: @student.id, roles_mask: 4, confirmed_at: Time.now)
         @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}", parent_id: @parent.id)
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
