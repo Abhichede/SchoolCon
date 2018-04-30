@@ -6,6 +6,12 @@
   <%= wicked_pdf_stylesheet_link_tag 'application' %>
 </head>
 
+<style>
+  body{
+    background-color: #ffffff !important;
+  }
+</style>
+
 
 <% unless @receipt_template.nil? %>
     <% fill_receipt %>

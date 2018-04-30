@@ -1,7 +1,17 @@
-<%= wicked_pdf_stylesheet_link_tag 'application' %>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <%= favicon_link_tag SchoolInfo.first.logo.blank? ? 'favicon.ico' : SchoolInfo.first.logo, :rel => 'shortcut icon' %>
+
+  <%= wicked_pdf_stylesheet_link_tag 'application' %>
+</head>
 <style>
   table, tr, td, th, tbody, thead, tfoot {
     page-break-inside: avoid !important;
+  }
+
+  body{
+    background-color: #ffffff !important;
   }
 </style>
 <h4 class="text-center"><%= current_institute.name %></h4>

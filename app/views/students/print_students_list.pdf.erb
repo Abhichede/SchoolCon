@@ -1,56 +1,67 @@
-<%= wicked_pdf_stylesheet_link_tag 'application' %>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <%= favicon_link_tag SchoolInfo.first.logo.blank? ? 'favicon.ico' : SchoolInfo.first.logo, :rel => 'shortcut icon' %>
+
+  <%= wicked_pdf_stylesheet_link_tag 'application' %>
+</head>
 <style>
   table, tr, td, th, tbody, thead, tfoot {
     page-break-inside: avoid !important;
   }
+    body{
+      background-color: #ffffff !important;
+    }
 </style>
-<h4 class="text-center"><%= current_institute.name %></h4>
-<hr>
-<div class="row">
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <strong>Standard: </strong>
+<div class="pdf">
+  <h4 class="text-center"><%= current_institute.name %></h4>
+  <hr>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <strong>Standard: </strong>
+        <% if params[:type] === 'standard_wise' %>
+          <%= @standard.name %>
+        <% elsif params[:type] === 'division_wise' %>
+          <%= @division.standard.name %>
+        <% end %>
+      <br/>
+      <strong>Division: </strong>
       <% if params[:type] === 'standard_wise' %>
-        <%= @standard.name %>
+          All
       <% elsif params[:type] === 'division_wise' %>
-        <%= @division.standard.name %>
+          <%= @division.name %>
       <% end %>
-    <br/>
-    <strong>Division: </strong>
-    <% if params[:type] === 'standard_wise' %>
-        All
-    <% elsif params[:type] === 'division_wise' %>
-        <%= @division.name %>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <span class="text-center"><strong>Students List</strong></span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <strong>Total Students: </strong> <%= @students.count %> <br/>
+      <strong>Academic Year: </strong> <%= AcademicYear.find_by_is_active(true).academic_year %>
+    </div>
+  </div>
+  <hr>
+  <table class="table table-striped" id="admitted_students_table">
+    <thead>
+    <tr>
+      <th>Sr#</th>
+      <th>Name</th>
+      <th>Total Fee</th>
+      <th>Paid</th>
+      <th>Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% counter = 0 %>
+    <% @students.where(is_enquiry: false).each do |student| %>
+        <tr>
+          <td><%= counter += 1 %></td>
+          <td><%= student.self_full_name %></td>
+          <td><%= student.total_fee_with_discount_fine %></td>
+          <td><%= student.current_total_paid %></td>
+          <td><%= student.current_balance_amount %></td>
+        </tr>
     <% end %>
-  </div>
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <span class="text-center"><strong>Students List</strong></span>
-  </div>
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <strong>Total Students: </strong> <%= @students.count %> <br/>
-    <strong>Academic Year: </strong> <%= AcademicYear.find_by_is_active(true).academic_year %>
-  </div>
+    </tbody>
+  </table>
 </div>
-<hr>
-<table class="table table-striped" id="admitted_students_table">
-  <thead>
-  <tr>
-    <th>Sr#</th>
-    <th>Name</th>
-    <th>Total Fee</th>
-    <th>Paid</th>
-    <th>Balance</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% counter = 0 %>
-  <% @students.where(is_enquiry: false).each do |student| %>
-      <tr>
-        <td><%= counter += 1 %></td>
-        <td><%= student.self_full_name %></td>
-        <td><%= student.total_fee_with_discount_fine %></td>
-        <td><%= student.current_total_paid %></td>
-        <td><%= student.current_balance_amount %></td>
-      </tr>
-  <% end %>
-  </tbody>
-</table>
