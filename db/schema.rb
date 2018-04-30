@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180426111303) do
+ActiveRecord::Schema.define(version: 20180430060606) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -314,6 +314,12 @@ ActiveRecord::Schema.define(version: 20180426111303) do
     t.boolean "is_enquiry", default: false
     t.string "leaving_certificate"
     t.datetime "deleted_at"
+    t.string "medical_history", default: "NA"
+    t.string "skill_of_child", default: "NA"
+    t.text "siblings_schooling_details"
+    t.boolean "is_transportation_required", default: false
+    t.string "transport_pickup_point", default: ""
+    t.string "disability_of_student", default: "NA"
     t.index ["deleted_at"], name: "index_students_on_deleted_at"
   end
 

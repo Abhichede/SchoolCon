@@ -428,6 +428,57 @@
     </div>
   </div>
 
+  <div class="panel panel-default">
+    <div class="panel-heading">Other Details</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <%= f.label :medical_history, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_area :medical_history, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:medical_history) %>
+
+        <%= f.label :siblings_schooling_details, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_area :siblings_schooling_details, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:siblings_schooling_details) %>
+
+      </div>
+      <div class="form-group">
+        <%= f.label :skill_of_child, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :skill_of_child, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:skill_of_child) %>
+
+        <%= f.label :disability_of_student, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :disability_of_student, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:disability_of_student) %>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <div class="checkbox checkbox-success">
+            <input type="checkbox" name="student[is_transportation_required]" id="student_is_transportation_required" <%= @student.is_transportation_required ? 'checked' : '' %> >
+            <label for="student_is_transportation_required">Is transportation required?</label>
+          </div>
+        </div>
+        <%=f.error_span(:is_transportation_required) %>
+
+        <%= f.label :transport_pickup_point, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-4">
+          <%= f.text_field :transport_pickup_point, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:transport_pickup_point) %>
+      </div>
+
+    </div>
+  </div>
+
     <div id="student_fees">
 
     </div>
@@ -458,9 +509,23 @@
 
 <script type="text/javascript">
     $(function () {
+
+        $("#student_is_transportation_required").change(function () {
+            if(this.checked){
+                $("#student_transport_pickup_point").removeAttr('disabled');
+            }else{
+                $("#student_transport_pickup_point").attr('disabled', true);
+            }
+        });
         $(document).ready(function () {
           get_divisions();
           get_fee_structure();
+
+            if($("#student_is_transportation_required").checked){
+                $("#student_transport_pickup_point").removeAttr('disabled');
+            }else{
+                $("#student_transport_pickup_point").attr('disabled', true);
+            }
         });
 
         $('select#student_standard_ids').on('click', function () {

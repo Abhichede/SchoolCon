@@ -151,6 +151,8 @@ class StudentsController < ApplicationController
                                     :last_school_attended, :academic_year_ids,
                                     :division_ids, :joining_date, :roll_no, :student_adhar, :father_adhar,
                                     :prev_standard, :prev_year, :prev_marks,
-                                    :mother_adhar, :profile_photo, :is_enquiry, fee_category_ids: [])
+                                    :mother_adhar, :profile_photo, :is_enquiry, :medical_history, :skill_of_child,
+                                    :siblings_schooling_details, :is_transportation_required, :transport_pickup_point,
+                                    :disability_of_student, fee_category_ids: [])
   end
 end
