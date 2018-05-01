@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: 'json' } do
     mount_devise_token_auth_for 'User', at: 'auth'
-    resources :students, only: ['index']
+    resources :students
   end
   resources :school_infos
   resources :my_templates
