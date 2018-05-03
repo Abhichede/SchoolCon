@@ -1,7 +1,8 @@
+<% add_breadcrumb "New Fee Payment", new_student_fee_payment_path %>
 <% if params[:fee_type] === 'student_wise' && !params[:student_id].nil? %>
     <div class="panel panel-default">
       <div class="panel-body">
-        <h3>Payments for: <%= @student.self_full_name %></h3>
+        <h3>Payments for: <%= link_to @student.self_full_name, student_path(@student) %> <small class="text-muted"><i class="fa fa-arrow-left"></i> Click here to go to profile</small> </h3>
       </div>
     </div>
     <div class="panel panel-primary">
@@ -211,7 +212,7 @@
 
     <% if @student.current_balance_amount > 0 %>
         <div class="panel panel-primary">
-          <div class="panel-heading text-center text-capitalize">Little information about payment</div>
+          <div class="panel-heading text-center text-capitalize">Information about payment</div>
           <div class="panel-body">
             <%= form_for @student_fee_payment, :html => { :class => "form-horizontal student_fee_payment" } do |f| %>
 
@@ -264,10 +265,12 @@
                 <%= f.hidden_field :academic_year_id, value: @student.academic_years.where(is_active: true).last.id %>
 
               <div class="form-group">
-                <div class="col-lg-offset-10 col-lg-2">
-                  <%= f.submit 'Pay Fee', :class => 'btn btn-primary' %>
+                <div class="col-lg-offset-8 col-lg-2 col-md-2">
+                  <%= f.submit 'Pay Fee', :class => 'btn btn-primary btn-block' %>
+                </div>
+                <div class="col-lg-2 col-md-2">
                   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                              student_path(@student), :class => 'btn btn-default' %>
+                              student_path(@student), :class => 'btn btn-default btn-block' %>
                 </div>
               </div>
             <% end %>

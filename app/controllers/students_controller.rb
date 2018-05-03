@@ -9,6 +9,10 @@ class StudentsController < ApplicationController
   # GET /students.json
   def index
     @students = Student.all
+
+    if params[:search_query].presence
+      @students = Student.search_by_full_name(params[:search_query])
+    end
   end
 
   # GET /students/1

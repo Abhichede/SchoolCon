@@ -108,6 +108,14 @@
                   </li>
                   <li><a><i class="fa fa-user-circle"></i> Students <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+                      <li>
+                        <form action="<%= students_path %>">
+                          <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
+                            <input type="text" name="search_query" class="form-control" value="<%= params[:search_query] if params[:search_query].presence %>" placeholder="Search student">
+                            <span class="fa fa-search form-control-feedback right" aria-hidden="true"></span>
+                          </div>
+                        </form>
+                      </li>
                       <li><a href="<%= students_path %>">Student List</a></li>
                       <li><a href="<%= new_student_path %>">New Admission</a></li>
                       <li><a href="<%= new_student_path(is_enquiry: true) %>">New Enquiry</a></li>

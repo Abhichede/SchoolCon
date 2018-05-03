@@ -27,6 +27,18 @@ class Student < ApplicationRecord
     "#{first_name} #{middle_name} #{last_name}"
   end
 
+  def self.search_by_full_name(search)
+    @names = search.split(" ")
+
+    if @names.size == 2
+      where("(lower(first_name) LIKE ? AND lower(last_name) LIKE ?) OR (lower(middle_name) LIKE ? AND lower(last_name) LIKE ?) OR (lower(first_name) LIKE ? AND lower(middle_name) LIKE ?)", "%#{@names[0].downcase}%", "%#{@names[1].downcase}%", "%#{@names[0].downcase}%", "%#{@names[1].downcase}%", "%#{@names[0].downcase}%", "%#{@names[1].downcase}%")
+    elsif @names.size == 3
+      where("lower(first_name) LIKE ? AND lower(middle_name) LIKE ? AND lower(last_name) LIKE ?", "%#{@names[0].downcase}%", "%#{@names[1].downcase}%", "%#{@names[2].downcase}%")
+    elsif @names.size == 1
+      where("lower(first_name) LIKE ? OR lower(middle_name) LIKE ? OR lower(last_name) LIKE ?", "%#{search.downcase}%", "%#{search.downcase}%", "%#{search.downcase}%")
+    end
+  end
+
   def father_full_name
     "#{father_first_name} #{father_middle_name} #{father_last_name}"
   end

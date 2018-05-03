@@ -13,7 +13,7 @@
               students_path, :class => 'custom-link btn btn-default'  %>
   <%= link_to '<i class="fa fa-edit"> </i> '.html_safe + t('.edit', :default => t("helpers.links.edit")),
               edit_student_path(@student), :class => 'custom-link btn btn-success' %>
-  <%= link_to '<i class="fa fa-trash"> </i> '.html_safe + t('.destroy', :default => t("helpers.links.destroy")),
+  <% link_to '<i class="fa fa-trash"> </i> '.html_safe + t('.destroy', :default => t("helpers.links.destroy")),
               student_path(@student),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Deleting student will delete all related data permanently, this action can not revert. Are you sure?')) },

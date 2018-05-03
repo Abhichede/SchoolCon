@@ -1,22 +1,23 @@
+<% add_breadcrumb 'Fee Receipt', fee_receipt_path %>
 <div class="row">
   <div class="col-md-3">
     <div class="panel panel-default">
       <div class="panel-body">
         <%= link_to "<i class='fa fa-arrow-left'></i> #{@student.first_name}`s Profile".html_safe,
                     student_path(@student),
-                    :class => 'custom-link' %>
+                    :class => 'btn btn-default btn-block' %>
         <%= link_to "<i class='fa fa-edit'></i> Edit Transaction".html_safe, {controller: 'student_fee_payments',
                              action: 'edit', fee_type: 'student_wise',
                              student_id: @student.id, id: @student_fee_payment},
-                    class: 'custom-link' %>
-        <%= link_to "<i class='fa fa-trash'></i> Delete Transaction".html_safe, student_fee_payment_path(@student_fee_payment),
+                    class: 'btn btn-primary btn-block' %>
+        <% link_to "<i class='fa fa-trash'></i> Delete Transaction".html_safe, student_fee_payment_path(@student_fee_payment),
                     :method => 'delete',
                     :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                    class: 'custom-link' %>
+                    class: 'btn btn-danger btn-block' %>
         <%= link_to "<i class='fa fa-edit'></i> Print Receipt".html_safe, {controller: 'student_fee_payments',
                                                                               action: 'fee_receipt', fee_type: 'student_wise',
                                                                               student_id: @student.id, id: @student_fee_payment, format: 'pdf'},
-                    class: 'custom-link' %>
+                    class: 'btn btn-info btn-block' %>
       </div>
     </div>
   </div>

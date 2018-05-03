@@ -3,9 +3,9 @@
   <div class="col-md-2">
     <div class="panel panel-default">
       <div class="panel-body">
-        <%= link_to t('.new', :default => t("helpers.links.new")),
+        <%= link_to "<i class='fa fa-plus'></i> ".html_safe + t('.new', :default => t("helpers.links.new")),
                     new_academic_year_path,
-                    :class => 'custom-link btn btn-primary', remote: true %>
+                    :class => 'btn btn-primary btn-block', remote: true %>
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@
                 <td>
                   <%= link_to t('.edit', :default => t("helpers.links.edit")),
                               edit_academic_year_path(academic_year), :class => 'btn btn-default btn-xs', remote: true %>
-                  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                  <% link_to t('.destroy', :default => t("helpers.links.destroy")),
                               academic_year_path(academic_year),
                               :method => :delete,
                               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },

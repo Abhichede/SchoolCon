@@ -1,8 +1,5 @@
 <%- model_class = StudentFeePayment -%>
 <div class="panel panel-success">
-  <div class="panel-heading text-center">
-    <h3><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h3>
-  </div>
   <div class="panel-body">
     <%= render :partial => 'form' %>
   </div>
