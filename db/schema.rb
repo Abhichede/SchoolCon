@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.string "start_year"
     t.string "end_month"
     t.string "end_year"
+    t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "is_active"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_academic_years_on_deleted_at"
   end
@@ -37,9 +37,10 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.integer "division_id"
     t.integer "teacher_id"
     t.json "att_data"
+    t.integer "student_id"
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "subject_id"
     t.integer "academic_year_id"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_attendances_on_deleted_at"
@@ -199,7 +200,7 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.date "payment_date"
     t.string "payment_mode"
     t.text "payment_desc"
-    t.float "amount", limit: 53
+    t.float "amount", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
@@ -298,21 +299,20 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.string "username"
     t.string "password"
     t.integer "academic_year_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "prev_standard"
+    t.string "prev_year"
+    t.string "prev_marks"
+    t.integer "division_id"
     t.string "joining_date"
     t.string "roll_no"
     t.string "student_adhar"
     t.string "father_adhar"
     t.string "mother_adhar"
-    t.integer "division_id"
-    t.string "prev_standard"
-    t.string "prev_year"
-    t.string "prev_marks"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "profile_photo"
     t.integer "parent_id"
     t.boolean "is_enquiry", default: false
-    t.string "leaving_certificate"
     t.datetime "deleted_at"
     t.string "medical_history", default: "NA"
     t.string "skill_of_child", default: "NA"
@@ -343,8 +343,6 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.text "address_one"
     t.string "contact"
     t.string "standard_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "dob"
     t.string "gender"
     t.string "blood_group"
@@ -357,6 +355,8 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.string "pincode"
     t.string "middle_name"
     t.string "staff_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "time_table_settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -365,9 +365,9 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.integer "period_duration", default: 60
     t.integer "num_breaks", default: 3
     t.string "break_durations", default: "30, 60, 30"
+    t.string "breaks_after", default: "11:00 AM, 01:30 PM, 04:30 PM"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "breaks_after", default: "11:00 AM, 01:30 PM, 04:30 PM"
   end
 
   create_table "time_tables", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -378,9 +378,9 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.time "end_time"
     t.integer "teacher_id"
     t.string "subject"
+    t.string "color", default: "BLACK"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "color", default: "BLACK"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_time_tables_on_deleted_at"
   end

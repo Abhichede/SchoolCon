@@ -95,6 +95,9 @@
                       <li><a href="<%= standards_path %>">Standards</a></li>
                       <li><a href="<%= divisions_path %>">Divisions</a></li>
                       <li><a href="<%= subjects_path %>">Subjects</a></li>
+                      <li><a href="<%= caste_categories_path %>">Caste Categories</a></li>
+                      <li><a href="<%= castes_path %>">Castes</a></li>
+                      <li><a href="<%= religions_path %>">Religions</a></li>
                       <li>
                         <a>TimeTables <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
@@ -149,7 +152,7 @@
             <!--</a>-->
 
             <%= link_to '<span class="glyphicon glyphicon-off" aria-hidden="true"></span>'.html_safe,
-                        destroy_user_session_path, method: :delete, 'data-toggle': "tooltip", 'data-placement': "top", 'title': "Logout" %>
+                        destroy_user_session_path, method: :delete, 'data-toggle' => "tooltip", 'data-placement' => "top", 'title' => "Logout" %>
           </div>
           <!-- /menu footer buttons -->
         </div>
