@@ -1,15 +1,15 @@
 <%- model_class = Subject -%>
-<!--<div class="row">-->
-  <!--<div class="col-md-2">-->
-    <!--<div class="panel panel-default">-->
-      <!--<div class="panel-body">-->
-        <% #link_to t('.new', :default => t("helpers.links.new")),
-            #        new_subject_path,
-             #       :class => 'custom-link btn btn-primary', remote: true %>
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class="col-md-10">-->
+<div class="row">
+  <div class="col-md-2">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= link_to t('.new', :default => t("helpers.links.new")),
+                   new_subject_path,
+                   :class => 'custom-link btn btn-primary', remote: true %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-10">
     <div class="panel panel-default">
       <div class="panel-body">
         <table class="table table-striped">
@@ -42,5 +42,5 @@
         </table>
       </div>
     </div>
-  <!--</div>-->
-<!--</div>-->
+  </div>
+</div>

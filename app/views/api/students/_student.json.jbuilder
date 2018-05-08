@@ -11,7 +11,8 @@ json.extract! student, :id, :first_name, :middle_name, :last_name,
               :student_email, :prn, :last_school_attended, :joining_date, :roll_no, :student_adhar, :father_adhar,
               :prev_standard, :prev_year, :prev_marks, :mother_adhar, :is_enquiry, :medical_history, :skill_of_child,
               :disability_of_student, :siblings_schooling_details,
-              :is_transportation_required, :transport_pickup_point, :created_at, :updated_at, :profile_photo
+              :is_transportation_required, :transport_pickup_point, :created_at, :updated_at, :profile_photo, :current_total_fee,
+              :current_total_discount, :current_total_fine, :current_total_paid, :current_balance_amount
 json.standard {
   json.partial! "standards/standard", standard: student.standards.last
 }
