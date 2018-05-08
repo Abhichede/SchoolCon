@@ -28,6 +28,9 @@ json.caste {
 json.religion {
   json.partial! "religions/religion", religion: student.religion
 }
+json.messages {
+  json.array! student.notifications, partial: 'notifications/notification', as: :notification
+}
 json.fees {
   json.array! student.student_fee_payments, partial: 'student_fee_payments/student_fee_payment', as: :student_fee_payment
 }
