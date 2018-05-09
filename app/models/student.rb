@@ -128,7 +128,7 @@ class Student < ApplicationRecord
   end
 
   def timetable(day)
-    @timetables = standards.last.time_tables.where(division: divisions.last.name, day: day)
+    @timetables = standards.last.time_tables.where(division: divisions.last.name, day: day).order(:start_time)
   end
 
 
