@@ -127,5 +127,9 @@ class Student < ApplicationRecord
     @attendances = divisions.last.attendances.group_by {|a| Date.parse(a.date).beginning_of_month}
   end
 
+  def timetable(day)
+    @timetables = standards.last.time_tables.where(division: divisions.last.name, day: day)
+  end
+
 
 end

@@ -7,4 +7,11 @@ class Teacher < ApplicationRecord
   def fullname
     "#{first_name} #{middle_name} #{last_name}"
   end
+
+  def address
+    "#{address_one} #{address_two} \n
+      #{city} #{state} \n
+      #{country} #{pincode}"
+  end
+
 end
