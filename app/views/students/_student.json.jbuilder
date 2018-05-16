@@ -47,7 +47,7 @@ json.timetable_saturday{
   json.array! student.timetable("Saturday"), partial: 'time_tables/time_table', as: :time_table
 }
 json.messages {
-  json.array! student.notifications, partial: 'notifications/notification', as: :notification
+  json.array! student.notifications.order("created_at DESC"), partial: 'notifications/notification', as: :notification
 }
 json.fees {
   json.array! student.student_fee_payments, partial: 'student_fee_payments/student_fee_payment', as: :student_fee_payment
