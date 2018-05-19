@@ -54,4 +54,8 @@ json.fees {
   json.array! student.student_fee_payments, partial: 'student_fee_payments/student_fee_payment', as: :student_fee_payment
 }
 
+json.attendance{
+  json.array! student.divisions.last.attendances.where(academic_year_id: student.academic_years.last), partial: 'attendances/attendance', locals: {student: student}, as: :attendance
+}
+
 json.url student_url(student, format: :json)
