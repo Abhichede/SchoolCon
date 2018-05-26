@@ -2,6 +2,7 @@ class Teacher < ApplicationRecord
   has_and_belongs_to_many :subjects
   has_many :time_tables
   has_many :attendances
+  has_many :class_teachers
 
 
   def fullname

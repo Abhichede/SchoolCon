@@ -1,0 +1,1 @@
+json.array! @attendances, partial: 'api/attendances/attendance', locals: {student: @student}, as: :attendance

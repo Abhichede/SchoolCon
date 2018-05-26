@@ -98,14 +98,7 @@
                       <li><a href="<%= caste_categories_path %>">Caste Categories</a></li>
                       <li><a href="<%= castes_path %>">Castes</a></li>
                       <li><a href="<%= religions_path %>">Religions</a></li>
-                      <li>
-                        <a>TimeTables <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                          <li class="sub_menu"><a href="<%= time_tables_path %>">Batch wise</a>
-                          </li>
-                          <li><a href="<%= teacher_wise_timetable_path %>">Teacher Wise</a>
-                          </li>
-                        </ul>
+                      <li><a href="<%= time_tables_path %>">Timetable</a>
                       </li>
                     </ul>
                   </li>
@@ -131,6 +124,15 @@
                       <li><a href="<%= fee_categories_path %>">Fee Categories</a></li>
                       <li><a href="<%= student_fee_payments_path %>">Fee Collection</a></li>
                       <li><a href="<%= fee_payment_path %>">Quick Payment</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a><i class="fa fa-money"></i> Teachers <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<%= teachers_path %>">Teachers</a></li>
+                      <li><a href="<%= class_teachers_path %>">Class Teachers</a></li>
+                      <li><a href="<%= teacher_wise_timetable_path %>">Timetable</a>
+                      </li>
                     </ul>
                   </li>
                 </ul>

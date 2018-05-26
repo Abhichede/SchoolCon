@@ -19,9 +19,9 @@
           <thead>
           <tr>
             <th><%= model_class.human_attribute_name(:id) %></th>
+            <th><%= model_class.human_attribute_name(:standard_id) %></th>
             <th><%= model_class.human_attribute_name(:division_id) %></th>
             <th><%= model_class.human_attribute_name(:teacher_id) %></th>
-            <th><%= model_class.human_attribute_name(:standard_id) %></th>
             <th><%= model_class.human_attribute_name(:created_at) %></th>
             <th><%=t '.actions', :default => t("helpers.actions") %></th>
           </tr>
@@ -30,9 +30,9 @@
           <% @class_teachers.each do |class_teacher| %>
               <tr>
                 <td><%= link_to class_teacher.id, class_teacher_path(class_teacher) %></td>
-                <td><%= class_teacher.division_id %></td>
-                <td><%= class_teacher.teacher_id %></td>
-                <td><%= class_teacher.standard_id %></td>
+                <td><%= class_teacher.standard.name %></td>
+                <td><%= class_teacher.division.name %></td>
+                <td><%= "#{class_teacher.teacher.first_name} #{class_teacher.teacher.last_name}" %></td>
                 <td><%=l class_teacher.created_at %></td>
                 <td>
                   <%= link_to t('.show', :default => t("helpers.links.show")),

@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   ROLES = %i[admin teacher parent]
 
   def roles=(roles)
+    ## Roles mask assigned as 1 - Admin, 2 - Teacher, 4  - Parent
     roles = [*roles].map { |r| r.to_sym }
     self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.inject(0, :+)
   end

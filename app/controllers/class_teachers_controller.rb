@@ -27,14 +27,19 @@ class ClassTeachersController < ApplicationController
   # POST /class_teachers.json
   def create
     @class_teacher = ClassTeacher.new(class_teacher_params)
-
+    @already_assigned = Division.find(class_teacher_params[:division_id]).class_teacher
     respond_to do |format|
-      if @class_teacher.save
-        format.html { redirect_to class_teachers_path, notice: 'Class teacher was successfully created.' }
-        format.json { render :show, status: :created, location: @class_teacher }
+      if @already_assigned.nil?
+        if @class_teacher.save
+          format.html { redirect_to class_teachers_path, notice: 'Class teacher was successfully created.' }
+          format.json { render :show, status: :created, location: @class_teacher }
+        else
+          format.html { render :new }
+          format.json { render json: @class_teacher.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render :new }
-        format.json { render json: @class_teacher.errors, status: :unprocessable_entity }
+        format.html { redirect_to class_teachers_path, alert: 'Class teacher was assigned already for this division or class.' }
+        format.json { render :show, status: :created, location: @class_teacher }
       end
     end
   end

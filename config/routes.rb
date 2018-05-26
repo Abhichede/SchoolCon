@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: 'json' } do
     mount_devise_token_auth_for 'User', at: 'auth'
     resources :students
+    resources :parents
+    resources :student_fee_payments
+    resources :attendances
+    # Notifications
+    resources :notifications
+
   end
   resources :school_infos
   resources :my_templates
@@ -68,6 +74,6 @@ Rails.application.routes.draw do
 
   ## Students list
   get 'students_list', to: 'students#print_students_list'
-  
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

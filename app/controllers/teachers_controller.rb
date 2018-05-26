@@ -38,6 +38,7 @@ class TeachersController < ApplicationController
 
     respond_to do |format|
       if @teacher.save
+        User.create(email: @parent.email, password: "#{@parent.first_name}#{@parent.contact}", password_confirmation: "#{@parent.first_name}#{@parent.contact}", student_id: @parent.id, roles_mask: 2, confirmed_at: Time.now)
         format.html { redirect_to @teacher, notice: 'Teacher was successfully created.' }
         format.json { render :show, status: :created, location: @teacher }
       else
