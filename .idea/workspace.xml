@@ -2,47 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/api/attendances_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/api/notifications_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/api/student_fee_payments_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/attendances/_attendance.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/attendances/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/notifications/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/notifications/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/parents/_parent.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/parents/_student.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/parents/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/parents/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/student_fee_payments/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/api/student_fee_payments/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/students/_class_teacher_students.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/teachers/_teachers_timetable.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/class_teachers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/class_teachers_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/notifications_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/notifications_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/students_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/students_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/teachers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/teachers_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/class_teacher.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/class_teacher.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/division.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/division.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/standard.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/standard.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/teacher.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/teacher.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/students/_student.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/students/_student.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/students/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/students/show.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/class_teachers/_class_teacher.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/class_teachers/_class_teacher.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/class_teachers/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/class_teachers/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parents/_parent.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parents/_parent.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/students/_student.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/students/_student.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/teachers/_teacher.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/teachers/_teacher.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/time_tables/_time_table.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/time_tables/_time_table.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/devise_token_auth.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise_token_auth.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -112,11 +73,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="attendances_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="attendances_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/attendances_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
               <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="devise_token_auth.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/devise_token_auth.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_student.json.jbuilder" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/api/parents/_student.json.jbuilder">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -174,6 +153,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response1.json" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -182,7 +164,6 @@
         <option value="$PROJECT_DIR$/app/views/caste_categories/_caste_category.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/subjects/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/time_table.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/devise_token_auth.rb" />
         <option value="$PROJECT_DIR$/app/models/notification.rb" />
         <option value="$PROJECT_DIR$/app/views/notifications/_notification.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/attendances/index.json.jbuilder" />
@@ -228,6 +209,7 @@
         <option value="$PROJECT_DIR$/app/views/api/notifications/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/notifications/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/controllers/api/attendances_controller.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/devise_token_auth.rb" />
       </list>
     </option>
   </component>
@@ -259,7 +241,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="RailsProjectView" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -392,13 +376,17 @@
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,6 +415,73 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="ZWc0cmFhakxiemd6SkhvaWFBYVhCeWFQdThUcWlmS1UyVzZ6cWVpdy81b2h4ZTdzWmw3bE5vZUM3bllTczdTNXNyeGdpWG9RUUEwaWNKWktzOEVZRndyNnUwUmh2Uk10ZlA2OE04NXBIWXl5UlNHUUJwc3lBb0hhcmRZemdZWTUvcFBIc2JtT1VzcHAxNU83OWNkcjZ3PT0tLWZCOVg0RVNqUUJ4ajlPSVVGeWtoa3c9PQ%3D%3D--227d9dd5dc47fc66337f726d0b5d124424e3ad20" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/auth/sign_in" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="abhichede777@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="Abhichede777@" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="abhichede777@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="Ghf_ljsFhttstRmJ7OfnOg" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="KTEEtBceEgr5GEZg1hSzZw" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1526754932" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -3103,7 +3158,9 @@
       <workItem from="1527190568756" duration="4858000" />
       <workItem from="1527232570240" duration="5442000" />
       <workItem from="1527250740017" duration="9908000" />
-      <workItem from="1527316679994" duration="1503000" />
+      <workItem from="1527316679994" duration="2314000" />
+      <workItem from="1527340793211" duration="1340000" />
+      <workItem from="1527406939242" duration="2992000" />
     </task>
     <task id="LOCAL-00001" summary="students json changed">
       <created>1525545132186</created>
@@ -3182,11 +3239,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526717334664</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added some new REST process for API.">
+      <created>1527329897868</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527329897868</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82028000" />
+    <option name="totallyTimeSpent" value="87171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
@@ -3199,12 +3263,13 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5003358" side_tool="true" weight="0.49331552" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="REST Client" order="9" visible="true" weight="0.66353256" />
       <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3382353" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.328877" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966422" weight="0.5975936" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966422" weight="0.5949198" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.27669576" />
+      <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.28475487" />
       <window_info anchor="right" id="Database" order="6" weight="0.32907993" />
       <window_info id="Structure" order="1" sideWeight="0.5013369" side_tool="true" weight="0.29617193" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -3216,7 +3281,6 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.328877" />
-      <window_info anchor="right" id="REST Client" order="9" weight="0.66353256" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -3258,16 +3322,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="students json changed" />
     <MESSAGE value="changes made in attendance." />
-    <option name="LAST_COMMIT_MESSAGE" value="changes made in attendance." />
+    <MESSAGE value="added some new REST process for API." />
+    <option name="LAST_COMMIT_MESSAGE" value="added some new REST process for API." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/attendances_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/attendances_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -3484,13 +3542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/parents/_student.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/students/_student.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
@@ -3601,6 +3652,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise_token_auth.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/parents/_student.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
     </entry>
