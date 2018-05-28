@@ -35,15 +35,10 @@ class StudentsController < ApplicationController
     respond_to do |format|
       if @student.save
         update_student_wise_fee(@student)
-        # send_sms_to_parent(@student)
-        unless Parent.find_by_mobile(@student.father_mobile)
-          @parent = Parent.new(name: "#{@student.father_first_name} #{@student.father_middle_name} #{@student.father_last_name}",
-                               mobile: @student.father_mobile)
-          @parent.save
-        end
+
+        update_parent(@student)
         @parent = Parent.find_by_mobile(@student.father_mobile)
-        User.create(email: @student.father_email, password: "#{@student.first_name}#{@student.father_mobile}", password_confirmation: "#{@student.first_name}#{@student.father_mobile}", student_id: @parent.id, roles_mask: 4, confirmed_at: Time.now)
-        @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}", parent_id: @parent.id)
+        @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}")
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
       else
@@ -106,6 +101,34 @@ class StudentsController < ApplicationController
                                          amount: fee.amount, academic_year_id: @student.academic_years.where(is_active: true).first.id,
                                          is_paid: false)
       @student_wise.save
+    end
+  end
+
+  def update_parent(student)
+    unless Parent.find_by_mobile(student.father_mobile)
+      @parent = Parent.new(name: "#{student.father_first_name} #{student.father_middle_name} #{student.father_last_name}",
+                           mobile: student.father_mobile)
+      @parent.save
+
+      User.create(email: student.father_email, password: "#{student.first_name}#{student.father_mobile}", password_confirmation: "#{student.first_name}#{student.father_mobile}", student_id: @parent.id, roles_mask: 4, confirmed_at: Time.now)
+    end
+
+    @parent = Parent.find_by_mobile(student.father_mobile)
+
+    student.update(parent_id: @parent.id)
+
+    #send_sms_to_parent(@student, Notification.new(message: "Your Account created on SchoolCon following are details, username/Email: #{student.father_email} Password: #{student.first_name}#{student.father_mobile} Open SchoolCon App & Login."))
+  end
+
+  def update_parent_from_view
+    if params[:student_id]
+      @student = Student.find(params[:student_id])
+      update_parent(@student)
+    end
+
+    respond_to do |format|
+      format.html { redirect_to students_url, notice: 'Parent added.' }
+      format.json { head :no_content }
     end
   end
 

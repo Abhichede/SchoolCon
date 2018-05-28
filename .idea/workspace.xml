@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/parents_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/parents_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/students_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/students_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/students/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/students/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -55,38 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parents_controller.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/parents_controller.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/students/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            <state relative-caret-position="504">
+              <caret line="38" column="59" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parent.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/parent.rb">
+      <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/parents/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="102" column="56" selection-start-line="102" selection-start-column="56" selection-end-line="102" selection-end-column="56" />
+            <state relative-caret-position="147">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -106,6 +90,8 @@
     <findStrings>
       <find>attendance_time</find>
       <find>attendance_date</find>
+      <find>update_student_wise_fee</find>
+      <find>send_sms_to_parent</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,8 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/time_table.rb" />
-        <option value="$PROJECT_DIR$/app/models/notification.rb" />
         <option value="$PROJECT_DIR$/app/views/notifications/_notification.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/attendances/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/models/attendance.rb" />
@@ -142,7 +126,6 @@
         <option value="$PROJECT_DIR$/app/models/division.rb" />
         <option value="$PROJECT_DIR$/app/controllers/class_teachers_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/teachers/_teacher.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/controllers/students_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/parents/_parent.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/parents/show.json.jbuilder" />
@@ -164,7 +147,6 @@
         <option value="$PROJECT_DIR$/app/views/teachers/_teachers_timetable.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/time_tables/_time_table.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/controllers/api/notifications_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/api/notifications/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/notifications/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/config/initializers/devise_token_auth.rb" />
@@ -174,6 +156,10 @@
         <option value="$PROJECT_DIR$/app/models/parent.rb" />
         <option value="$PROJECT_DIR$/app/views/parents/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/parents_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/students/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/students_controller.rb" />
       </list>
     </option>
   </component>
@@ -225,153 +211,6 @@
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="academic_years" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="attendances" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="notifications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="parents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="student_fee_payments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="students" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="attendances" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="class_teachers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="notifications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="parents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="student_fee_payments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="students" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="teachers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="time_tables" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -3882,7 +3721,7 @@
       <workItem from="1527316679994" duration="2314000" />
       <workItem from="1527340793211" duration="1340000" />
       <workItem from="1527406939242" duration="6336000" />
-      <workItem from="1527502845294" duration="3572000" />
+      <workItem from="1527502845294" duration="10346000" />
     </task>
     <task id="LOCAL-00001" summary="students json changed">
       <created>1525545132186</created>
@@ -4003,11 +3842,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527506260542</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Changes in links of sidebars, redesigned parents module. and added function to change student_id of parents account in Users module">
+      <created>1527506430042</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1527506430042</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94087000" />
+    <option name="totallyTimeSpent" value="100861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
@@ -4084,34 +3930,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Changes in links of sidebars, redesigned parents module. and added function to change student_id of parents account in Users module" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/class_teachers/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="34" column="94" selection-start-line="34" selection-start-column="94" selection-end-line="34" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/teachers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="40" column="198" selection-start-line="40" selection-start-column="198" selection-end-line="40" selection-end-column="198" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/class_teachers/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="88" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/class_teachers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/students/index.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -4298,13 +4116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -4355,22 +4166,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/student_fee_payments/show.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/academic_years/index.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
@@ -4403,13 +4200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parents/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3088d0e6-bf58-4bee-b959-1e919ea5181e/schema/SchoolCon_v1_development/table/parents">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -4417,10 +4207,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parents/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="76" column="61" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/students_helper.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/parents_helper.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/parents_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="920">
           <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="38" column="59" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/notifications_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
         </state>
       </provider>
     </entry>

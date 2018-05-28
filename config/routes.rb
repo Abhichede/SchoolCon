@@ -72,8 +72,9 @@ Rails.application.routes.draw do
   # certificates
   get 'add_leaving_certificate', to: 'students#add_leaving_certificate'
 
-  ## Students list
+  ## Students
   get 'students_list', to: 'students#print_students_list'
+  post 'update_parent', to: 'students#update_parent_from_view', as: 'update_parent'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
