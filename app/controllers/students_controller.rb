@@ -113,7 +113,7 @@ class StudentsController < ApplicationController
       User.create(email: student.father_email, password: "#{student.first_name}#{student.father_mobile}", password_confirmation: "#{student.first_name}#{student.father_mobile}", student_id: @parent.id, roles_mask: 4, confirmed_at: Time.now)
     end
 
-    @user = User.find_by_email(student.father_email)
+    @user = User.where(email: student.father_email).last
     @parent = Parent.find_by_mobile(student.father_mobile)
     @user.update(student_id: @parent.id)
     student.update(parent_id: @parent.id)
