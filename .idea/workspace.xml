@@ -4,13 +4,6 @@
     <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/parents_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/parents_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/parent.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/parent.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parents/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parents/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parents/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parents/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parents/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parents/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parents/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parents/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/parents/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/parents/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -65,8 +58,8 @@
       <file leaf-file-name="parents_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/parents_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+            <state relative-caret-position="196">
+              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -3889,7 +3882,7 @@
       <workItem from="1527316679994" duration="2314000" />
       <workItem from="1527340793211" duration="1340000" />
       <workItem from="1527406939242" duration="6336000" />
-      <workItem from="1527502845294" duration="3282000" />
+      <workItem from="1527502845294" duration="3572000" />
     </task>
     <task id="LOCAL-00001" summary="students json changed">
       <created>1525545132186</created>
@@ -4003,15 +3996,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527423507682</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Changes in links of sidebars, redesigned parents module. and added function to change student_id of parents account in Users module">
+      <created>1527506260542</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1527506260542</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93797000" />
+    <option name="totallyTimeSpent" value="94087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -4023,7 +4022,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="REST Client" order="9" weight="0.66353256" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.328877" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3382353" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3382353" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966422" weight="0.59358287" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
@@ -4081,7 +4080,8 @@
     <MESSAGE value="students json changed" />
     <MESSAGE value="changes made in attendance." />
     <MESSAGE value="added some new REST process for API." />
-    <option name="LAST_COMMIT_MESSAGE" value="added some new REST process for API." />
+    <MESSAGE value="Changes in links of sidebars, redesigned parents module. and added function to change student_id of parents account in Users module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in links of sidebars, redesigned parents module. and added function to change student_id of parents account in Users module" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/views/class_teachers/index.html.erb">
@@ -4419,8 +4419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/parents_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+        <state relative-caret-position="196">
+          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
         </state>
       </provider>
     </entry>

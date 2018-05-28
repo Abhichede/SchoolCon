@@ -44,7 +44,7 @@ class ParentsController < ApplicationController
     respond_to do |format|
       if @parent.update(parent_params)
         @user = User.where(email: @parent.students.first.father_email)
-        @user.update(student_id: @parent.id)
+        @user.update(student_id: @parent.id) if @user
         format.html { redirect_to @parent, notice: 'Parent was successfully updated.' }
         format.json { render :show, status: :ok, location: @parent }
       else
