@@ -1,6 +1,7 @@
 class ParentsController < ApplicationController
   before_action :set_parent, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb 'Parents', :parents_path
   # GET /parents
   # GET /parents.json
   def index
@@ -42,6 +43,8 @@ class ParentsController < ApplicationController
   def update
     respond_to do |format|
       if @parent.update(parent_params)
+        @user = User.where(email: @parent.students.first.father_email)
+        @user.update(student_id: @parent.id)
         format.html { redirect_to @parent, notice: 'Parent was successfully updated.' }
         format.json { render :show, status: :ok, location: @parent }
       else

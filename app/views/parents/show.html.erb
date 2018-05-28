@@ -1,14 +1,50 @@
-<p id="notice"><%= notice %></p>
+<% add_breadcrumb @parent.name, parent_path(@parent) %>
+<%- model_class = Parent -%>
+<div class="well well-sm">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              parents_path, :class => 'btn btn-default' %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_parent_path(@parent), :class => 'btn btn-primary' %>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @parent.name %>
-</p>
+<div class="row">
+  <div class="col-lg-4 col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Personal Info
+      </div>
+      <div class="panel-body">
+        <dl class="dl-horizontal">
+          <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+          <dd><%= @parent.name %></dd>
+          <dt><strong><%= model_class.human_attribute_name(:mobile) %>:</strong></dt>
+          <dd><%= @parent.mobile %></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-8 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Children
+      </div>
+      <div class="panel-body">
+        <% @parent.students.each do |student| %>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <dl class="dl-horizontal">
+                <dt><strong>Name:</strong></dt>
+                <dd><%= student.self_full_name %></dd>
+                <dt><strong>Standard:</strong></dt>
+                <dd><%= student.standards.last.name %></dd>
 
-<p>
-  <strong>Mobile:</strong>
-  <%= @parent.mobile %>
-</p>
-
-<%= link_to 'Edit', edit_parent_path(@parent) %> |
-<%= link_to 'Back', parents_path %>
+                <dt><strong>Division:</strong></dt>
+                <dd><%= student.divisions.last.name %></dd>
+              </dl>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

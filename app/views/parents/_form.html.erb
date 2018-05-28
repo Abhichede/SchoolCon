@@ -1,27 +1,41 @@
-<%= form_with(model: parent, local: true) do |form| %>
-  <% if parent.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(parent.errors.count, "error") %> prohibited this parent from being saved:</h2>
+<%= form_for @parent, :html => { :class => "form-horizontal parent" } do |f| %>
 
-      <ul>
-      <% parent.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <% if @parent.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@parent.errors.count, "error") %> prohibited this parent from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @parent.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :parent_name %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:name) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :mobile, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :mobile, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:mobile) %>
   </div>
 
-  <div class="field">
-    <%= form.label :mobile %>
-    <%= form.text_field :mobile, id: :parent_mobile %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                parents_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
