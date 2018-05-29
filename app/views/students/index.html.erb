@@ -35,9 +35,9 @@
                 <%= link_to 'Send Message',
                             new_notification_path(student_id: student.id, notification_type: 'student_wise'),
                             :class => 'btn btn-primary btn-xs', remote: true %>
-                <% if student.parent.nil? %>
-                  <%= button_to 'Add Parent', update_parent_path(student_id: student.id), :class => 'btn btn-primary btn-xs' %>
-                <% end %>
+                <% #if student.parent.nil? %>
+                  <% #button_to 'Add Parent', update_parent_path(student_id: student.id), :class => 'btn btn-primary btn-xs' %>
+                <% #end %>
               </td>
             </tr>
         <% end %>
