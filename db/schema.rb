@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430060606) do
+ActiveRecord::Schema.define(version: 20180529093932) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -415,12 +415,14 @@ ActiveRecord::Schema.define(version: 20180430060606) do
     t.integer "roles_mask"
     t.boolean "approved", default: false, null: false
     t.integer "student_id"
+    t.string "username"
     t.index ["approved"], name: "index_users_on_approved"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
