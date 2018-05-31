@@ -38,7 +38,11 @@ class TeachersController < ApplicationController
 
     respond_to do |format|
       if @teacher.save
-        User.create(email: @teacher.email, password: "#{@teacher.first_name}#{@teacher.contact}", password_confirmation: "#{@teacher.first_name}#{@teacher.contact}", student_id: @teacher.id, roles_mask: 2)
+        if @user = User.find_by_email(@teacher.email)
+          @user.update(student_id: @teacher.id)
+        else
+          User.create(email: @teacher.email, password: "#{@teacher.first_name}#{@teacher.contact}", password_confirmation: "#{@teacher.first_name}#{@teacher.contact}", student_id: @teacher.id, roles_mask: 2)
+        end
         format.html { redirect_to @teacher, notice: 'Teacher was successfully created.' }
         format.json { render :show, status: :created, location: @teacher }
       else
