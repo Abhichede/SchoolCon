@@ -233,7 +233,7 @@
       </div>
 
       <div class="form-group required">
-        <%= f.label :student_mobile, :class => 'control-label col-lg-2' %>
+        <%= f.label :student_mobile, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :student_mobile, :class => 'form-control' %>
           <div class="text-muted">WhatsApp number preferred.</div>
@@ -577,5 +577,27 @@
         $('#btn-spinner').on('click', function(){
             on();
         });
+
+        /**
+         * This is completely reticules thing doing here
+         * that is to auto fill the student email id
+         * by default by there name.
+         *
+         * @removable In fututre this can get removed
+         */
+        $('#student_first_name').on('change keyup', function () {
+           var name = $(this).val();
+           $('#student_student_email').val(name.toLowerCase() + "@myschoolcon.com");
+        });
+
+        $('#student_last_name').on('change keyup', function () {
+            var first_name = $("#student_first_name").val();
+            var last_name = $(this).val();
+            $('#student_student_email').val(first_name.toLowerCase() + "." + last_name.toLowerCase() + "@myschoolcon.com");
+        });
+
+        /**
+         * ==> END <==
+         */
     });
 </script>

@@ -31,10 +31,10 @@
     <h4>Personal Details</h4>
   <hr/>
 
-  <div class="form-group">
-    <%= f.label :name, :class => 'control-label col-lg-2' %>
+  <div class="form-group required">
+    <%= f.label :name, :class => 'control-label required col-lg-2' %>
     <div class="col-lg-5">
-      <%= f.text_field :first_name, :class => 'form-control', placeholder: 'First Name' %>
+      <%= f.text_field :first_name, :class => 'form-control', placeholder: 'First Name*' %>
     </div>
     <%=f.error_span(:first_name) %>
 
@@ -49,7 +49,7 @@
   <div class="form-group">
     <div class="col-lg-2"></div>
     <div class="col-lg-5">
-      <%= f.text_field :last_name, :class => 'form-control', placeholder: 'Last Name' %>
+      <%= f.text_field :last_name, :class => 'form-control', placeholder: 'Last Name*' %>
     </div>
     <%=f.error_span(:last_name) %>
   </div>
@@ -126,15 +126,15 @@
   </div>
 
 
-  <div class="form-group">
-    <%= f.label :contact, :class => 'control-label col-lg-2' %>
+  <div class="form-group required">
+    <%= f.label :contact, :class => 'control-label required col-lg-2' %>
     <div class="col-lg-5">
-      <%= f.text_field :contact, :class => 'form-control', placeholder: 'Mobile No.' %>
+      <%= f.text_field :contact, :class => 'form-control', placeholder: 'Mobile No.*' %>
     </div>
     <%=f.error_span(:contact) %>
 
     <div class="col-lg-5">
-      <%= f.text_field :email, :class => 'form-control', placeholder: 'Email' %>
+      <%= f.text_field :email, :class => 'form-control required', placeholder: 'Email*' %>
     </div>
     <%=f.error_span(:email) %>
   </div>
