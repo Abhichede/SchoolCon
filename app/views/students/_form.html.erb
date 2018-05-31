@@ -240,7 +240,7 @@
         </div>
         <%=f.error_span(:student_mobile) %>
 
-        <%= f.label :student_email, :class => 'control-label col-lg-2' %>
+        <%= f.label :student_email, :class => 'control-label required col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :student_email, :class => 'form-control' %>
         </div>
@@ -369,7 +369,7 @@
       </div>
 
       <div class="form-group required">
-        <%= f.label :roll_no, :class => 'control-label required col-lg-2' %>
+        <%= f.label :roll_no, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
           <%= f.text_field :roll_no, :class => 'form-control', placeholder: 'Roll No.' %>
         </div>

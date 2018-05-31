@@ -45,6 +45,11 @@ class StudentFeePaymentsController < ApplicationController
     if @student.current_balance_amount >= student_fee_payment_params[:amount].to_f
       respond_to do |format|
         if @student_fee_payment.save
+          # admission_message = MyTemplate.find_by_name('Fee Payment Message')
+          # admission_message.gsub! '#{amount}', @student_fee_payment.amount
+          # admission_message.gsub! '#{institute_name}', current_institute.name
+          # send_sms_to_parent(@student, Notification.new(message: strip_tags(admission_message)))
+
           format.html { redirect_to fee_receipt_path(id: @student_fee_payment.id, student_id: @student_fee_payment.student.id, fee_type: 'student_wise'), notice: 'Student fee payment was successfully created.' }
           format.json { render :show, status: :created, location: @student_fee_payment }
         else
@@ -104,7 +109,7 @@ class StudentFeePaymentsController < ApplicationController
 
     respond_to do |format|
       if !params[:student_id].blank?
-        @receipt_template = MyTemplate.find_by_name('Receipt')
+        @receipt_template = MyTemplate.find_by_name('Fee Receipt')
         @student = Student.find(params[:student_id])
         format.html
         format.pdf do

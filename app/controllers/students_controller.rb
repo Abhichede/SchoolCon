@@ -36,9 +36,11 @@ class StudentsController < ApplicationController
       if @student.save
         update_student_wise_fee(@student)
 
-        update_parent(@student)
-        @parent = Parent.find_by_mobile(@student.father_mobile)
-        @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}")
+        unless @student.is_enquiry
+          update_parent(@student)
+          @parent = Parent.find_by_mobile(@student.father_mobile)
+          @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}")
+        end
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
       else
@@ -119,7 +121,10 @@ class StudentsController < ApplicationController
     @user.update(student_id: @parent.id)
     student.update(parent_id: @parent.id)
 
-    #send_sms_to_parent(@student, Notification.new(message: "Your Account created on SchoolCon following are details, username/Email: #{student.father_email} Password: #{student.first_name}#{student.father_mobile} Open SchoolCon App & Login."))
+    # admission_message = MyTemplate.find_by_name('Admission Success')
+    # admission_message.gsub! '#{student_name}', student.self_full_name
+    # admission_message.gsub! '#{institute_name}', current_institute.name
+    # send_sms_to_parent(@student, Notification.new(message: strip_tags(admission_message)))
   end
 
   def update_parent_from_view
