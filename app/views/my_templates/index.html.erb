@@ -1,6 +1,46 @@
 <%- model_class = MyTemplate -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    Some Codes used for Dynamic data in templates
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 well">
+        <h5>Institute Details</h5>
+        <strong>#{institute_name} </strong>- for name of the institute <br/>
+        <strong>#{institute_logo} </strong>- for Logo of the institute <br/>
+        <strong>#{institute_address} </strong>- for address of the institute <br/>
+        <strong>#{institute_contact} </strong>- for contact of the institute <br/>
+        <strong>#{institute_gst_no} </strong>- for GST No. of the institute <br/>
+        <strong>#{institute_registration_no} </strong>- for Registration number of the institute
+      </div>
+      <div class="col-lg-4 col-md-4 well">
+        <h5>Student Details</h5>
+        <strong>#{student_name} </strong>- for name of the Student <br/>
+        <strong>#{student_contact} </strong>- for contact of the student <br/>
+        <strong>#{student_standard} </strong>- for standard of the student <br/>
+        <strong>#{student_division} </strong>- for division of the student <br/>
+      </div>
+      <div class="col-lg-4 col-md-4 well">
+        <h5>Fee Details</h5>
+        <strong>#{amount} </strong>- for amount in numbers <br/>
+        <strong>#{payment_mode} </strong>- for Mode of the payment <br/>
+        <strong>#{payment_date} </strong>- for Date of the Payment <br/>
+        <strong>#{amount_in_words} </strong>- for Amount in Words <br/>
+        <strong>#{balance_amount} </strong>- for Balance Amount <br/>
+        <strong>#{receipt_no} </strong>- for Receipt No. <br/>
+        <strong>#{receipt_date} </strong>- for the Date of receipt <br/>
+        <strong>#{fee_details} </strong>- For the table of fee details <br/>
+        <strong>#{fee_summary} </strong>- for the summary of fee, includes balance fee, fine, discount, paid etc.
+      </div>
+    </div>
+    <div class="row">
+      <div class="well well-sm">
+        <h5>Others</h5>
+        <strong>#{date}</strong> - For current(Today's) date
+      </div>
+    </div>
+  </div>
 </div>
 <table class="table table-striped">
   <thead>

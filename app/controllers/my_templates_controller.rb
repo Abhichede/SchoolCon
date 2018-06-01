@@ -1,6 +1,7 @@
 class MyTemplatesController < ApplicationController
   before_action :set_my_template, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
+  add_breadcrumb 'Templates', :my_templates_path
   # GET /my_templates
   # GET /my_templates.json
   def index

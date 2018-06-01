@@ -23,6 +23,8 @@ class Student < ApplicationRecord
 
   mount_uploader :profile_photo, StudentProfileUploader
 
+  validates :student_email, presence: true, uniqueness: true
+
   def self_full_name
     "#{first_name} #{middle_name} #{last_name}"
   end
