@@ -1,4 +1,4 @@
-if attendance.nil?
+unless attendance.att_data.nil?
   json.extract! attendance, :id, :date
   if student
     json.is_present attendance.filter_by_student(student)
