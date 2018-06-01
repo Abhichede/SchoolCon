@@ -45,7 +45,7 @@ class NotificationsController < ApplicationController
           end
         end
         if notification_params[:by_sms] == '1'
-          #send_sms_to_parent(@notification.student, @notification)
+          send_sms_to_parent(@notification.student, @notification)
         end
       end
 
@@ -68,7 +68,7 @@ class NotificationsController < ApplicationController
             end
           end
           if notification_params[:by_sms] == '1'
-            #send_sms_to_parent(@notification.student, @notification)
+            send_sms_to_parent(@notification.student, @notification)
           end
         end
       end
@@ -89,7 +89,7 @@ class NotificationsController < ApplicationController
           end
         end
         if notification_params[:by_sms] == '1'
-          #send_sms_to_parent(@notification.student, @notification)
+          send_sms_to_parent(@notification.student, @notification)
         end
       end
 
@@ -107,7 +107,7 @@ class NotificationsController < ApplicationController
         end
       end
       if notification_params[:by_sms] == '1'
-        #send_sms_to_parent(@notification.student, @notification)
+        send_sms_to_parent(@notification.student, @notification)
       end
       respond_to do |format|
         format.html { redirect_to session.delete(:return_to), notice: "Notification was sent successfully." }

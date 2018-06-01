@@ -41,6 +41,14 @@ class StudentsController < ApplicationController
           @parent = Parent.find_by_mobile(@student.father_mobile)
           @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}")
         end
+
+        if @student.is_enquiry
+          admission_message = MyTemplate.find_by_name('Enquiry Success').desc
+          admission_message.gsub! '#{father_name}', @student.father_full_name
+          admission_message.gsub! '#{institute_name}', current_institute.name
+          send_sms_to_parent(@student, Notification.new(message: ActionController::Base.helpers.strip_tags(admission_message)))
+        end
+
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
       else
@@ -121,10 +129,10 @@ class StudentsController < ApplicationController
     @user.update(student_id: @parent.id)
     student.update(parent_id: @parent.id)
 
-    # admission_message = MyTemplate.find_by_name('Admission Success')
-    # admission_message.gsub! '#{student_name}', student.self_full_name
-    # admission_message.gsub! '#{institute_name}', current_institute.name
-    # send_sms_to_parent(@student, Notification.new(message: strip_tags(admission_message)))
+    admission_message = MyTemplate.find_by_name('Admission Success').desc
+    admission_message.gsub! '#{student_name}', student.self_full_name
+    admission_message.gsub! '#{institute_name}', current_institute.name
+    send_sms_to_parent(@student, Notification.new(message: ActionController::Base.helpers.strip_tags(admission_message)))
   end
 
   def update_parent_from_view

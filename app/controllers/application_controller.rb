@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def send_sms_to_parent(student, notification)
     puts student.father_mobile
     #response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=abhichede777&password=abhijit123@&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
-    response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=pravinapsunde&password=Pra23402&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
+    response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=schoolcon&password=Linker@70531&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
     case response.code
       when 400
         puts response
@@ -41,6 +41,10 @@ class ApplicationController < ActionController::Base
 
   def set_mailer_host
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
+  end
+
+  def current_institute
+    SchoolInfo.first
   end
 
   private
