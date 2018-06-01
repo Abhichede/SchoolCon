@@ -20,9 +20,9 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.save
-    Student.all.each do |student|
-      send_sms_to_parent(student, Notification.new(message: @event.title))
-    end
+    # Student.all.each do |student|
+    #   send_sms_to_parent(student, Notification.new(message: @event.title))
+    # end
   end
 
   def update
