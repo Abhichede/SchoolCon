@@ -70,8 +70,6 @@ class StudentsController < ApplicationController
         update_student_wise_fee(@student)
         unless @student.is_enquiry
           update_parent(@student, false)
-          @parent = Parent.find_by_mobile(@student.father_mobile)
-          @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}")
         end
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
@@ -131,7 +129,7 @@ class StudentsController < ApplicationController
 
     @parent = Parent.find_by_mobile(student.father_mobile)
     @user = User.where(username: @parent.mobile).last
-    @user.update(student_id: @parent.id)
+    @user.update(student_id: @parent.id) unless @user.nil?
     student.update(parent_id: @parent.id)
 
     admission_message = MyTemplate.find_by_name('Admission Success').desc
