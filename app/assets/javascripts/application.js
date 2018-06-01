@@ -81,7 +81,7 @@ $(document).ready(function () {
 
      off();
 
-     $('.btn-primary, .btn-success, .btn-default').on('click', function () {
+     $('.btn-primary, .btn-success, .btn-default, .fc-content, btn-spinner').on('click', function () {
          on();
      });
     /**

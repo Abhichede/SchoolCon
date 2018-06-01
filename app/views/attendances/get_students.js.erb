@@ -1,4 +1,6 @@
-$("#students").replaceWith('<div id="students"><table class="table table-stripped">' +
+$("#students").replaceWith('<div id="students">'+
+    '<div class="row"><input type="checkbox" class="form-control" id="select_all_students" checked data-toggle="toggle" data-onstyle="primary" data-offstyle="danger"></div>'+
+    '<div style="max-height: 30rem; overflow-y: auto"><table class="table table-stripped" id="attendance_student">' +
     '<thead>' +
     '<tr>' +
     '<th>Roll No.</th>' +
@@ -17,8 +19,9 @@ $("#students").replaceWith('<div id="students"><table class="table table-strippe
     '</tr>'+
     '<% end %>'+
     '</tbody>'+
+    '</table>'+
+    '</div>' +
     '</div>'+
-    '<input type="checkbox" class="form-control" id="select_all_students" checked data-toggle="toggle" data-onstyle="primary" data-offstyle="danger">' +
     '<input type="hidden" class="form-control" checked name="attendance[att_data][0]" value="nil"></div>');
 
 <% @students.each do |student| %>
@@ -40,4 +43,8 @@ $('#select_all_students').change(function () {
     } else {
         $('td').find('input:checkbox').bootstrapToggle('off');
     }
+});
+
+$("#attendance_student").dataTable({
+    'pageLength': 100
 });

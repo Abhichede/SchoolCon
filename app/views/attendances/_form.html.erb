@@ -16,7 +16,7 @@
       </div>
     <% end %>
 
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="form-group">
         <%= f.label :date, :class => 'control-label col-lg-2' %>
         <div class="col-lg-10">
@@ -63,11 +63,12 @@
 
       <%= f.hidden_field :academic_year_id, value: @academic_year.id %>
     </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-10" style="max-height: 30rem; overflow: auto">
-          <div id="students"></div>
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div>
+            <div id="students"></div>
+          </div>
         </div>
       </div>
     </div>

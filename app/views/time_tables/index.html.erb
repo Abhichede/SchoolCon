@@ -26,247 +26,253 @@
   </div>
 </div>
 <br/>
-<% if @time_tables  %>
-  <% if !@time_table_setting.nil?  %>
-    <div class="row">
-      <div class="col-lg-9">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <table class="table table-bordered table-timetable">
-              <thead>
-              <tr>
-                <th colspan="2"></th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
-              </tr>
-              </thead>
-              <tbody>
+<% if params[:division].blank? %>
+  <div class="well">
+    <h5>Please select Class(Standard) & Division</h5>
+  </div>
+<% else %>
+  <% unless @time_tables.nil? %>
+    <% if !@time_table_setting.nil?  %>
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <table class="table table-bordered table-timetable">
+                <thead>
+                <tr>
+                  <th colspan="2"></th>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                </tr>
+                </thead>
+                <tbody>
 
-              <%
-                start_time = @time_table_setting.school_start
-                end_time = @time_table_setting.school_end
-                intervals = @time_table_setting.breaks_after.split(', ')
-                durations = @time_table_setting.break_durations.split(', ')
-                period_duration = @time_table_setting.period_duration.to_i
-                num = 0
-              %>
-              <%
-                while start_time < end_time
-              %>
-                  <!-- breaks --->
-                  <% intervals.each do |interval| %>
-                      <% if start_time == ('2000-01-01 '+ interval).to_time(:utc)  %>
-                          <tr>
-                            <td>
-                              <%= start_time.strftime('%I:%M %p') %><br/>
-                              To <br/>
-                              <%= (start_time + durations[num].to_i.minutes ).strftime('%I:%M %p') %>
-                            </td>
-                            <td colspan="7" class="text-center" style="background-color: #ababab; font-weight: 600; font-size: 20">Break</td>
-                          </tr>
-                          <%
-                            start_time += durations[num].to_i.minutes
-                            num += 1
-                          %>
+                <%
+                  start_time = @time_table_setting.school_start
+                  end_time = @time_table_setting.school_end
+                  intervals = @time_table_setting.breaks_after.split(', ')
+                  durations = @time_table_setting.break_durations.split(', ')
+                  period_duration = @time_table_setting.period_duration.to_i
+                  num = 0
+                %>
+                <%
+                  while start_time < end_time
+                %>
+                    <!-- breaks --->
+                    <% intervals.each do |interval| %>
+                        <% if start_time == ('2000-01-01 '+ interval).to_time(:utc)  %>
+                            <tr>
+                              <td>
+                                <%= start_time.strftime('%I:%M %p') %><br/>
+                                To <br/>
+                                <%= (start_time + durations[num].to_i.minutes ).strftime('%I:%M %p') %>
+                              </td>
+                              <td colspan="7" class="text-center" style="background-color: #ababab; font-weight: 600; font-size: 20">Break</td>
+                            </tr>
+                            <%
+                              start_time += durations[num].to_i.minutes
+                              num += 1
+                            %>
+                        <% end %>
+                    <%  end %>
+                    <!-- end breaks -->
+
+                    <tr>
+                      <td colspan="2">
+                        <%= start_time.strftime('%I:%M %p') %>
+                        To
+                        <%= (start_time + period_duration.minutes ).strftime('%I:%M %p') %>
+                      </td>
+
+                      <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Monday').last %>
+                      <% if !@period.nil? %>
+                          <td style="color: #FFF; background-color: <%= @period.color %>">
+                            <%= link_to({controller: 'time_tables', action:'edit',
+                                         id: @period.id, standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time,
+                                         end_time: (start_time + period_duration.minutes), day: 'Monday'},
+                                        class: 'btn-spinner', style: 'color: white;',
+                                        remote: true) do %>
+                                <%= @period.subject %><br/>
+                                <%= @period.teacher.fullname.capitalize %><br/>
+                            <% end %>
+                          </td>
+                      <% else %>
+                          <td style="color: #000; background-color: #FFF;">
+                            <%= link_to({controller: 'time_tables', action:'new',
+                                         standard_id: params[:standard_id], division: params[:division],
+                                         start_time: start_time, end_time: (start_time + period_duration.minutes),
+                                         day: 'Monday'}, remote: true) do %>
+                                <div style="display: table-cell; vertical-align: middle">
+                                  <br/><br/>
+                                </div>
+                            <% end %>
+                          </td>
                       <% end %>
-                  <%  end %>
-                  <!-- end breaks -->
 
-                  <tr>
-                    <td colspan="2">
-                      <%= start_time.strftime('%I:%M %p') %>
-                      To
-                      <%= (start_time + period_duration.minutes ).strftime('%I:%M %p') %>
-                    </td>
-
-                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Monday').last %>
-                    <% if !@period.nil? %>
-                        <td style="color: #FFF; background-color: <%= @period.color %>">
-                          <%= link_to({controller: 'time_tables', action:'edit',
-                                       id: @period.id, standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time,
-                                       end_time: (start_time + period_duration.minutes), day: 'Monday'},
-                                      class: 'btn-spinner', style: 'color: white;',
-                                      remote: true) do %>
-                              <%= @period.subject %><br/>
-                              <%= @period.teacher.fullname.capitalize %><br/>
-                          <% end %>
-                        </td>
-                    <% else %>
-                        <td style="color: #000; background-color: #FFF;">
-                          <%= link_to({controller: 'time_tables', action:'new',
-                                       standard_id: params[:standard_id], division: params[:division],
-                                       start_time: start_time, end_time: (start_time + period_duration.minutes),
-                                       day: 'Monday'}, remote: true) do %>
-                              <div style="display: table-cell; vertical-align: middle">
+                      <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Tuesday').last %>
+                      <% if !@period.nil? %>
+                          <td style="color: #FFF; background-color: <%= @period.color %>">
+                            <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Tuesday'},
+                                        class: 'btn-spinner', style: 'color: white;',
+                                        remote: true) do %>
+                                <%= @period.subject %><br/>
+                                <%= @period.teacher.fullname.capitalize %><br/>
+                            <% end %>
+                          </td>
+                      <% else %>
+                          <td style="color: #000; background-color: #FFF;">
+                            <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Tuesday'},
+                                        class: 'btn-timetabel',
+                                        remote: true) do %>
                                 <br/><br/>
-                              </div>
-                          <% end %>
-                        </td>
-                    <% end %>
+                            <% end %>
+                          </td>
+                      <% end %>
 
-                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Tuesday').last %>
-                    <% if !@period.nil? %>
-                        <td style="color: #FFF; background-color: <%= @period.color %>">
-                          <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Tuesday'},
-                                      class: 'btn-spinner', style: 'color: white;',
-                                      remote: true) do %>
-                              <%= @period.subject %><br/>
-                              <%= @period.teacher.fullname.capitalize %><br/>
-                          <% end %>
-                        </td>
-                    <% else %>
-                        <td style="color: #000; background-color: #FFF;">
-                          <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Tuesday'},
-                                      class: 'btn-timetabel',
-                                      remote: true) do %>
-                              <br/><br/>
-                          <% end %>
-                        </td>
-                    <% end %>
+                      <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Wednesday').last %>
+                      <% if !@period.nil? %>
+                          <td style="color: #FFF; background-color: <%= @period.color %>">
+                            <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Wednesday'},
+                                        class: 'btn-spinner', style: 'color: white;',
+                                        remote: true) do %>
+                                <%= @period.subject %><br/>
+                                <%= @period.teacher.fullname.capitalize %><br/>
+                            <% end %>
+                          </td>
+                      <% else %>
+                          <td style="color: #000; background-color: #FFF">
+                            <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time,
+                                         end_time: (start_time + period_duration.minutes), day: 'Wednesday'},
+                                        class: 'btn-timetabel',
+                                        remote: true) do  %>
+                                <br/><br/>
+                            <% end %>
+                          </td>
+                      <% end %>
 
-                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Wednesday').last %>
-                    <% if !@period.nil? %>
-                        <td style="color: #FFF; background-color: <%= @period.color %>">
-                          <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Wednesday'},
-                                      class: 'btn-spinner', style: 'color: white;',
-                                      remote: true) do %>
-                              <%= @period.subject %><br/>
-                              <%= @period.teacher.fullname.capitalize %><br/>
-                          <% end %>
-                        </td>
-                    <% else %>
-                        <td style="color: #000; background-color: #FFF">
-                          <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time,
-                                       end_time: (start_time + period_duration.minutes), day: 'Wednesday'},
-                                      class: 'btn-timetabel',
-                                      remote: true) do  %>
-                              <br/><br/>
-                          <% end %>
-                        </td>
-                    <% end %>
+                      <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Thursday').last %>
+                      <% if !@period.nil? %>
+                          <td style="color: #FFF; background-color: <%= @period.color %>">
+                            <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Thursday'},
+                                        class: 'btn-spinner', style: 'color: white',
+                                        remote: true) do %>
+                                <%= @period.subject %><br/>
+                                <%= @period.teacher.fullname.capitalize %><br/>
+                            <% end %>
+                          </td>
+                      <% else %>
+                          <td style="color: #000; background-color: #FFF">
+                            <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Thursday'},
+                                        class: 'btn-timetabel',
+                                        remote: true) do %>
+                                <br/><br/>
+                            <% end %>
+                          </td>
+                      <% end %>
 
-                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Thursday').last %>
-                    <% if !@period.nil? %>
-                        <td style="color: #FFF; background-color: <%= @period.color %>">
-                          <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Thursday'},
-                                      class: 'btn-spinner', style: 'color: white',
-                                      remote: true) do %>
-                              <%= @period.subject %><br/>
-                              <%= @period.teacher.fullname.capitalize %><br/>
-                          <% end %>
-                        </td>
-                    <% else %>
-                        <td style="color: #000; background-color: #FFF">
-                          <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Thursday'},
-                                      class: 'btn-timetabel',
-                                      remote: true) do %>
-                              <br/><br/>
-                          <% end %>
-                        </td>
-                    <% end %>
+                      <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Friday').last %>
+                      <% if !@period.nil? %>
+                          <td style="color: #FFF; background-color: <%= @period.color %>">
+                            <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Friday'},
+                                        class: 'btn-spinner', style: 'color: white',
+                                        remote: true) do %>
+                                <%= @period.subject %><br/>
+                                <%= @period.teacher.fullname.capitalize %><br/>
+                            <% end %>
+                          </td>
+                      <% else %>
+                          <td style="color: #FFF; background-color: #FFF">
+                            <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Friday'},
+                                        class: 'btn-timetabel',
+                                        remote: true) do %>
+                                <br/><br/>
+                            <% end %>
+                          </td>
+                      <% end %>
 
-                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Friday').last %>
-                    <% if !@period.nil? %>
-                        <td style="color: #FFF; background-color: <%= @period.color %>">
-                          <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Friday'},
-                                      class: 'btn-spinner', style: 'color: white',
-                                      remote: true) do %>
-                              <%= @period.subject %><br/>
-                              <%= @period.teacher.fullname.capitalize %><br/>
-                          <% end %>
-                        </td>
-                    <% else %>
-                        <td style="color: #FFF; background-color: #FFF">
-                          <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Friday'},
-                                      class: 'btn-timetabel',
-                                      remote: true) do %>
-                              <br/><br/>
-                          <% end %>
-                        </td>
-                    <% end %>
+                      <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Saturday').last %>
+                      <% if !@period.nil? %>
+                          <td style="color: #FFF; background-color: <%= @period.color %>">
+                            <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Saturday'},
+                                        class: 'btn-spinner', style: 'color: white',
+                                        remote: true) do %>
+                                <%= @period.subject %><br/>
+                                <%= @period.teacher.fullname.capitalize %><br/>
+                            <% end %>
+                          </td>
+                      <% else %>
+                          <td style="color: #000; background-color: #FFF;">
+                            <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
+                                         division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Saturday'},
+                                        class: 'btn-timetabel',
+                                        remote: true) do %>
+                                <br/><br/>
+                            <% end %>
+                          </td>
+                      <% end %>
+                    </tr>
 
-                    <% @period = @time_tables.where(start_time: start_time, end_time: (start_time + period_duration.minutes ), day: 'Saturday').last %>
-                    <% if !@period.nil? %>
-                        <td style="color: #FFF; background-color: <%= @period.color %>">
-                          <%= link_to({controller: 'time_tables', action:'edit', id: @period.id, standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Saturday'},
-                                      class: 'btn-spinner', style: 'color: white',
-                                      remote: true) do %>
-                              <%= @period.subject %><br/>
-                              <%= @period.teacher.fullname.capitalize %><br/>
-                          <% end %>
-                        </td>
-                    <% else %>
-                        <td style="color: #000; background-color: #FFF;">
-                          <%= link_to({controller: 'time_tables', action:'new', standard_id: params[:standard_id],
-                                       division: params[:division], start_time: start_time, end_time: (start_time + period_duration.minutes), day: 'Saturday'},
-                                      class: 'btn-timetabel',
-                                      remote: true) do %>
-                              <br/><br/>
-                          <% end %>
-                        </td>
-                    <% end %>
-                  </tr>
+                <%
+                  start_time = start_time + period_duration.minutes
+                  end
+                %>
 
-              <%
-                start_time = start_time + period_duration.minutes
-                end
-              %>
-
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              Time-Table Settings
+            </div>
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item">School Start: <%= @time_table_setting.school_start.strftime('%I:%M %p') %></li>
+                <li class="list-group-item">School End: <%= @time_table_setting.school_end.strftime('%I:%M %p') %></li>
+                <li class="list-group-item">Period Duration: <%= @time_table_setting.period_duration %> minutes</li>
+                <li class="list-group-item">No. of Breaks: <%= @time_table_setting.num_breaks %></li>
+                <li class="list-group-item">Break Durations: <%= @time_table_setting.break_durations %> minutes</li>
+                <li class="list-group-item">Break After: <%= @time_table_setting.breaks_after %></li>
+              </ul>
+            </div>
+            <div class="panel-footer">
+              <%= link_to 'New Setting',
+                      new_time_table_setting_path,
+                      class: 'btn btn-default',
+                      remote: true if @time_table_setting.nil? %>
+              <%= link_to 'Update Setting',
+                      edit_time_table_setting_path(@time_table_setting),
+                      class: 'btn btn-default',
+                      remote: true if !@time_table_setting.nil? %>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            Time-Table Settings
-          </div>
-          <div class="panel-body">
-            <ul class="list-group">
-              <li class="list-group-item">School Start: <%= @time_table_setting.school_start.strftime('%I:%M %p') %></li>
-              <li class="list-group-item">School End: <%= @time_table_setting.school_end.strftime('%I:%M %p') %></li>
-              <li class="list-group-item">Period Duration: <%= @time_table_setting.period_duration %> minutes</li>
-              <li class="list-group-item">No. of Breaks: <%= @time_table_setting.num_breaks %></li>
-              <li class="list-group-item">Break Durations: <%= @time_table_setting.break_durations %> minutes</li>
-              <li class="list-group-item">Break After: <%= @time_table_setting.breaks_after %></li>
-            </ul>
-          </div>
-          <div class="panel-footer">
-            <%= link_to 'New Setting',
-                    new_time_table_setting_path,
-                    class: 'btn btn-default',
-                    remote: true if @time_table_setting.nil? %>
-            <%= link_to 'Update Setting',
-                    edit_time_table_setting_path(@time_table_setting),
-                    class: 'btn btn-default',
-                    remote: true if !@time_table_setting.nil? %>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% else %>
-    <strong>Create settings first: </strong>
-    <%= link_to 'New Setting',
-                new_time_table_setting_path,
-                class: 'btn btn-default',
-                remote: true if @time_table_setting.nil? %>
+    <% else %>
+      <strong>Create settings first: </strong>
+      <%= link_to 'New Setting',
+                  new_time_table_setting_path,
+                  class: 'btn btn-default',
+                  remote: true if @time_table_setting.nil? %>
+    <% end %>
   <% end %>
-<% end %>  
+<% end %>
 <script type="text/javascript">
   $(function () {
     $('select#standard_id').on('click', function () {

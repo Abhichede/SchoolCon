@@ -212,15 +212,14 @@
                 <% if !birthday_today_students.blank? %>
                     <% birthday_today_students.each do |birth_stud| %>
                         <li class="">
-                          <span class="image">
-                            <img src="<%= birth_stud.profile_photo %>" alt="img" width="50" height="50" />
-                          </span>
-                          <span class="pull-right">
-                            <%= link_to "
-                            <span>#{birth_stud.self_full_name}</span>
-                            <span class='time'>#{birth_stud.current_age} Years Old</span>
-                            <i class='fa fa-share-square btn'></i>".html_safe,
-                                        new_notification_path(student_id: birth_stud.id, notification_type: 'student_wise', message_type: 'birthday_wish'), remote: true %>
+                          <span>
+                            <%= link_to new_notification_path(student_id: birth_stud.id, notification_type: 'student_wise', message_type: 'birthday_wish'), remote: true  do %>
+                              <span class="image">
+                                <img src="<%= birth_stud.profile_photo.blank? ? image_path('student-default.png') : birth_stud.profile_photo %>" alt="img" width="50" height="50"/>
+                              </span>
+                             <span><%= birth_stud.first_name %> <%= birth_stud.last_name %></span>
+                             <span class='time'> <%= birth_stud.current_age %> Years Old</span>
+                            <% end %>
                           </span>
                         </li>
                     <% end %>

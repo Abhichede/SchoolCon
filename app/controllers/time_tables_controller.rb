@@ -6,7 +6,7 @@ class TimeTablesController < ApplicationController
   # GET /time_tables.json
   def index
     add_breadcrumb 'Class-wise Timetable', :time_tables_path
-    if params[:standard_id] || params[:division]
+    unless params[:standard_id].blank? && params[:division].blank?
       @time_tables = TimeTable.where(:standard_id => params[:standard_id], :division => params[:division])
     end
     @time_table_setting = TimeTableSetting.last

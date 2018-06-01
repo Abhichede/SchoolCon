@@ -44,27 +44,27 @@
 
     <div class="row">
       <div class="col-lg-6">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <% if !@attendance.nil? %>
+        <% if !@attendance.nil? %>
+          <div class="panel panel-default">
+            <div class="panel-body">
                 <ul class="list-group">
                   <li class="list-group-item">Showing result for: <span class="pull-right"><%= @attendance.standard.name %> - <%= @attendance.division.name %></span></li>
                   <li class="list-group-item">Date: <span class="pull-right"><%= @attendance.date %></span> </li>
                   <li class="list-group-item">Subject: <span class="pull-right"><%= @attendance.subject.name %></span></li>
                   <li class="list-group-item"><span><%= link_to 'Edit', edit_attendance_path(@attendance), class: 'btn btn-info btn-block' %></span></li>
                 </ul>
-            <% else %>
-                <ul class="list-group">
-                  <li class="list-group-item">Nothing Found</li>
-                </ul>
-            <% end %>
+            </div>
           </div>
-        </div>
+        <% else %>
+          <div class="well">
+            <h5>Nothing Found</h5>
+          </div>
+        <% end %>
       </div>
       <div class="col-lg-6">
-        <div class="panel panel-default">
-          <div class="panel-body" style="overflow: auto; max-height: 30rem;">
-            <% if !@students.nil? && !@attendance.nil? %>
+        <% if !@students.nil? && !@attendance.nil? %>
+          <div class="panel panel-default">
+            <div class="panel-body" style="overflow: auto; max-height: 30rem;">
               <table class="table table-bordered">
                 <thead>
                   <tr>
@@ -87,9 +87,9 @@
                   <% end %>
                 </tbody>
               </table>
-            <% end %>
+            </div>
           </div>
-        </div>
+         <% end %>
       </div>
     </div>
   </div>
