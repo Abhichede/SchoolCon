@@ -51,6 +51,15 @@ function off() {
     $("#overlay").css('display', "none");
 }
 
+$("form").on('submit', function () {
+    if($(this).valid()){
+        on();
+    }else {
+        off();
+    }
+
+});
+
 $(document).ready(function () {
 
     /***
@@ -62,15 +71,21 @@ $(document).ready(function () {
     }).on('focusout', function () {
         $('*').removeClass('password');
     });
-
-
-
     /***
      *  end login
      */
 
     /**
-     * Toastr
+     * Start spinner
+     */
+
+     off();
+
+     $('.btn-primary, .btn-success, .btn-default').on('click', function () {
+         on();
+     });
+    /**
+     * END Spinner
      */
 
 });

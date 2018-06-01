@@ -397,14 +397,18 @@
                         <th><%= month.strftime('%B') %></th>
                         <td>
                           <table class="table table-bordered">
-                            <% for att in attendance %>
+                            <% attendance.each do |att| %>
                                 <tr>
                                   <th> <%= att.date %> </th>
                                   <th> <%= att.subject.name %> </th>
                                   <td>
-                          <span class="label label-<%= att.att_data["#{@student.id}"] === 'on' ? 'primary' : 'danger' %>">
-                            <%= att.att_data["#{@student.id}"] === 'on' ? 'Present' : 'Absent' %>
-                          </span>
+                                    <% if att.att_data.nil? %>
+                                      <span class="label label-<%= att.att_data["#{@student.id}"] === 'on' ? 'primary' : 'danger' %>">
+                                        <%= att.att_data["#{@student.id}"] === 'on' ? 'Present' : 'Absent' %>
+                                      </span>
+                                    <% else %>
+                                      <span class="label label-danger">Absent</span>
+                                    <% end %>
                                   </td>
                                 </tr>
                             <% end %>

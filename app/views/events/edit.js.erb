@@ -1,2 +1,6 @@
 $('#remote_container').html('<%= j render "edit" %>');
 $('#edit_event').modal('show');
+
+$('#edit_event').on('shown.bs.modal', function () {
+    off();
+});

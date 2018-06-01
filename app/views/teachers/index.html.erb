@@ -22,6 +22,7 @@
             <th><%= model_class.human_attribute_name(:address) %></th>
             <th><%= model_class.human_attribute_name(:contact) %></th>
             <th><%= model_class.human_attribute_name(:email) %></th>
+            <th>Type</th>
 
             <th><%= model_class.human_attribute_name(:subjects) %></th>
           </tr>
@@ -40,6 +41,7 @@
                 </td>
                 <td><%= teacher.contact %></td>
                 <td><%= teacher.email %></td>
+                <td><%= teacher.staff_type %></td>
 
                 <td>
                   <% teacher.subjects.each do |subject| %>

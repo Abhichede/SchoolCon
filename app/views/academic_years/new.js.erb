@@ -1,2 +1,5 @@
 $('#remote_container').html('<%= j render "new" %>');
 $('#new_academic_year').modal('show');
+$('#new_academic_year').on('shown.bs.modal', function () {
+    off();
+});

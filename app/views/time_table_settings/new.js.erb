@@ -1,2 +1,5 @@
 $('#remote_container').html('<%= j render "new" %>');
 $('#new_time_table_setting').modal('show');
+$('#new_time_table_setting').on('shown.bs.modal', function () {
+    off();
+});

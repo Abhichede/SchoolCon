@@ -37,7 +37,7 @@ class StudentsController < ApplicationController
         update_student_wise_fee(@student)
 
         unless @student.is_enquiry
-          update_parent(@student)
+          update_parent(@student, true)
           @parent = Parent.find_by_mobile(@student.father_mobile)
           @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}")
         end
@@ -68,6 +68,11 @@ class StudentsController < ApplicationController
       end
       if @student.update(student_params)
         update_student_wise_fee(@student)
+        unless @student.is_enquiry
+          update_parent(@student, false)
+          @parent = Parent.find_by_mobile(@student.father_mobile)
+          @student.update(prn: "#{SchoolInfo.first.code.blank? ? "PRN" : SchoolInfo.first.code}#{@student.id}")
+        end
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
       else
@@ -114,7 +119,7 @@ class StudentsController < ApplicationController
     end
   end
 
-  def update_parent(student)
+  def update_parent(student, is_new)
     unless Parent.find_by_mobile(student.father_mobile)
       @parent = Parent.new(name: "#{student.father_first_name} #{student.father_middle_name} #{student.father_last_name}",
                            mobile: student.father_mobile)
@@ -132,13 +137,13 @@ class StudentsController < ApplicationController
     admission_message = MyTemplate.find_by_name('Admission Success').desc
     admission_message.gsub! '#{student_name}', student.self_full_name
     admission_message.gsub! '#{institute_name}', current_institute.name
-    send_sms_to_parent(@student, Notification.new(message: ActionController::Base.helpers.strip_tags(admission_message)))
+    send_sms_to_parent(@student, Notification.new(message: ActionController::Base.helpers.strip_tags(admission_message))) if is_new
   end
 
   def update_parent_from_view
     if params[:student_id]
       @student = Student.find(params[:student_id])
-      update_parent(@student)
+      update_parent(@student, true)
     end
 
     respond_to do |format|
