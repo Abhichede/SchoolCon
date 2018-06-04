@@ -51,15 +51,6 @@ function off() {
     $("#overlay").css('display', "none");
 }
 
-$("form").on('submit', function () {
-    if($(this).valid()){
-        on();
-    }else {
-        off();
-    }
-
-});
-
 $(document).ready(function () {
 
     /***
@@ -80,6 +71,15 @@ $(document).ready(function () {
      */
 
      off();
+
+    $("form").on('submit', function () {
+        if($(this).valid()){
+            on();
+        }else {
+            off();
+        }
+
+    });
 
      $('.btn-primary, .btn-success, .btn-default, .fc-content, btn-spinner').on('click', function () {
          on();
