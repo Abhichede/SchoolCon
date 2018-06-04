@@ -35,10 +35,12 @@ class Ability
       # can [:fee_payment, :fee_receipt, :fee_statement], StudentFeePayment
       # can [:print_students_list], Student
     elsif user.has_role? :teacher
-      can [:create, :update, :read], :all # author can create status
-      can [:fee_payment, :fee_receipt, :fee_statement], StudentFeePayment
-      can [:print_students_list], Student
+      # can [:create, :update, :read], :all # author can create status
+      # can [:fee_payment, :fee_receipt, :fee_statement], StudentFeePayment
+      # can [:print_students_list], Student
       # can :destroy, Status # #uncomment this line, author can destroy status
+      #
+       can :manage, :all
     elsif user.has_role? :parent
       can :read, Student
     end

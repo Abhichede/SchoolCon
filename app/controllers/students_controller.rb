@@ -135,7 +135,7 @@ class StudentsController < ApplicationController
     admission_message = MyTemplate.find_by_name('Admission Success').desc
     admission_message.gsub! '#{student_name}', student.self_full_name
     admission_message.gsub! '#{institute_name}', current_institute.name
-    send_sms_to_parent(@student, Notification.new(message: ActionController::Base.helpers.strip_tags(admission_message))) if is_new
+    send_sms_to_parent(student, Notification.new(message: ActionController::Base.helpers.strip_tags(admission_message))) if is_new
   end
 
   def update_parent_from_view
@@ -161,11 +161,11 @@ class StudentsController < ApplicationController
   def print_students_list
     if params[:type] === 'standard_wise'
       @standard = Standard.find(params[:id])
-      @students = @standard.students
+      @students = @standard.students.where(is_enquiry: false)
 
     elsif params[:type] === 'division_wise'
       @division = Division.find(params[:id])
-      @students = @division.students
+      @students = @division.students.where(is_enquiry: false)
     end
     respond_to do |format|
       format.pdf do

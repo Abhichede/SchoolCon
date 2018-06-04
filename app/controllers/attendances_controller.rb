@@ -15,7 +15,7 @@ class AttendancesController < ApplicationController
                                      :date => params[:date], :subject_id => params[:subject]).limit(1).last
       @standard = Standard.find(params[:standard_id])
       @division = Division.find(params[:division])
-      @students = @division.students
+      @students = @division.students.where(is_enquiry: false)
     else
       @attendances = Attendance.all
     end
@@ -53,6 +53,13 @@ class AttendancesController < ApplicationController
                                   alert: 'Attendance has already been taken.' }
       else
         if @attendance.save
+          @attendance.division.students.where(is_enquiry: false).each do |student|
+            unless @attendance.att_data["#{student.id}"] === 'on'
+              absent_message = MyTemplate.find_by_name('Student Absent Message').desc
+              absent_message.gsub! '#{student_name}', student.self_full_name
+              send_sms_to_parent(student, Notification.new(message: ActionController::Base.helpers.strip_tags(absent_message)))
+            end
+          end
           format.html { redirect_to attendances_path(standard_id: @attendance.standard_id, division: @attendance.division_id,
                                                      subject: @attendance.subject_id, date: @attendance.date),
                                     notice: 'Attendance was successfully created.' }
@@ -70,6 +77,13 @@ class AttendancesController < ApplicationController
   def update
     respond_to do |format|
       if @attendance.update(attendance_params)
+        @attendance.division.students.where(is_enquiry: false).each do |student|
+          unless @attendance.att_data["#{student.id}"] === 'on'
+            absent_message = MyTemplate.find_by_name('Student Absent Message').desc
+            absent_message.gsub! '#{student_name}', student.self_full_name
+            send_sms_to_parent(student, Notification.new(message: ActionController::Base.helpers.strip_tags(absent_message)))
+          end
+        end
         format.html { redirect_to attendances_path(standard_id: @attendance.standard_id, division: @attendance.division_id,
                                                    subject: @attendance.subject_id, date: @attendance.date),
                                   notice: 'Attendance was successfully updated.' }
