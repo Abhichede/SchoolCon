@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-SchoolInfo.create(name: 'Dnyandeep Classes', address: 'Dindori')
-User.create(email: 'abhichede777@gmail.com', password: 'Abhichede777@', roles_mask: 1, approved: true, confirmed_at: Time.now)
+# SchoolInfo.create(name: 'Dnyandeep Classes', address: 'Dindori')
+# User.create(email: 'abhichede777@gmail.com', password: 'Abhichede777@', roles_mask: 1, approved: true, confirmed_at: Time.now)
 MyTemplate.create(name: 'Fee Receipt', desc: '
 <p style="text-align: center; line-height: 1;">
 <span style="font-size: 18px;">
