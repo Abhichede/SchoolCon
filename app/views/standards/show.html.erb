@@ -36,7 +36,7 @@
                         Division: <%= division.name %>
                         <strong>Total Students: <%= division.students.count %></strong>
                         <span class="pull-right">
-                          <a class="btn btn-xs" data-toggle="collapse" href="#division_<%= division.name %>">
+                          <a class="btn btn-xs" data-toggle="collapse" href="#division_<%= division.name.parameterize.underscore %>">
                             <i class="fa fa-chevron-down"></i>
                           </a>
                         </span>
@@ -50,7 +50,7 @@
                         </span>
                       </h5>
                     </div>
-                    <div class="panel-body collapse" id="division_<%= division.name %>">
+                    <div class="panel-body collapse" id="division_<%= division.name.parameterize.underscore %>">
                       <table class="table table-bordered table-responsive" id="admitted_students_table_<%= division.name %>">
                         <thead>
                           <tr>
