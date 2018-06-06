@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :office_expenses
+  resources :post_attachments
+  resources :posts
   devise_for :users
 
   # get 'profiles', to: 'profiles#index'
@@ -16,7 +19,7 @@ Rails.application.routes.draw do
     resources :attendances
     # Notifications
     resources :notifications
-
+    resources :posts
   end
   resources :school_infos
   resources :my_templates

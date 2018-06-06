@@ -4,5 +4,6 @@ class DashboardController < ApplicationController
     @teachers = Teacher.where(staff_type: 'Teaching')
     @standards = Standard.all
     @student_fee = StudentFeePayment.all
+    @posts = Post.all.order("created_at DESC").limit(10)
   end
 end

@@ -14,32 +14,34 @@
       <div class="panel-body">
         <div class="row">
           <% Standard.all.each do |standard| %>
-            <div class="col-md-4 col-lg-4">
-              <div class="panel panel-<%= random_boot_panel %>">
-                <div class="panel-heading">
-                  Standard - <%= standard.name %>
-                </div>
-                <div class="panel-body">
-                  <ul class="list-group">
-                    <% standard.fee_categories.each do |fee_category| %>
-                      <li class="list-group-item">
-                        <strong><%= fee_category.name %>:</strong>
-                        <span class=""><%= fee_category.amount %></span>
-                        <span class="pull-right">
-                          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                                      edit_fee_category_path(fee_category), :class => 'btn btn-default btn-xs', remote: true %>
-                          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                                      fee_category_path(fee_category),
-                                      :method => :delete,
-                                      :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
-                                      :class => 'btn btn-xs btn-danger' %>
-                        </span>
-                      </li>
-                    <% end %>
-                  </ul>
+            <% unless standard.fee_categories.count == 0 %>
+              <div class="col-md-4 col-lg-4">
+                <div class="panel panel-<%= random_boot_panel %>">
+                  <div class="panel-heading">
+                    Standard - <%= standard.name %>
+                  </div>
+                  <div class="panel-body">
+                    <ul class="list-group">
+                      <% standard.fee_categories.each do |fee_category| %>
+                        <li class="list-group-item">
+                          <strong><%= fee_category.name %>:</strong>
+                          <span class=""><%= fee_category.amount %></span>
+                          <span class="pull-right">
+                            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                                        edit_fee_category_path(fee_category), :class => 'btn btn-default btn-xs', remote: true %>
+                            <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                                        fee_category_path(fee_category),
+                                        :method => :delete,
+                                        :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
+                                        :class => 'btn btn-xs btn-danger' %>
+                          </span>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
         </div>
       </div>

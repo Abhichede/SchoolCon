@@ -1,0 +1,2 @@
+class OfficeExpenseTag < ApplicationRecord
+end

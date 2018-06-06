@@ -1,0 +1,2 @@
+class OfficeExpense < ApplicationRecord
+end
