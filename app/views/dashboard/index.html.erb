@@ -208,7 +208,7 @@
             <div class="x_panel">
               <div class="x_title">
                 <h2><i class="fa fa-list-alt"></i> Expenses
-                  <small>Particular-wise</small>
+                  <small>Recent 10 activities</small>
                 </h2>
                 <ul class="nav navbar-right panel_toolbox">
                   <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -295,7 +295,7 @@
                          <span><%= post.title %></span>
                          <span class='time'> <%= post.created_at_local %></span>
                           <span class="message">
-                            <%= post.description %>
+                            <%= truncate(post.description, :length => 30) %>
                           </span>
                         <% end %>
                       </span>
@@ -311,5 +311,54 @@
         <div class="clearfix"></div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-8 col-md-8"></div>
+  <div class="col-lg-4 col-md-4">
+    <div class="row">
+      <div class="x_panel">
+        <div class="x_title">
+          <h2><i class="fa fa-list-alt"></i> Expenses
+            <small>Recent</small>
+          </h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li>
+              <%= link_to "<i class='fa fa-share-square-o'></i>".html_safe, office_expenses_path %>
+            </li>
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content" style="max-height: 40rem; overflow-y: auto;">
+          <ul class="list-unstyled msg_list">
+            <% if !@office_expenses.nil? %>
+              <% @office_expenses.each do |expense| %>
+                <li class="">
+                  <span>
+                    <%= link_to office_expense_path(expense) do %>
+
+                      <span class='time'> <%= expense.date %></span>
+                      <span><%= expense.particular %></span><br/>
+                      <span>Amount: Rs. <strong><%= expense.amount %> /-</strong></span>
+                      <span class="message">
+                        <%= truncate(expense.description, :length => 30) %>
+                      </span>
+                    <% end %>
+                  </span>
+                </li>
+              <% end %>
+            <% else %>
+              <li class="">Nothing</li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
   </div>
 </div>

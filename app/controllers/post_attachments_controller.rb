@@ -1,6 +1,7 @@
 class PostAttachmentsController < ApplicationController
   before_action :set_post_attachment, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb 'Attachments', :posts_path
   # GET /post_attachments
   # GET /post_attachments.json
   def index

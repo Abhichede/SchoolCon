@@ -1,59 +1,68 @@
-<%= form_for @office_expense, :html => { :class => "form-horizontal office_expense" } do |f| %>
+<div class="col-md-3 col-lg-3"></div>
+<div class="col-lg-6 col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= form_for @office_expense, :html => {:class => "form-horizontal office_expense"} do |f| %>
 
-  <% if @office_expense.errors.any? %>
-    <div id="error_expl" class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@office_expense.errors.count, "error") %> prohibited this office_expense from being saved:</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-        <% @office_expense.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+        <% if @office_expense.errors.any? %>
+          <div id="error_expl" class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= pluralize(@office_expense.errors.count, "error") %> prohibited this
+                office_expense
+                from being saved:</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <% @office_expense.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
         <% end %>
-        </ul>
-      </div>
-    </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :date, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :date, :class => 'form-control datepicker' %>
-    </div>
-    <%= f.error_span(:date) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :particular, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :particular, :class => 'form-control', id: 'autocomplete-custom-append' %>
-    </div>
-    <%=f.error_span(:particular) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :description, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :description, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:description) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :amount, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :amount, :class => 'form-control', required: true %>
-    </div>
-    <%=f.error_span(:amount) %>
-  </div>
+        <div class="form-group">
+          <%= f.label :date, :class => 'control-label col-lg-2' %>
+          <div class="col-lg-10">
+            <%= f.text_field :date, :class => 'form-control datepicker' %>
+          </div>
+          <%= f.error_span(:date) %>
+        </div>
+        <div class="form-group">
+          <%= f.label :particular, :class => 'control-label col-lg-2' %>
+          <div class="col-lg-10">
+            <%= f.text_field :particular, :class => 'form-control', id: 'autocomplete-custom-append' %>
+          </div>
+          <%= f.error_span(:particular) %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, :class => 'control-label col-lg-2' %>
+          <div class="col-lg-10">
+            <%= f.text_field :description, :class => 'form-control' %>
+          </div>
+          <%= f.error_span(:description) %>
+        </div>
+        <div class="form-group">
+          <%= f.label :amount, :class => 'control-label col-lg-2' %>
+          <div class="col-lg-10">
+            <%= f.text_field :amount, :class => 'form-control', required: true %>
+          </div>
+          <%= f.error_span(:amount) %>
+        </div>
 
-  <div class="form-group">
-    <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                office_expenses_path, :class => 'btn btn-default' %>
+        <div class="form-group">
+          <div class="col-lg-offset-2 col-lg-10">
+            <%= f.submit nil, :class => 'btn btn-primary' %>
+            <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                        office_expenses_path, :class => 'btn btn-default' %>
+          </div>
+        </div>
+
+      <% end %>
     </div>
   </div>
-
-<% end %>
-
+</div>
+<div class="col-md-3 col-lg-3"></div>
 <script type="text/javascript" charset="utf-8">
     function init_autocomplete() {
 

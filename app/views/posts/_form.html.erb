@@ -1,51 +1,58 @@
-<%= form_for @post, :html => { :class => "form-horizontal post" } do |f| %>
-
-  <% if @post.errors.any? %>
-    <div id="error_expl" class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+<div class="col-lg-2 col-md-2"></div>
+<div class="col-lg-8 col-md-8">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= form_for @post, :html => {:class => "form-horizontal post"} do |f| %>
+        <% if @post.errors.any? %>
+          <div id="error_expl" class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= pluralize(@post.errors.count, "error") %> prohibited this post from being
+                saved:</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <% @post.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
         <% end %>
-        </ul>
-      </div>
-    </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :title, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :title, :class => 'form-control' %>
+        <div class="form-group">
+          <%= f.label :title, :class => 'control-label col-lg-2' %>
+          <div class="col-lg-10">
+            <%= f.text_field :title, :class => 'form-control' %>
+          </div>
+          <%= f.error_span(:title) %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, :class => 'control-label col-lg-2' %>
+          <div class="col-lg-10">
+            <%= f.text_area :description, :class => 'form-control', rows: 10 %>
+          </div>
+          <%= f.error_span(:description) %>
+        </div>
+
+        <%= f.fields_for :post_attachments do |p| %>
+          <div class="form-group">
+            <%= f.label :attachment_path, :class => 'control-label col-lg-2' %>
+            <div class="col-lg-10">
+              <%= f.file_field :attachment_path, :class => 'form-control', multiple: true, name: 'post_attachments[attachment_path][]' %>
+            </div>
+            <%= f.error_span(:attachment_path) %>
+          </div>
+        <% end unless @post.post_attachments.count > 0 %>
+
+        <div class="form-group">
+          <div class="col-lg-offset-2 col-lg-10">
+            <%= f.submit nil, :class => 'btn btn-primary' %>
+            <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                        posts_path, :class => 'btn btn-default' %>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <%=f.error_span(:title) %>
   </div>
-  <div class="form-group">
-    <%= f.label :description, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :description, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:description) %>
-  </div>
-
-  <%= f.fields_for :post_attachments do |p| %>
-    <div class="form-group">
-      <%= f.label :attachment_path, :class => 'control-label col-lg-2' %>
-      <div class="col-lg-10">
-        <%= f.file_field :attachment_path, :class => 'form-control', multiple: true, name: 'post_attachments[attachment_path][]' %>
-      </div>
-      <%=f.error_span(:attachment_path) %>
-    </div>
-  <% end unless @post.post_attachments.nil? %>
-
-  <div class="form-group">
-    <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                posts_path, :class => 'btn btn-default' %>
-    </div>
-  </div>
-
-<% end %>
+</div>
+<div class="col-lg-2 col-md-2"></div>

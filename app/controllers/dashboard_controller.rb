@@ -5,5 +5,6 @@ class DashboardController < ApplicationController
     @standards = Standard.all
     @student_fee = StudentFeePayment.all
     @posts = Post.all.order("created_at DESC").limit(10)
+    @office_expenses = OfficeExpense.all.order("created_at DESC").limit(10)
   end
 end

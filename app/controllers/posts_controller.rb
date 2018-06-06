@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb 'Posts/News', :posts_path
   # GET /posts
   # GET /posts.json
   def index

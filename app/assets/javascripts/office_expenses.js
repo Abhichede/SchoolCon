@@ -15,8 +15,8 @@ $("form").ready(function () {
         // Specify validation error messages
         messages: {
             "office_expense[amount]": {
-                required: "Please enter standard Name",
-                pattern: "only number starting with 1-9 allowed with an optional decimal point."
+                required: "Please enter amount",
+                pattern: "only number, between 1 to 9 with an optional decimal point, are allowed."
             }
         },
         // Make sure the form is submitted to the destination defined
