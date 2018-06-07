@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="">
+    <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="new modules added POSTS, Post attachments, Office Expenses.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/office_expenses/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/office_expenses/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/posts.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -72,16 +75,57 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/office_expenses/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="41" column="93" selection-start-line="41" selection-start-column="93" selection-end-line="41" selection-end-column="93" />
-              <folding>
-                <element signature="n#div#1;n#!!top" />
-                <element signature="n#div#3;n#!!top" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="292" column="33" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="820">
+              <caret line="41" column="87" selection-start-line="41" selection-start-column="87" selection-end-line="41" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="office_expenses.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/office_expenses.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="53" selection-end-line="27" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="posts.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/posts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="posts_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -110,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/time_tables/edit.js.erb" />
         <option value="$PROJECT_DIR$/app/views/time_tables/new.js.erb" />
         <option value="$PROJECT_DIR$/app/views/students/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/student.rb" />
@@ -146,21 +189,22 @@
         <option value="$PROJECT_DIR$/app/controllers/office_expenses_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/post_attachments/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/office_expenses/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/office_expenses.js" />
         <option value="$PROJECT_DIR$/app/views/office_expenses/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/office_expenses/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/posts/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/post_attachments/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/post_attachments_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/office_expenses/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/posts.js" />
       </list>
     </option>
   </component>
@@ -179,10 +223,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="145" />
+    <option name="x" value="67" />
     <option name="y" value="24" />
-    <option name="width" value="1535" />
-    <option name="height" value="876" />
+    <option name="width" value="1533" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -192,10 +236,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="RailsProjectView" />
       <pane id="AndroidView" />
+      <pane id="RailsProjectView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,6 +250,25 @@
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
@@ -228,10 +290,18 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="office_expenses" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3751,14 +3821,8 @@
       <workItem from="1528184824417" duration="8052000" />
       <workItem from="1528258368277" duration="8251000" />
       <workItem from="1528306417365" duration="15653000" />
-      <workItem from="1528353873524" duration="1803000" />
-    </task>
-    <task id="LOCAL-00008" summary="students json changed">
-      <created>1526493016111</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1526493016111</updated>
+      <workItem from="1528353873524" duration="3793000" />
+      <workItem from="1528367963191" duration="1254000" />
     </task>
     <task id="LOCAL-00009" summary="students json changed">
       <created>1526493276224</created>
@@ -4096,14 +4160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1528322370679</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="new modules added POSTS, Post attachments, Office Expenses.">
+      <created>1528355921935</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1528355921937</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222181000" />
+    <option name="totallyTimeSpent" value="225425000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
+    <frame x="65" y="-4" width="1535" height="904" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -4119,8 +4190,9 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966422" weight="0.5775401" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.27871054" />
+      <window_info active="true" content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.2827401" />
       <window_info anchor="right" id="Database" order="6" weight="0.30288786" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
       <window_info id="Structure" order="1" sideWeight="0.5013369" side_tool="true" weight="0.29617193" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -4135,7 +4207,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -4186,6 +4257,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="new modules added POSTS, Post attachments, Office Expenses." />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6460">
+          <caret line="323" column="25" selection-start-line="323" selection-start-column="25" selection-end-line="323" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/standards/_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -4413,13 +4491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="52" column="14" selection-start-line="46" selection-start-column="8" selection-end-line="52" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="596">
@@ -4431,13 +4502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="90" column="64" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/office_expenses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -4497,20 +4561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6460">
-          <caret line="323" column="25" selection-start-line="323" selection-start-column="25" selection-end-line="323" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -4520,12 +4570,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/office_expenses/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="41" column="93" selection-start-line="41" selection-start-column="93" selection-end-line="41" selection-end-column="93" />
-          <folding>
-            <element signature="n#div#1;n#!!top" />
-            <element signature="n#div#3;n#!!top" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="292" column="33" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="41" column="87" selection-start-line="41" selection-start-column="87" selection-end-line="41" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/office_expenses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="53" selection-end-line="27" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
         </state>
       </provider>
     </entry>

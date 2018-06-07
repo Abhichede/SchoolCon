@@ -39,6 +39,7 @@
             <%= f.label :attachment_path, :class => 'control-label col-lg-2' %>
             <div class="col-lg-10">
               <%= f.file_field :attachment_path, :class => 'form-control', multiple: true, name: 'post_attachments[attachment_path][]' %>
+              <p class="note">Supported files(jpg, png, jpeg, gif, svg, docs, doxs, pdf)</p>
             </div>
             <%= f.error_span(:attachment_path) %>
           </div>

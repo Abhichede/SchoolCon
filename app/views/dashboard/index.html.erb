@@ -290,7 +290,9 @@
                       <span>
                         <%= link_to post_path(post) do %>
                           <span class="image">
-                            <img src="<%= post.post_attachments.first.attachment_path %>" alt="img" width="50" height="50"/>
+                            <% if post.post_attachments.count > 0 %>
+                              <img src="<%= post.post_attachments.first.attachment_path %>" alt="img" width="50" height="50"/>
+                            <% end %>
                           </span>
                          <span><%= post.title %></span>
                          <span class='time'> <%= post.created_at_local %></span>
