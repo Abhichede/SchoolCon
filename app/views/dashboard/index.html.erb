@@ -294,8 +294,9 @@
                               <img src="<%= post.post_attachments.first.attachment_path %>" alt="img" width="50" height="50"/>
                             <% end %>
                           </span>
-                         <span><%= post.title %></span>
-                         <span class='time'> <%= post.created_at_local %></span>
+                          <span class='time'><%= post.created_at_local %></span>
+                          <span><br></span>
+                         <span class="title"><%= truncate post.title, length: 15 %></span>
                           <span class="message">
                             <%= truncate(post.description, :length => 30) %>
                           </span>
@@ -343,9 +344,9 @@
                 <li class="">
                   <span>
                     <%= link_to office_expense_path(expense) do %>
-
                       <span class='time'> <%= expense.date %></span>
-                      <span><%= expense.particular %></span><br/>
+                      <span><br/></span>
+                      <span class="title"><%= expense.particular %></span>
                       <span>Amount: Rs. <strong><%= expense.amount %> /-</strong></span>
                       <span class="message">
                         <%= truncate(expense.description, :length => 30) %>

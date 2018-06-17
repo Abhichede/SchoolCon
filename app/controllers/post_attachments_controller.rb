@@ -29,7 +29,7 @@ class PostAttachmentsController < ApplicationController
 
     respond_to do |format|
       if @post_attachment.save
-        format.html { redirect_to @post_attachment, notice: 'Post attachment was successfully created.' }
+        format.html { redirect_to post_path(@post_attachment.post), notice: 'Post attachment was successfully created.' }
         format.json { render :show, status: :created, location: @post_attachment }
       else
         format.html { render :new }
@@ -53,7 +53,7 @@ class PostAttachmentsController < ApplicationController
   def destroy
     @post_attachment.destroy
     respond_to do |format|
-      format.html { redirect_to post_attachments_url, notice: 'Post attachment was successfully destroyed.' }
+      format.html { redirect_to post_path(@post_attachment.post), alert: 'Post attachment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

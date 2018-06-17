@@ -9,17 +9,25 @@ Rails.application.routes.draw do
   # get 'edit_profile', to: 'profiles#edit'
   # post 'update_profile', to: 'profiles#update'
 
-  resources :profiles, only: [:index, :update, :edit]
+  resources :profiles, only: %i[index update edit]
 
   namespace :api, defaults: { format: 'json' } do
     mount_devise_token_auth_for 'User', at: 'auth'
     resources :students
+    # ==> Parents
     resources :parents
+    # ==> Student Fee Payments
     resources :student_fee_payments
+    # ==> Student Attendances
     resources :attendances
-    # Notifications
+    # ==> Notifications
     resources :notifications
+    # ==> Posts
     resources :posts
+    # ==> Teachers
+    resources :teachers
+    # ==> Student's certificates
+    resources :student_certificates
   end
   resources :school_infos
   resources :my_templates
@@ -48,7 +56,7 @@ Rails.application.routes.draw do
   resources :teachers
   resources :subjects
   resources :standards
-  
+
   get 'get_subjects', to: 'time_tables#get_subjects'
   get 'get_divisions', to: 'time_tables#get_divisions'
   get 'get_students', to: 'attendances#get_students'
@@ -63,19 +71,19 @@ Rails.application.routes.draw do
   get 'non_teaching_staff', to: 'teachers#non_teaching'
   get 'admins_staff', to: 'teachers#admins'
 
-  # assign subjects
+  # => assign subjects
   get 'new_assign_subject', to: 'standards#new_assign_subject'
   post 'assign_subjects', to: 'standards#assign_subjects'
 
-  # fee
+  # => fee
   get 'fee_payment', to: 'student_fee_payments#fee_payment'
   get 'fee_receipt', to: 'student_fee_payments#fee_receipt'
   get 'fee_statement', to: 'student_fee_payments#fee_statement'
 
-  # certificates
+  # ==> certificates
   get 'add_leaving_certificate', to: 'students#add_leaving_certificate'
 
-  ## Students
+  # ==> Students
   get 'students_list', to: 'students#print_students_list'
   post 'update_parent', to: 'students#update_parent_from_view', as: 'update_parent'
 

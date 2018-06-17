@@ -28,15 +28,28 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    ext = %w[.jpg .jpeg .gif .png .pdf .svg .docs .docx .xls]
 
     respond_to do |format|
+      # unless params[:post_attachments].blank?
+      #   params[:post_attachments]['attachment_path'].each do |a|
+      #
+      #   end
+      # end
+
       if @post.save
         unless params[:post_attachments].blank?
           params[:post_attachments]['attachment_path'].each do |a|
-            @post_attachment = @post.post_attachments.create!(:attachment_path => a)
+            if ext.include? File.extname(a.original_filename)
+              @post_attachment = @post.post_attachments.create!(attachment_path: a)
+            else
+              @post.destroy
+              format.html { redirect_to new_post_url, alert: "File extension #{File.extname(a.original_filename)} is not allowed." }
+              break
+            end
           end
         end
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to post_path(@post), notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
