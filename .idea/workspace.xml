@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <ignored path=".idea/.generators" />
@@ -72,19 +70,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pdf.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pdf.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="students_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="students_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3018" />
+            <state relative-caret-position="402">
+              <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -93,24 +93,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="620">
               <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="90" column="64" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wicked_pdf.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/wicked_pdf.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -143,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/post_attachments/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/standards/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/_post.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" />
@@ -194,6 +175,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" />
         <option value="$PROJECT_DIR$/app/views/student_fee_payments/fee_statement.pdf.erb" />
         <option value="$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/students_controller.rb" />
       </list>
     </option>
   </component>
@@ -3802,14 +3784,7 @@
       <workItem from="1529693451870" duration="1837000" />
       <workItem from="1529739909822" duration="1216000" />
       <workItem from="1529788244793" duration="2248000" />
-      <workItem from="1529817006676" duration="977000" />
-    </task>
-    <task id="LOCAL-00015" summary="added some new REST process for API.">
-      <created>1527422816668</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1527422816669</updated>
+      <workItem from="1529817006676" duration="1993000" />
     </task>
     <task id="LOCAL-00016" summary="added some new REST process for API.">
       <created>1527423507682</created>
@@ -4147,11 +4122,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529788853278</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="checking marathi in pdf">
+      <created>1529858019954</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1529858019958</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262378000" />
+    <option name="totallyTimeSpent" value="263394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
@@ -4170,7 +4152,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966422" weight="0.37566844" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.33512425" />
+      <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.33512425" />
       <window_info anchor="right" id="Database" order="6" weight="0.30288786" />
       <window_info id="Structure" order="1" sideWeight="0.5013369" side_tool="true" weight="0.29617193" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -4234,7 +4216,8 @@
     <MESSAGE value="Attendance chart updated." />
     <MESSAGE value="SMS Unmuted." />
     <MESSAGE value="new modules added POSTS, Post attachments, Office Expenses." />
-    <option name="LAST_COMMIT_MESSAGE" value="new modules added POSTS, Post attachments, Office Expenses." />
+    <MESSAGE value="checking marathi in pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="checking marathi in pdf" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/initializers/wicked_pdf.rb">
@@ -4534,20 +4517,6 @@
         <state relative-caret-position="-540" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/wicked_pdf.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="90" column="64" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -4569,6 +4538,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/wicked_pdf.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="90" column="64" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
@@ -4579,13 +4569,8 @@
     <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3018" />
       </provider>
     </entry>
   </component>
