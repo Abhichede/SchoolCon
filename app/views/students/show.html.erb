@@ -83,7 +83,8 @@
               <li role="presentation"><a href="#academic_info" aria-controls="academic_info" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i> Academic Details</a></li>
               <li role="presentation"><a href="#previous_info" aria-controls="previous_info" role="tab" data-toggle="tab"><i class="fa fa-backward"></i> Previous Details</a></li>
               <li role="presentation"><a href="#fee_details" aria-controls="fee_details" role="tab" data-toggle="tab"><i class="fa fa-inr"></i> Fee Details</a></li>
-              <li role="presentation"><a href="#certificates" aria-controls="certificates" role="tab" data-toggle="tab"><i class="fa fa-file-text"></i> Documents</a></li>
+              <li role="presentation"><a href="#documents" aria-controls="documents" role="tab" data-toggle="tab"><i class="fa fa-file-text"></i> Documents</a></li>
+              <li role="presentation"><a href="#certificates" aria-controls="certificates" role="tab" data-toggle="tab"><i class="fa fa-file-text"></i> Certificates</a></li>
               <li role="presentation"><a href="#attendances" aria-controls="attendances" role="tab" data-toggle="tab"><i class="fa fa-file-text"></i> Attendance</a></li>
             </ul>
 
@@ -356,14 +357,14 @@
                     </div>
                 <% end %>
               </div>
-              <div role="tabpanel" class="tab-pane" id="certificates">
+              <div role="tabpanel" class="tab-pane" id="documents">
                 <div class="panel panel-default">
                   <div class="panel-body">
-            <span class="pull-right">
-          <%= link_to '<i class="fa fa-certificate"> </i> Add Document'.html_safe, {controller: 'students',
-                                                                                    action: 'add_leaving_certificate', id: @student.id},
-                      class: 'btn btn-default', remote: true %>
-        </span>
+                  <span class="pull-right">
+                    <%= link_to '<i class="fa fa-certificate"> </i> Add Document'.html_safe,
+                                {controller: 'students', action: 'add_leaving_certificate',
+                                 id: @student.id}, class: 'btn btn-default', remote: true %>
+                  </span>
                   </div>
                 </div>
                 <% @student.student_certificates.each do |cert| %>
@@ -371,12 +372,12 @@
                       <div class="panel-heading">
                         <%= cert.name %>
                         <span class="pull-right">
-                <%= link_to '<i class="fa fa-trash"> </i> '.html_safe + t('.destroy', :default => t("helpers.links.destroy")),
-                            student_certificate_path(cert),
-                            :method => 'delete',
-                            :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }
-                %>
-              </span>
+                          <%= link_to '<i class="fa fa-trash"> </i> '.html_safe + t('.destroy', :default => t("helpers.links.destroy")),
+                                      student_certificate_path(cert),
+                                      :method => 'delete',
+                                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }
+                          %>
+                        </span>
                       </div>
                       <div class="panel-body">
                         <% if File.extname(cert.path.to_s) == ".pdf" %>
@@ -387,6 +388,23 @@
                       </div>
                     </div>
                 <% end unless @student.student_certificates.nil? %>
+              </div>
+
+              <div role="tabpanel" class="tab-pane" id="certificates">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <strong>Bonafide</strong>
+                        <span class="pull-right">
+                          <%= link_to 'View/Download',
+                                      view_student_certificates_path(type: 'Bonafide', id: @student, format: 'pdf'),
+                                      :class => 'btn btn-info btn-xs' %>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <div role="tabpanel" class="tab-pane" id="attendances">

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="" />
+    <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/students/view_student_certificates.pdf.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/students_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/students_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/students_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/students_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/my_templates/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/my_templates/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/my_templates/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/my_templates/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/students/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/students/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <ignored path=".idea/.generators" />
@@ -70,11 +82,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pdf.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pdf.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            <state relative-caret-position="280">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="students_helper.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/students_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="129" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="129" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,22 +115,29 @@
       <file leaf-file-name="students_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
+            <state relative-caret-position="3540">
+              <caret line="177" column="22" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="print_students_list.pdf.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb">
+      <file leaf-file-name="view_student_certificates.pdf.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/students/view_student_certificates.pdf.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="200">
+              <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Erb File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -111,7 +151,13 @@
       <find>pdf</find>
       <find>certificate</find>
       <find>reset_</find>
+      <find>emojiList</find>
+      <find>@receipt_template</find>
     </findStrings>
+    <replaceStrings>
+      <replace>codeList</replace>
+      <replace>@bonafide_template</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -125,17 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/standards/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/posts/_post.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/api/posts/index.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/models/post.rb" />
-        <option value="$PROJECT_DIR$/app/models/post_attachment.rb" />
-        <option value="$PROJECT_DIR$/app/views/post_attachments/_post_attachment.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/views/api/posts/_post.json.jbuilder" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/office_expenses_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
@@ -167,15 +202,26 @@
         <option value="$PROJECT_DIR$/app/controllers/api/student_certificates_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/api/student_certificates/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/student_certificates/index.json.jbuilder" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/pdf.html" />
         <option value="$PROJECT_DIR$/config/initializers/wicked_pdf.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" />
         <option value="$PROJECT_DIR$/app/views/student_fee_payments/fee_statement.pdf.erb" />
         <option value="$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb" />
+        <option value="$PROJECT_DIR$/app/views/my_templates/_edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/my_templates/_form.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/students/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/students_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/attendance.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/attendances_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/attendances/index.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/my_templates/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/students_helper.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/students/view_student_certificates.pdf.erb" />
       </list>
     </option>
   </component>
@@ -207,7 +253,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,15 +273,94 @@
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="attendances" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="attendances" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="my_templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="student_fee_payments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,20 +376,154 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/api/notifications" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.fonts" />
       <recent name="$PROJECT_DIR$/app/views/api/student_certificates" />
       <recent name="$PROJECT_DIR$/app/controllers/api" />
       <recent name="$PROJECT_DIR$/app/assets/javascripts" />
       <recent name="$PROJECT_DIR$/app/assets/images" />
-      <recent name="$PROJECT_DIR$/app/views/api/notifications" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/views/api/notifications" />
     </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="bjA3aWtiNFVEVzBxeVpsTmhZUmZGOHhhS0lIWlNSUHJTWFR6eC9jdkxsVkFBTldTNlgxakR3cVk2Rmlsc0ZFZThOa2Y3TVNvbGo0cGpIdGR3S3BvR2JJdUZwLzRuT09qaDduYXM3WjYxR09vaDVhcFF1aEFsVVkyc21LdlNuNTJMRGRHT1FOVUFvendFUks3VkdGd0wvSW9PVjBOTy8wZXNvaTZQMXh1emozakUvcHorSVpHMW5RaldlVEMzamNhNm5HQ1ArQ3gzSGRWY1JZUGFKVGdQQ0lBU0RENmxIT0swY09ZWWF0RlFBUT0tLVBFVndBU01LS1RtTkhFamduWmlUU2c9PQ%3D%3D--083f16a6d900221780f3b65e43c7fdf1a6de59e4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/attendances" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="oEQOuoELfNpeLbqbFlZJig" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="UYfWS2NVoVyS2LvvzV6B6Q" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1526754932" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="SmJjUnBOTlBPdmF4Y2FIaXY2T1Y0elJyYld1OWtLRS9YTVg4RnIzMzlzUGRFakRPOEhNbTF5bEw3VEswMUUwZ2ZOUUs5RE9WYmdQWSszUUpEV1VyclBlYUxDU3hsTzNSL1FzOExBUWZKL1pLQXJPbFh4YnRXcStHNGpDY24wRTFoV2pSc21vaDM5NE9oT1VOTkd2aVRwUkpsZW0veVdYcXRmV0dsSEZRWGRZdEVweG5XcWR3UlVwck1UaUZ5T1dnMEhSRlVYV2FDQ1UyQlJ4cFQ0OFZWRVlhSTdDVTJiUDZwUkh3MVZ4Wk5yVT0tLTNCSm1sdkNKU3BjZGxrcDMvTFVjT0E9PQ%3D%3D--0ecacd9ed0de60487976d02ec9a2f2f2c68c7564" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/attendances" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="oEQOuoELfNpeLbqbFlZJig" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="UYfWS2NVoVyS2LvvzV6B6Q" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1526754932" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -3461,132 +3723,6 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="L2xXeUphNVEyK1R5M2ttZk1MMnFadXlKYzVkZ2gvNmdpZ05JTFd4cENpdmRIMFJwM0FnYStCT3RqbFY1UzZKZ3JpUEpRdHdyUlVmWmRna1NSS0pLMTkvWUl0NloxcS96SHZGWnN5a0g4aVhVRmhIelNaNy96SmZQc2ROWS9mYWtaLy9IY2xCY3JrMVl0OGxsL1BYdVZBPT0tLWlvTmgrMlduejFwYlNKblhYTDZscmc9PQ%3D%3D--778f639bf23334f3612f6147690623ede4a08865" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/parents/1" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="email" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede777@" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="1jqNZeg8eNvOG9MoP-QF5A" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="VUm0d3sfqdw4wd4rgZffdg" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1526754932" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="L2xXeUphNVEyK1R5M2ttZk1MMnFadXlKYzVkZ2gvNmdpZ05JTFd4cENpdmRIMFJwM0FnYStCT3RqbFY1UzZKZ3JpUEpRdHdyUlVmWmRna1NSS0pLMTkvWUl0NloxcS96SHZGWnN5a0g4aVhVRmhIelNaNy96SmZQc2ROWS9mYWtaLy9IY2xCY3JrMVl0OGxsL1BYdVZBPT0tLWlvTmgrMlduejFwYlNKblhYTDZscmc9PQ%3D%3D--778f639bf23334f3612f6147690623ede4a08865" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/auth/sign_in" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="email" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede777@" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="Iprcbtce1D4D5NxNw7YAzQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="USy7egZPI37E95kow5Xwnw" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1526754932" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -3784,14 +3920,12 @@
       <workItem from="1529693451870" duration="1837000" />
       <workItem from="1529739909822" duration="1216000" />
       <workItem from="1529788244793" duration="2248000" />
-      <workItem from="1529817006676" duration="1993000" />
-    </task>
-    <task id="LOCAL-00016" summary="added some new REST process for API.">
-      <created>1527423507682</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1527423507682</updated>
+      <workItem from="1529817006676" duration="3475000" />
+      <workItem from="1529915893902" duration="18817000" />
+      <workItem from="1530000391325" duration="830000" />
+      <workItem from="1530103754391" duration="598000" />
+      <workItem from="1530107866436" duration="1793000" />
+      <workItem from="1530176518008" duration="796000" />
     </task>
     <task id="LOCAL-00017" summary="Changes in links of sidebars, redesigned parents module. and added function to change student_id of parents account in Users module">
       <created>1527506260542</created>
@@ -4129,15 +4263,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529858019958</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="checking marathi in pdf">
+      <created>1529859649340</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1529859649340</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263394000" />
+    <option name="totallyTimeSpent" value="287710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -4147,12 +4287,12 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5003358" side_tool="true" weight="0.49331552" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3382353" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3382353" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.328877" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966422" weight="0.37566844" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966422" weight="0.5093333" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.33512425" />
+      <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.35997313" />
       <window_info anchor="right" id="Database" order="6" weight="0.30288786" />
       <window_info id="Structure" order="1" sideWeight="0.5013369" side_tool="true" weight="0.29617193" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -4164,7 +4304,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.328877" />
-      <window_info anchor="right" id="REST Client" order="9" weight="0.6615178" />
+      <window_info anchor="right" id="REST Client" order="9" weight="0.6601746" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -4220,218 +4360,107 @@
     <option name="LAST_COMMIT_MESSAGE" value="checking marathi in pdf" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/initializers/wicked_pdf.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="280">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/student_fee_payments/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/office_expenses_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/office_expenses/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/office_expenses/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="65" selection-start-line="1" selection-end-line="1" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/office_expenses/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/posts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/office_expenses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/office_expenses/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fee_categories/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3088d0e6-bf58-4bee-b959-1e919ea5181e/schema/SchoolCon_v1_development/table/post_attachments">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/uploaders/post_attachment_uploader.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="47" column="46" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/teachers/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2640" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3088d0e6-bf58-4bee-b959-1e919ea5181e/schema/SchoolCon_v1_development/table/posts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/post_attachment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/subjects/_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/subjects/new.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/post_attachments/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/post_attachments/edit.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/post_attachments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/post_attachments/_edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/post_attachments/_new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/students_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="12" column="22" selection-end-line="12" selection-end-column="22" />
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/post_attachments/new.js.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="3540">
+          <caret line="177" column="22" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/post_attachments/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/students/view_student_certificates.pdf.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+        <state relative-caret-position="200">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="298" column="43" selection-start-line="298" selection-start-column="43" selection-end-line="298" selection-end-column="43" />
+        <state relative-caret-position="1440">
+          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="35" column="81" selection-start-line="35" selection-start-column="81" selection-end-line="35" selection-end-column="81" />
+        <state relative-caret-position="280">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/students_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3540">
+          <caret line="177" column="22" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/view_student_certificates.pdf.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3540">
+          <caret line="177" column="22" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/view_student_certificates.pdf.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/students_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="105" selection-start-line="2" selection-start-column="105" selection-end-line="2" selection-end-column="105" />
         </state>
       </provider>
     </entry>
@@ -4505,13 +4534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/dashboard_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-540" />
@@ -4531,20 +4553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="388" column="58" selection-start-line="388" selection-start-column="47" selection-end-line="388" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/wicked_pdf.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -4554,22 +4562,157 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
+        <state relative-caret-position="377">
           <caret line="90" column="64" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/my_templates/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/my_templates/_edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/my_templates/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-164">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/student_certificates_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="88" column="74" selection-start-line="88" selection-start-column="74" selection-end-line="88" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/standards/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="46" column="64" selection-start-line="44" selection-start-column="18" selection-end-line="46" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="400" column="84" selection-start-line="400" selection-start-column="84" selection-end-line="400" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/student.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="180">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/attendance.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/students/_student.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/attendances_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/attendances/index.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="76" selection-start-column="76" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="109" selection-start-column="109" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/students_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3540">
+          <caret line="177" column="22" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/student_fee_payments_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/academic_years_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1438" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/my_templates/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/students_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="129" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="129" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="280">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/view_student_certificates.pdf.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
         </state>
       </provider>
     </entry>

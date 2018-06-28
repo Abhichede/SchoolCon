@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: %i[show edit update destroy add_leaving_certificate]
+  before_action :set_student, only: %i[show edit update destroy add_leaving_certificate view_student_certificates]
 
   load_and_authorize_resource
 
@@ -170,6 +170,16 @@ class StudentsController < ApplicationController
     respond_to do |format|
       format.pdf do
         render pdf: "students", encoding: 'UTF-8'   # Excluding ".pdf" extension.
+      end
+    end
+  end
+
+  def view_student_certificates
+    @bonafide_template = MyTemplate.find_by_name(params[:type])
+
+    respond_to do |format|
+      format.pdf do
+        render pdf: "#{@student.self_full_name}_#{params[:type]}", encoding: 'UTF-8'   # Excluding ".pdf" extension.
       end
     end
   end

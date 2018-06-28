@@ -1,0 +1,13 @@
+<style>
+  table, tr, td, th, tbody, thead, tfoot {
+    page-break-inside: avoid !important;
+  }
+  body{
+    background-color: #ffffff !important;
+  }
+</style>
+<div class="pdf">
+  <% fill_certificate_template %>
+  <%= wicked_pdf_image_tag current_institute.logo.url, height: 80, width: 180 %>
+  <%= @bonafide_template.desc.html_safe if @bonafide_template %>
+</div>

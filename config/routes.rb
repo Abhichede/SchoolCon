@@ -86,6 +86,7 @@ Rails.application.routes.draw do
   # ==> Students
   get 'students_list', to: 'students#print_students_list'
   post 'update_parent', to: 'students#update_parent_from_view', as: 'update_parent'
+  get 'view_student_certificates', to: 'students#view_student_certificates'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

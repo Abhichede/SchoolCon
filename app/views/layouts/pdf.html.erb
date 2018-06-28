@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -5,4 +7,10 @@
   <%= wicked_pdf_stylesheet_link_tag 'application' %>
 </head>
 
-<%= yield %>
+<body>
+<div id="content">
+  <%= yield %>
+</div>
+</body>
+
+</html>
