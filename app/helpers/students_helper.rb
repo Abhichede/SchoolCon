@@ -9,7 +9,7 @@ module StudentsHelper
     @bonafide_template.desc.gsub! '#{student_name}', @student.self_full_name
     @bonafide_template.desc.gsub! '#{student_contact}', @student.student_mobile
     @bonafide_template.desc.gsub! '#{student_mother_name}', @student.mother_first_name
-    @bonafide_template.desc.gsub! '#{student_father_name}', @student.father_first_name
+    @bonafide_template.desc.gsub! '#{student_father_name}', @student.father_full_name
     @bonafide_template.desc.gsub! '#{admission_year}', "#{@student.joining_date.to_date.year}"
     @bonafide_template.desc.gsub! '#{academic_year}', @student.academic_years.last.end_year
     @bonafide_template.desc.gsub! '#{student_dob}', @student.date_of_birth
@@ -18,5 +18,9 @@ module StudentsHelper
     @bonafide_template.desc.gsub! '#{student_standard}', @student.standards.last.name
     @bonafide_template.desc.gsub! '#{student_division}', @student.divisions.last.name
     @bonafide_template.desc.gsub! '#{date}', Date.today.to_s
+
+    @bonafide_template.desc.gsub! '#{student_admission_date}', @student.joining_date
+    @bonafide_template.desc.gsub! '#{student_first_class}', @student.standards.first.name
+    @bonafide_template.desc.gsub! '#{student_nationality}', @student.nationality
   end
 end

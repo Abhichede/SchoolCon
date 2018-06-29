@@ -402,6 +402,14 @@
                                       :class => 'btn btn-info btn-xs' %>
                         </span>
                       </li>
+                      <li class="list-group-item">
+                        <strong>Leaving certificate</strong>
+                        <span class="pull-right">
+                                                <%= link_to 'View/Download',
+                                                            view_student_certificates_path(type: 'Leaving certificate', id: @student, format: 'pdf'),
+                                                            :class => 'btn btn-info btn-xs' %>
+                                              </span>
+                      </li>
                     </ul>
                   </div>
                 </div>
