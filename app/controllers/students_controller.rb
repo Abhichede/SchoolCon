@@ -179,7 +179,7 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       format.pdf do
-        render pdf: "#{@student.self_full_name}_#{params[:type]}", encoding: 'UTF-8'   # Excluding ".pdf" extension.
+        render pdf: "#{@student.self_full_name}_#{params[:type]}", encoding: 'UTF-8'  # Excluding ".pdf" extension.
       end
     end
   end
