@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :holidays
   resources :office_expenses
   resources :post_attachments
   resources :posts
@@ -28,6 +29,8 @@ Rails.application.routes.draw do
     resources :teachers
     # ==> Student's certificates
     resources :student_certificates
+    # ==> Holidays
+    resources :holidays
   end
   resources :school_infos
   resources :my_templates

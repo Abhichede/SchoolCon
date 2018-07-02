@@ -113,7 +113,6 @@ class NotificationsController < ApplicationController
         format.html { redirect_to session.delete(:return_to), notice: "Notification was sent successfully." }
         format.json { render :show, status: :created, location: @notification }
       end
-
     end
   end
 
