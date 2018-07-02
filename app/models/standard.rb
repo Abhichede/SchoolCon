@@ -9,6 +9,7 @@ class Standard < ApplicationRecord
   has_many :attendances
   has_many :fee_categories, dependent: :destroy
   has_many :class_teachers
+  has_many :homeworks
 
   def total_allocated_fee
     fee = 0

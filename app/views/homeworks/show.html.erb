@@ -1,0 +1,25 @@
+<%- model_class = Homework -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @homework.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @homework.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:standard_id) %>:</strong></dt>
+  <dd><%= @homework.standard_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:attachment) %>:</strong></dt>
+  <dd><%= @homework.attachment %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              homeworks_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_homework_path(@homework), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              homework_path(@homework),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
