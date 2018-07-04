@@ -34,6 +34,8 @@ Rails.application.routes.draw do
     resources :holidays
     # ==> Homeworks
     resources :homeworks
+    # ==> TimeTable
+    resources :time_tables
   end
   resources :school_infos
   resources :my_templates

@@ -11,4 +11,8 @@ class TimeTable < ApplicationRecord
   def end_time_local
     end_time.strftime("%I:%M %p")
   end
+
+  def teacher_name
+    teacher.fullname
+  end
 end

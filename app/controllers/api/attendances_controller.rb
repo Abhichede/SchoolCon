@@ -4,10 +4,10 @@ module Api
 
     def index
       @academic_year = AcademicYear.where(is_active: true).last
-      if !params[:student_id].blank?
+      if !params[:student_id].blank? && !params[:date].blank?
         @student = Student.find(params[:student_id])
         @division = @student.divisions.last
-        @attendances = @division.attendances.where(academic_year_id: @academic_year.id)
+        @attendances = @division.attendances.where(academic_year_id: @academic_year.id, date: params[:date])
       else
         @attendances = Attendance.where(academic_year_id: @academic_year.id)
       end

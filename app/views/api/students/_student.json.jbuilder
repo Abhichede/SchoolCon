@@ -21,23 +21,3 @@ json.caste {
 json.religion {
   json.partial! "religions/religion", religion: student.religion
 }
-json.timetable_monday{
-  json.array! student.timetable("Monday"), partial: 'time_tables/time_table', as: :time_table
-}
-json.timetable_tuesday{
-  json.array! student.timetable("Tuesday"), partial: 'time_tables/time_table', as: :time_table
-}
-json.timetable_wednesday{
-  json.array! student.timetable("Wednesday"), partial: 'time_tables/time_table', as: :time_table
-}
-json.timetable_thursday{
-  json.array! student.timetable("Thursday"), partial: 'time_tables/time_table', as: :time_table
-}
-json.timetable_friday{
-  json.array! student.timetable("Friday"), partial: 'time_tables/time_table', as: :time_table
-}
-json.timetable_saturday{
-  json.array! student.timetable("Saturday"), partial: 'time_tables/time_table', as: :time_table
-}
-
-json.url student_url(student, format: :json)

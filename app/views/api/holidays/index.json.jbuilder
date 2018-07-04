@@ -1,1 +1,1 @@
-json.array! @holidays, partial: 'holidays/holiday', as: :holiday
+json.array! @holidays, partial: 'api/holidays/holiday', as: :holiday

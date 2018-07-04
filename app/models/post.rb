@@ -3,6 +3,6 @@ class Post < ApplicationRecord
   accepts_nested_attributes_for :post_attachments
 
   def created_at_local
-    created_at.strftime("%d-%m-%Y %I:%M %p")
+    created_at.strftime("%d-%b-%Y %I:%M %p")
   end
 end
