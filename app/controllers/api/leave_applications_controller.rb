@@ -36,7 +36,10 @@ module Api
       @classteacher = @student.divisions.last.class_teacher
 
       @leave_application.save
-      @leave_application.update(teacher_id: @classteacher.teacher.id)
+      unless @classteacher.nil?
+        @leave_application.update(teacher_id: @classteacher.teacher.id)
+      end
+
 
       # respond_to do |format|
       #   if @leave_application.save
