@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180702104322) do
+ActiveRecord::Schema.define(version: 20180707085301) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -122,6 +122,19 @@ ActiveRecord::Schema.define(version: 20180702104322) do
     t.string "attachment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "division_id"
+    t.date "date"
+  end
+
+  create_table "leave_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "subject"
+    t.text "message"
+    t.boolean "is_approved"
+    t.datetime "seen_date"
+    t.integer "teacher_id"
+    t.integer "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "my_templates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -155,6 +168,14 @@ ActiveRecord::Schema.define(version: 20180702104322) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "date"
+  end
+
+  create_table "parent_messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "student_id"
+    t.integer "teacher_id"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "parents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

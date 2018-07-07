@@ -18,6 +18,9 @@ class Student < ApplicationRecord
   has_many :student_wise_instant_fees, dependent: :destroy
   has_many :student_certificates, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_many :leave_applications
+  has_many :parent_messages
+
 
   attr_accessor :siblings
 

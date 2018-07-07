@@ -1,0 +1,69 @@
+<%= form_for @leave_application, :html => { :class => "form-horizontal leave_application" } do |f| %>
+
+  <% if @leave_application.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@leave_application.errors.count, "error") %> prohibited this leave_application from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @leave_application.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :subject, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :subject, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:subject) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :message, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :message, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:message) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :is_approved, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :is_approved, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:is_approved) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :seen_date, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :seen_date, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:seen_date) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :teacher_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :teacher_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:teacher_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :student_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :student_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:student_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                leave_applications_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

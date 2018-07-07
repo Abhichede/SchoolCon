@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :parent_messages
+  resources :leave_applications
   resources :homeworks
   resources :holidays
   resources :office_expenses
@@ -36,6 +38,10 @@ Rails.application.routes.draw do
     resources :homeworks
     # ==> TimeTable
     resources :time_tables
+    # ==> Leave Application
+    resources :leave_applications
+    # ==> Parent Messages
+    resources :parent_messages
   end
   resources :school_infos
   resources :my_templates

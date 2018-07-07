@@ -1,1 +1,1 @@
-json.array! @homeworks, partial: 'homeworks/homework', as: :homework
+json.array! @homeworks, partial: 'api/homeworks/homework', as: :homework

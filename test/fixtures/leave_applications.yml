@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  message: MyText
+  is_approved: false
+  seen_date: 2018-07-07 13:09:28
+  teacher_id: 1
+  student_id: 1
+
+two:
+  subject: MyString
+  message: MyText
+  is_approved: false
+  seen_date: 2018-07-07 13:09:28
+  teacher_id: 1
+  student_id: 1

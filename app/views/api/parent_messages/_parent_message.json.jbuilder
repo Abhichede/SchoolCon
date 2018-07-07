@@ -1,0 +1,1 @@
+json.extract! parent_message, :id, :message, :created_at

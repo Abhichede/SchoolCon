@@ -3,6 +3,8 @@ class Teacher < ApplicationRecord
   has_many :time_tables
   has_many :attendances
   has_many :class_teachers
+  has_many :leave_applications
+  has_many :parent_messages
 
 
   def fullname

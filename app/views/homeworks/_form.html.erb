@@ -16,6 +16,13 @@
   <% end %>
 
   <div class="form-group">
+    <%= f.label :date, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-6">
+      <%= f.text_field :date, :class => 'form-control' %>
+    </div>
+    <%= f.error_span(:date) %>
+  </div>
+  <div class="form-group">
     <%= f.label :name, :class => 'control-label col-lg-2' %>
     <div class="col-lg-6">
       <%= f.text_field :name, :class => 'form-control' %>
@@ -38,6 +45,7 @@
   </div>
 
   <%= f.hidden_field :standard_id, value: @homework.standard_id.blank? ? params[:standard_id] : @homework.standard_id %>
+  <%= f.hidden_field :division_id, value: @homework.division_id.blank? ? params[:division_id] : @homework.division_id %>
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-6">
@@ -48,3 +56,11 @@
   </div>
 
 <% end %>
+
+<script type="text/javascript">
+    $(function () {
+        $('#homework_date').datetimepicker({
+            format: 'DD-MM-YYYY'
+        });
+    });
+</script>

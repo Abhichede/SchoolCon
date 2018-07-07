@@ -5,4 +5,6 @@ class Division < ApplicationRecord
   belongs_to :standard
   has_many :attendances, dependent: :destroy
   has_one :class_teacher
+
+  has_many :homeworks
 end

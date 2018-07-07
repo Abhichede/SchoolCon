@@ -148,7 +148,7 @@ $(document).ready(function () {
 
     });
 
-     $('.btn-primary, .btn-success, .btn-default, .fc-content, btn-spinner').on('click', function () {
+     $('.btn-primary, .btn-success, .fc-content, btn-spinner').on('click', function () {
          on();
      });
     /**
