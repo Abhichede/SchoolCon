@@ -1,0 +1,1 @@
+json.extract! academic_year, :id, :academic_year, :start_date, :end_date, :current_year
