@@ -48,6 +48,9 @@ Rails.application.routes.draw do
     resources :standards
     # ==> Divisions
     resources :divisions
+    # ==> Academic Year
+    resources :academic_years
+    get 'get_current_academic_year', to: 'academic_years#get_current_academic_year'
   end
   resources :school_infos
   resources :my_templates
