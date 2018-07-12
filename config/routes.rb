@@ -42,6 +42,12 @@ Rails.application.routes.draw do
     resources :leave_applications
     # ==> Parent Messages
     resources :parent_messages
+    # ==> Subjects
+    resources :subjects
+    # ==> Standards
+    resources :standards
+    # ==> Divisions
+    resources :divisions
   end
   resources :school_infos
   resources :my_templates

@@ -41,7 +41,7 @@ class TeachersController < ApplicationController
         if @user = User.find_by_email(@teacher.email)
           @user.update(student_id: @teacher.id)
         else
-          User.create(email: @teacher.email, password: "#{@teacher.first_name}#{@teacher.contact}", password_confirmation: "#{@teacher.first_name}#{@teacher.contact}", student_id: @teacher.id, roles_mask: 2, username: @teacher.contact)
+          User.create(email: @teacher.email, password: "#{@teacher.first_name}#{@teacher.contact}", password_confirmation: "#{@teacher.first_name}#{@teacher.contact}", student_id: @teacher.id, roles_mask: 2, username: @teacher.contact, confirmed_at: Time.now, approved: true)
         end
         format.html { redirect_to @teacher, notice: 'Teacher was successfully created.' }
         format.json { render :show, status: :created, location: @teacher }
@@ -69,6 +69,8 @@ class TeachersController < ApplicationController
   # DELETE /teachers/1
   # DELETE /teachers/1.json
   def destroy
+    @user = User.find_by_email(@teacher.email)
+    @user.destroy unless @user.nil? && @user.roles == 'Teacher'
     @teacher.destroy
     respond_to do |format|
       format.html { redirect_to teachers_url, notice: 'Teacher was successfully destroyed.' }

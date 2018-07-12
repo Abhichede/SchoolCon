@@ -3,7 +3,12 @@ module Api
     before_action :set_student, only: %i[show]
 
     def index
-      @students = Student.all
+      if params[:division_id]
+        @division = Division.find(params[:division_id])
+        @students = @division.students
+      else
+        @students = Student.all
+      end
     end
 
 

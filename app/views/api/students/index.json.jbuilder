@@ -1,4 +1,4 @@
-json.array! @students, partial: 'students/student', as: :student
+json.array! @students, partial: 'api/students/student_all', as: :student
 
 # json.students @students do |student|
 #   json.id student.id
