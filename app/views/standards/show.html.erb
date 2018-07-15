@@ -1,6 +1,21 @@
 <%- model_class = Standard -%>
 <% add_breadcrumb @standard.name + " standard", standard_path(@standard) %>
-
+<div class="row">
+  <div class="col-lg-offset-10 col-lg-2 col-md-2 col-md-offset-10">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Subjects
+      </div>
+      <div class="panel-body">
+        <ul class="list-group">
+          <% @standard.subjects.each do |s| %>
+            <li class="list-group-item"><%= s.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="row">
   <div class="col-lg-2">
     <div class="panel panel-default">

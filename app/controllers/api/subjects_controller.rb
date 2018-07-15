@@ -7,6 +7,9 @@ module Api
       if params[:teacher_id]
         @teacher = Teacher.find(params[:teacher_id])
         @subjects = @teacher.subjects
+      elsif params[:standard_id]
+        @standard = Standard.find(params[:standard_id])
+        @subjects = @standard.subjects
       else
         @subjects = Subject.all
       end
