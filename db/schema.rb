@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180707085301) do
+ActiveRecord::Schema.define(version: 20180716092452) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20180707085301) do
   end
 
   create_table "attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "date"
+    t.date "date"
     t.integer "standard_id"
     t.integer "division_id"
     t.integer "teacher_id"
