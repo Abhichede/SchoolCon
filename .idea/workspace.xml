@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/attendances_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/attendances_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/attendances_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/attendances_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/api/parents/_student.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/parents/_student.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180716092452_change_column_type_from_attendances.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180716092452_change_column_type_from_attendances.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -102,23 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20180716092452_change_column_type_from_attendances.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="20180716092452_change_column_type_from_attendances.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20180716092452_change_column_type_from_attendances.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attendances" pinned="false" current-in-tab="true">
-        <entry file="das://3088d0e6-bf58-4bee-b959-1e919ea5181e/schema/SchoolCon_v1_development/table/attendances">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-              <column-attributes>
-                <column name="att_data" languageId="JSON" />
-              </column-attributes>
+            <state relative-caret-position="40">
+              <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -162,7 +146,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response43.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response47.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -397,6 +381,220 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="ZnZOcnArUlE4YUZTaWZWc3dXSlY4Nmc1WVB1NnY5WUcyN2MrWHJmRkpIOVhhMDdFOWdFdDZocEhRM3Npa0k2NDBhdTllaVp6WHkvUVlhbkdhWTl5dUlPOS9FQXFTWldOTWJRNDZCYlpmQTFXOVAvZU1sUUhtV1VlOVl0YUFIbmlzdHhEZWZvaklRZGRjdDRiRittWXp3PT0tLTZTT0tndXlhMnN4Tll3Y1RnQThSUHc9PQ%3D%3D--2d8fa7d0e33f3d83b1c862d8cccafb1086475c08" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/attendances" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1561618207" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="16" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="16-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Q2xab0tDWWx2NFpUdktWRlJ6dlJVWGQ3aUdEY2FNOVp1d1Q3YlBlWVdCalpTbFNVcXVZaXA4MmVvUU5tbjdUOUxub3ZwWnRHUVZxemVTaDlzWUlhVDBLZU9vMFhkaWQ3Z2prQTZpVTl6YmdPZWdVZ0RqdUZBbnpLSEVjakNlWXpObytzUGZWRzRneW5KT2NNc2NrNVVnPT0tLW5LK0J0cGtPSmRkVE5oV1l5cjlKOVE9PQ%3D%3D--a3fc3736ad669f82fc12911fd4a1a97e0b4a0ce7" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/attendances" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1561618207" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="16" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="16-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -4559,198 +4757,6 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="TW14QlpUUkYzWGhSQmpsZlhGY2E1bE5yQmdvRXhBQkh5MWJjMzJoOVNXOGdnaXZUYzdUYjl4WmtvWm1NTVUxMDNmQTNCdXprbVdDc2ZpT0g4QW9YVzMwSHNCRGVDQ25BMGRyVCttNmtOK3lqU2pKSUdBYk1GaWlORnkzMHdyc2I1V2FFd0ZaM3JuQXprKzhGVFVHbnRBPT0tLUlzMm1GeE1XaTJVSGg4NDZDejRDcGc9PQ%3D%3D--0c2b2aca30b35eba7d9e7eced68335c088e2b6cc" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="'16-07-2018'" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="VWUyK1JSbTZpVGxxaS9QVGU4WnUvRXRNeE1pRVJFT3ltNW41OWZtTmdSUER3WEdzSkg0UXRNemsrcStOcmRlenB4cnJKQ2ZnTzJSR3JBMGoxRlV3Q01JWWdNRkdzZG8zRHkybVlsd0kwT1prdVRnQzdvemtOWW9zcURDV2J4SVlWb29NWEhPNWNiMGdvbFpYYmxhQWx3PT0tLTJNNVRReWVsVWV6YkMwWHhpY0t6eWc9PQ%3D%3D--6a6b9a4780e00a66c7f76ae5333543da8aded46e" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="'16-07-2018'" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[academic_year_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[standard_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[division_id]" />
-                <option name="value" value="2" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[teacher_id]" />
-                <option name="value" value="4" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[subject_id]" />
-                <option name="value" value="2" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[date]" />
-                <option name="value" value="17-07-2018" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[att_data][1]" />
-                <option name="value" value="on" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[att_data][2]" />
-                <option name="value" value="on" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="attendance[att_data][3]" />
-                <option name="value" value="on" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -4971,14 +4977,7 @@
       <workItem from="1531602579017" duration="16000" />
       <workItem from="1531639566227" duration="2742000" />
       <workItem from="1531726636267" duration="5282000" />
-      <workItem from="1531732075665" duration="2085000" />
-    </task>
-    <task id="LOCAL-00032" summary="New seed added for enquiry message, then some SMS template changes as well as chart for attendance hide for some time.">
-      <created>1527840330455</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1527840330455</updated>
+      <workItem from="1531732075665" duration="3173000" />
     </task>
     <task id="LOCAL-00033" summary="New seed added for enquiry message, then some SMS template changes as well as chart for attendance hide for some time.">
       <created>1527844280683</created>
@@ -5316,11 +5315,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531640720604</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="subject standard wise">
+      <created>1531734406322</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1531734406325</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370482000" />
+    <option name="totallyTimeSpent" value="371570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
@@ -5339,7 +5345,6 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.328877" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49899262" weight="0.7286096" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.328877" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.27669576" />
       <window_info anchor="right" id="Database" order="6" weight="0.30288786" />
@@ -5352,6 +5357,7 @@
       <window_info anchor="bottom" id="Messages" order="9" weight="0.328877" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.328877" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -5745,13 +5751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180716092452_change_column_type_from_attendances.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/attendances_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -5766,6 +5765,13 @@
           <column-attributes>
             <column name="att_data" languageId="JSON" />
           </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180716092452_change_column_type_from_attendances.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
         </state>
       </provider>
     </entry>
