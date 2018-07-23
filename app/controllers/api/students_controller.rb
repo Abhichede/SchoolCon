@@ -11,6 +11,11 @@ module Api
       end
     end
 
+    def student_fee_summary
+      if params[:student_id]
+        @student = Student.find(params[:student_id])
+      end
+    end
 
     def show; end
 

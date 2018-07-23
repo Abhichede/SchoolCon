@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :parents
     # ==> Student Fee Payments
     resources :student_fee_payments
+    get 'student_fee_summary', to: 'students#student_fee_summary'
     # ==> Student Attendances
     resources :attendances
     # ==> Notifications
