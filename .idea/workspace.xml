@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05934a77-b177-49fc-b3d2-42d1bc176178" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/api/students/student_fee_summary.json.jbuilder" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/students_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/students_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/student.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/student.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/api/students/student_fee_summary.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/students/student_fee_summary.json.jbuilder" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -82,65 +83,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="monthly_summary.json.jbuilder" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/api/attendances/monthly_summary.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attendances_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/attendances_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="74" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8400">
-              <caret line="420" column="34" selection-start-line="420" selection-start-column="34" selection-end-line="420" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/student.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="134" column="109" selection-start-line="134" selection-start-column="109" selection-end-line="134" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student_fee_summary.json.jbuilder" pinned="false" current-in-tab="true">
+      <file leaf-file-name="student_fee_summary.json.jbuilder" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/api/students/student_fee_summary.json.jbuilder">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+            <state relative-caret-position="40">
+              <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="_notification.json.jbuilder" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_student.json.jbuilder" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/api/students/_student.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+            <state relative-caret-position="20">
+              <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -148,8 +104,26 @@
       <file leaf-file-name="students_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/students_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+            <state relative-caret-position="320">
+              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/student.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="133" column="61" selection-start-line="133" selection-start-column="61" selection-end-line="133" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_student.json.jbuilder" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/api/students/_student.json.jbuilder">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="58" selection-start-line="6" selection-start-column="14" selection-end-line="7" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -192,10 +166,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response19.json" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/api/leave_applications/create.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/api/teachers/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/teachers/show.json.jbuilder" />
@@ -242,10 +218,11 @@
         <option value="$PROJECT_DIR$/app/views/api/attendances/monthly_summary.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/controllers/api/attendances_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180716092452_change_column_type_from_attendances.rb" />
-        <option value="$PROJECT_DIR$/app/models/student.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/students_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/students_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/student.rb" />
         <option value="$PROJECT_DIR$/app/views/api/students/student_fee_summary.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" />
       </list>
     </option>
   </component>
@@ -277,9 +254,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -330,6 +307,22 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="holidays" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="notifications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="students" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -348,7 +341,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,6 +371,1602 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="ZWR5TXdVVEZWaGNhSmVDcFRTaVcyeCtyUEtveTJYWE5mZHZzTlhVZFVFZnBxV2MzbXE5Qjh0OFM0NXlWM2JNT3QzV09IcnJTWUh3eUl0WlRxaFU0TkNibkdkMm4xYm45VnhJQitacTBXMjE5c3B0T0hmb1NSVmU4cDQ3RTQ5Y0dCcVB6dGkzTUN1aTcveXVBMTNDOUlBPT0tLWc2MUtBMURmOXduY3dPTWwveEUzU2c9PQ%3D%3D--970505257a5781e4fd41346048b0d92d53ef4e13" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/notifications" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="c1c0M002T0d6N3F5ZnJqb3QwUGNZWVJNUlJqL3lzZlBjZUxyS2xqZDZOTmpCVnNTUkhTdGoweGo1RTZ6bU10S2o3Qkt6Yk1CdWlVRm9rM2UybzdmM25wcjgxVFF0Wmk0MU1aZWtMWkxZLzdUWXZqcHdCendiRUpvcXRpOHpRM1h6S0JORTBta3dpK25ralliLzV3Mnp3PT0tLVpKSWZUOFNWZFVpUHA2Qlk5cXA3WVE9PQ%3D%3D--da97dc22a85df771ff76b907fc85c824560a36a1" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/notifications" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="cDZzdVJJN1c3ekxXeUtzVCtvRlRKeXE3YWhnRmpWRzJYbWlFSkFuNXhnNnpXR3lzaUgyVHlKSXdXbVhXWWhJRkl3b1hUQTJxcFRpanFHclBoOEV4RHo1U1NDcG0wSUladUR4VXdpQkMyQ1lDck1TNmd2ZTlWOW1OcmxTb3VqYWZVVGJkL29PcmdQU1k0TTZja1o1QXRRPT0tLW5CM2lGdmFJL1FTN1BmUXBQMjNIeFE9PQ%3D%3D--d75f943660675ecaeef64fcff2cfaec210373207" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="YkF5YVFOWGs0SDNUZGZkRDBPbitxZXVrQkRsbjQvdWRHaHZHUGd1ZStaTTFGMVFPUDN6VkNjalAwMWw2bE1BL1p6VnhmSmN2aUZ1S2VadXNrdkxRVnpRb3dQV2JEZFcza0xjU0Y2V1RYaVpRVzZUZy9zdXRva3A3MFVianFIMzJXM2sreHBaWlFEbEZ4MTMvWExRbHNnPT0tLVF0M0x0Z1NrL3dVZythNmVoeFZ0TEE9PQ%3D%3D--7928df1cbb28848728ee86bbc914d00c77462ec2" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="U3NjWjM4bmlleXg0dFI4YzVrVkNzcTh3UUxOQTJMblJUbmw4dW5Kd3NvZ3RWUWxpb0lPRlgwZitPV3ZsdmVEOXVOWmhZVTJLOGl2N1ZBVnlwenV4QldpSXR3dFVhMWZiaGc5eUkrRlFYWXl4dmR0NzBKcSt2SStyRFVqa3VGYkVaTFdiZDM0VUVsUTByMnFQNDh2N0tRPT0tLTluOUFWQ2M3TEJjV1hMVkhFMUxFQUE9PQ%3D%3D--fb35457e78e35c24230346fb40eb6b763f6cdb11" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="ZlIrd3ZGS0JMUWlTMjhJQkRQejBxdUdlYURXczJmMEN5ZXM2elZ1ZlZ3NWJrUGZIUlAxYVdGVG1IOVlnclZvVDI3UFRxSzRMWFMyc2VoRkRYTmlmb3NXNnFwVnZlZTE5ODZwQ2V6YXVLc21MUldYYlBPTUlsQzl1MkZ5a2d1NnVWbEtKSW1YOTRnNEJ5cmVrTUFhQ253PT0tLU53enNXbUJTc3kxRXBZaHkyY2tOZGc9PQ%3D%3D--da1e60a06d852d0f781de2b54eafddb5b1e7d305" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="UWl0alQwby9zSzFwRnd4dGhOL2Noay9uWHQyQWlUTVFCQVd4bUxsMm40MFJvTXdFUVBCY1ZpYmFGT1V0amxyY3FNQlhCaGsvM0oyd0VJeWl6KzFwbWFCbkl4OVVnc0MzS2pqd2trSE1pbllyZHFRQURsbVh3K1RmWGhYcVdidmRMWnZVRXJySzhOdm8xUkhaRTVCU0V3PT0tLVl0c3IwVmp5Q2krTTRhUWNrU3ZIWUE9PQ%3D%3D--455df4587f8d009f88df72cdc03034f7ecc4c8ce" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="ajJmNUd5TmFnTjRpYWNPWUVmdXM0bFdUcmtoV3g1aEZRRk1mR0lPTFVSOXFEZVZidlY2VWQrOVJEblBtMVlsUGNXOHdRaFJXYldhL2RmVWVtRGlpNWtPRUU3TFdwSVRnOThLdTVSYlJhNHYxZy83S1Q0eS82bnFLUkhlUmVuRDJwckdGOGtTMElMdi9WMnNPY1hTOFlBPT0tLXVxSDdEdEZRcUQ2REV4N256L1krSVE9PQ%3D%3D--810845e7f58ccd4de8d800daf360b8c229da1e35" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="UE51ZUcvSzFLNjhvVnlLN1FpZEhuVWVwcTdzSENXaGNnTlRET3pmOHh6YjBEZzFodGJpT2NmR0pQT1NwK3Q3em50amVLamQxRDcrSDdWb0xlT0lneUdHNlVmREhzdUM1NmU1V1B5UGVCTDQ0bFFlYmNBMENKdHN1eWNkTkFQb0tlWDVNeitRK1U2eHl5OEFNU0xlWVZ3PT0tLXhwM2FmNVZhV2R0T1owQWVoWmJHWEE9PQ%3D%3D--6451c82a4ca196acf3c995446b621bc09e741f25" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="em9vTkxwekduSWdudGFTSTFtTGdDeFVONDZKZXAyNWlqV2x4Z3pKb0dIRnJyc1JHU0J4VWxBUyt0RVJQdHExb2trOXFJVlV2MTVFR1JjS25KNGg4SEFxZ3VnbGJiZ3J6alI2NHYrMFdIZE16a1ptTzArMmlBdlVyOVNkdnJxS1Q5NGFPbHY0NEZ2WWlZQ01UVk9IdUxBPT0tLVRlMS9YL0FybUxsMU5YQjl3RTMvcVE9PQ%3D%3D--3a0052f905b8df43daf38fd31d9643bf8b785d00" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="2zD7wfCvi52brq0XBZTazA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="HnNJbYG8IEarCBkV2-FfQA" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562573625" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="em9vTkxwekduSWdudGFTSTFtTGdDeFVONDZKZXAyNWlqV2x4Z3pKb0dIRnJyc1JHU0J4VWxBUyt0RVJQdHExb2trOXFJVlV2MTVFR1JjS25KNGg4SEFxZ3VnbGJiZ3J6alI2NHYrMFdIZE16a1ptTzArMmlBdlVyOVNkdnJxS1Q5NGFPbHY0NEZ2WWlZQ01UVk9IdUxBPT0tLVRlMS9YL0FybUxsMU5YQjl3RTMvcVE9PQ%3D%3D--3a0052f905b8df43daf38fd31d9643bf8b785d00" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/auth/sign_in" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="8805356039" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="8J80rNfe93Pgtdm5Q-WzLQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="Qfbe1ciicUfkdsxOqxyF4Q" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562225045" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="apsunde.sachin@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="em9vTkxwekduSWdudGFTSTFtTGdDeFVONDZKZXAyNWlqV2x4Z3pKb0dIRnJyc1JHU0J4VWxBUyt0RVJQdHExb2trOXFJVlV2MTVFR1JjS25KNGg4SEFxZ3VnbGJiZ3J6alI2NHYrMFdIZE16a1ptTzArMmlBdlVyOVNkdnJxS1Q5NGFPbHY0NEZ2WWlZQ01UVk9IdUxBPT0tLVRlMS9YL0FybUxsMU5YQjl3RTMvcVE9PQ%3D%3D--3a0052f905b8df43daf38fd31d9643bf8b785d00" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="TXdtY1h0d0Z1QW1RQ1VqbjFicEppQWlnOXVlSUJRR0ovYkpFSzVPYVpSMkYvUmw4SGxJZFAwUEhINGpGWkRwNGVEZFU3ZUppK3dNVmtYQU1EblA1YjRlcmJha2Y4dzg4RXFuTVVHSDZIbkhwSjJjbDVuWTBIYXo5dlU4OEhDYVRHOWdBaGJ2NkE0Q3EzcnpLaUdudFJ3PT0tLVp5d2tyR3JxUFZLT2Jwb3NJck1FMGc9PQ%3D%3D--93b7a79bef83a34cd2f6f58e06add9584b17abe4" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/api/auth/sign_in" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="8J80rNfe93Pgtdm5Q-WzLQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="Qfbe1ciicUfkdsxOqxyF4Q" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562225045" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="tashika.gaikwad@myschoolcon.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="em9vTkxwekduSWdudGFTSTFtTGdDeFVONDZKZXAyNWlqV2x4Z3pKb0dIRnJyc1JHU0J4VWxBUyt0RVJQdHExb2trOXFJVlV2MTVFR1JjS25KNGg4SEFxZ3VnbGJiZ3J6alI2NHYrMFdIZE16a1ptTzArMmlBdlVyOVNkdnJxS1Q5NGFPbHY0NEZ2WWlZQ01UVk9IdUxBPT0tLVRlMS9YL0FybUxsMU5YQjl3RTMvcVE9PQ%3D%3D--3a0052f905b8df43daf38fd31d9643bf8b785d00" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Z2FVc09Ya1lzaUlZOHNOOGtEMmszYWh1TTE2cVBxdUV0dkVIU1gzbGFJbjBlOU1wNFJ0dmRCTjArWFFCUDRoQ0pUWDcrcHZnUWZ6NG0rS0FhbUt6VTA0dFB3bDlXOVNvV3VDN2tMSWxPYWVIdGRaQUJHZzN5UnRxR0pIT2JDOCtndk91ejB3VFpzZjhrekNPUkxDMlF3PT0tLS9GK0UrL3p4UkVjWGV0NEJqSW1Uc3c9PQ%3D%3D--399b9265f5703f075452e19c001d7504db9cf9b8" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="8J80rNfe93Pgtdm5Q-WzLQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="Qfbe1ciicUfkdsxOqxyF4Q" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562225045" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="tashika.gaikwad@myschoolcon.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="em9vTkxwekduSWdudGFTSTFtTGdDeFVONDZKZXAyNWlqV2x4Z3pKb0dIRnJyc1JHU0J4VWxBUyt0RVJQdHExb2trOXFJVlV2MTVFR1JjS25KNGg4SEFxZ3VnbGJiZ3J6alI2NHYrMFdIZE16a1ptTzArMmlBdlVyOVNkdnJxS1Q5NGFPbHY0NEZ2WWlZQ01UVk9IdUxBPT0tLVRlMS9YL0FybUxsMU5YQjl3RTMvcVE9PQ%3D%3D--3a0052f905b8df43daf38fd31d9643bf8b785d00" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="VFBScEQvVitOTWcxM3pBaHZqSEhXNlNRWVVqeGF3SnhkSFZkTzBpWVRiVU92cHJzaDBuRjlLaHEwVjBJeFM3RDBYWTJtekUvb09WYzRYVk9ZSitKYkZSYjNuMHRGZGQzdGpVY01mRzYvOElKZUpRK1U0Z3BEeHlidHhXT3ZWWDA1YWl3Wlo3QmdyeVNVdG5mTU5GTEpBPT0tLTA2Rit6UC92M2JkOWhuY3g0ZUFtS0E9PQ%3D%3D--f72584bf8f570d5844621e13a6ea205de024bff5" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="/api/student_fee_summary" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="8J80rNfe93Pgtdm5Q-WzLQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="Qfbe1ciicUfkdsxOqxyF4Q" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1562225045" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="tashika.gaikwad@myschoolcon.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="student_id" />
+                <option name="value" value="11" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="date" />
+                <option name="value" value="15-07-2018" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[academic_year_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[standard_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[division_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[teacher_id]" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[subject_id]" />
+                <option name="value" value="2" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][1]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][2]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[att_data][16]" />
+                <option name="value" value="on" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="attendance[date]" />
+                <option name="value" value="19-07-2018" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -3929,1098 +5518,6 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="Y0JPbGtQblRobmw1aGdpcmRHanNuRVRJcjJnNXB2b3lDVCtjdXgrd2NZYUE0UzBUbmZPYldsbGEvc3paMGdYYWx6UkNJT1NnYlJYdWVvNjRTZXl3MnBBdXd3S3hTMExWNWNLOGt0VGlNMURVa3Z5dmg5RmVreGJKN0hRRzViSzN0MmdPcmlNZWJyT2ZqcjhjbkNSUDR3PT0tLXNqMDY3aTl0WGxaaVZKUzRFa0xCYlE9PQ%3D%3D--0a39bb4372b6ab5f2c11f587d8c3df207654e5c0" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="K0pOMTBycHYxUVRnNHZ2MzRLK1VETk9LYTd1bkMyT21VczdFM054ZVR0VTZ3elh3UWp1M3dnYVl1dnNZVHJjU1owV1hjblJhSnB6aVVnSXpkZjhoMDJyZGZocC83SzdWMkQ4VmNzTUVJeXBDbk9ZblJJQ1ExdklaSDJMSkorMmVGZGNZblRFSVRBUWc3ZWthM0xEWkFBPT0tLXFoMVpDaU5Zd0lTZmlUSzBNc2FlZnc9PQ%3D%3D--c993131be5cc798f3d4d2b34b8e7e5b3c1fa67f6" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="c3JkVERYQjJ5RzVxL2hDWDV2ekxMTUhjQlRSa29yMHg0dUFVMmZLZDVjWW90eUF6ZjBHRXpZYmQyTTNqNjZzQmNDQ1plVkozcXZVQWNkeVdDZUxvWmZTdUhwaVlrSnl4NGVkYlpKbmFlclVYYTBSL3FVY2wxVHRGWUhpdEVsUHdBUWtlVkNQVWJiZXh5aTFDbit5U3VRPT0tLWl2aHpoZ1g4WnU2RWplR1dGNlFQU1E9PQ%3D%3D--a541d8eeef494adc2ec0ff62eaa87c393d432c6c" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="NjZSUCtydVI1eEhUcG1OUlhCR25rQnpUWDdaSlVSaVFLZjlwcXcreTQrdlpEQnAyWDZJYit0cEpnbVNEdkNXaklwNGNzQ3E2YkRhL1M4V3A0aGpkN0Z4L3BmWCtpVWpxRGR5MnJBVndzYUp6aDkwZkFGTjZKbDhDZ1F3OTZPY1RlYUxaRDk1WWRkKzk4dDkxU3k5amFRPT0tLW04N01Vemg3VENyMVRaUjNXN2tzRlE9PQ%3D%3D--7bb37b8038f6d6a10386c2b28c0cbc45fbb7cb01" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="ckVMc2pjOHM4eTV1dFZ0dnpGdVVqckV4VkU3a1k5alBOWDc0TVJDZnZmL2JiVzBnVGhkRnN1dkx2OGNuTWhINldJaFBPK25xUGVjUlA2eG5MWFg4V3BPTG1aa0dacUJQbDVxS2svemUzL0gwTHBObUJlNVp5WmMvM09PSDA0MWFWZjR0d2Z0bm1vemlob0xTT1VROWR3PT0tLVR5KzJ6NjZFM3JoMzBqWnVjY0R2c0E9PQ%3D%3D--12c07f2cc22ec747447029820913f450b0db5e32" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cEk5TTFOaFpid2lBRG00RXlEdFFpcUlGNmp1WFhkSWlvbnFzTFZlZEhnWitmdzk1SHNxb2dkVTh1VzNzZ2pEcEVvaGErbkZPREVaZWdpakRWb2FJYXdOQUswNFF6ZmVGRS9ONC82U0RwN1hRVHcwUUlwaFJrdWxWTCsrT2s4dldDVmxhSWprdURpajN3dFRVYlVMdnV3PT0tLXFtL1RSZS9sSVFwMWpRb2lJOVVBSEE9PQ%3D%3D--eb1d799443650f8af76b5e744d709cd7bf24c514" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="anpSU0xBb1VkaXRuZUxGN0ZmRWpibjVPTlpkcFNITTB6aFRvNldna3FJamlWdDdNVFhmUlN5Unlpb0dERFM2bWtZNVRpclZXVUlDM0IxWXZGMU0vUDJwQ2FsVGlJcVBTQVBUb05hSWZ2UWUzMEJhcG10TG0zR2xkZlZjUmJtS2s5TnZWb0l4bE9YVWFPOXlNL0czTGt3PT0tLWhDRE9vcVdNSUIyTHpkLzJYbEh6Ync9PQ%3D%3D--58330198810f172feb1d279a9109940bf26dadfa" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="Y3pjMFJsaFFTcHpiM3N0SVZHZ0pxcGNLeU80ZFpSMHhyaEUxSFVTSTRIWDJwSmtndEF5YU5zWWFPK0FxN3BLWmhMWCszd0RmSGc1VGQ1bzFGQVFIWDEyclpjTTM2bW1RLzhndGJPTTlRMjRtbU1TMGdhclFSNGZFektZL2V6dlA0ZXJlM3JuZGJEWlU0ck5EcUxVK0RRPT0tLVBlUitFMDRjNmh1cmk4UlJUVDB5bXc9PQ%3D%3D--174099fee8ef3675e7bfd71366f796bb1b0b5265" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="elU5WDl6dUJVN21wMDdDamszbEtHaUpCOUJtb3RLT2xydm00WVdrTzlTcXpqNk1yZ0dqdHc4QlZzL1k5MjJOQ3JPOExWMTJEMmJ2S2VWRnFzVys4eUo0UWFoWU9CUUJ3ZE9iUitDQWVralV2WGNSYVoxMlh1VW9VU2dCMEFkRy9lTXVtbHVkYUtmZ1VpQkFhMllFdHl3PT0tLVl2K0RLRzY3R2hqYVJLVHpzNzBVZUE9PQ%3D%3D--877596869fba6212b7f443b88c309dc5c6b34225" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-03-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eCtXaUZIMG82NkF4SEh1WW5MY0RMTC9wTVBUb205UlJVT2RlUWI1WHRmdzJiMUp3cUtNcEp1NExqQ2wzd0R6TFliVXczQUNTMys4bFVIaWpQUzc1blorNVhJRGVKVCs1VFFQTXRWRElyNGZvOVd3b1d0NWZueUY3ODZaSUFrcEhYN2JteGxTanJHS0lwSEppMndNNDB3PT0tLWZWN01hRFFvalJsQUxqOXFHTDlPa3c9PQ%3D%3D--a1b740996262ee74cb20bfd8a84666e5aa423780" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-07-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="WVlsaUxGWVk2WFFUWUxNL0xNMGJyVTNRcElDVTRicHFtcU9aWFVCRVd3UzQySnE4NE1LL1NxTFZQWk9ERGhCbUFscmF1emF3alhhdHF2KzJzc1ZaT0pXbHlsV1FXZFRCWjE5RW4ycS9BNnpFSVBEcWtsMUg0czJBUnFoOFgrR1I2QjZmTXdiR2h2dTVYTjk0a3hNcm53PT0tLVJoUzlOUnZlNjlHc3VoTy9FeHFvRlE9PQ%3D%3D--a5031ce820009bac8e7841729d9cc4d1d1f667db" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-07-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SFNnVE9xSUJ5dEZPVVZSK0hrbHhnd1AySnR1L1hEUXBuNXREREV6UlQ5NGNGWHZSakFkZFdkeGY5aHBKRk9CMkR6SmxqbmE2K3F6Q2wrNDVPbEJuaHowRWhzY1JWR3JiOUNZZUR4dDQwcGZaTnM3TTNET0dMazMwaElvNVpLbmd3S3o1bnVqcEZxRlpabVVwa0JoYzVnPT0tLWMwN2x1ck80YVBaWjVvWjc3L3pmNWc9PQ%3D%3D--2124a8fd3faf4063999384b253759007b483d65c" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-07-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cHhTZkxMYmVGQk11RmUrSEZHL1pkUFRhbERTTFdqRys0NnlCbEVNRWZneEVURDZJRDBEd2Vhb1dlZHJkaThFMDFXUWRVYWNFT1Zub0VVRDRPWXhTTTd0Y1RwODQxU2JYTkV1T2JUMnAzZnZrRURwelBaeDVjR3RrRmttTkkwSUtEVTdwMzJZZHZQb0R6LzNMWEsyZXhBPT0tLVlaS1RzUFBpKzdnb1VWRUVGcE5jM3c9PQ%3D%3D--6e5f8d64c9f93d2e3e88dd29f9ae78d217fd1033" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-05-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="OW5EeXZIUXhlbDVMWmUrN1F3MzRBaUR5SmZpRE1ZeStDMTlIdG14emNBN1VhS0RhMXJaY3F6Uk9ETWRPUlVBZUVyYzNDdktqZWZPaDRpc1BrdGsrYlZ2UG9QOE1TS2FXb054NElpcjlscFhVWVpxYWRuT0l4TWJnUnp4ckxJUFhlRC9uR0R5LzdsWGczQjNISXNlRGtRPT0tLWxpeEs0VytmRG1nVDU4Mmx0UXFlOEE9PQ%3D%3D--be0730db4a1aa6d7ec93d525fce66646f9eb62ee" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="SktGcnFLazhnMUhVOFNpTUoxVWZHS0tMWHJqNTNnd1pHbW5JaEV2SjMvMjZHWkFxNHNkRWZlV3dya0NscW5NSE5sbXFjd2pCdFFNQm5JZVYwRkNtTVVQVUNDY3lSWUVLcy9oNG0yZGE3WU4wOG5TNWg4V29YcFFGL0EvckhpbzVyNUppL1lXQVIyc2tWb3JGSk1QeStRPT0tLXB4YnVnRGtwSFlCWHZzSm9iRHYweXc9PQ%3D%3D--d123a40b5f1ccdbc7eecb32ecf873c513b17797a" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/api/monthly_summary" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="8805356039" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="MQNP6haqViK_ylEi_An3Ew" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="ZNxRQTW5cnfgnY9w2YyLbA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1561618207" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="apsunde.sachin@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="16-05-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -5245,21 +5742,8 @@
       <workItem from="1531806030935" duration="74000" />
       <workItem from="1531806189064" duration="85000" />
       <workItem from="1531981483548" duration="1889000" />
-      <workItem from="1532332480962" duration="616000" />
-    </task>
-    <task id="LOCAL-00035" summary="Temporary Deploy">
-      <created>1527845539409</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1527845539409</updated>
-    </task>
-    <task id="LOCAL-00036" summary="revert production evironment fole for mailer host">
-      <created>1527845815941</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1527845815941</updated>
+      <workItem from="1532332480962" duration="2717000" />
+      <workItem from="1532409399468" duration="1218000" />
     </task>
     <task id="LOCAL-00037" summary="revert production evironment fole for mailer host">
       <created>1527845969190</created>
@@ -5590,11 +6074,25 @@
       <option name="project" value="LOCAL" />
       <updated>1531736294727</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="added student's fee summary">
+      <created>1532333131947</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1532333131948</updated>
+    </task>
+    <task id="LOCAL-00085" summary="added student's fee summary">
+      <created>1532333871454</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1532333871454</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377040000" />
+    <option name="totallyTimeSpent" value="380359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
@@ -5610,10 +6108,10 @@
       <window_info anchor="right" id="REST Client" order="9" weight="0.61853594" />
       <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.42513368" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.328877" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49899262" weight="0.72933334" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49899262" weight="0.7286096" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.29281396" />
+      <window_info content_ui="combo" x="612" y="115" width="441" height="748" id="Project" order="0" sideWeight="0.4986631" visible="true" weight="0.29684353" />
       <window_info anchor="right" id="Database" order="6" weight="0.30288786" />
       <window_info id="Structure" order="1" sideWeight="0.5013369" side_tool="true" weight="0.29617193" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -5681,30 +6179,10 @@
     <MESSAGE value="added leave Application module, and message from parent to teacher" />
     <MESSAGE value="Added academic year, fee payments, attendance for teacher API" />
     <MESSAGE value="subject standard wise" />
-    <option name="LAST_COMMIT_MESSAGE" value="subject standard wise" />
+    <MESSAGE value="added student's fee summary" />
+    <option name="LAST_COMMIT_MESSAGE" value="added student's fee summary" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/api/subjects/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/divisions/show.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/divisions/_division.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/standards/show.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -6007,27 +6485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/students_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/students/_student.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/student.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="134" column="109" selection-start-line="134" selection-start-column="109" selection-end-line="134" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -6035,10 +6492,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/students/_student.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="58" selection-start-line="6" selection-start-column="14" selection-end-line="7" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/students_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/student.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="133" column="61" selection-start-line="133" selection-start-column="61" selection-end-line="133" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/students/student_fee_summary.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        <state relative-caret-position="40">
+          <caret line="2" column="84" selection-start-line="2" selection-start-column="84" selection-end-line="2" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/holidays/_holiday.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/holiday.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
         </state>
       </provider>
     </entry>

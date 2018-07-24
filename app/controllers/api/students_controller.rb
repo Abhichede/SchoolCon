@@ -14,6 +14,7 @@ module Api
     def student_fee_summary
       if params[:student_id]
         @student = Student.find(params[:student_id])
+        @academic_year = AcademicYear.find_by_is_active(true)
       end
     end
 

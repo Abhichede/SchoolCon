@@ -130,6 +130,10 @@ class Student < ApplicationRecord
     total_amount = (total_fee_with_discount_fine - current_total_paid)
   end
 
+  def current_academic_year
+    academic_years.where(is_active: true).first.academic_year
+  end
+
 
   def attendance
     @attendances = divisions.last.attendances.where(academic_year_id: AcademicYear.find_by_is_active(true).id).group_by {|a| a.date.beginning_of_month}
