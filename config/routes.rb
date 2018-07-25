@@ -52,7 +52,7 @@ Rails.application.routes.draw do
     # ==> Academic Year
     resources :academic_years
     get 'get_current_academic_year', to: 'academic_years#get_current_academic_year'
-    get 'monthly_summary', to: 'attendances#monthly_summary'
+    get 'attendance_monthly_summary', to: 'attendances#monthly_summary'
   end
   resources :school_infos
   resources :my_templates
