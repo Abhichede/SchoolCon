@@ -5,6 +5,11 @@ class StudentFeePayment < ApplicationRecord
   belongs_to :academic_year
 
   def current_academic_year
-    academic_year.academic_year
+    if academic_year
+      academic_year.academic_year
+    else
+      payment_date.to_date.year
+    end
+
   end
 end
