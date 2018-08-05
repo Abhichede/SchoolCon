@@ -8,6 +8,7 @@
     <list default="true" id="d812e55c-59d6-451f-b3ad-0a7ebceac636" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/attendances/_attendance.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/api/attendances/_attendance.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -87,8 +88,18 @@
       <file leaf-file-name="_attendance.json.jbuilder" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/api/attendances/_attendance.json.jbuilder">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="252">
+              <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.json.jbuilder" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="138" lean-forward="false" selection-start-line="0" selection-start-column="138" selection-end-line="0" selection-end-column="138" />
               <folding />
             </state>
           </provider>
@@ -142,12 +153,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response149.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response153.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/api/parent_messages/_parent_message.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/parent_messages/create.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/leave_applications/_leave_application.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/controllers/api/parent_messages_controller.rb" />
@@ -197,6 +207,7 @@
         <option value="$PROJECT_DIR$/app/controllers/api/attendances_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/student_fee_payment.rb" />
         <option value="$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/attendances/_attendance.json.jbuilder" />
       </list>
     </option>
@@ -4622,14 +4633,7 @@
       <workItem from="1525155465031" duration="5232000" />
       <workItem from="1525173969061" duration="7204000" />
       <workItem from="1525330133525" duration="428000" />
-      <workItem from="1533455127221" duration="6719000" />
-    </task>
-    <task id="LOCAL-00047" summary="menu changed fromm hover effect to dropdown on click and headers removed from students, standard etc. and menu headers also removed">
-      <created>1522065945082</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1522065945082</updated>
+      <workItem from="1533455127221" duration="7388000" />
     </task>
     <task id="LOCAL-00048" summary="menu changed fromm hover effect to dropdown on click and headers removed from students, standard etc. and menu headers also removed">
       <created>1522066621566</created>
@@ -4967,11 +4971,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533461149856</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="changes made from other device might change some other things">
+      <created>1533462043734</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1533462043734</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390144000" />
+    <option name="totallyTimeSpent" value="390813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-4" width="1377" height="912" extended-state="6" />
@@ -5346,14 +5357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/attendances_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -5402,10 +5405,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/attendances/index.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="138" lean-forward="false" selection-start-line="0" selection-start-column="138" selection-end-line="0" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/attendances/_attendance.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state relative-caret-position="252">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
