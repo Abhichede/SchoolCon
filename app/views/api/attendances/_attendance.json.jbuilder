@@ -13,7 +13,9 @@ unless attendance.att_data.nil?
       absent_days = 0
 
       @attendances_monthly_summary.each do |attendance|
-        attendance.att_data["#{student.id}"] === 'on' ? present_days += 1 : absent_days += 1
+        unless attendance.nil?
+          attendance.att_data["#{student.id}"] === 'on' ? present_days += 1 : absent_days += 1
+        end
       end
 
       json.total_days all_attendances
