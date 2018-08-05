@@ -6,9 +6,13 @@ module Api
     def index
       @academic_year = AcademicYear.where(is_active: true).last
       if !params[:student_id].blank? && !params[:date].blank?
+        first_date_of_month = Date.parse(params[:date]).beginning_of_month
+        last_date_of_month = Date.parse(params[:date]).end_of_month
         @student = Student.find(params[:student_id])
         @division = @student.divisions.last
         @attendances = @division.attendances.where(academic_year_id: @academic_year.id, date: params[:date])
+
+        @attendances_monthly_summary = @division.attendances.where("academic_year_id = ? AND date BETWEEN ? AND ?", @academic_year.id, first_date_of_month, last_date_of_month)
       else
         @attendances = Attendance.where(academic_year_id: @academic_year.id)
       end
@@ -17,18 +21,6 @@ module Api
 
     def show; end
 
-    def monthly_summary
-      @academic_year = AcademicYear.where(is_active: true).last
-      if params[:student_id] && params[:date]
-        first_date_of_month = Date.parse(params[:date]).beginning_of_month
-        last_date_of_month = Date.parse(params[:date]).end_of_month
-
-        @student = Student.find(params[:student_id])
-
-        @division = @student.divisions.last
-        @attendances = @division.attendances.where("academic_year_id = ? AND date BETWEEN ? AND ?", @academic_year.id, first_date_of_month, last_date_of_month)
-      end
-    end
 
     def create
       @attendance = Attendance.new(attendance_params)

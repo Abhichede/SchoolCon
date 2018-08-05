@@ -10,6 +10,9 @@ class StudentFeePayment < ApplicationRecord
     else
       payment_date.to_date.year
     end
+  end
 
+  def date
+    payment_date.strftime("%d-%b-%Y")
   end
 end

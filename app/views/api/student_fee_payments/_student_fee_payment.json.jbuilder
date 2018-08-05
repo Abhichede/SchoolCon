@@ -1,1 +1,1 @@
-json.extract! student_fee_payment, :id, :student_id, :current_academic_year, :payment_date, :payment_mode, :payment_desc, :amount, :created_at, :updated_at
+json.extract! student_fee_payment, :id, :student_id, :current_academic_year, :date, :payment_mode, :payment_desc, :amount, :created_at, :updated_at
