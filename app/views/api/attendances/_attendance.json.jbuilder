@@ -3,7 +3,7 @@ unless attendance.att_data.nil?
   if student
     json.is_present attendance.filter_by_student(student)
 
-    if @attendances_monthly_summary.nil?
+    if @attendances_monthly_summary.count < 1
       json.total_days 0
       json.present_days 0
       json.absent_days 0
