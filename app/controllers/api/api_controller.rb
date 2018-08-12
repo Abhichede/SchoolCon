@@ -3,7 +3,7 @@ module Api
     include DeviseTokenAuth::Concerns::SetUserByToken
     protect_from_forgery with: :null_session
 
-    before_action :authenticate_api_user!
+    before_action :authenticate_api_user!, :except => [:password_controller]
 
   end
 end

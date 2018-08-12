@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
 
   private
     def skip_authenticate
-      unless params[:controller].split('/')[0] == 'devise_token_auth' || params[:controller].split('/')[0] == 'api'
+      unless params[:controller].split('/')[0] == 'devise_token_auth' || params[:controller].split('/')[0] == 'api' || params[:controller].split('/')[0] == 'password'
         authenticate_user!
       end
     end
