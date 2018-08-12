@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   resources :profiles, only: %i[index update edit]
 
   namespace :api, defaults: { format: 'json' } do
-    mount_devise_token_auth_for 'User', at: 'auth'
+    mount_devise_token_auth_for 'User', at: 'auth', controllers: { passwords: 'passwords' }
+
     resources :students
     # ==> Parents
     resources :parents
