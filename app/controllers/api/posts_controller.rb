@@ -14,6 +14,10 @@ module Api
       @post_attachments = @post.post_attachments.all
     end
 
+    def gallery
+      @attachments = PostAttachment.all.order("created_at DESC")
+    end
+
 
     private
       # Use callbacks to share common setup or constraints between actions.

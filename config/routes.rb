@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     resources :notifications
     # ==> Posts
     resources :posts
+    get 'gallery', to: 'posts#gallery'
     # ==> Teachers
     resources :teachers
     # ==> Student's certificates

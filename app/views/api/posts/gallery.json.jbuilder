@@ -1,0 +1,1 @@
+json.array! @attachments, partial: 'api/posts/attachment', as: :attachment

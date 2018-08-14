@@ -1,0 +1,1 @@
+json.extract! attachment, :id, :attachment_path_url
