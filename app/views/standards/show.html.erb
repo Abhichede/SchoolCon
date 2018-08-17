@@ -1,17 +1,37 @@
 <%- model_class = Standard -%>
 <% add_breadcrumb @standard.name + " standard", standard_path(@standard) %>
 <div class="row">
-  <div class="col-lg-offset-10 col-lg-2 col-md-2 col-md-offset-10">
+  <div class="col-lg-6 col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Divisions
+        <%= link_to '<i class="fa fa-plus"></i> '.html_safe,
+                    new_division_path,
+                    :class => 'pull-right', remote: true %>
+      </div>
+      <div class="panel-body">
+        <div class="button-group" role="group">
+          <% @standard.divisions.each do |d| %>
+            <button class="btn btn-default" type="button"><%= d.name %></button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
         Subjects
+        <%= link_to '<i class="fa fa-plus"></i> '.html_safe,
+                    new_subject_path,
+                    :class => 'pull-right', remote: true %>
       </div>
       <div class="panel-body">
-        <ul class="list-group">
+        <div class="button-group">
           <% @standard.subjects.each do |s| %>
-            <li class="list-group-item"><%= s.name %></li>
+            <button type="button" class="btn btn-default"><%= s.name %></button>
           <% end %>
-        </ul>
+        </div>
       </div>
     </div>
   </div>

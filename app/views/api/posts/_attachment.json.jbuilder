@@ -1,1 +1,1 @@
-json.extract! attachment, :id, :attachment_path_url
+json.extract! attachment, :attachment_path_url

@@ -15,7 +15,7 @@ module Api
     end
 
     def gallery
-      @attachments = PostAttachment.all.order("created_at DESC")
+      @posts = Post.all.order("created_at DESC")
     end
 
 
