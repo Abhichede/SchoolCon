@@ -5,9 +5,9 @@ module Api
     def index
       if params[:student_id]
         @student = Student.find(params[:student_id])
-        @notifications = @student.notifications
+        @notifications = @student.notifications.order("created_at DESC")
       else
-        @notifications = Notification.all
+        @notifications = Notification.all.order("created_at DESC")
       end
     end
 

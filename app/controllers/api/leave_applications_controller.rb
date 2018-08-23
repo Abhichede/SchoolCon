@@ -7,7 +7,7 @@ module Api
     def index
       if params[:student_id]
         @student = Student.find(params[:student_id])
-        @leave_applications = @student.leave_applications
+        @leave_applications = @student.leave_applications.order("created_at DESC")
       else
         @leave_applications = LeaveApplication.all
       end
