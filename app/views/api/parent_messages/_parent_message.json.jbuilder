@@ -1,1 +1,1 @@
-json.extract! parent_message, :id, :message, :created_at
+json.extract! parent_message, :id, :message, :created_at, :message_type

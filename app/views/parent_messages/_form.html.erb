@@ -1,32 +1,57 @@
-<%= form_with(model: parent_message, local: true) do |form| %>
-  <% if parent_message.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(parent_message.errors.count, "error") %> prohibited this parent_message from being saved:</h2>
+<%= form_for @parent_message, :html => { :class => "form-horizontal parent_message" } do |f| %>
 
-      <ul>
-      <% parent_message.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <% if @parent_message.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@parent_message.errors.count, "error") %> prohibited this parent_message from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @parent_message.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :student_id %>
-    <%= form.number_field :student_id, id: :parent_message_student_id %>
+  <div class="form-group">
+    <%= f.label :student, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :student_id, options_for_select(Student.where(is_enquiry: false).map {|student| [student.self_full_name, student.id]}),
+                   {include_blank: 'Select Student', disabled: 'Select Student'}, class: 'selectpicker ', 'data-live-search': true %>
+    </div>
+    <%=f.error_span(:student_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :teacher, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :teacher_id, options_for_select(Teacher.all.map {|teacher| [teacher.fullname, teacher.id]}),
+                   {include_blank: 'Select teacher', disabled: 'Select teacher'}, class: 'selectpicker ', 'data-live-search': true %>
+    </div>
+    <%=f.error_span(:teacher_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :message, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :message, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:message) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :message_type, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :message_type, :class => 'form-control', value: 'teacher', readonly: true %>
+    </div>
+    <%=f.error_span(:message_type) %>
   </div>
 
-  <div class="field">
-    <%= form.label :teacher_id %>
-    <%= form.number_field :teacher_id, id: :parent_message_teacher_id %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                parent_messages_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message, id: :parent_message_message %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
