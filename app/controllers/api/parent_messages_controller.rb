@@ -6,11 +6,11 @@ module Api
     # GET /parent_messages.json
     def index
       if params[:student_id] && params[:teacher_id]
-        @parent_messages = ParentMessage.where(student_id: params[:student_id], teacher_id: params[:teacher_id]).order("created_at DESC")
+        @parent_messages = ParentMessage.where(student_id: params[:student_id], teacher_id: params[:teacher_id])
       elsif params[:student_id]
-        @parent_messages = Student.find(params[:student_id]).parent_messages.order("created_at DESC")
+        @parent_messages = Student.find(params[:student_id]).parent_messages
       else
-        @parent_messages = ParentMessage.all.order("created_at DESC")
+        @parent_messages = ParentMessage.all
       end
     end
 
