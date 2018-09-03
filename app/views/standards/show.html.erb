@@ -70,7 +70,7 @@
                     <div class="panel-heading">
                       <h5>
                         Division: <%= division.name %>
-                        <strong>Total Students: <%= division.students.count %></strong>
+                        <strong>Total Students: <%= division.students.where(is_enquiry: false).count %></strong>
                         <span class="pull-right">
                           <a class="btn btn-xs" data-toggle="collapse" href="#division_<%= division.name.parameterize.underscore %>">
                             <i class="fa fa-chevron-down"></i>
@@ -104,36 +104,36 @@
                               <td colspan="3">No Students</td>
                             </tr>
                           <% end %>
-                          <% division.students.each do |student| %>
+                          <% division.students.where(is_enquiry: false).each do |student| %>
                             <tr>
                               <td><%= student.roll_no %></td>
                               <td><%= student.self_full_name %></td>
-                              <td>
-                                <table class="table table-bordered">
-                                  <tbody>
-                                    <tr>
-                                      <th>Allocated Fee</th>
-                                      <td><%= student.current_total_fee %></td>
-                                    </tr>
-                                    <tr>
-                                      <th>Discount</th>
-                                      <td><%= student.current_total_discount %></td>
-                                    </tr>
-                                    <tr>
-                                      <th>Fine</th>
-                                      <td><%= student.current_total_fine %></td>
-                                    </tr>
-                                    <tr>
-                                      <th>Paid Fee</th>
-                                      <td><%= student.current_total_paid %></td>
-                                    </tr>
-                                    <tr>
-                                      <th>Balance</th>
-                                      <td><%= student.current_balance_amount %></td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
+<!--                              <td>-->
+<!--                                <table class="table table-bordered">-->
+<!--                                  <tbody>-->
+<!--                                    <tr>-->
+<!--                                      <th>Allocated Fee</th>-->
+<!--                                      <td><%#= student.current_total_fee %></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                      <th>Discount</th>-->
+<!--                                      <td><%#= student.current_total_discount %></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                      <th>Fine</th>-->
+<!--                                      <td><%#= student.current_total_fine %></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                      <th>Paid Fee</th>-->
+<!--                                      <td><%#= student.current_total_paid %></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                      <th>Balance</th>-->
+<!--                                      <td><%#= student.current_balance_amount %></td>-->
+<!--                                    </tr>-->
+<!--                                  </tbody>-->
+<!--                                </table>-->
+<!--                              </td>-->
                               <td>
                                 <%= link_to 'Show', student_path(student), class: 'btn btn-success btn-xs' %>
                                 <%= link_to 'Send Message',

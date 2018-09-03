@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :students
     # ==> Parents
     resources :parents
+    post 'register_device_id', to: 'parents#register_device_id'
     # ==> Student Fee Payments
     resources :student_fee_payments
     get 'student_fee_summary', to: 'students#student_fee_summary'
@@ -114,6 +115,9 @@ Rails.application.routes.draw do
   get 'students_list', to: 'students#print_students_list'
   post 'update_parent', to: 'students#update_parent_from_view', as: 'update_parent'
   get 'view_student_certificates', to: 'students#view_student_certificates'
+
+  # ==> Parents
+  get 'send_auth_details', to: 'parents#send_auth_details'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

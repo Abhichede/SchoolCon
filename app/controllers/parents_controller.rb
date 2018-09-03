@@ -22,6 +22,32 @@ class ParentsController < ApplicationController
   def edit
   end
 
+  def send_auth_details
+    @parents = Parent.all
+    alert_msg = "Following is message report"
+    @parents.each do |parent|
+      message = "Authentication Details username: #{parent.mobile} password: #{parent.mobile}, Please do not share with anyone."
+      response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=schoolcon&password=Linker@70531&mobile=#{parent.mobile}&message=#{message}&sender=DNYNDP&type=3"
+
+
+      case response.code
+        when 400
+          puts response
+          alert_msg += "#{parent.mobile} - #{response}"
+        when 200
+          puts response
+          alert_msg += "#{parent.mobile} - #{response}"
+        else
+          fail "Invalid response #{response} received."
+          alert_msg += "#{parent.mobile} - #{response}"
+      end
+    end
+
+    respond_to do |f|
+      f.html { redirect_to parents_path, alert: alert_msg }
+    end
+  end
+
   # POST /parents
   # POST /parents.json
   def create
