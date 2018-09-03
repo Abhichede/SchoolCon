@@ -87,7 +87,7 @@
 # MyTemplate.create(name: 'Student Absent Message', desc: 'Your child #{student_name} is absent today.')
 #
 # MyTemplate.create(name: 'Enquiry Success', desc: 'Thank You, #{father_name}, for Visiting #{institute_name}.')
-#
+# #
 
 Holiday.create(date: '2018-01-26', description: 'Republic Day')
 Holiday.create(date: '2018-02-13', description: 'Maha Shivratri')

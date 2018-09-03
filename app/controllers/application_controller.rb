@@ -19,15 +19,15 @@ class ApplicationController < ActionController::Base
   def send_sms_to_parent(student, notification)
     puts student.father_mobile
     #response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=abhichede777&password=abhijit123@&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
-    # response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=schoolcon&password=Linker@70531&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
-    # case response.code
-    #   when 400
-    #     puts response
-    #   when 200
-    #     puts response
-    #   else
-    #     fail "Invalid response #{response} received."
-    # end
+    response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=schoolcon&password=Linker@70531&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"
+    case response.code
+      when 400
+        puts response
+      when 200
+        puts response
+      else
+        fail "Invalid response #{response} received."
+    end
   end
 
   rescue_from CanCan::AccessDenied do |exception|
