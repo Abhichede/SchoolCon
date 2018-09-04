@@ -118,6 +118,7 @@ Rails.application.routes.draw do
 
   # ==> Parents
   get 'send_auth_details', to: 'parents#send_auth_details'
+  get 'send_stdwise_auth_details', to: 'standards#send_stdwise_auth_details'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

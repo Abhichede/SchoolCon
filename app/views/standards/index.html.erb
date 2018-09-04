@@ -42,6 +42,9 @@
                   <%= link_to 'Message to All',
                               new_notification_path(notification_type: 'standard_wise', type_data: standard.id),
                               :class => 'btn btn-primary btn-xs', remote: true %>
+                  <%= link_to 'send auth details',
+                              send_stdwise_auth_details_path(id: standard.id),
+                              :class => 'btn btn-success btn-xs'%>
                   <%= link_to 'Print List',
                               students_list_path(type: 'standard_wise', id: standard.id, format: 'pdf'),
                               :class => 'btn btn-info btn-xs' %>
