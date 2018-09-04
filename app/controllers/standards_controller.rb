@@ -86,26 +86,22 @@ class StandardsController < ApplicationController
   def send_stdwise_auth_details
     @standard = Standard.find(params[:id])
     @students = @standard.students.where(is_enquiry: false)
-    alert_msg = "Following is message report"
     @students.each do |parent|
       message = "Dear parents, Dnyandeep classes is launching new app for our class, please click on following link to download app https://play.google.com/store/apps/details?id=com.linkerit.schoolcon and use following credentials username: #{parent.father_mobile} password: #{parent.father_mobile}, Please do not share with anyone."
       response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=schoolcon&password=Linker@70531&mobile=#{parent.father_mobile}&message=#{message}&sender=DNYNDP&type=3"
 
       case response.code
-      when 400
-        puts response
-        alert_msg += "#{parent.father_mobile} - #{response}"
-      when 200
-        puts response
-        alert_msg += "#{parent.father_mobile} - #{response}"
-      else
-        fail "Invalid response #{response} received."
-        alert_msg += "#{parent.father_mobile} - #{response}"
+        when 400
+          puts response
+        when 200
+          puts response
+        else
+          fail "Invalid response #{response} received."
       end
     end
 
     respond_to do |f|
-      f.html { redirect_to standards_path, alert: alert_msg }
+      f.html { redirect_to standards_path }
     end
   end
 
