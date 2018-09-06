@@ -43,9 +43,17 @@ class TimeTableSettingsController < ApplicationController
   # PATCH/PUT /time_table_settings/1
   # PATCH/PUT /time_table_settings/1.json
   def update
+    @timetables = TimeTable.all
+
+    @timetables.each do |t|
+      t.destroy
+    end
+
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
     respond_to do |format|
       if @time_table_setting.update(time_table_setting_params)
-        format.html { redirect_to @time_table_setting, notice: 'Time table setting was successfully updated.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Time table setting was successfully updated.' }
         format.json { render :show, status: :ok, location: @time_table_setting }
       else
         format.html { render :edit }
