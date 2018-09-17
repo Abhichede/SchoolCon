@@ -1,6 +1,6 @@
 module Api
   class LeaveApplicationsController < Api::ApiController
-    before_action :set_leave_application, only: [:show, :edit, :update, :destroy]
+    before_action :set_leave_application, only: [:show, :edit, :update, :destroy, :update_status]
 
     # GET /leave_applications
     # GET /leave_applications.json
@@ -50,6 +50,16 @@ module Api
       #     format.json { render json: @leave_application.errors, status: :unprocessable_entity }
       #   end
       # end
+    end
+
+    def update_status
+      respond_to do |format|
+        if @leave_application.update(is_approved: params[:is_approved])
+          format.json { render json: { success: 'Status updated.' } }
+        else
+          format.json { render json: { error: 'Error while updating.' } }
+        end
+      end
     end
 
     # PATCH/PUT /leave_applications/1

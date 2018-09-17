@@ -44,6 +44,7 @@ Rails.application.routes.draw do
     resources :time_tables
     # ==> Leave Application
     resources :leave_applications
+    post 'update_status', to: 'leave_applications#update_status'
     # ==> Parent Messages
     resources :parent_messages
     # ==> Subjects

@@ -42,6 +42,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def as_json(options={})
+    super(options).merge({success: true})
+  end
+
   protected
     def self.find_for_database_authentication(warden_conditions)
       conditions = warden_conditions.dup
