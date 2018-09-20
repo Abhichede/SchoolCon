@@ -1,0 +1,37 @@
+<%= form_with(model: teacher_leave_application, local: true) do |form| %>
+  <% if teacher_leave_application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(teacher_leave_application.errors.count, "error") %> prohibited this teacher_leave_application from being saved:</h2>
+
+      <ul>
+      <% teacher_leave_application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :teacher_id %>
+    <%= form.number_field :teacher_id, id: :teacher_leave_application_teacher_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, id: :teacher_leave_application_subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.text_area :message, id: :teacher_leave_application_message %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_approved %>
+    <%= form.check_box :is_approved, id: :teacher_leave_application_is_approved %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

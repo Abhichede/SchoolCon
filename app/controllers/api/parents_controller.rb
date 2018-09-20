@@ -16,7 +16,7 @@ module Api
           if @user.device_id == nil || @user.device_id != device_reg_params[:device_id]
             @user.update(device_id: device_reg_params[:device_id])
             respond_to do |f|
-              f.json {render json: {error: 'Device id updated.'}}
+              f.json {render json: {success: 'Device id updated.'}}
             end
           else
             respond_to do |f|

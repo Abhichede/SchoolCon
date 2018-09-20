@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :teacher_leave_applications
   resources :parent_messages
   resources :leave_applications
   resources :homeworks
@@ -57,6 +58,9 @@ Rails.application.routes.draw do
     resources :academic_years
     get 'get_current_academic_year', to: 'academic_years#get_current_academic_year'
     get 'attendance_monthly_summary', to: 'attendances#monthly_summary'
+
+    resources :teacher_leave_applications
+
   end
   resources :school_infos
   resources :my_templates

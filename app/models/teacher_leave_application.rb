@@ -1,0 +1,2 @@
+class TeacherLeaveApplication < ApplicationRecord
+end

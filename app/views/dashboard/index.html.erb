@@ -1,47 +1,10 @@
 <div class="row">
-  <div class="col-lg-3 col-md-6">
-    <div class="panel panel-primary">
-      <div class="panel-body">
-        <div class="col-lg-4 col-md-4">
-          <span class="fa fa-graduation-cap " style="font-size: 50px;"></span>
-        </div>
-        <div class="col-lg-8 col-md-8">
-          <span style="font-size: 35px;"><%= @students.count %></span>
-        </div>
-      </div>
-      <div class="panel-footer">
-        <div class="text-center">
-          <%= link_to t('students').upcase, students_path %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6">
-    <div class="panel panel-danger">
-      <div class="panel-body">
-        <div class="col-lg-4 col-md-4">
-          <span class="fa fa-user-circle " style="font-size: 50px;"></span>
-        </div>
-        <div class="col-lg-8 col-md-8">
-          <span style="font-size: 35px;"><%= @teachers.count %></span>
-        </div>
-      </div>
-      <div class="panel-footer">
-        <div class="text-center">
-          <%= t('teachers').upcase %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6">
+  <div class="col-lg-3 col-md-6 col-sm-6">
     <div class="panel panel-info">
       <div class="panel-body">
-        <div class="col-lg-4 col-md-4">
-          <span class="fa fa-book " style="font-size: 50px;"></span>
-        </div>
-        <div class="col-lg-8 col-md-8">
-          <span style="font-size: 35px;"><%= @standards.count %></span>
-        </div>
+        <%= link_to standards_path do %>
+          <span class="fa fa-book centered-image" style="font-size: 10rem;"></span>
+        <% end %>
       </div>
       <div class="panel-footer">
         <div class="text-center">
@@ -50,27 +13,156 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-6">
-    <div class="panel panel-default">
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
       <div class="panel-body">
-        <div class="col-lg-4 col-md-4">
-          <span class="fa fa-money" style="font-size: 50px;"></span>
-        </div>
-        <div class="col-lg-8 col-md-8">
-            <span style="font-size: 25px;">
-              <%
-                amount = 0.0
-                @student_fee.each do |f|
-                  amount += f.amount.to_f
-                end
-              %>
-              &#8377; <%= amount %>
-            </span>
-        </div>
+        <%= link_to divisions_path do %>
+          <span class="fa fa-book centered-image" style="font-size: 10rem;"></span>
+        <% end %>
       </div>
       <div class="panel-footer">
         <div class="text-center">
-          <%= t('fee_collected').upcase %>
+          <%= t('divisions').upcase %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to students_path  do %>
+        <span class="fa fa-graduation-cap centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          <%= link_to t('students').upcase, students_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to homeworks_path do %>
+          <span class="fa fa-pencil centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          Homework
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to attendances_path do %>
+          <span class="fa fa-check centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          Attendance
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to time_tables_path do %>
+          <span class="fa fa-calendar centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          Timetable
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to notifications_path do %>
+          <span class="fa fa-envelope centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          Messages
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to posts_path do %>
+          <span class="fa fa-clipboard centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          News / Events
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to fee_payment_path do %>
+          <span class="fa fa-money centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          Quick Payment
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to new_student_path do %>
+          <span class="fa fa-user-plus centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          New Student Admission
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to new_student_path(is_enquiry: true) do %>
+          <span class="fa fa-user-plus centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          New student Enquiry
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <%= link_to my_templates_path do %>
+          <span class="fa fa-tags centered-image" style="font-size: 10rem;"></span>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <div class="text-center">
+          Templates
         </div>
       </div>
     </div>

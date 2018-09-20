@@ -1,0 +1,2 @@
+module TeacherLeaveApplicationsHelper
+end

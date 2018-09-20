@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Teacher Leave Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Teacher</th>
+      <th>Subject</th>
+      <th>Message</th>
+      <th>Is approved</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teacher_leave_applications.each do |teacher_leave_application| %>
+      <tr>
+        <td><%= teacher_leave_application.teacher_id %></td>
+        <td><%= teacher_leave_application.subject %></td>
+        <td><%= teacher_leave_application.message %></td>
+        <td><%= teacher_leave_application.is_approved %></td>
+        <td><%= link_to 'Show', teacher_leave_application %></td>
+        <td><%= link_to 'Edit', edit_teacher_leave_application_path(teacher_leave_application) %></td>
+        <td><%= link_to 'Destroy', teacher_leave_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Teacher Leave Application', new_teacher_leave_application_path %>

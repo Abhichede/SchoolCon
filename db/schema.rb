@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180716092452) do
+ActiveRecord::Schema.define(version: 20180919090407) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
     t.string "start_year"
     t.string "end_month"
     t.string "end_year"
+    t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "is_active"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_academic_years_on_deleted_at"
   end
@@ -37,9 +37,10 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.integer "division_id"
     t.integer "teacher_id"
     t.json "att_data"
+    t.integer "student_id"
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "subject_id"
     t.integer "academic_year_id"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_attendances_on_deleted_at"
@@ -175,6 +176,7 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "message_type"
   end
 
   create_table "parents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -265,7 +267,7 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.date "payment_date"
     t.string "payment_mode"
     t.text "payment_desc"
-    t.float "amount", limit: 53
+    t.float "amount", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
@@ -364,21 +366,20 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.string "username"
     t.string "password"
     t.integer "academic_year_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "prev_standard"
+    t.string "prev_year"
+    t.string "prev_marks"
+    t.integer "division_id"
     t.string "joining_date"
     t.string "roll_no"
     t.string "student_adhar"
     t.string "father_adhar"
     t.string "mother_adhar"
-    t.integer "division_id"
-    t.string "prev_standard"
-    t.string "prev_year"
-    t.string "prev_marks"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "profile_photo"
     t.integer "parent_id"
     t.boolean "is_enquiry", default: false
-    t.string "leaving_certificate"
     t.datetime "deleted_at"
     t.string "medical_history", default: "NA"
     t.string "skill_of_child", default: "NA"
@@ -404,13 +405,20 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.index ["teacher_id", "subject_id"], name: "index_subjects_teachers_on_teacher_id_and_subject_id"
   end
 
+  create_table "teacher_leave_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "teacher_id"
+    t.string "subject"
+    t.text "message"
+    t.boolean "is_approved", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "first_name"
     t.text "address_one"
     t.string "contact"
     t.string "standard_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "dob"
     t.string "gender"
     t.string "blood_group"
@@ -423,6 +431,8 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.string "pincode"
     t.string "middle_name"
     t.string "staff_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "time_table_settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -431,9 +441,9 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.integer "period_duration", default: 60
     t.integer "num_breaks", default: 3
     t.string "break_durations", default: "30, 60, 30"
+    t.string "breaks_after", default: "11:00 AM, 01:30 PM, 04:30 PM"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "breaks_after", default: "11:00 AM, 01:30 PM, 04:30 PM"
   end
 
   create_table "time_tables", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -444,9 +454,9 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.time "end_time"
     t.integer "teacher_id"
     t.string "subject"
+    t.string "color", default: "BLACK"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "color", default: "BLACK"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_time_tables_on_deleted_at"
   end
@@ -482,6 +492,7 @@ ActiveRecord::Schema.define(version: 20180716092452) do
     t.boolean "approved", default: false, null: false
     t.integer "student_id"
     t.string "username"
+    t.string "device_id"
     t.index ["approved"], name: "index_users_on_approved"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
