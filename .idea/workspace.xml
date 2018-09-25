@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -121,11 +121,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+            <state relative-caret-position="87">
+              <caret line="19" column="171" selection-start-line="19" selection-start-column="171" selection-end-line="19" selection-end-column="171" />
             </state>
           </provider>
         </entry>
@@ -139,10 +139,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/parents_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
+            <state relative-caret-position="261">
               <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="87" selection-end-column="6" />
             </state>
           </provider>
@@ -258,11 +258,11 @@
         <option value="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/teachers_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/notification.rb" />
         <option value="$PROJECT_DIR$/app/views/notifications/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/notifications_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -345,7 +345,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537866285952" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537866594335" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pictures/message window.jpg" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -5248,7 +5248,7 @@
       <workItem from="1537422501823" duration="7636000" />
       <workItem from="1537598902083" duration="1883000" />
       <workItem from="1537764417822" duration="2127000" />
-      <workItem from="1537848506420" duration="10356000" />
+      <workItem from="1537848506420" duration="10704000" />
     </task>
     <task id="LOCAL-00001" summary="Added forgot password api call using mobile number or email address.">
       <created>1534075334472</created>
@@ -5474,11 +5474,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537865994761</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Changes made in api call and leave application, homework">
+      <created>1537866576330</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1537866576330</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119150000" />
+    <option name="totallyTimeSpent" value="119498000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5797,13 +5804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/notification.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -5848,8 +5848,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/parents_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
+        <state relative-caret-position="261">
           <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="87" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="19" column="171" selection-start-line="19" selection-start-column="171" selection-end-line="19" selection-end-column="171" />
         </state>
       </provider>
     </entry>

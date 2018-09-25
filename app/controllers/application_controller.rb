@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def init_fcm
-    fcm = FCM.new('AIzaSyCZGMoIfW6k6A_OiaF1w-lvUTXE1IN14JQ')
+    fcm = FCM.new('AAAAiyCLg_w:APA91bE8GWOAsGSuMDkBhHMp2Ga2HgMheDSc3I5U2G9OJIwz0V9TF1uRKkbDVad67m5ZvoxVOXi-CR_zkUoD2wt9HhniVA51qG-z9_7pvTOgVyH7qoW_qh58SXgjvmFjfm5wafnkeCcZ')
   end
 
   def send_sms_to_parent(student, notification)
