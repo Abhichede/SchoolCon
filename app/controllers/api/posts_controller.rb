@@ -22,6 +22,9 @@ module Api
         if @post.save
           if params[:post_attachments]
             params[:post_attachments]['attachment_path'].each do |a|
+              decoded = Base64.decode64(a.read)
+              # decoded = FilelessIO.new(decoded)
+              a  = decoded
               if ext.include? File.extname(a.original_filename)
                 @post_attachment = @post.post_attachments.create!(attachment_path: a)
               else
