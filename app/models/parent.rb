@@ -1,6 +1,8 @@
 class Parent < ApplicationRecord
   has_many :students
 
+  attr_accessor :user_type
+
   def user_account_email
     @user = User.where(email: students.first.father_email).first
 

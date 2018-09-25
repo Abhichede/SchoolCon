@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/homeworks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/homeworks_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/homeworks/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/homeworks/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/homeworks/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/homeworks/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/parent.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/parent.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -82,7 +81,7 @@
           <entry key="jbuilder" value="27" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
-          <entry key="rb" value="94" />
+          <entry key="rb" value="98" />
           <entry key="sql" value="1" />
           <entry key="users" value="10" />
           <entry key="yml" value="4" />
@@ -93,7 +92,7 @@
           <entry key="Database Element" value="16" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RHTML" value="32" />
-          <entry key="Ruby" value="120" />
+          <entry key="Ruby" value="124" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="4" />
         </counts>
@@ -101,18 +100,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="50" />
-          <entry key="erb" value="2002" />
+          <entry key="erb" value="2098" />
           <entry key="jbuilder" value="149" />
-          <entry key="rb" value="3015" />
-          <entry key="txt" value="947" />
+          <entry key="rb" value="3059" />
+          <entry key="txt" value="975" />
           <entry key="yml" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="954" />
-          <entry key="RHTML" value="2002" />
-          <entry key="Ruby" value="3157" />
+          <entry key="PLAIN_TEXT" value="982" />
+          <entry key="RHTML" value="2098" />
+          <entry key="Ruby" value="3201" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="55" />
         </counts>
@@ -121,24 +120,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/homeworks/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/homeworks_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="60" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/homeworks/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -182,18 +163,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-456" />
+            <state relative-caret-position="432">
+              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/standards/show.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/parents_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1634">
-              <caret line="86" column="114" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="114" />
+            <state relative-caret-position="-475">
+              <caret line="48" column="5" selection-start-line="24" selection-start-column="2" selection-end-line="48" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/parents_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/parent.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/student.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -219,11 +229,12 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="3b984a5d-1c0b-4eaf-a356-d760c2c86dd5" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response1.json" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/application_record.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/passwords_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/devise/passwords_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/devise_token_auth/passwords_controller.rb" />
@@ -263,7 +274,6 @@
         <option value="$PROJECT_DIR$/app/views/notifications/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/api/teacher_leave_applications/index.json.jbuilder" />
@@ -273,6 +283,9 @@
         <option value="$PROJECT_DIR$/app/views/homeworks/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/homeworks_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/homeworks/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/parent.rb" />
       </list>
     </option>
   </component>
@@ -317,6 +330,19 @@
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
@@ -372,7 +398,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537848849927" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537853289284" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pictures/message window.jpg" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -5339,7 +5365,7 @@
       <workItem from="1537422501823" duration="7636000" />
       <workItem from="1537598902083" duration="1883000" />
       <workItem from="1537764417822" duration="2127000" />
-      <workItem from="1537848506420" duration="222000" />
+      <workItem from="1537848506420" duration="1326000" />
     </task>
     <task id="LOCAL-00001" summary="Added forgot password api call using mobile number or email address.">
       <created>1534075334472</created>
@@ -5474,11 +5500,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537435368422</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Changes made in api call and leave application, homework">
+      <created>1537848877008</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1537848877009</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109027000" />
+    <option name="totallyTimeSpent" value="110120000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5491,9 +5524,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2652787" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2652787" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -5508,7 +5540,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.58133334" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.58133334" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49832103" weight="0.372" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501679" side_tool="true" weight="0.7546667" />
@@ -5541,13 +5573,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Changes made in api call and leave application, homework" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/api_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://ce6cde97-1e0a-46e9-8f8b-796311155d08/schema/SchoolCon_v1_development/table/users" />
     <entry file="das://ce6cde97-1e0a-46e9-8f8b-796311155d08/schema/SchoolCon_v1_development/table/parents" />
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
@@ -5591,13 +5616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/parents_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="48" column="5" selection-start-line="24" selection-start-column="2" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -5725,13 +5743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/parents_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -5752,9 +5763,6 @@
           <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/student.rb">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/students/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
@@ -5829,7 +5837,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/students/print_students_list.pdf.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456" />
+        <state relative-caret-position="432">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/parents_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="48" column="5" selection-start-line="24" selection-start-column="2" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/student.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/parent.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/parents_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+        </state>
       </provider>
     </entry>
   </component>

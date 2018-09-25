@@ -46,7 +46,7 @@ module Api
     end
 
     def device_reg_params
-      params.permit(:parent_id, :device_id)
+      params.permit(:parent_id, :device_id, :user_type)
     end
   end
 end
