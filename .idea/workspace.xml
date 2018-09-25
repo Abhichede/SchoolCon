@@ -81,7 +81,7 @@
           <entry key="jbuilder" value="27" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
-          <entry key="rb" value="98" />
+          <entry key="rb" value="99" />
           <entry key="sql" value="1" />
           <entry key="users" value="10" />
           <entry key="yml" value="4" />
@@ -92,7 +92,7 @@
           <entry key="Database Element" value="16" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RHTML" value="32" />
-          <entry key="Ruby" value="124" />
+          <entry key="Ruby" value="125" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="4" />
         </counts>
@@ -102,16 +102,16 @@
           <entry key="cell" value="50" />
           <entry key="erb" value="2098" />
           <entry key="jbuilder" value="149" />
-          <entry key="rb" value="3059" />
-          <entry key="txt" value="975" />
+          <entry key="rb" value="3074" />
+          <entry key="txt" value="989" />
           <entry key="yml" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="982" />
+          <entry key="PLAIN_TEXT" value="996" />
           <entry key="RHTML" value="2098" />
-          <entry key="Ruby" value="3201" />
+          <entry key="Ruby" value="3216" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="55" />
         </counts>
@@ -120,15 +120,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/homeworks/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/subjects/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -181,20 +172,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/parents_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+            <state relative-caret-position="375">
+              <caret line="22" column="77" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/teacher_leave_applications_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/parent.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -230,7 +230,7 @@
     <option name="defaultAccountId" value="3b984a5d-1c0b-4eaf-a356-d760c2c86dd5" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response1.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response17.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -355,6 +355,21 @@
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="teacher_leave_applications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="homeworks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -398,7 +413,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537853289284" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537855500373" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pictures/message window.jpg" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -415,6 +430,643 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b21abTVXZmI0M2lFMmIrVytHNWFhRWhrdzdYTWhLQUxuYkpZM0hzSmYrYlUvSkJ1end2OFprZW5IQ2JnRERJdUljYUxaU25RaUNpTEFNVVZZSlQyUS95djhjUUhNaHJCTWZteHhpWjg5Y0JUYTl5eEdRL3pkckY0dUJEZmdLSkhEWFVsL1NkK2FONDh5RmxwQVJjcGRnPT0tLWtxK2FBa0NpMWZpVXFDVnZ6VmQ2ZGc9PQ%3D%3D--54b380c3acc9fe88f8c1e7bd3fa19de7bb6977f4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="api/teacher_leave_applications" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="wGl9A_GZPo5q0WLQ1aUH2g" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="Cdbarfud_GNqGZn6FoY6jQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="tashika.gaikwad@myschoolcon.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="teacher_leave_application[message]" />
+                <option name="value" value="sdasd1sdsdasdsd d sdasd" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="teacher_leave_application[teacher_id]" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="teacher_leave_application[subject]" />
+                <option name="value" value="jhjvh" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b21abTVXZmI0M2lFMmIrVytHNWFhRWhrdzdYTWhLQUxuYkpZM0hzSmYrYlUvSkJ1end2OFprZW5IQ2JnRERJdUljYUxaU25RaUNpTEFNVVZZSlQyUS95djhjUUhNaHJCTWZteHhpWjg5Y0JUYTl5eEdRL3pkckY0dUJEZmdLSkhEWFVsL1NkK2FONDh5RmxwQVJjcGRnPT0tLWtxK2FBa0NpMWZpVXFDVnZ6VmQ2ZGc9PQ%3D%3D--54b380c3acc9fe88f8c1e7bd3fa19de7bb6977f4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="api/register_device_id" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="wGl9A_GZPo5q0WLQ1aUH2g" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="Cdbarfud_GNqGZn6FoY6jQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="tashika.gaikwad@myschoolcon.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="parent_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="device_id" />
+                <option name="value" value="asdasdasdasdsads" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user_type" />
+                <option name="value" value="teacher" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b21abTVXZmI0M2lFMmIrVytHNWFhRWhrdzdYTWhLQUxuYkpZM0hzSmYrYlUvSkJ1end2OFprZW5IQ2JnRERJdUljYUxaU25RaUNpTEFNVVZZSlQyUS95djhjUUhNaHJCTWZteHhpWjg5Y0JUYTl5eEdRL3pkckY0dUJEZmdLSkhEWFVsL1NkK2FONDh5RmxwQVJjcGRnPT0tLWtxK2FBa0NpMWZpVXFDVnZ6VmQ2ZGc9PQ%3D%3D--54b380c3acc9fe88f8c1e7bd3fa19de7bb6977f4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="api/auth/sign_in" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="ssAACOfsiO1GeQ3ThLUccQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="9SZkLm7DevNq3FOtajDz4A" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="tashika.gaikwad@myschoolcon.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="parent_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="device_id" />
+                <option name="value" value="asdasdasdasdsads" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user_type" />
+                <option name="value" value="teacher" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b21abTVXZmI0M2lFMmIrVytHNWFhRWhrdzdYTWhLQUxuYkpZM0hzSmYrYlUvSkJ1end2OFprZW5IQ2JnRERJdUljYUxaU25RaUNpTEFNVVZZSlQyUS95djhjUUhNaHJCTWZteHhpWjg5Y0JUYTl5eEdRL3pkckY0dUJEZmdLSkhEWFVsL1NkK2FONDh5RmxwQVJjcGRnPT0tLWtxK2FBa0NpMWZpVXFDVnZ6VmQ2ZGc9PQ%3D%3D--54b380c3acc9fe88f8c1e7bd3fa19de7bb6977f4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="api/register_device_id" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="ssAACOfsiO1GeQ3ThLUccQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="9SZkLm7DevNq3FOtajDz4A" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="tashika.gaikwad@myschoolcon.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="parent_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="device_id" />
+                <option name="value" value="asdasdasdasdsads" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user_type" />
+                <option name="value" value="teacher" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b21abTVXZmI0M2lFMmIrVytHNWFhRWhrdzdYTWhLQUxuYkpZM0hzSmYrYlUvSkJ1end2OFprZW5IQ2JnRERJdUljYUxaU25RaUNpTEFNVVZZSlQyUS95djhjUUhNaHJCTWZteHhpWjg5Y0JUYTl5eEdRL3pkckY0dUJEZmdLSkhEWFVsL1NkK2FONDh5RmxwQVJjcGRnPT0tLWtxK2FBa0NpMWZpVXFDVnZ6VmQ2ZGc9PQ%3D%3D--54b380c3acc9fe88f8c1e7bd3fa19de7bb6977f4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="api/auth/sign_in" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="ssAACOfsiO1GeQ3ThLUccQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="9SZkLm7DevNq3FOtajDz4A" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="abhijitchede777@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="parent_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="device_id" />
+                <option name="value" value="asdasdasdasdsads" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user_type" />
+                <option name="value" value="teacher" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b21abTVXZmI0M2lFMmIrVytHNWFhRWhrdzdYTWhLQUxuYkpZM0hzSmYrYlUvSkJ1end2OFprZW5IQ2JnRERJdUljYUxaU25RaUNpTEFNVVZZSlQyUS95djhjUUhNaHJCTWZteHhpWjg5Y0JUYTl5eEdRL3pkckY0dUJEZmdLSkhEWFVsL1NkK2FONDh5RmxwQVJjcGRnPT0tLWtxK2FBa0NpMWZpVXFDVnZ6VmQ2ZGc9PQ%3D%3D--54b380c3acc9fe88f8c1e7bd3fa19de7bb6977f4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="api/auth/sign_in" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9689968965" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9689968965" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="ssAACOfsiO1GeQ3ThLUccQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="9SZkLm7DevNq3FOtajDz4A" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="abhijitchede777@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="parent_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="device_id" />
+                <option name="value" value="asdasdasdasdsads" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user_type" />
+                <option name="value" value="teacher" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b21abTVXZmI0M2lFMmIrVytHNWFhRWhrdzdYTWhLQUxuYkpZM0hzSmYrYlUvSkJ1end2OFprZW5IQ2JnRERJdUljYUxaU25RaUNpTEFNVVZZSlQyUS95djhjUUhNaHJCTWZteHhpWjg5Y0JUYTl5eEdRL3pkckY0dUJEZmdLSkhEWFVsL1NkK2FONDh5RmxwQVJjcGRnPT0tLWtxK2FBa0NpMWZpVXFDVnZ6VmQ2ZGc9PQ%3D%3D--54b380c3acc9fe88f8c1e7bd3fa19de7bb6977f4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="api/register_device_id" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9689968965" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="Abhichede777@" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="ssAACOfsiO1GeQ3ThLUccQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="9SZkLm7DevNq3FOtajDz4A" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="abhichede777@gmail.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="parent_id" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="device_id" />
+                <option name="value" value="asdasdasdasdsads" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="user_type" />
+                <option name="value" value="teacher" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -4643,664 +5295,6 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="a3NsZzZCcjRkMHZVUGtUL3VYMytxR0ZYZHNkek44UnpGcXJTalpsQzQyaWpEOHZOM1FWQ0Zqd2ExbndYV1VqN1d5VjdlQnJFRmNyeUVGNElTQkk3c0YvT3U4TzRWbTZpNWJRbkkvaWIzSlhhOGdVWVU4SDc3aWNYK2VFdmwvZmdjOWdpbWErMVdJYjcwQjRwTVp3UUlRPT0tLTR3R3phSnZtUmVGaDYrNjBOYmRxaEE9PQ%3D%3D--7836789ccd95b0b41b488c36663096e53f5475b9" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cE5xQU52WTV6ZHNCZGVtZ2NGdXBobHVaSytZbGVvVlZwS0YwdkJudy9xM1Exa1p2RG9oZDF6aW1HV2owNlhNMExjbTBwUk1SVVlzdERhUCsrQ01aMEVHNS9sRS9PMkNyMFdmVmt2cjhYMHJyL25OeHVoN1BCOTRnRDZPTy9iMks4RkJoUy9PMVRMZm1taUJFblowSEJnPT0tLS9ZVmFtNWZtSlRoZUVsVFlBRjBwS2c9PQ%3D%3D--3afdf63f6617a0e8c0677943ed3142e632e14c1e" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="api/homeworks" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede777@" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="BHMCK4tMzdhefHs7r6MnBQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="WlF1-v9mUz36jqMOSInFWQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[name]" />
-                <option name="value" value="AAA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[description]" />
-                <option name="value" value="Somethign AAAA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[standard_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[division_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[date]" />
-                <option name="value" value="08-09-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="a3NsZzZCcjRkMHZVUGtUL3VYMytxR0ZYZHNkek44UnpGcXJTalpsQzQyaWpEOHZOM1FWQ0Zqd2ExbndYV1VqN1d5VjdlQnJFRmNyeUVGNElTQkk3c0YvT3U4TzRWbTZpNWJRbkkvaWIzSlhhOGdVWVU4SDc3aWNYK2VFdmwvZmdjOWdpbWErMVdJYjcwQjRwTVp3UUlRPT0tLTR3R3phSnZtUmVGaDYrNjBOYmRxaEE9PQ%3D%3D--7836789ccd95b0b41b488c36663096e53f5475b9" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cE5xQU52WTV6ZHNCZGVtZ2NGdXBobHVaSytZbGVvVlZwS0YwdkJudy9xM1Exa1p2RG9oZDF6aW1HV2owNlhNMExjbTBwUk1SVVlzdERhUCsrQ01aMEVHNS9sRS9PMkNyMFdmVmt2cjhYMHJyL25OeHVoN1BCOTRnRDZPTy9iMks4RkJoUy9PMVRMZm1taUJFblowSEJnPT0tLS9ZVmFtNWZtSlRoZUVsVFlBRjBwS2c9PQ%3D%3D--3afdf63f6617a0e8c0677943ed3142e632e14c1e" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="api/homeworks" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede777@" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="BHMCK4tMzdhefHs7r6MnBQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="WlF1-v9mUz36jqMOSInFWQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="name" />
-                <option name="value" value="AAA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="description" />
-                <option name="value" value="Somethign AAAA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="standard_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="division_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="date" />
-                <option name="value" value="08-09-2018" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="TkdHcDY0MkJjQWs4dkY4S3JnenZrbXFtZklUZVpNOW5mNnN5RkNsNllYZU1IQTRURU1JT1c5ZnM2U2tZZVVCNTNHNVd0K01EZDVzOFpIWjdIRkdvR09uK3FiNGwxaEdSY0prN3c0a3ZSOWlzN2NsUktQYWtnWGp3U2w5VnQwRlJ0ZlJZY3I0LzBMR1QrMjAzamhuamFRPT0tLVU1NHJSaktQT0JVTVZ3d1NKTDcwanc9PQ%3D%3D--9eb6f48229a070431606a91990d5f94881642aec" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cE5xQU52WTV6ZHNCZGVtZ2NGdXBobHVaSytZbGVvVlZwS0YwdkJudy9xM1Exa1p2RG9oZDF6aW1HV2owNlhNMExjbTBwUk1SVVlzdERhUCsrQ01aMEVHNS9sRS9PMkNyMFdmVmt2cjhYMHJyL25OeHVoN1BCOTRnRDZPTy9iMks4RkJoUy9PMVRMZm1taUJFblowSEJnPT0tLS9ZVmFtNWZtSlRoZUVsVFlBRjBwS2c9PQ%3D%3D--3afdf63f6617a0e8c0677943ed3142e632e14c1e" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="api/time_tables" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede777@" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="BHMCK4tMzdhefHs7r6MnBQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="WlF1-v9mUz36jqMOSInFWQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="3" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="device_id" />
-                <option name="value" value="kjkjnfsdfsdfsdfsdfsdfSS232323" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="standard_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="division_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="TkdHcDY0MkJjQWs4dkY4S3JnenZrbXFtZklUZVpNOW5mNnN5RkNsNllYZU1IQTRURU1JT1c5ZnM2U2tZZVVCNTNHNVd0K01EZDVzOFpIWjdIRkdvR09uK3FiNGwxaEdSY0prN3c0a3ZSOWlzN2NsUktQYWtnWGp3U2w5VnQwRlJ0ZlJZY3I0LzBMR1QrMjAzamhuamFRPT0tLVU1NHJSaktQT0JVTVZ3d1NKTDcwanc9PQ%3D%3D--9eb6f48229a070431606a91990d5f94881642aec" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cE5xQU52WTV6ZHNCZGVtZ2NGdXBobHVaSytZbGVvVlZwS0YwdkJudy9xM1Exa1p2RG9oZDF6aW1HV2owNlhNMExjbTBwUk1SVVlzdERhUCsrQ01aMEVHNS9sRS9PMkNyMFdmVmt2cjhYMHJyL25OeHVoN1BCOTRnRDZPTy9iMks4RkJoUy9PMVRMZm1taUJFblowSEJnPT0tLS9ZVmFtNWZtSlRoZUVsVFlBRjBwS2c9PQ%3D%3D--3afdf63f6617a0e8c0677943ed3142e632e14c1e" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="api/auth/sign_in" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede777@" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="zigUsDlNs4XLJ_PVjcxPLQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="Ndzjwa-7duTttYvhX5VI9A" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="3" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="device_id" />
-                <option name="value" value="kjkjnfsdfsdfsdfsdfsdfSS232323" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="standard_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="division_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="TkdHcDY0MkJjQWs4dkY4S3JnenZrbXFtZklUZVpNOW5mNnN5RkNsNllYZU1IQTRURU1JT1c5ZnM2U2tZZVVCNTNHNVd0K01EZDVzOFpIWjdIRkdvR09uK3FiNGwxaEdSY0prN3c0a3ZSOWlzN2NsUktQYWtnWGp3U2w5VnQwRlJ0ZlJZY3I0LzBMR1QrMjAzamhuamFRPT0tLVU1NHJSaktQT0JVTVZ3d1NKTDcwanc9PQ%3D%3D--9eb6f48229a070431606a91990d5f94881642aec" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cE5xQU52WTV6ZHNCZGVtZ2NGdXBobHVaSytZbGVvVlZwS0YwdkJudy9xM1Exa1p2RG9oZDF6aW1HV2owNlhNMExjbTBwUk1SVVlzdERhUCsrQ01aMEVHNS9sRS9PMkNyMFdmVmt2cjhYMHJyL25OeHVoN1BCOTRnRDZPTy9iMks4RkJoUy9PMVRMZm1taUJFblowSEJnPT0tLS9ZVmFtNWZtSlRoZUVsVFlBRjBwS2c9PQ%3D%3D--3afdf63f6617a0e8c0677943ed3142e632e14c1e" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="api/auth/sign_in" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede7" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="zigUsDlNs4XLJ_PVjcxPLQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="Ndzjwa-7duTttYvhX5VI9A" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="3" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="device_id" />
-                <option name="value" value="kjkjnfsdfsdfsdfsdfsdfSS232323" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="standard_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="division_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="TkdHcDY0MkJjQWs4dkY4S3JnenZrbXFtZklUZVpNOW5mNnN5RkNsNllYZU1IQTRURU1JT1c5ZnM2U2tZZVVCNTNHNVd0K01EZDVzOFpIWjdIRkdvR09uK3FiNGwxaEdSY0prN3c0a3ZSOWlzN2NsUktQYWtnWGp3U2w5VnQwRlJ0ZlJZY3I0LzBMR1QrMjAzamhuamFRPT0tLVU1NHJSaktQT0JVTVZ3d1NKTDcwanc9PQ%3D%3D--9eb6f48229a070431606a91990d5f94881642aec" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cE5xQU52WTV6ZHNCZGVtZ2NGdXBobHVaSytZbGVvVlZwS0YwdkJudy9xM1Exa1p2RG9oZDF6aW1HV2owNlhNMExjbTBwUk1SVVlzdERhUCsrQ01aMEVHNS9sRS9PMkNyMFdmVmt2cjhYMHJyL25OeHVoN1BCOTRnRDZPTy9iMks4RkJoUy9PMVRMZm1taUJFblowSEJnPT0tLS9ZVmFtNWZtSlRoZUVsVFlBRjBwS2c9PQ%3D%3D--3afdf63f6617a0e8c0677943ed3142e632e14c1e" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="api/time_tables" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede777@" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="zigUsDlNs4XLJ_PVjcxPLQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="Ndzjwa-7duTttYvhX5VI9A" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="3" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="device_id" />
-                <option name="value" value="kjkjnfsdfsdfsdfsdfsdfSS232323" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="standard_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="division_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="UVdtQ0xTbitXYUFYMjJ0b0piUjh6SkZYek9TcGllNmRkSzcxc1pxb3h6eHZac1BRcDVnaE1iOThZNEZHbGphaGJDZDkxSWFHSVd1WnQweC9mNzZFRXl2ZE5YZElzamhUajcwQ3hXZlhNVXN1b3hQOE5CMnRoVTdRdHdvU0JxaWRPUXBoNzIyenI2MVZ5R2NjUlV4eWJnPT0tLVZnVjFSdHNYeXhqRXk5cUdGZFFibEE9PQ%3D%3D--ed9e1d9327ad52a37b3089776f7e1ec8a2d238e9" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cE5xQU52WTV6ZHNCZGVtZ2NGdXBobHVaSytZbGVvVlZwS0YwdkJudy9xM1Exa1p2RG9oZDF6aW1HV2owNlhNMExjbTBwUk1SVVlzdERhUCsrQ01aMEVHNS9sRS9PMkNyMFdmVmt2cjhYMHJyL25OeHVoN1BCOTRnRDZPTy9iMks4RkJoUy9PMVRMZm1taUJFblowSEJnPT0tLS9ZVmFtNWZtSlRoZUVsVFlBRjBwS2c9PQ%3D%3D--3afdf63f6617a0e8c0677943ed3142e632e14c1e" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="api/time_tables" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhichede777@" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="zigUsDlNs4XLJ_PVjcxPLQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="Ndzjwa-7duTttYvhX5VI9A" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_id" />
-                <option name="value" value="3" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="device_id" />
-                <option name="value" value="kjkjnfsdfsdfsdfsdfsdfSS232323" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="standard_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="division_id" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -5365,7 +5359,7 @@
       <workItem from="1537422501823" duration="7636000" />
       <workItem from="1537598902083" duration="1883000" />
       <workItem from="1537764417822" duration="2127000" />
-      <workItem from="1537848506420" duration="1326000" />
+      <workItem from="1537848506420" duration="3299000" />
     </task>
     <task id="LOCAL-00001" summary="Added forgot password api call using mobile number or email address.">
       <created>1534075334472</created>
@@ -5507,11 +5501,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537848877009</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Changes made in api call and leave application, homework">
+      <created>1537853863307</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1537853863307</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110120000" />
+    <option name="totallyTimeSpent" value="112093000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5750,13 +5751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/teacher_leave_applications_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180919090407_create_teacher_leave_applications.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -5856,17 +5850,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/parent.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/teacher_leave_applications_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="38">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/parents_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+        <state relative-caret-position="375">
+          <caret line="22" column="77" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/parent.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
         </state>
       </provider>
     </entry>

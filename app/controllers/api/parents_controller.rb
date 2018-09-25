@@ -20,7 +20,7 @@ module Api
             end
           else
             respond_to do |f|
-              f.json {render json: {error: 'Device id was updated already.'}}
+              f.json {render json: {error: 'Device id was updated already.'} }
             end
           end
         else
