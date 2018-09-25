@@ -4,7 +4,6 @@
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/uploaders/homework_attachment_uploader.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/uploaders/homework_attachment_uploader.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -189,8 +188,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+            <state relative-caret-position="304">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -415,7 +414,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537861651031" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537862267183" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pictures/message window.jpg" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -5318,7 +5317,7 @@
       <workItem from="1537422501823" duration="7636000" />
       <workItem from="1537598902083" duration="1883000" />
       <workItem from="1537764417822" duration="2127000" />
-      <workItem from="1537848506420" duration="7511000" />
+      <workItem from="1537848506420" duration="7902000" />
     </task>
     <task id="LOCAL-00001" summary="Added forgot password api call using mobile number or email address.">
       <created>1534075334472</created>
@@ -5516,11 +5515,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537859672251</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Changes made in api call and leave application, homework">
+      <created>1537861850131</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1537861850131</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116305000" />
+    <option name="totallyTimeSpent" value="116696000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5533,6 +5539,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2652787" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -5549,7 +5556,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.58133334" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.58133334" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49832103" weight="0.5733333" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501679" side_tool="true" weight="0.7546667" />
@@ -5884,8 +5891,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
