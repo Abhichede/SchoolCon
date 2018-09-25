@@ -11,6 +11,13 @@ module Api
     end
 
     def create
+      if homework_params[:attachment]
+        decoded = Base64.decode64(homework_params[:attachment].read)
+        decoded = FilelessIO.new(decoded)
+
+        homework_params[:attachment]  = decoded
+      end
+
       @homework = Homework.new(homework_params)
 
       respond_to do |format|
