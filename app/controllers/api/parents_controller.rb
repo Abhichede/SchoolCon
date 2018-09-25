@@ -36,7 +36,7 @@ module Api
       else
         if device_reg_params[:teacher_id]
           @teacher = Teacher.find(device_reg_params[:teacher_id])
-          @user = User.where(username: @teacher.mobile).last
+          @user = User.where(username: @teacher.contact).last
 
           if @user
             if @user.device_id == nil || @user.device_id != device_reg_params[:device_id]
