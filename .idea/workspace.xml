@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/teacher_leave_applications_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/teacher_leave_applications_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -102,13 +101,13 @@
           <entry key="erb" value="2098" />
           <entry key="jbuilder" value="149" />
           <entry key="rb" value="3192" />
-          <entry key="txt" value="1053" />
+          <entry key="txt" value="1131" />
           <entry key="yml" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1060" />
+          <entry key="PLAIN_TEXT" value="1138" />
           <entry key="RHTML" value="2098" />
           <entry key="Ruby" value="3334" />
           <entry key="Scratch" value="50" />
@@ -229,7 +228,7 @@
     <option name="defaultAccountId" value="3b984a5d-1c0b-4eaf-a356-d760c2c86dd5" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response29.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response33.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -412,7 +411,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537856523123" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537859224587" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pictures/message window.jpg" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -429,6 +428,97 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b21abTVXZmI0M2lFMmIrVytHNWFhRWhrdzdYTWhLQUxuYkpZM0hzSmYrYlUvSkJ1end2OFprZW5IQ2JnRERJdUljYUxaU25RaUNpTEFNVVZZSlQyUS95djhjUUhNaHJCTWZteHhpWjg5Y0JUYTl5eEdRL3pkckY0dUJEZmdLSkhEWFVsL1NkK2FONDh5RmxwQVJjcGRnPT0tLWtxK2FBa0NpMWZpVXFDVnZ6VmQ2ZGc9PQ%3D%3D--54b380c3acc9fe88f8c1e7bd3fa19de7bb6977f4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="schoolcon.herokuapp.com" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
+          <option name="urlPath" value="api/teacher_leave_applications" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="9595858519" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="wGl9A_GZPo5q0WLQ1aUH2g" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="Cdbarfud_GNqGZn6FoY6jQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="tashika.gaikwad@myschoolcon.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="teacher_leave_application[teacher_id]" />
+                <option name="value" value="8" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="teacher_leave_application[subject]" />
+                <option name="value" value="Something" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="teacher_leave_application[message]" />
+                <option name="value" value="Testing Something" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -5175,104 +5265,6 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="a3NsZzZCcjRkMHZVUGtUL3VYMytxR0ZYZHNkek44UnpGcXJTalpsQzQyaWpEOHZOM1FWQ0Zqd2ExbndYV1VqN1d5VjdlQnJFRmNyeUVGNElTQkk3c0YvT3U4TzRWbTZpNWJRbkkvaWIzSlhhOGdVWVU4SDc3aWNYK2VFdmwvZmdjOWdpbWErMVdJYjcwQjRwTVp3UUlRPT0tLTR3R3phSnZtUmVGaDYrNjBOYmRxaEE9PQ%3D%3D--7836789ccd95b0b41b488c36663096e53f5475b9" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="cE5xQU52WTV6ZHNCZGVtZ2NGdXBobHVaSytZbGVvVlZwS0YwdkJudy9xM1Exa1p2RG9oZDF6aW1HV2owNlhNMExjbTBwUk1SVVlzdERhUCsrQ01aMEVHNS9sRS9PMkNyMFdmVmt2cjhYMHJyL25OeHVoN1BCOTRnRDZPTy9iMks4RkJoUy9PMVRMZm1taUJFblowSEJnPT0tLS9ZVmFtNWZtSlRoZUVsVFlBRjBwS2c9PQ%3D%3D--3afdf63f6617a0e8c0677943ed3142e632e14c1e" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="api/auth/sign_in" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9595858519" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="9595858519" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="BHMCK4tMzdhefHs7r6MnBQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="WlF1-v9mUz36jqMOSInFWQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhichede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[name]" />
-                <option name="value" value="AAA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[description]" />
-                <option name="value" value="Somethign AAAA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[standard_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[division_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[date]" />
-                <option name="value" value="08-09-2018" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="homework[attachment]" />
-                <option name="value" value="file://$USER_HOME$/Pictures/510222832-612x612.jpg" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -5337,7 +5329,7 @@
       <workItem from="1537422501823" duration="7636000" />
       <workItem from="1537598902083" duration="1883000" />
       <workItem from="1537764417822" duration="2127000" />
-      <workItem from="1537848506420" duration="4049000" />
+      <workItem from="1537848506420" duration="4877000" />
     </task>
     <task id="LOCAL-00001" summary="Added forgot password api call using mobile number or email address.">
       <created>1534075334472</created>
@@ -5514,11 +5506,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537856352406</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Changes made in api call and leave application, homework">
+      <created>1537856654263</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1537856654263</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112843000" />
+    <option name="totallyTimeSpent" value="113671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5547,11 +5546,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.58133334" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.58133334" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49832103" weight="0.372" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501679" side_tool="true" weight="0.7546667" />
-      <window_info anchor="bottom" id="REST Client" order="11" sideWeight="0.50369376" weight="0.58933336" />
+      <window_info active="true" anchor="bottom" id="REST Client" order="11" sideWeight="0.50369376" visible="true" weight="0.58933336" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />

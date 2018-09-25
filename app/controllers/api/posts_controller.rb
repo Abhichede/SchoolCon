@@ -20,7 +20,7 @@ module Api
         # end
 
         if @post.save
-          unless params[:post_attachments].blank?
+          unless params[:post_attachments]
             params[:post_attachments]['attachment_path'].each do |a|
               if ext.include? File.extname(a.original_filename)
                 @post_attachment = @post.post_attachments.create!(attachment_path: a)
@@ -32,7 +32,7 @@ module Api
             end
           end
           # format.html { redirect_to post_path(@post), notice: 'Post was successfully created.' }
-          format.json { render json: { success: "Post was successfully created" } }
+          format.json { render json: { success: "success" } }
         else
           # format.html { render :new }
           format.json { render json: @post.errors, status: :unprocessable_entity }
