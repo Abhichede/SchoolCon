@@ -26,9 +26,12 @@ class HomeworksController < ApplicationController
   def create
     @homework = Homework.new(homework_params)
 
+    session.delete(:return_to)
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
       if @homework.save
-        format.html { redirect_to standard_path(@homework.standard), notice: 'Homework was successfully created.' }
+        format.html { redirect_to session.delete(:return_to), notice: 'Homework was successfully created.' }
         format.json { render :show, status: :created, location: @homework }
       else
         format.html { render :new }

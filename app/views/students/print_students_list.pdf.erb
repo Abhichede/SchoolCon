@@ -39,6 +39,8 @@
     <tr>
       <th>Sr#</th>
       <th>Name</th>
+      <th>Parent Mobile</th>
+      <th>Student Mobile</th>
       <th>Total Fee</th>
       <th>Paid</th>
       <th>Balance</th>
@@ -50,6 +52,8 @@
         <tr>
           <td><%= counter += 1 %></td>
           <td><%= student.self_full_name %></td>
+          <td><%= student.father_mobile %></td>
+          <td><%= student.student_mobile %></td>
           <td><%= student.total_fee_with_discount_fine %></td>
           <td><%= student.current_total_paid %></td>
           <td><%= student.current_balance_amount %></td>

@@ -5,9 +5,29 @@
 <div class="row">
   <div class="panel panel-warning">
     <div class="panel-body">
-      To create new homework Go to <strong><%= link_to 'Standards', standards_path %> -> Divisions -> Add Homework</strong>
+      To create new homework click on corresponding division</strong>
     </div>
   </div>
+</div>
+<div class="row">
+  <% Standard.all.each do |standard| %>
+    <div class="col-md-4-col-lg-4 col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <strong><%= standard.name %></strong>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <% standard.divisions.each do |division| %>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                  <%= link_to division.name, new_homework_path(:standard_id => standard.id, :division_id => division.id), class: 'btn btn-default' %>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
 <table class="table table-striped">
   <thead>

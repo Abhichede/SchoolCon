@@ -1,3 +1,7 @@
+<%
+  session.delete(:return_to)
+  session[:return_to] ||= request.referer
+%>
 <%= form_for @homework, :html => { :class => "form-horizontal homework" } do |f| %>
 
   <% if @homework.errors.any? %>
@@ -51,7 +55,7 @@
     <div class="col-lg-offset-2 col-lg-6">
       <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                standard_path(params[:standard_id]), :class => 'btn btn-default' %>
+                  session.delete(:return_to), :class => 'btn btn-default' %>
     </div>
   </div>
 
