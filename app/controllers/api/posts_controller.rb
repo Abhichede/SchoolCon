@@ -20,7 +20,7 @@ module Api
         # end
 
         if @post.save
-          unless params[:post_attachments]
+          if params[:post_attachments]
             params[:post_attachments]['attachment_path'].each do |a|
               if ext.include? File.extname(a.original_filename)
                 @post_attachment = @post.post_attachments.create!(attachment_path: a)
