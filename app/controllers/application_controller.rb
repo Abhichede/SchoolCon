@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     I18n.locale = params[:locale] || I18n.default_locale
   end
 
+  def init_fcm
+    fcm = FCM.new('AIzaSyCZGMoIfW6k6A_OiaF1w-lvUTXE1IN14JQ')
+  end
+
   def send_sms_to_parent(student, notification)
     puts student.father_mobile
     #response = RestClient.get "http://login.bulksmsgateway.in/sendmessage.php?user=abhichede777&password=abhijit123@&mobile=#{student.father_mobile}&message=#{notification.message}&sender=DNYNDP&type=3"

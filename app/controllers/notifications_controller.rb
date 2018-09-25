@@ -109,6 +109,17 @@ class NotificationsController < ApplicationController
       if notification_params[:by_sms] == '1'
         send_sms_to_parent(@notification.student, @notification)
       end
+      if notification_params[:by_app] == '1'
+        fcm = init_fcm
+        @student = Student.find(notification_params[:student_id])
+        @user = User.where(username: @student.father_mobile).last
+        device_id = @user.device_id
+        registration_ids= [device_id] # an array of one or more client registration tokens
+        options = {data: {score: "123"}, collapse_key: "updated_score"}
+        response = fcm.send(registration_ids, options)
+
+        puts response
+      end
       respond_to do |format|
         format.html { redirect_to session.delete(:return_to), notice: "Notification was sent successfully." }
         format.json { render :show, status: :created, location: @notification }
@@ -148,6 +159,6 @@ class NotificationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def notification_params
-      params.require(:notification).permit(:title, :message, :from, :student_id, :notification_type, :type_data, :by_sms, :by_mail)
+      params.require(:notification).permit(:title, :message, :from, :student_id, :notification_type, :type_data, :by_sms, :by_mail, :by_app)
     end
 end

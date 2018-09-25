@@ -22,7 +22,7 @@ class TeachersController < ApplicationController
   def show
   end
 
-  # GET /teachers/new
+  # GET /teachers/newf
   def new
     @teacher = Teacher.new
   end

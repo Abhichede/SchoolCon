@@ -49,16 +49,22 @@
 
   <div class="form-group">
     <div class="col-lg-2"></div>
-    <div class="col-lg-5">
+    <div class="col-lg-4">
       <div class="checkbox checkbox-danger">
         <%= f.check_box :by_sms %>
         <%= f.label 'SMS', for: 'notification_by_sms' %>
       </div>
     </div>
-    <div class="col-lg-5">
+    <div class="col-lg-3">
       <div class="checkbox checkbox-danger">
         <%= f.check_box :by_mail %>
         <%= f.label :mail, for: 'notification_by_mail' %>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="checkbox checkbox-danger">
+        <%= f.check_box :by_app %>
+        <%= f.label :app, for: 'notification_by_mail' %>
       </div>
     </div>
   </div>
