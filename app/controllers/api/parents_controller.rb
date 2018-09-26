@@ -11,53 +11,40 @@ module Api
         @parent = Parent.find(device_reg_params[:parent_id])
         @user = User.where(username: @parent.mobile).last
 
-        if @user
-          if @user.device_id == nil || @user.device_id != device_reg_params[:device_id]
-            @user.update(device_id: device_reg_params[:device_id])
-            respond_to do |f|
+        respond_to do |f|
+          if @user
+            if @user.device_id == nil || @user.device_id != device_reg_params[:device_id]
+              @user.update(device_id: device_reg_params[:device_id])
               f.json {render json: {success: 'Device id updated.'}}
-            end
-          else
-            respond_to do |f|
+            else
               f.json {render json: {error: 'Device id was updated already.'} }
             end
-          end
-        else
-          respond_to do |f|
+          else
             f.json {render json: {error: 'User not found.'}}
           end
         end
-      else
-        respond_to do |f|
-          f.json {render json: {error: 'Related parent not found.'}}
-        end
-      end
-      if device_reg_params[:teacher_id] != ''
+
+      elsif device_reg_params[:teacher_id] != ''
         @teacher = Teacher.find(device_reg_params[:teacher_id])
         @user = User.where(username: @teacher.contact).last
 
-        if @user
-          if @user.device_id == nil || @user.device_id != device_reg_params[:device_id]
-            @user.update(device_id: device_reg_params[:device_id])
-            respond_to do |f|
-              f.json {render json: {success: 'Device id updated.'}}
-            end
-          else
-            respond_to do |f|
+        respond_to do |f|
+          if @user
+            if @user.device_id == nil || @user.device_id != device_reg_params[:device_id]
+              @user.update(device_id: device_reg_params[:device_id])
+                f.json {render json: {success: 'Device id updated.'}}
+            else
               f.json {render json: {error: 'Device id was updated already.'} }
             end
-          end
-        else
-          respond_to do |f|
+          else
             f.json {render json: {error: 'User not found.'}}
           end
         end
       else
         respond_to do |f|
-          f.json {render json: {error: 'Related parent not found.'}}
+          f.json {render json: {error: 'Related user not found.'}}
         end
       end
-
     end
 
 
