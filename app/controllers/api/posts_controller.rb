@@ -25,13 +25,8 @@ module Api
               decoded = Base64.decode64(a.to_s)
               # decoded = FilelessIO.new(decoded)
               a  = decoded
-              if ext.include? File.extname(a.original_filename)
-                @post_attachment = @post.post_attachments.create!(attachment_path: a)
-              else
-                @post.destroy
-                format.json { render json: {error: "File extension #{File.extname(a.original_filename)} is not allowed."} }
-                break
-              end
+              puts a
+              @post_attachment = @post.post_attachments.create!(attachment_path: a)
             end
           end
           # format.html { redirect_to post_path(@post), notice: 'Post was successfully created.' }
