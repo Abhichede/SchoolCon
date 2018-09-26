@@ -1,6 +1,5 @@
 module Api
   class HomeworksController < Api::ApiController
-
     def index
       if params[:student_id] && params[:date]
         @division = Student.find(params[:student_id]).divisions.last
@@ -12,7 +11,7 @@ module Api
 
     def create
       unless homework_params[:attachment].blank?
-        decoded = Base64.decode64(homework_params[:attachment].to_s.read)
+        decoded = Base64.decode64(homework_params[:attachment].to_s)
         # decoded = FilelessIO.new(decoded)
         homework_params[:attachment]  = decoded
       end
