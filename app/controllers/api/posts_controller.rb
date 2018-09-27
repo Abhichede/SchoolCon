@@ -22,10 +22,11 @@ module Api
         if @post.save
           unless params[:post_attachments].blank?
             params[:post_attachments]['attachment_path'].each do |a|
-              decoded = Base64.decode64(a.to_s)
-              # decoded = FilelessIO.new(decoded)
-              a  = decoded
+
               puts a
+              # decoded = Base64.decode64(a.to_s)
+              # # decoded = FilelessIO.new(decoded)
+              # a  = decoded
               @post_attachment = @post.post_attachments.create!(attachment_path: a)
             end
           end

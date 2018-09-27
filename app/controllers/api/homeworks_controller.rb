@@ -11,7 +11,10 @@ module Api
 
     def create
       unless homework_params[:attachment].blank?
-        decoded = Base64.decode64(homework_params[:attachment].to_s)
+        image_str = homework_params[:attachment].to_s
+        image_str.gsub! 'data:image/png;base64', ''
+        image_str.gsub! ' ', ''
+        decoded = Base64.decode64(image_str)
         # decoded = FilelessIO.new(decoded)
         homework_params[:attachment]  = decoded
       end
