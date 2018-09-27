@@ -10,10 +10,13 @@ module Api
     end
 
     def create
+      require "base64"
       unless homework_params[:attachment].blank?
-        image_str = homework_params[:attachment].to_s
+        image_str = homework_params[:attachment]
         image_str.gsub! 'data:image/png;base64', ''
         image_str.gsub! ' ', '+'
+
+        puts "This is string receieved: #{image_str}"
         decoded = Base64.decode64(image_str)
         # decoded = FilelessIO.new(decoded)
         homework_params[:attachment]  = decoded
