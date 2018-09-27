@@ -16,8 +16,15 @@ module Api
         decoded = Base64.decode64(image_str)
         # decoded = FilelessIO.new(decoded)
 
-        puts decoded
-        homework_params[:attachment]  = decoded
+        prefix = 'mydata'
+        suffix = '.jpg'
+        tempfile = Tempfile.new [prefix, suffix], "#{Rails.root}/tmp"
+
+        tempfile.binmode
+        tempfile.write(decoded)
+
+        uploaded_file = ActionDispatch::Http::UploadedFile.new(:tempfile => tempfile, :filename => 'pic.jpg', :original_filename => 'pic.jpg')
+        homework_params[:attachment]  = uploaded_file
       end
 
       @homework = Homework.new(homework_params)
