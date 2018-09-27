@@ -23,7 +23,7 @@ module Api
         tempfile.binmode
         tempfile.write(decoded)
 
-        uploaded_file = ActionDispatch::Http::UploadedFile.new(:tempfile => tempfile, :filename => 'pic.jpg', :original_filename => 'pic.jpg')
+        uploaded_file = ActionDispatch::Http::UploadedFile.new(:tempfile => tempfile, :content_type => 'image/jpg',:filename => 'pic.jpg', :original_filename => 'pic.jpg')
         puts "UploadParams #{uploaded_file}"
         homework_params[:attachment]  = uploaded_file
       end
