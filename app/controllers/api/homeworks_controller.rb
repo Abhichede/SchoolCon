@@ -12,20 +12,9 @@ module Api
     def create
       require "base64"
       unless homework_params[:attachment].blank?
-        image_str = homework_params[:attachment]
-        decoded = Base64.decode64(image_str)
-        # decoded = FilelessIO.new(decoded)
+        image_str = "data:image/jpg;base64,#{homework_params[:attachment]}"
 
-        prefix = 'mydata'
-        suffix = '.jpg'
-        tempfile = Tempfile.new [prefix, suffix], "#{Rails.root}/tmp"
-
-        tempfile.binmode
-        tempfile.write(decoded)
-
-        uploaded_file = ActionDispatch::Http::UploadedFile.new(:tempfile => tempfile, :content_type => 'image/jpg',:filename => 'pic.jpg', :original_filename => 'pic.jpg')
-        puts "UploadParams #{uploaded_file}"
-        homework_params[:attachment]  = uploaded_file
+        homework_params[:attachment]  = image_str
       end
 
       @homework = Homework.new(homework_params)

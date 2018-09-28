@@ -61,6 +61,7 @@ gem "breadcrumbs_on_rails"
 
 # File uploaders to aws
 gem 'carrierwave'
+gem 'carrierwave-base64'
 gem 'fog'
 gem 'figaro'
 gem 'mini_magick'
