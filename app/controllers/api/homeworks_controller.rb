@@ -14,6 +14,8 @@ module Api
       if homework_params[:attachment] != ''
         image_str = "data:image/jpg;base64,#{homework_params[:attachment]}"
 
+        puts image_str
+
         homework_params[:attachment]  = image_str
       end
 
