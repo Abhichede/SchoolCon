@@ -11,7 +11,7 @@ module Api
 
     def create
       require "base64"
-      unless homework_params[:attachment].blank?
+      if homework_params[:attachment] != ''
         image_str = "data:image/jpg;base64,#{homework_params[:attachment]}"
 
         homework_params[:attachment]  = image_str
