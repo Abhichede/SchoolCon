@@ -7,6 +7,14 @@ class Attendance < ApplicationRecord
   belongs_to :subject
   belongs_to :academic_year
 
+  validates :academic_year_id, presence: true
+  validates :standard_id, presence: true
+  validates :division_id, presence: true
+  validates :subject_id, presence: true
+  validates :teacher_id, presence: true
+  validates :date, presence: true
+
+
   def filter_by_student(student)
     att_data["#{student.id}"] === 'on' ? 'Present' : 'Absent'
   end

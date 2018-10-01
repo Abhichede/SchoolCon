@@ -13,10 +13,10 @@ module Api
       require "base64"
       if homework_params[:attachment] != ''
         image_str = "data:image/jpg;base64,#{homework_params[:attachment]}"
-
+        image_data = Base64.decode64(image_str['data:image/png;base64,'.length .. -1])
         puts image_str
 
-        homework_params[:attachment]  = image_str
+        homework_params[:attachment]  = image_data
       end
 
       @homework = Homework.new(homework_params)
