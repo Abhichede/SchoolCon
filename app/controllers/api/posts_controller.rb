@@ -27,7 +27,9 @@ module Api
               # decoded = Base64.decode64(a.to_s)
               # # decoded = FilelessIO.new(decoded)
               # a  = decoded
-              @post_attachment = @post.post_attachments.create!(attachment_path: a)
+              io = StringIO.new(Base64.decode64(a))
+              def io.original_filename; "pic.jpg"; end
+              @post_attachment = @post.post_attachments.create!(attachment_path: io)
             end
           end
           # format.html { redirect_to post_path(@post), notice: 'Post was successfully created.' }

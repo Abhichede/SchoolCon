@@ -16,7 +16,7 @@ module Api
       @homework = Homework.new(homework_params)
       if homework_params[:attachment] != ''
         io = StringIO.new(Base64.decode64(homework_params[:attachment]))
-        def io.original_filename; "pic.jpg"; end
+        def io.original_filename; "#{homework_params[:filename]}"; end
 
         puts io.original_filename
 
@@ -47,7 +47,7 @@ module Api
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def homework_params
-      params.require(:homework).permit(:name, :description, :standard_id, :attachment, :division_id, :date)
+      params.require(:homework).permit(:name, :description, :standard_id, :attachment, :division_id, :date, :filename)
     end
   end
 end
