@@ -13,16 +13,19 @@ module Api
     end
 
     def create
+      @homework = Homework.new(homework_params)
       if homework_params[:attachment] != ''
         io = StringIO.new(Base64.decode64(homework_params[:attachment]))
         def io.original_filename; "pic.jpg"; end
 
-        puts io
+        puts io.original_filename
 
         homework_params[:attachment]  = io
+
+        @homework.update_attributes attachment: io
       end
 
-      @homework = Homework.new(homework_params)
+
 
       respond_to do |format|
         if @homework.save
