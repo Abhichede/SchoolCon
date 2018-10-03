@@ -17,6 +17,8 @@ module Api
         io = StringIO.new(Base64.decode64(homework_params[:attachment]))
         def io.original_filename; "pic.jpg"; end
 
+        puts io
+
         homework_params[:attachment]  = io
       end
 
