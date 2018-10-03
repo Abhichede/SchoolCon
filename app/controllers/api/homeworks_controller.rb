@@ -18,10 +18,6 @@ module Api
         io = StringIO.new(Base64.decode64(homework_params[:attachment]))
         def io.original_filename; "#{homework_params[:filename]}"; end
 
-        puts io.original_filename
-
-        homework_params[:attachment]  = io
-
         @homework.update_attributes attachment: io
       end
 
