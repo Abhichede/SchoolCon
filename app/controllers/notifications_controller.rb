@@ -110,7 +110,9 @@ class NotificationsController < ApplicationController
         send_sms_to_parent(@notification.student, @notification)
       end
       if notification_params[:by_app] == '1'
-        fcm = init_fcm
+        require 'fcm'
+        fcm = FCM.new(ENV['FCM_SERVER_KEY'])
+        # fcm = init_fcm
         @student = Student.find(notification_params[:student_id])
         @user = User.where(username: @student.father_mobile).last
         device_id = @user.device_id

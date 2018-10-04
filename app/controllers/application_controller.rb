@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def init_fcm
+    require 'fcm'
     fcm = FCM.new(ENV['FCM_SERVER_KEY'])
   end
 
