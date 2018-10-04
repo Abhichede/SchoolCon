@@ -81,6 +81,8 @@ class NotificationsController < ApplicationController
       end
 
         if notification_params[:by_app] == '1'
+
+          puts device_ids
           require 'fcm'
           fcm = FCM.new(ENV['FCM_SERVER_KEY'])
           # fcm = init_fcm

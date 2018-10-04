@@ -86,7 +86,7 @@
           <entry key="jbuilder" value="28" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
-          <entry key="rb" value="136" />
+          <entry key="rb" value="137" />
           <entry key="sql" value="1" />
           <entry key="users" value="10" />
           <entry key="yml" value="5" />
@@ -97,7 +97,7 @@
           <entry key="Database Element" value="16" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="34" />
-          <entry key="Ruby" value="165" />
+          <entry key="Ruby" value="166" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="5" />
         </counts>
@@ -108,7 +108,7 @@
           <entry key="cell" value="50" />
           <entry key="erb" value="2108" />
           <entry key="jbuilder" value="149" />
-          <entry key="rb" value="4753" />
+          <entry key="rb" value="4877" />
           <entry key="txt" value="1312" />
           <entry key="yml" value="73" />
         </counts>
@@ -117,7 +117,7 @@
         <counts>
           <entry key="PLAIN_TEXT" value="1319" />
           <entry key="RHTML" value="2108" />
-          <entry key="Ruby" value="4950" />
+          <entry key="Ruby" value="5074" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="73" />
         </counts>
@@ -139,7 +139,16 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/notifications_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
-              <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+              <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="20" column="40" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -267,7 +276,6 @@
         <option value="$PROJECT_DIR$/app/models/notification.rb" />
         <option value="$PROJECT_DIR$/app/views/notifications/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/application.yml" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
@@ -275,6 +283,7 @@
         <option value="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/homework.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/notifications_controller.rb" />
       </list>
     </option>
@@ -5194,35 +5203,7 @@
       <workItem from="1538378513097" duration="2165000" />
       <workItem from="1538434142417" duration="903000" />
       <workItem from="1538548112441" duration="9255000" />
-      <workItem from="1538651643652" duration="726000" />
-    </task>
-    <task id="LOCAL-00012" summary="made changes in standards(removed fees column), added a call for push notifications">
-      <created>1535973413960</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1535973413960</updated>
-    </task>
-    <task id="LOCAL-00013" summary="made changes in standards(removed fees column), added a call for push notifications">
-      <created>1535973547407</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1535973547407</updated>
-    </task>
-    <task id="LOCAL-00014" summary="made changes in standards(removed fees column), added a call for push notifications">
-      <created>1536042322149</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1536042322149</updated>
-    </task>
-    <task id="LOCAL-00015" summary="made changes in standards(removed fees column), added a call for push notifications">
-      <created>1536079340608</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1536079340608</updated>
+      <workItem from="1538651643652" duration="2379000" />
     </task>
     <task id="LOCAL-00016" summary="made changes in standards(removed fees column), added a call for push notifications">
       <created>1536216290759</created>
@@ -5539,11 +5520,39 @@
       <option name="project" value="LOCAL" />
       <updated>1538567437324</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Changes made in api call and leave application, homework">
+      <created>1538654436635</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1538654436636</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Changes made in api call and leave application, homework">
+      <created>1538654529769</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1538654529769</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Changes made in api call and leave application, homework">
+      <created>1538655394323</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1538655394323</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Changes made in api call and leave application, homework">
+      <created>1538655484837</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1538655484837</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156657000" />
+    <option name="totallyTimeSpent" value="158310000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5791,13 +5800,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -5915,10 +5917,17 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/attendances_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="20" column="40" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/notifications_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
-          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+          <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
         </state>
       </provider>
     </entry>
