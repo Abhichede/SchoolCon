@@ -115,7 +115,14 @@ class NotificationsController < ApplicationController
         @user = User.where(username: @student.father_mobile).last
         device_id = @user.device_id
         registration_ids= [device_id] # an array of one or more client registration tokens
-        options = {data: {score: "123"}, collapse_key: "updated_score"}
+        options = {
+            priority: "high",
+            collapse_key: "updated_score",
+            notification: {
+                title: @notification.title,
+                body: @notification.message
+            }
+        }
         response = fcm.send(registration_ids, options)
 
         puts response
