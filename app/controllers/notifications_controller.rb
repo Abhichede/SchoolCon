@@ -54,6 +54,8 @@ class NotificationsController < ApplicationController
         format.json { render :show, status: :created, location: @notification }
       end
     elsif notification_params[:notification_type] === 'standard_wise'
+      counter = 0
+      device_ids = []
       @standard = Standard.find(notification_params[:type_data])
       @standard.divisions.each do |division|
         division.students.each do |student|
@@ -61,6 +63,9 @@ class NotificationsController < ApplicationController
                                            message: notification_params[:message],
                                            from: notification_params[:from], student_id: student.id)
 
+
+          @user = User.where(username: student.father_mobile).last
+          device_ids << @user.device_id
           @notification.save
           if notification_params[:by_mail] == '1'
             unless @notification.student.student_email.blank?
@@ -70,8 +75,29 @@ class NotificationsController < ApplicationController
           if notification_params[:by_sms] == '1'
             send_sms_to_parent(@notification.student, @notification)
           end
+
+
         end
       end
+
+        if notification_params[:by_app] == '1'
+          require 'fcm'
+          fcm = FCM.new(ENV['FCM_SERVER_KEY'])
+          # fcm = init_fcm
+          # @student = Student.find(notification_params[:student_id])
+          # @user = User.where(username: @student.father_mobile).last
+          # device_id = @user.device_id
+          # registration_ids= [device_id] # an array of one or more client registration tokens
+          options = {
+              priority: "high",
+              collapse_key: "updated_score",
+              notification: {
+                  title: @notification.title,
+                  body: @notification.message
+              }
+          }
+          response = fcm.send(device_ids, options)
+        end
         respond_to do |format|
           format.html { redirect_to session.delete(:return_to), notice: "Notification was sent successfully to All from standard #{@standard.name}." }
           format.json { render :show, status: :created, location: @notification }
