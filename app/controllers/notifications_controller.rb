@@ -97,6 +97,8 @@ class NotificationsController < ApplicationController
               }
           }
           response = fcm.send(device_ids, options)
+
+          puts response
         end
         respond_to do |format|
           format.html { redirect_to session.delete(:return_to), notice: "Notification was sent successfully to All from standard #{@standard.name}." }
