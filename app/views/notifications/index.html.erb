@@ -36,7 +36,7 @@
                     Division: <%= division.name %>
                     <strong>Total Students: <%= division.students.where(is_enquiry: false).count %></strong>
                     <span class="pull-right">
-                      <a class="btn btn-xs" data-toggle="collapse" href="#division_<%= division.name.parameterize.underscore %>">
+                      <a class="btn btn-xs" data-toggle="collapse" href="#division_<%= division.id %>">
                         <i class="fa fa-chevron-down"></i>
                       </a>
                     </span>
@@ -49,7 +49,7 @@
                     <% end %>
                   </h5>
                 </div>
-                <div class="panel-body collapse" id="division_<%= division.name.parameterize.underscore %>">
+                <div class="panel-body collapse" id="division_<%= division.id %>">
                   <table class="table table-bordered table-responsive" id="admitted_students_table_<%= division.name %>">
                     <thead>
                     <tr>
