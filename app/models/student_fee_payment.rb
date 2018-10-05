@@ -17,4 +17,8 @@ class StudentFeePayment < ApplicationRecord
       payment_date.strftime("%d-%b-%Y")
     end
   end
+
+  def student_name
+    student.self_full_name
+  end
 end
