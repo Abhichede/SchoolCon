@@ -6,7 +6,6 @@ module Api
       if params[:student_id]
         @student = Student.find(params[:student_id]) if params[:student_id]
         @student_fee_payments = @student.student_fee_payments if params[:student_id]
-
       else
         @student_fee_payments = StudentFeePayment.all.order("payment_date DESC")
       end

@@ -7,12 +7,14 @@ class StudentFeePayment < ApplicationRecord
   def current_academic_year
     if academic_year
       academic_year.academic_year
-    else
-      payment_date.to_date.year
+    # else
+    #   payment_date.to_date.year
     end
   end
 
   def date
-    payment_date.strftime("%d-%b-%Y")
+    if payment_date
+      payment_date.strftime("%d-%b-%Y")
+    end
   end
 end

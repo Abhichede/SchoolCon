@@ -34,7 +34,7 @@
                 <div class="panel-heading">
                   <h5>
                     Division: <%= division.name %>
-                    <strong>Total Students: <%= division.students.where(is_enquiry: false).count %></strong>
+                    <strong>Students: <%= division.students.where(is_enquiry: false).count %></strong>
                     <span class="pull-right">
                       <a class="btn btn-xs" data-toggle="collapse" href="#division_<%= division.id %>">
                         <i class="fa fa-chevron-down"></i>
