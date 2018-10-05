@@ -6,28 +6,86 @@
     </div>
   </div>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:message) %></th>
-      <th><%= model_class.human_attribute_name(:from) %></th>
-      <th><%= model_class.human_attribute_name(:student_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @notifications.each do |notification| %>
-      <tr >
-        <td><%= link_to notification.id, notification_path(notification) %></td>
-        <td><%= notification.title %></td>
-        <td><%= notification.message %></td>
-        <td><%= notification.from %></td>
-        <td><%= notification.student.self_full_name %></td>
-        <td><%=l notification.created_at %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <% Standard.all.each do |standard| %>
+    <div class="col-md-4-col-lg-4 col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <strong>Standard: <%= standard.name %></strong>
+          <% flag = false %>
+          <% standard.divisions.each do |div| %>
+            <% if div.students.count > 0 %>
+              <% flag = true %>
+            <% end %>
+          <% end %>
+
+          <% if flag %>
+            <span class="pull-right">
+              <%= link_to 'Message to STD',
+                          new_notification_path(notification_type: 'standard_wise', type_data: standard.id),
+                          :class => 'btn btn-primary btn-xs', remote: true %>
+            </span>
+          <% end %>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <% standard.divisions.each do |division| %>
+              <div class="panel panel-default" >
+                <div class="panel-heading">
+                  <h5>
+                    Division: <%= division.name %>
+                    <strong>Total Students: <%= division.students.where(is_enquiry: false).count %></strong>
+                    <span class="pull-right">
+                      <a class="btn btn-xs" data-toggle="collapse" href="#division_<%= division.name.parameterize.underscore %>">
+                        <i class="fa fa-chevron-down"></i>
+                      </a>
+                    </span>
+                    <% if division.students.count > 0 %>
+                      <span class="pull-right">
+                        <%= link_to 'Message to Div',
+                                    new_notification_path(notification_type: 'division_wise', type_data: division.id),
+                                    :class => 'btn btn-primary btn-xs', remote: true %>
+                      </span>
+                    <% end %>
+                  </h5>
+                </div>
+                <div class="panel-body collapse" id="division_<%= division.name.parameterize.underscore %>">
+                  <table class="table table-bordered table-responsive" id="admitted_students_table_<%= division.name %>">
+                    <thead>
+                    <tr>
+                      <th>Roll no.</th>
+                      <th>Name</th>
+                      <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% if division.students.blank? %>
+                      <tr>
+                        <td colspan="3">No Students</td>
+                      </tr>
+                    <% end %>
+                    <% division.students.where(is_enquiry: false).each do |student| %>
+                      <tr>
+                        <td><%= student.roll_no %></td>
+                        <td><%= student.self_full_name %></td>
+                        <td>
+
+                          <%= link_to 'Send Message',
+                                      new_notification_path(student_id: student.id, notification_type: 'student_wise'),
+                                      :class => 'btn btn-primary btn-xs', remote: true %>
+                        </td>
+
+                      </tr>
+                    <% end %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
