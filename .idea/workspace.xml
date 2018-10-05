@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/student_fee_payments_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/student_fee_payments_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/student_fee_payment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/student_fee_payment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/notifications/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notifications/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -86,7 +84,7 @@
           <entry key="erb" value="38" />
           <entry key="gif" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="jbuilder" value="32" />
+          <entry key="jbuilder" value="33" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
           <entry key="rb" value="155" />
@@ -101,7 +99,7 @@
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="38" />
-          <entry key="Ruby" value="188" />
+          <entry key="Ruby" value="189" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="5" />
         </counts>
@@ -111,8 +109,8 @@
           <entry key="Gemfile" value="55" />
           <entry key="cell" value="50" />
           <entry key="erb" value="2375" />
-          <entry key="jbuilder" value="149" />
-          <entry key="rb" value="5261" />
+          <entry key="jbuilder" value="166" />
+          <entry key="rb" value="5330" />
           <entry key="txt" value="1312" />
           <entry key="yml" value="73" />
         </counts>
@@ -121,7 +119,7 @@
         <counts>
           <entry key="PLAIN_TEXT" value="1319" />
           <entry key="RHTML" value="2375" />
-          <entry key="Ruby" value="5458" />
+          <entry key="Ruby" value="5544" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="73" />
         </counts>
@@ -150,14 +148,27 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="162" selection-start-column="162" selection-end-column="162" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/student_fee_payment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="399">
+              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -204,13 +215,11 @@
     <option name="defaultAccountId" value="3b984a5d-1c0b-4eaf-a356-d760c2c86dd5" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response19.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response23.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/api/notifications_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/api/parent_messages/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/parent_messages/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/attendances/_attendance.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/controllers/api/parent_messages_controller.rb" />
@@ -260,6 +269,8 @@
         <option value="$PROJECT_DIR$/app/views/notifications/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/api/student_fee_payments_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/student_fee_payment.rb" />
+        <option value="$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" />
       </list>
     </option>
   </component>
@@ -337,7 +348,7 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="student_fee_payments" type="462c0819:PsiDirectoryNode" />
+              <item name="notifications" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
@@ -388,6 +399,150 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="b3VRbzFIdjVDNEVYQ0RGRWJpQ2xEM3F0NEJoUmc0T0FIakJzTFo1T1ZPK0JtM2ppVzZKSDVETXpIY0QxRUlNSDlxQ1NXZWhxejFsY29IVC83ZDdxMTJBVGxaRkpQUFREV2MzZ01YaCtIVmJIb1RTU2E4bDRvc0FmaVorbWlvSy9WZVlScjJPbmluNUdEUTZmUTNKWGJ3PT0tLXYwTFlYUDI3UkFGWHVDNDdVNW9EYnc9PQ%3D%3D--3ee48c4bdebd957be6faac70c11320d1a1ba43a3" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="api/student_fee_payments" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9689968965" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="Abhichede777@" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="hnlRUbG0l9r_lg96fu8Rzg" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="fYGhr7EqMDXQu9t2ZzU3bQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="Abhichede777@gmail.com" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="_school_con_v1_session" />
+                <option name="path" value="/" />
+                <option name="value" value="UjlFQ1BNbFh6eW04U0MyaWIyajFaR2d1Z294MSt5SXRFZHF5UEZ5QUtFRDFUTG56UTUxbFgvOTM1U1c0WDZReE5PTnZjZjBndVpRbG53c0hRQmFqS3RrNUYvWjM1bjJPK0dQb3pVampzUDU0UG5Mb1JWdmpvWjdhTTdBVmdwQlhnSkxJdGlscFFEZXJCeHROZXI5NGJ3PT0tLTNtTXB6bGlDaFhFV2dBNXdBTUtiQUE9PQ%3D%3D--37144eed3126acb6232483387c1e0c8c5854f51d" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="api/student_fee_payments" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="image/jpg" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="9689968965" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="redirect_url" />
+                <option name="value" value="/users/password/edit" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="Abhichede777@" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="access-token" />
+                <option name="value" value="hnlRUbG0l9r_lg96fu8Rzg" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="client" />
+                <option name="value" value="fYGhr7EqMDXQu9t2ZzU3bQ" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="expiry" />
+                <option name="value" value="1565332174" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="token-type" />
+                <option name="value" value="Bearer" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="uid" />
+                <option name="value" value="Abhichede777@gmail.com" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -4753,202 +4908,6 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="U2NsQ25xV2NIWTh1UEVGdytUZTcvc0FPc0pXSGFaRkJSc2l5b0lJdGhOczY1ZkZzcmZVczU4K3d6TzhQcGs2MDRjMU4zOC9LTHowSFJQbkVHZHdNNG5yZGZkK1hoWWR2elRrYVg5ZERiRlNhOW1aV2c4Tm5HWXNEb3o0MUlZS3k3UncrTFR1S2x1MWxiV09tbFM2VGdRPT0tLTJ5cW5qVWVxVjJuTG5YcG4rTEZ1Vnc9PQ%3D%3D--546cc5a30689daceb271558b2955b876c9974719" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
-          <option name="urlPath" value="api/student_fee_payments" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhijit9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="fFAk7FPLI0ybw--s3jj9aA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="wU_4aq37mCvAB9Vf7QsTTA" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhijitchede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[payment_date]" />
-                <option name="value" value="17-09-2018" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[student_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[payment_mode]" />
-                <option name="value" value="CASH" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[payment_desc]" />
-                <option name="value" value="No" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[amount]" />
-                <option name="value" value="1000" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[academic_year_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="localhost" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="U2NsQ25xV2NIWTh1UEVGdytUZTcvc0FPc0pXSGFaRkJSc2l5b0lJdGhOczY1ZkZzcmZVczU4K3d6TzhQcGs2MDRjMU4zOC9LTHowSFJQbkVHZHdNNG5yZGZkK1hoWWR2elRrYVg5ZERiRlNhOW1aV2c4Tm5HWXNEb3o0MUlZS3k3UncrTFR1S2x1MWxiV09tbFM2VGdRPT0tLTJ5cW5qVWVxVjJuTG5YcG4rTEZ1Vnc9PQ%3D%3D--546cc5a30689daceb271558b2955b876c9974719" />
-              </Biscuit>
-              <Biscuit>
-                <option name="date" value="-1" />
-                <option name="domain" value="schoolcon.herokuapp.com" />
-                <option name="name" value="_school_con_v1_session" />
-                <option name="path" value="/" />
-                <option name="value" value="Tnp2UWlNQ0ZiUlZHTUJDWlZoZi9yY0FKaEJvM2VoZzBHOEpwR085V2VOUHRla3Z5VHgzK090endad2d3N3RNVXY5M24wcFlKektBSklNTXhKR2U1R0UyZDZpTmhlTFUvcmhPeWlMV1RqcFpNRGlwaTg5M3dsbzRjZnVnZDFhNWlHUTRiN2N0WWVPUERmQUZCeERjaEhnPT0tLTl1QTBVVUY4K3p6RHMxSGtMN3Vrd3c9PQ%3D%3D--48e0b9bc6d86761e5058df3899a9851ea807b7ca" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://schoolcon.herokuapp.com" />
-          <option name="urlPath" value="api/auth/sign_in" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="username" />
-                <option name="value" value="9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="redirect_url" />
-                <option name="value" value="/users/password/edit" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="password" />
-                <option name="value" value="Abhijit9689968965" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="access-token" />
-                <option name="value" value="hTumnLPCMUTMxDIyjB0s_w" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="client" />
-                <option name="value" value="borvlEHlcgbcvAZmlxrXmQ" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="expiry" />
-                <option name="value" value="1565332174" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="token-type" />
-                <option name="value" value="Bearer" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="uid" />
-                <option name="value" value="abhijitchede777@gmail.com" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[payment_date]" />
-                <option name="value" value="17-09-2018" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[student_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[payment_mode]" />
-                <option name="value" value="CASH" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[payment_desc]" />
-                <option name="value" value="No" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[amount]" />
-                <option name="value" value="1000" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="student_fee_payment[academic_year_id]" />
-                <option name="value" value="1" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -5022,21 +4981,7 @@
       <workItem from="1538434142417" duration="903000" />
       <workItem from="1538548112441" duration="9255000" />
       <workItem from="1538651643652" duration="3372000" />
-      <workItem from="1538718532838" duration="8570000" />
-    </task>
-    <task id="LOCAL-00024" summary="Changes made in api call and leave application, homework">
-      <created>1537856070010</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1537856070010</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Changes made in api call and leave application, homework">
-      <created>1537856352406</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1537856352406</updated>
+      <workItem from="1538718532838" duration="9534000" />
     </task>
     <task id="LOCAL-00026" summary="Changes made in api call and leave application, homework">
       <created>1537856654263</created>
@@ -5367,11 +5312,25 @@
       <option name="project" value="LOCAL" />
       <updated>1538735446892</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Changes made in api call and leave application, homework">
+      <created>1538738695927</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1538738695927</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Changes made in api call and leave application, homework">
+      <created>1538738950082</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1538738950082</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167873000" />
+    <option name="totallyTimeSpent" value="168837000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5384,9 +5343,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30154467" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30154467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -5401,7 +5359,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.5826667" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.5826667" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49832103" weight="0.26" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501679" side_tool="true" weight="0.7546667" />
@@ -5434,9 +5392,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Changes made in api call and leave application, homework" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/api/teacher_leave_applications/_teacher_leave_application.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -5735,13 +5690,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/student_fee_payment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="399">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="162" selection-start-column="162" selection-end-column="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
         </state>
       </provider>
     </entry>
