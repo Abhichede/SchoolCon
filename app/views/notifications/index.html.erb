@@ -23,7 +23,7 @@
             <span class="pull-right">
               <%= link_to 'Message to STD',
                           new_notification_path(notification_type: 'standard_wise', type_data: standard.id),
-                          :class => 'btn btn-primary btn-xs', remote: true %>
+                          :class => 'btn btn-success btn-xs', remote: true %>
             </span>
           <% end %>
         </div>
@@ -72,7 +72,7 @@
 
                           <%= link_to 'Send Message',
                                       new_notification_path(student_id: student.id, notification_type: 'student_wise'),
-                                      :class => 'btn btn-primary btn-xs', remote: true %>
+                                      :class => 'btn btn-warning btn-xs', remote: true %>
                         </td>
 
                       </tr>
