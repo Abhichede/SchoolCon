@@ -31,12 +31,18 @@ class NotificationsController < ApplicationController
     session.delete(:return_to)
     session[:return_to] ||= request.referer
 
+    device_ids = []
     if notification_params[:notification_type] === 'division_wise'
       @division = Division.find(notification_params[:type_data])
       @division.students.each do |student|
         @notification = Notification.new(title: notification_params[:title],
                                          message: notification_params[:message],
                                          from: notification_params[:from], student_id: student.id)
+
+        @user = User.where(username: student.father_mobile).last
+        unless device_ids.include?(@user.device_id)
+          device_ids << @user.device_id
+        end
 
         @notification.save
         if notification_params[:by_mail] == '1'
@@ -47,6 +53,29 @@ class NotificationsController < ApplicationController
         if notification_params[:by_sms] == '1'
           send_sms_to_parent(@notification.student, @notification)
         end
+      end
+
+      if notification_params[:by_app] == '1'
+
+        puts device_ids
+        require 'fcm'
+        fcm = FCM.new(ENV['FCM_SERVER_KEY'])
+        # fcm = init_fcm
+        # @student = Student.find(notification_params[:student_id])
+        # @user = User.where(username: @student.father_mobile).last
+        # device_id = @user.device_id
+        # registration_ids= [device_id] # an array of one or more client registration tokens
+        options = {
+            priority: "high",
+            collapse_key: "updated_score",
+            notification: {
+                title: @notification.title,
+                body: @notification.message
+            }
+        }
+        response = fcm.send(device_ids, options)
+
+        puts response
       end
 
       respond_to do |format|
@@ -65,7 +94,9 @@ class NotificationsController < ApplicationController
 
 
           @user = User.where(username: student.father_mobile).last
-          device_ids << @user.device_id
+          unless device_ids.include?(@user.device_id)
+            device_ids << @user.device_id
+          end
           @notification.save
           if notification_params[:by_mail] == '1'
             unless @notification.student.student_email.blank?
@@ -107,10 +138,16 @@ class NotificationsController < ApplicationController
           format.json { render :show, status: :created, location: @notification }
         end
     elsif notification_params[:notification_type] === 'to_all'
+      device_ids = []
       Student.all.each do |student|
         @notification = Notification.new(title: notification_params[:title],
                                          message: notification_params[:message],
                                          from: notification_params[:from], student_id: student.id)
+
+        @user = User.where(username: student.father_mobile).last
+        unless device_ids.include?(@user.device_id)
+          device_ids << @user.device_id
+        end
 
         @notification.save
         if notification_params[:by_mail] == '1'
@@ -121,6 +158,29 @@ class NotificationsController < ApplicationController
         if notification_params[:by_sms] == '1'
           send_sms_to_parent(@notification.student, @notification)
         end
+      end
+
+      if notification_params[:by_app] == '1'
+
+        puts device_ids
+        require 'fcm'
+        fcm = FCM.new(ENV['FCM_SERVER_KEY'])
+        # fcm = init_fcm
+        # @student = Student.find(notification_params[:student_id])
+        # @user = User.where(username: @student.father_mobile).last
+        # device_id = @user.device_id
+        # registration_ids= [device_id] # an array of one or more client registration tokens
+        options = {
+            priority: "high",
+            collapse_key: "updated_score",
+            notification: {
+                title: @notification.title,
+                body: @notification.message
+            }
+        }
+        response = fcm.send(device_ids, options)
+
+        puts response
       end
 
       respond_to do |format|

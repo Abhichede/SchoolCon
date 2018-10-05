@@ -28,6 +28,25 @@ module Api
             admission_message.gsub! '#{institute_name}', current_institute.name
             send_sms_to_parent(@student, Notification.new(message: ActionController::Base.helpers.strip_tags(admission_message)))
 
+            require 'fcm'
+            fcm = FCM.new(ENV['FCM_SERVER_KEY'])
+            # fcm = init_fcm
+            @user = User.where(username: student.father_mobile).last
+            device_id = @user.device_id
+            registration_ids= [device_id] # an array of one or more client registration tokens
+            options = {
+                priority: "high",
+                collapse_key: "updated_score",
+                notification: {
+                    title: "Fee Payments",
+                    body: ActionController::Base.helpers.strip_tags(admission_message)
+                }
+            }
+            response = fcm.send(registration_ids, options)
+
+            puts response
+
+
             format.json { render json: { success: 'Success' }}
           else
             format.json { render json: @student_fee_payment.errors, status: :unprocessable_entity }

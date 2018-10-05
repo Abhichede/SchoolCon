@@ -26,11 +26,38 @@ class HomeworksController < ApplicationController
   def create
     @homework = Homework.new(homework_params)
 
+    @division = Division.find(homework_params[:division_id])
+
+    device_ids = []
+    @division.students.each do |student|
+      @user = User.where(username: student.father_mobile).last
+
+      unless device_ids.include?(@user.device_id)
+        device_ids << @user.device_id
+      end
+    end
+
     session.delete(:return_to)
     session[:return_to] ||= request.referer
 
     respond_to do |format|
       if @homework.save
+
+        require 'fcm'
+        fcm = FCM.new(ENV['FCM_SERVER_KEY'])
+        # fcm = init_fcm
+        options = {
+            priority: "high",
+            collapse_key: "updated_score",
+            notification: {
+                title: "New Homework",
+                body: @homework.name
+            }
+        }
+        response = fcm.send(device_ids, options)
+
+        puts response
+
         format.html { redirect_to session.delete(:return_to), notice: 'Homework was successfully created.' }
         format.json { render :show, status: :created, location: @homework }
       else
