@@ -53,7 +53,7 @@ class StudentFeePaymentsController < ApplicationController
           require 'fcm'
           fcm = FCM.new(ENV['FCM_SERVER_KEY'])
           # fcm = init_fcm
-          @user = User.where(username: student.father_mobile).last
+          @user = User.where(username: @student.father_mobile).last
           device_id = @user.device_id
           registration_ids= [device_id] # an array of one or more client registration tokens
           options = {

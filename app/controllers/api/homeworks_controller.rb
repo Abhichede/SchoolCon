@@ -25,6 +25,32 @@ module Api
 
       respond_to do |format|
         if @homework.save
+
+          @division = Division.find(homework_params[:division_id])
+
+          device_ids = []
+          @division.students.each do |student|
+            @user = User.where(username: student.father_mobile).last
+
+            unless device_ids.include?(@user.device_id)
+              device_ids << @user.device_id
+            end
+          end
+
+          require 'fcm'
+          fcm = FCM.new(ENV['FCM_SERVER_KEY'])
+          # fcm = init_fcm
+          options = {
+              priority: "high",
+              collapse_key: "updated_score",
+              notification: {
+                  title: "New Homework",
+                  body: @homework.name
+              }
+          }
+          response = fcm.send(device_ids, options)
+
+          puts response
           # format.html { redirect_to standard_path(@homework.standard), notice: 'Homework was successfully created.' }
           format.json { render json: {success: 'Homework created successfully.'} }
         else
