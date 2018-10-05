@@ -14,7 +14,7 @@ module Api
 
         @attendances_monthly_summary = @division.attendances.where("academic_year_id = ? AND date BETWEEN ? AND ?", @academic_year.id, first_date_of_month, last_date_of_month)
       else
-        @attendances = Attendance.where(academic_year_id: @academic_year.id)
+        @attendances = Attendance.where(academic_year_id: @academic_year.id).order("date DESC")
       end
     end
 

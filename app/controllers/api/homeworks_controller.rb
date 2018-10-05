@@ -8,7 +8,7 @@ module Api
         @division = Division.find(params[:division_id])
         @homeworks = @division.homeworks.order("date DESC")
       else
-        @homeworks = Homework.all
+        @homeworks = Homework.all.order("date DESC")
       end
     end
 

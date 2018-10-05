@@ -8,7 +8,7 @@ module Api
         @student_fee_payments = @student.student_fee_payments if params[:student_id]
 
       else
-        @student_fee_payments = StudentFeePayment.all
+        @student_fee_payments = StudentFeePayment.all.order("payment_date DESC")
       end
     end
 
