@@ -212,7 +212,8 @@ class NotificationsController < ApplicationController
             collapse_key: "updated_score",
             notification: {
                 title: @notification.title,
-                body: @notification.message
+                body: @notification.message,
+                icon: "http://myschoolcon.com/images/schoolcon_logo.jpeg"
             }
         }
         response = fcm.send(registration_ids, options)
