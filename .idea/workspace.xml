@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -64,7 +64,7 @@
           <entry key="project.open.time.51" value="7" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.53" value="3" />
-          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.55" value="2" />
           <entry key="project.open.time.56" value="2" />
           <entry key="project.open.time.57" value="2" />
           <entry key="project.open.time.59" value="1" />
@@ -74,7 +74,7 @@
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.67" value="2" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="50" />
+          <entry key="project.opened" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -86,7 +86,7 @@
           <entry key="jbuilder" value="33" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
-          <entry key="rb" value="155" />
+          <entry key="rb" value="157" />
           <entry key="sql" value="1" />
           <entry key="users" value="10" />
           <entry key="yml" value="5" />
@@ -98,7 +98,7 @@
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="38" />
-          <entry key="Ruby" value="189" />
+          <entry key="Ruby" value="191" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="5" />
         </counts>
@@ -109,7 +109,7 @@
           <entry key="cell" value="50" />
           <entry key="erb" value="2375" />
           <entry key="jbuilder" value="166" />
-          <entry key="rb" value="5330" />
+          <entry key="rb" value="5466" />
           <entry key="txt" value="1312" />
           <entry key="yml" value="73" />
         </counts>
@@ -118,7 +118,7 @@
         <counts>
           <entry key="PLAIN_TEXT" value="1319" />
           <entry key="RHTML" value="2375" />
-          <entry key="Ruby" value="5544" />
+          <entry key="Ruby" value="5680" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="73" />
         </counts>
@@ -127,65 +127,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/notifications/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/student_fee_payments_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="84" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="162" selection-start-column="162" selection-end-column="162" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+            <state relative-caret-position="394">
+              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/student_fee_payment.rb">
+        <entry file="file://$PROJECT_DIR$/app/models/homework.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/standards/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1273">
-              <caret line="67" column="14" selection-start-line="67" selection-start-column="14" selection-end-line="149" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/homeworks/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" selection-start-line="11" selection-end-line="30" selection-end-column="6" />
+            <state relative-caret-position="95">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -259,7 +214,6 @@
         <option value="$PROJECT_DIR$/app/controllers/api/attendances_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/attendances_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/homeworks_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/student_fee_payments_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/notifications_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/notifications/index.html.erb" />
@@ -267,6 +221,7 @@
         <option value="$PROJECT_DIR$/app/models/student_fee_payment.rb" />
         <option value="$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" />
       </list>
     </option>
   </component>
@@ -292,7 +247,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -370,8 +327,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4953,13 +4908,7 @@
       <workItem from="1538651643652" duration="3372000" />
       <workItem from="1538718532838" duration="10509000" />
       <workItem from="1538817484414" duration="598000" />
-    </task>
-    <task id="LOCAL-00027" summary="Changes made in api call and leave application, homework">
-      <created>1537859276542</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1537859276542</updated>
+      <workItem from="1539410530079" duration="680000" />
     </task>
     <task id="LOCAL-00028" summary="Changes made in api call and leave application, homework">
       <created>1537859672251</created>
@@ -5297,11 +5246,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538741802070</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Changes made in api call and leave application, homework">
+      <created>1539410666206</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1539410666207</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170410000" />
+    <option name="totallyTimeSpent" value="171090000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5314,8 +5270,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3055742" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31027535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -5523,13 +5480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/homework.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/academic_years_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -5619,24 +5569,10 @@
     <entry file="file://$PROJECT_DIR$/app/views/api/attendances/create.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/standards/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
           <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/notifications/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -5679,6 +5615,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/notifications/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/homework.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
         </state>
       </provider>
     </entry>

@@ -219,7 +219,7 @@
                         <% if File.extname(homework.attachment.to_s) == ".docx" || File.extname(homework.attachment.to_s) == ".xls" || File.extname(homework.attachment.to_s) == ".pdf" %>
                           <a href="<%= homework.attachment %>">Download</a>
                         <% else %>
-                          <%= image_tag homework.attachment %>
+                          <%= image_tag homework.attachment, width: '250', height: '250' %>
                         <% end %>
                       </td>
                       <td>
