@@ -32,8 +32,10 @@ class HomeworksController < ApplicationController
     @division.students.each do |student|
       @user = User.where(username: student.father_mobile).last
 
-      unless device_ids.include?(@user.device_id)
-        device_ids << @user.device_id
+      unless @user.nil?
+        unless device_ids.include?(@user.device_id)
+          device_ids << @user.device_id
+        end
       end
     end
 

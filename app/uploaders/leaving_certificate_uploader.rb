@@ -1,12 +1,24 @@
 # encoding: utf-8
+# CarrierWave.configure do |config|
+#   config.fog_credentials = {
+#       :provider               => 'AWS',
+#       :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
+#       :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],
+#       :region                 => 'ap-south-1'
+#   }
+#   config.fog_directory  = ENV['AWS_S3_BUCKET'] # bucket name
+# end
+
+require 'carrierwave/storage/ftp'
 CarrierWave.configure do |config|
-  config.fog_credentials = {
-      :provider               => 'AWS',
-      :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
-      :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],
-      :region                 => 'ap-south-1'
-  }
-  config.fog_directory  = ENV['AWS_S3_BUCKET'] # bucket name
+  config.ftp_host = "ftp.myschoolcon.com"
+  config.ftp_port = 21
+  config.ftp_user = ENV['FTP_USERNAME']
+  config.ftp_passwd = ENV['FTP_PASSWORD']
+  config.ftp_folder = ENV['FTP_FOLDER']
+  config.ftp_url = ENV['FTP_URL']
+  config.ftp_passive = false # false by default
+  config.ftp_tls = false # false by default
 end
 
 class LeavingCertificateUploader < CarrierWave::Uploader::Base
@@ -16,7 +28,7 @@ class LeavingCertificateUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   # storage :file
-   storage :fog
+   storage :ftp
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
