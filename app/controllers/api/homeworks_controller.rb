@@ -17,14 +17,18 @@ module Api
       if homework_params[:attachment] != ''
         io = StringIO.new(Base64.decode64(homework_params[:attachment]))
         filename = homework_params[:filename]
-        if filename.include? ".jpg"
+        if filename
+          if filename.include? ".jpg"
+            def io.original_filename; "pic.jpg"; end
+          elsif filename.include? ".pdf"
+            def io.original_filename; "doc.pdf"; end
+          elsif filename.include? ".png"
+            def io.original_filename; "pic.png"; end
+          elsif filename.include? ".jpeg"
+            def io.original_filename; "pic.jpeg"; end
+          end
+        else
           def io.original_filename; "pic.jpg"; end
-        elsif filename.include? ".pdf"
-          def io.original_filename; "doc.pdf"; end
-        elsif filename.include? ".png"
-          def io.original_filename; "pic.png"; end
-        elsif filename.include? ".jpeg"
-          def io.original_filename; "pic.jpeg"; end
         end
 
         @homework.update_attributes attachment: io
