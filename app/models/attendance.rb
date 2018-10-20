@@ -12,7 +12,6 @@ class Attendance < ApplicationRecord
   validates :division_id, presence: true
   validates :subject_id, presence: true
   validates :teacher_id, presence: true
-  validates :date, presence: true
 
 
   def filter_by_student(student)
