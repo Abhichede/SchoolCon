@@ -15,7 +15,7 @@ module Api
     def create
       @homework = Homework.new(homework_params)
       if homework_params[:attachment] != ''
-        io = Base64.decode64(homework_params[:attachment])
+        io = StringIO.new(Base64.decode64(homework_params[:attachment]))
         filename = homework_params[:filename]
         # if filename
         #
