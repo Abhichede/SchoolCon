@@ -27,7 +27,7 @@ module Api
               # decoded = Base64.decode64(a.to_s)
               # # decoded = FilelessIO.new(decoded)
               # a  = decoded
-              io = StringIO.new(Base64.decode64(a))
+              io = StringIO.new(Base64.decode64(params[:post_attachments]['attachment_path'][a]))
               def io.original_filename; "pic.jpg"; end
               @post_attachment = @post.post_attachments.create!(attachment_path: io)
             end
