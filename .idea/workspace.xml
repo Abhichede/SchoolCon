@@ -4,7 +4,6 @@
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -111,7 +110,7 @@
           <entry key="cell" value="50" />
           <entry key="erb" value="2405" />
           <entry key="jbuilder" value="166" />
-          <entry key="rb" value="5788" />
+          <entry key="rb" value="5795" />
           <entry key="txt" value="1312" />
           <entry key="yml" value="143" />
         </counts>
@@ -120,7 +119,7 @@
         <counts>
           <entry key="PLAIN_TEXT" value="1319" />
           <entry key="RHTML" value="2405" />
-          <entry key="Ruby" value="6028" />
+          <entry key="Ruby" value="6035" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="143" />
         </counts>
@@ -150,8 +149,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+            <state relative-caret-position="87">
+              <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -159,8 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/posts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="29" column="95" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
+            <state relative-caret-position="228">
+              <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -4938,21 +4937,7 @@
       <workItem from="1539774307663" duration="1856000" />
       <workItem from="1539888170222" duration="1203000" />
       <workItem from="1539930254901" duration="12389000" />
-      <workItem from="1540008286146" duration="5064000" />
-    </task>
-    <task id="LOCAL-00041" summary="Changes made in api call and leave application, homework">
-      <created>1538033562986</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1538033562987</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Changes made in api call and leave application, homework">
-      <created>1538035470711</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1538035470711</updated>
+      <workItem from="1540008286146" duration="6011000" />
     </task>
     <task id="LOCAL-00043" summary="Changes made in api call and leave application, homework">
       <created>1538043933718</created>
@@ -5283,11 +5268,25 @@
       <option name="project" value="LOCAL" />
       <updated>1540019880562</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Changes made in api call and leave application, homework">
+      <created>1540020078060</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1540020078061</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Changes made in api call and leave application, homework">
+      <created>1540020388019</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1540020388024</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193757000" />
+    <option name="totallyTimeSpent" value="194704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5650,15 +5649,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/posts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="95" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
+        <state relative-caret-position="228">
+          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        <state relative-caret-position="87">
+          <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
         </state>
       </provider>
     </entry>

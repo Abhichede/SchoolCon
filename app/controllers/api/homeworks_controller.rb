@@ -66,7 +66,7 @@ module Api
 
           puts response
           # format.html { redirect_to standard_path(@homework.standard), notice: 'Homework was successfully created.' }
-          format.json { render json: {success: 'Homework created successfully.'} }
+          format.json { render json: {success: 'success'} }
         else
           # format.html { render :new }
           format.json { render json: {error: 'Homework not created successfully.'} }
