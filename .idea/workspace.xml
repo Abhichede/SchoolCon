@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" afterDir="false" />
-    </list>
+    <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +84,7 @@
           <entry key="jbuilder" value="33" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
-          <entry key="rb" value="184" />
+          <entry key="rb" value="186" />
           <entry key="sql" value="1" />
           <entry key="users" value="10" />
           <entry key="yml" value="9" />
@@ -99,7 +96,7 @@
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="41" />
-          <entry key="Ruby" value="219" />
+          <entry key="Ruby" value="221" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="9" />
         </counts>
@@ -110,7 +107,7 @@
           <entry key="cell" value="50" />
           <entry key="erb" value="2405" />
           <entry key="jbuilder" value="166" />
-          <entry key="rb" value="5795" />
+          <entry key="rb" value="5796" />
           <entry key="txt" value="1312" />
           <entry key="yml" value="143" />
         </counts>
@@ -119,7 +116,7 @@
         <counts>
           <entry key="PLAIN_TEXT" value="1319" />
           <entry key="RHTML" value="2405" />
-          <entry key="Ruby" value="6035" />
+          <entry key="Ruby" value="6036" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="143" />
         </counts>
@@ -146,11 +143,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
+            <state relative-caret-position="171">
               <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/attendances_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/attendance.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -234,7 +249,6 @@
         <option value="$PROJECT_DIR$/app/views/notifications/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/api/parents_controller.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/app/models/attendance.rb" />
         <option value="$PROJECT_DIR$/app/models/homework.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/attendances_controller.rb" />
@@ -260,6 +274,7 @@
         <option value="$PROJECT_DIR$/config/application.yml" />
         <option value="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/attendance.rb" />
       </list>
     </option>
   </component>
@@ -4937,21 +4952,7 @@
       <workItem from="1539774307663" duration="1856000" />
       <workItem from="1539888170222" duration="1203000" />
       <workItem from="1539930254901" duration="12389000" />
-      <workItem from="1540008286146" duration="6011000" />
-    </task>
-    <task id="LOCAL-00043" summary="Changes made in api call and leave application, homework">
-      <created>1538043933718</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1538043933718</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Changes made in api call and leave application, homework">
-      <created>1538045142084</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1538045142084</updated>
+      <workItem from="1540008286146" duration="7543000" />
     </task>
     <task id="LOCAL-00045" summary="Changes made in api call and leave application, homework">
       <created>1538048140993</created>
@@ -5282,11 +5283,25 @@
       <option name="project" value="LOCAL" />
       <updated>1540020388024</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Changes made in api call and leave application, homework">
+      <created>1540022831028</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1540022831029</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Changes made in api call and leave application, homework">
+      <created>1540024329336</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1540024329337</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194704000" />
+    <option name="totallyTimeSpent" value="196236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5299,6 +5314,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33378106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -5315,7 +5331,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.5826667" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.5826667" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49832103" weight="0.45466667" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501679" side_tool="true" weight="0.7546667" />
@@ -5382,13 +5398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/attendance.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/academic_years_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -5441,13 +5450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="119" column="25" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/attendances_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -5656,8 +5658,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/homeworks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
+        <state relative-caret-position="171">
           <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/attendance.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/attendances_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
         </state>
       </provider>
     </entry>
