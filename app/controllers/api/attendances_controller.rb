@@ -32,7 +32,7 @@ module Api
       respond_to do |format|
         if @duplicate.count > 0
           @attendance = @duplicate.first
-          format.json { render json: {error: 'Attendance already taken'}, status: :unprocessable_entity }
+          format.json { render json: {error: 'Attendance already taken'}}
         else
           if @attendance.save
             @attendance.division.students.where(is_enquiry: false).each do |student|
