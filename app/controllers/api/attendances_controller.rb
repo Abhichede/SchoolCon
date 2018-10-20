@@ -66,6 +66,7 @@ module Api
             format.json
           else
             # format.html { render :new }
+            puts @attendance.errors
             format.json { render json: {error: "Something went wrong while saving, please check all mandatory fields are filled."} }
           end
         end
