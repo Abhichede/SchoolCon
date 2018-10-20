@@ -22,8 +22,7 @@ module Api
         if @post.save
           unless params[:post_attachments].blank?
             puts " Data: #{params[:post_attachments]['attachment_path']}"
-            params[:post_attachments]['attachment_path'].each_with_index do |a, i|
-              puts a
+            params[:post_attachments]['attachment_path'].each do |a|
 
               # decoded = Base64.decode64(a.to_s)
               # # decoded = FilelessIO.new(decoded)

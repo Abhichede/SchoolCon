@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/posts_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -109,7 +109,7 @@
           <entry key="cell" value="50" />
           <entry key="erb" value="2405" />
           <entry key="jbuilder" value="166" />
-          <entry key="rb" value="5709" />
+          <entry key="rb" value="5747" />
           <entry key="txt" value="1312" />
           <entry key="yml" value="143" />
         </counts>
@@ -118,7 +118,7 @@
         <counts>
           <entry key="PLAIN_TEXT" value="1319" />
           <entry key="RHTML" value="2405" />
-          <entry key="Ruby" value="5949" />
+          <entry key="Ruby" value="5987" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="143" />
         </counts>
@@ -157,8 +157,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/posts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="152">
+              <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -4936,14 +4936,7 @@
       <workItem from="1539774307663" duration="1856000" />
       <workItem from="1539888170222" duration="1203000" />
       <workItem from="1539930254901" duration="12389000" />
-      <workItem from="1540008286146" duration="3437000" />
-    </task>
-    <task id="LOCAL-00035" summary="Changes made in api call and leave application, homework">
-      <created>1537867017819</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1537867017819</updated>
+      <workItem from="1540008286146" duration="3718000" />
     </task>
     <task id="LOCAL-00036" summary="Changes made in api call and leave application, homework">
       <created>1537867918391</created>
@@ -5281,11 +5274,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540017888302</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Changes made in api call and leave application, homework">
+      <created>1540018520398</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1540018520398</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192130000" />
+    <option name="totallyTimeSpent" value="192411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5298,7 +5298,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33378106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -5315,7 +5314,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.5826667" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.5826667" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49832103" weight="0.45466667" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501679" side_tool="true" weight="0.7546667" />
@@ -5656,8 +5655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/posts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="152">
+          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
         </state>
       </provider>
     </entry>
