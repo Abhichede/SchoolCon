@@ -46,15 +46,15 @@ module Api
             puts response
 
 
-            format.json { render json: { success: 'Success' }}
+            format.json { render json: { success: true, message: 'Fees added successfully.' }}
           else
-            format.json { render json: @student_fee_payment.errors, status: :unprocessable_entity }
+            format.json { render json: {success: false, error: @student_fee_payment.errors} }
           end
         end
 
       else
         respond_to do |format|
-          format.json { render json: {error: 'Fee is greater than balance amount.' }}
+          format.json { render json: {success: false, error: 'Fee is greater than balance amount.' }}
         end
       end
     end

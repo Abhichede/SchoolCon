@@ -32,10 +32,10 @@ module Api
             end
           end
           # format.html { redirect_to post_path(@post), notice: 'Post was successfully created.' }
-          format.json { render json: { success: "success" } }
+          format.json { render json: { success: true, message: 'Post created successfully' } }
         else
           # format.html { render :new }
-          format.json { render json: @post.errors, status: :unprocessable_entity }
+          format.json { render json: {success: false, error: @post.errors} }
         end
       end
     end

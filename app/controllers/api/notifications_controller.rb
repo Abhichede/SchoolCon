@@ -36,7 +36,7 @@ module Api
         end
 
         respond_to do |format|
-          format.json { render json: {success: 'Success'}}
+          format.json { render json: {success: true, message: 'Message send successfully.'}}
         end
       elsif notification_params[:notification_type] === 'standard_wise'
         @standard = Standard.find(notification_params[:type_data])
@@ -58,7 +58,7 @@ module Api
           end
         end
         respond_to do |format|
-          format.json { render json: {success: 'Success'}}
+          format.json { render json: {success: true, message: 'Message send successfully.'}}
         end
       elsif notification_params[:notification_type] === 'to_all'
         Student.all.each do |student|
@@ -78,7 +78,7 @@ module Api
         end
 
         respond_to do |format|
-          format.json { render json: {success: 'Success'}}
+          format.json { render json: {success: true, message: 'Message send successfully.'}}
         end
       elsif notification_params[:notification_type] === 'student_wise'
         notification_params[:student_id] = notification_params[:type_data]
@@ -96,7 +96,7 @@ module Api
           send_sms_to_parent(@notification.student, @notification)
         end
         respond_to do |format|
-          format.json { render json: {success: 'Success'}}
+          format.json { render json: {success: true, message: 'Message send successfully.'}}
         end
       end
     end

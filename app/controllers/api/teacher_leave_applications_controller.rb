@@ -30,10 +30,10 @@ module Api
       respond_to do |format|
         if @teacher_leave_application.save
           # format.html { redirect_to @teacher_leave_application, notice: 'Teacher leave application was successfully created.' }
-          format.json { render json:{ success: 'success' } }
+          format.json { render json:{ success: true, message: 'Leave application submitted' } }
         else
           # format.html { render :new }
-          format.json { render json: @teacher_leave_application.errors, status: :unprocessable_entity }
+          format.json { render json: {success: false, error: @teacher_leave_application.errors} }
         end
       end
     end
