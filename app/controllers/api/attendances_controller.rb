@@ -32,7 +32,7 @@ module Api
       respond_to do |format|
         if @duplicate.count > 0
           @attendance = @duplicate.first
-          format.json { render json: {error: 'Attendance already taken'}}
+          format.json { render json: {success: false, error: 'Attendance already taken'}}
         else
           if @attendance.save
             @attendance.division.students.where(is_enquiry: false).each do |student|
@@ -63,13 +63,13 @@ module Api
             # format.html { redirect_to attendances_path(standard_id: @attendance.standard_id, division: @attendance.division_id,
             #                                            subject: @attendance.subject_id, date: @attendance.date),
             #                           notice: 'Attendance was successfully created.' }
-            format.json
+            format.json { render json: {success: true, message: "Attendance Submitted successfully"} }
           else
             # format.html { render :new }
             @attendance.errors.full_messages.each do |msg|
               puts msg
             end
-            format.json { render json: {error: "Something went wrong while saving, please check all mandatory fields are filled."} }
+            format.json { render json: {success: false, error: "Something went wrong while saving, please check all mandatory fields are filled."} }
           end
         end
       end
