@@ -2,6 +2,28 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+    <% @holidays.each do |holiday| %>
+    <div class="col-md-6 col-lg-6">
+      <div class="panel panel-danger">
+        <div class="panel-body">
+          <div class="col-lg-4 col-md-4">
+            <h2><span class="label label-primary"><%= holiday.date.day %></span></h2>
+            <h4><span><%= holiday.date.strftime('%b') %></span><span> <%= holiday.date.year %></span></h4>
+          </div>
+          <div class="col-md-8 col-lg-8">
+            <h5>Something</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+  </div>
+</div>
 <table class="table table-striped">
   <thead>
     <tr>

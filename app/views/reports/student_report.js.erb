@@ -1,0 +1,27 @@
+off();
+var content_block = $('.report_content_block');
+$('.report_section_bottom').attr('style', 'visibility: visible');
+content_block.empty();
+
+content_block.append(
+    '<table class="table table-bordered">'+
+    '<thead> <tr>'+
+    '<th>Name</th>'+
+    '<th>Contact</th>'+
+    '<th>Gender</th>'+
+    '</tr> </thead>'+
+    '<tbody id="student_report_content_report_tbody">'+
+
+    '</tbody>'
+);
+
+
+<% @students.each do |student| %>
+  $('#student_report_content_report_tbody').append(
+      '<tr>'+
+        '<td><%= student.self_full_name %></td>'+
+      '<td><%= student.student_mobile %></td>'+
+      '<td><%= student.gender %></td>'+
+      '</tr>'
+  );
+<% end %>

@@ -1,0 +1,35 @@
+<%= form_with url: issue_certificate_path, local: true, :html => { :class => "form-horizontal issue_certificate" } do |f| %>
+
+  <div class="form-group">
+    <%= f.label :reason, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-6">
+      <%= f.text_field :reason, :class => 'form-control', required: true %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cetrificate_name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-6">
+      <%= f.select(:cetrificate_name, options_for_select([['Leaving certificate'],['Bonafide']],
+                                             :disabled=> 'Type'),
+                   {include_blank: 'Type'}, class: 'form-control', id: 'issue_certificate_certificate_name', required: true) %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :certificate_content, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-6">
+      <%= f.text_area :certificate_content, :class => 'form-control', rows: 10, required: true %>
+    </div>
+  </div>
+
+  <%= f.hidden_field :issued_by, value: current_user.id %>
+  <%= f.hidden_field :id, value: @student.id %>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-6">
+      <%= f.submit 'Save', :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  session.delete(:return_to), :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

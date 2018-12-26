@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: %i[show edit update destroy add_leaving_certificate view_student_certificates]
+  before_action :set_student, only: %i[show edit update destroy add_leaving_certificate view_student_certificates issue_certificate]
 
   load_and_authorize_resource
 
@@ -180,6 +180,20 @@ class StudentsController < ApplicationController
     respond_to do |format|
       format.pdf do
         render pdf: "#{@student.self_full_name}_#{params[:type]}", encoding: 'UTF-8'  # Excluding ".pdf" extension.
+      end
+    end
+  end
+
+  def issue_certificate
+    @issued_certificate = @student.issued_certificates.new(reason: params[:reason],
+                                                           cetrificate_name: params[:cetrificate_name],
+                                                           certificate_content: params[:certificate_content],
+                                                           issued_by: params[:issued_by])
+    respond_to do |format|
+      if @issued_certificate.save
+        format.html { redirect_to @student, notice: 'Certificate issued.' }
+      else
+        format.html { redirect_to @student, alert: 'error while adding entry.' }
       end
     end
   end

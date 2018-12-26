@@ -254,4 +254,10 @@ $(function () {
     /**
      * END
      */
+
+    /**
+     * Issue Certificate form validation
+     */
+
+    $('form.issue_certificate').validate();
 });

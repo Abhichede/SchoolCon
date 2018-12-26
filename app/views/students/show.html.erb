@@ -393,26 +393,16 @@
               <div role="tabpanel" class="tab-pane" id="certificates">
                 <div class="panel panel-default">
                   <div class="panel-body">
-                    <ul class="list-group">
-                      <li class="list-group-item">
-                        <strong>Bonafide</strong>
-                        <span class="pull-right">
-                          <%= link_to 'View/Download',
-                                      view_student_certificates_path(type: 'Bonafide', id: @student, format: 'pdf'),
-                                      :class => 'btn btn-info btn-xs' %>
-                        </span>
-                      </li>
-                      <li class="list-group-item">
-                        <strong>Leaving certificate</strong>
-                        <span class="pull-right">
-                                                <%= link_to 'View/Download',
-                                                            view_student_certificates_path(type: 'Leaving certificate', id: @student, format: 'pdf'),
-                                                            :class => 'btn btn-info btn-xs' %>
-                                              </span>
-                      </li>
-                    </ul>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#issue_certificate_form_modal"><i class="fa fa-certificate"> </i> Issue Certificate</button>
                   </div>
                 </div>
+                <% @student.issued_certificates.each do |cert| %>
+                  <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <%= cert.reason %>
+                    </div>
+                  </div>
+                <% end unless @student.issued_certificates.nil? %>
               </div>
 
               <div role="tabpanel" class="tab-pane" id="attendances">
@@ -452,3 +442,22 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function () {
+   $('#issue_certificate_form_modal').modal.hide();
+});
+</script>
+<div class="modal fade" tabindex="-1" role="dialog" id="issue_certificate_form_modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Issue Certificate</h4>
+      </div>
+      <div class="modal-body">
+        <%= render :partial => 'issue_certificate_form' %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

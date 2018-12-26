@@ -17,7 +17,7 @@ if attendance.att_data.nil?
     json.absent_days absent_days
 
   end
-else
+elsif student
   json.extract! attendance, :id, :date
   if student
     json.is_present attendance.filter_by_student(student)
@@ -40,4 +40,6 @@ else
     json.absent_days absent_days
 
   end
+else
+  json.extract! attendance, :id, :date, :subject_id, :standard_id, :division_id, :academic_year_id, :teacher_id, :att_data
 end

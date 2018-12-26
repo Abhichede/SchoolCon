@@ -1,6 +1,6 @@
 module Api
   class AttendancesController < Api::ApiController
-    before_action :set_attendance, only: %i[show]
+    before_action :set_attendance, only: %i[show update]
     before_action :set_academic_year
 
     def index
@@ -10,9 +10,15 @@ module Api
         last_date_of_month = Date.parse(params[:date]).end_of_month
         @student = Student.find(params[:student_id])
         @division = @student.divisions.last
-        @attendances = @division.attendances.where(academic_year_id: @academic_year.id, date: params[:date])
+        @attendances = @division.attendances.where(academic_year_id: @academic_year.id,
+                                                   date: params[:date])
 
-        @attendances_monthly_summary = @division.attendances.where("academic_year_id = ? AND date BETWEEN ? AND ?", @academic_year.id, first_date_of_month, last_date_of_month)
+        @attendances_monthly_summary = @division.attendances.where("academic_year_id = ? AND date BETWEEN ? AND ?",
+                                                                   @academic_year.id, first_date_of_month,
+                                                                   last_date_of_month)
+      elsif params[:teacher_id]
+        @attendances = Attendance.where(academic_year_id: @academic_year.id,
+                                        teacher_id: params[:teacher_id]).order("date DESC")
       else
         @attendances = Attendance.where(academic_year_id: @academic_year.id).order("date DESC")
       end
@@ -71,6 +77,46 @@ module Api
             end
             format.json { render json: {success: false, error: "Something went wrong while saving, please check all mandatory fields are filled."} }
           end
+        end
+      end
+    end
+
+    # PATCH/PUT /attendances/1
+    # PATCH/PUT /attendances/1.json
+    def update
+      respond_to do |format|
+        if @attendance.update(attendance_params)
+          @attendance.division.students.where(is_enquiry: false).each do |student|
+            unless @attendance.att_data["#{student.id}"] === 'on'
+              absent_message = MyTemplate.find_by_name('Student Absent Message').desc
+              absent_message.gsub! '#{student_name}', student.self_full_name
+              send_sms_to_parent(student, Notification.new(message: ActionController::Base.helpers.strip_tags(absent_message)))
+
+              require 'fcm'
+              fcm = FCM.new(ENV['FCM_SERVER_KEY'])
+              # fcm = init_fcm
+              @user = User.where(username: student.father_mobile).last
+              device_id = @user.device_id
+              registration_ids= [device_id] # an array of one or more client registration tokens
+              options = {
+                  priority: "high",
+                  collapse_key: "updated_score",
+                  notification: {
+                      title: "Attendance",
+                      body: ActionController::Base.helpers.strip_tags(absent_message)
+                  }
+              }
+              response = fcm.send(registration_ids, options)
+
+              puts response
+            end
+          end
+          # format.html { redirect_to attendances_path(standard_id: @attendance.standard_id, division: @attendance.division_id,
+          #                                            subject: @attendance.subject_id, date: @attendance.date),
+          #                           notice: 'Attendance was successfully updated.' }
+          format.json { render json: {success: true, message: "Attendance updated successfully"} }
+        else
+          format.json { render json: {success: false, error: "Something went wrong while saving, please check all mandatory fields are filled."} }
         end
       end
     end

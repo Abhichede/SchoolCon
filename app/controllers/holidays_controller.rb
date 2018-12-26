@@ -1,6 +1,6 @@
 class HolidaysController < ApplicationController
   before_action :set_holiday, only: [:show, :edit, :update, :destroy]
-
+  add_breadcrumb 'Holidays', :holidays_path
   # GET /holidays
   # GET /holidays.json
   def index

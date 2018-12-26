@@ -132,12 +132,19 @@
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-money"></i> Teachers <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-users"></i> Teachers <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<%= teachers_path %>">Teachers</a></li>
                       <li><a href="<%= class_teachers_path %>">Class Teachers</a></li>
                       <li><a href="<%= teacher_wise_timetable_path %>">Timetable</a>
                       </li>
+                    </ul>
+                  </li>
+
+                  <li><a><i class="fa fa-file"></i> Reports <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<%= reports_dashboard_path %>">All</a></li>
+                      <li><a href="<%= student_report_path %>">Student Report</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -218,8 +225,9 @@
         <div id='remote_container'></div>
 
         <div id="overlay">
-          <div class="ball centered-image">
-            <%= image_tag 'favicon.ico' %>
+          <div id="loader">
+            <div id="shadow"></div>
+            <div id="box"></div>
           </div>
         </div>
       </div><!--/row-->

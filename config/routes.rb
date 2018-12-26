@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'reports_dashboard', to: 'reports#index'
+  get 'student_report', to: 'reports#student_report'
+
   resources :teacher_leave_applications
   resources :parent_messages
   resources :leave_applications
@@ -124,6 +127,9 @@ Rails.application.routes.draw do
   # ==> Parents
   get 'send_auth_details', to: 'parents#send_auth_details'
   get 'send_stdwise_auth_details', to: 'standards#send_stdwise_auth_details'
+
+  # ==> Issue certificate
+  post 'issue_certificate', to: 'students#issue_certificate'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -20,6 +20,7 @@ class Student < ApplicationRecord
   has_many :notifications, dependent: :destroy
   has_many :leave_applications
   has_many :parent_messages
+  has_many :issued_certificates
 
 
   attr_accessor :siblings
