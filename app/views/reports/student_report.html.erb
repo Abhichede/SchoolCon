@@ -7,64 +7,90 @@
     <div class="x_content">
       <form action="<%= student_report_path %>" data-remote="true" method="get" id="students_report_form">
         <div class="form-group">
-          <div class="col-lg-3">
-            <label class="control-label" for="report_for">Report for</label>
-            <%= select_tag "report_for", options_for_select([['Please Select'],['Blood group','blood_group'],
-                                                              ['Category','category'], ['Gender','gender'],
-                                                              ['Caste','caste'], ['Religion','religion'],
-                                                              ['Certificate issued','certificate']],
-                                                             :selected => params[:report_for]), class: 'form-control' %>
-          </div>
-          <div class="col-lg-2" id="student_report_gender_select" style="display: none">
-            <label class="control-label" for="gender">Select Gender</label>
-            <%= select_tag "gender", options_for_select([['Please Select'],['Male','Male'], ['Female','Female'],
-                                                         ['Other','Other']], :selected => params[:gender]),
-                           class: 'form-control' %>
-          </div>
-          <div class="col-lg-2" id="student_report_blood_group_select" style="display: none">
-            <label class="control-label" for="blood_group">Select Blood group</label>
-            <%= select_tag "blood_group", options_for_select([['Please Select'],['A+','A+'], ['A-','A-'], ['B+','B+'],
-                                                         ['B-','B-'], ['AB+','AB+'], ['AB-','AB-'], ['O+','O+'],
-                                                         ['O-','O-']], :selected => params[:blood_group]),
-                           class: 'form-control' %>
-          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <label class="control-label" for="report_for">Report for</label>
+              <%= select_tag "report_for", options_for_select([['Please Select'],['Blood group','blood_group'],
+                                                                ['Category','category'], ['Gender','gender'],
+                                                                ['Caste','caste'], ['Religion','religion'],
+                                                                ['Certificate issued','certificate']],
+                                                               :selected => params[:report_for]), class: 'form-control', required: true %>
+            </div>
+            <div class="col-lg-2" id="student_report_gender_select" style="display: none">
+              <label class="control-label" for="gender">Select Gender</label>
+              <%= select_tag "gender", options_for_select([['Please Select'],['Male','Male'], ['Female','Female'],
+                                                           ['Other','Other']], :selected => params[:gender]),
+                             class: 'form-control' %>
+            </div>
+            <div class="col-lg-2" id="student_report_blood_group_select" style="display: none">
+              <label class="control-label" for="blood_group">Select Blood group</label>
+              <%= select_tag "blood_group", options_for_select([['Please Select'],['A+','A+'], ['A-','A-'], ['B+','B+'],
+                                                           ['B-','B-'], ['AB+','AB+'], ['AB-','AB-'], ['O+','O+'],
+                                                           ['O-','O-']], :selected => params[:blood_group]),
+                             class: 'form-control' %>
+            </div>
 
-          <div class="col-lg-2" id="student_report_category_select" style="display: none">
-            <label class="control-label" for="category">Select Category</label>
-            <%= select_tag "category", options_for_select(CasteCategory.all.map {|category| [category.category, category.id]},
-                                                           {:selected => params[:category]}),
-                           class: 'form-control' %>
-          </div>
+            <div class="col-lg-2" id="student_report_category_select" style="display: none">
+              <label class="control-label" for="category">Select Category</label>
+              <%= select_tag "category", options_for_select(CasteCategory.all.map {|category| [category.category, category.id]},
+                                                             {:selected => params[:category]}),
+                             class: 'form-control' %>
+            </div>
 
-          <div class="col-lg-2" id="student_report_caste_select" style="display: none">
-            <label class="control-label" for="caste">Select Caste</label>
-            <%= select_tag "caste", options_for_select(Caste.all.map {|caste| [caste.name, caste.id]},
-                                                          {:selected => params[:caste]}),
-                           class: 'form-control' %>
-          </div>
+            <div class="col-lg-2" id="student_report_caste_select" style="display: none">
+              <label class="control-label" for="caste">Select Caste</label>
+              <%= select_tag "caste", options_for_select(Caste.all.map {|caste| [caste.name, caste.id]},
+                                                            {:selected => params[:caste]}),
+                             class: 'form-control' %>
+            </div>
 
-          <div class="col-lg-2" id="student_report_religion_select" style="display: none">
-            <label class="control-label" for="religion">Select Religion</label>
-            <%= select_tag "religion", options_for_select(Religion.all.map {|religion| [religion.name, religion.id]},
-                                                       {:selected => params[:caste]}),
-                           class: 'form-control' %>
-          </div>
+            <div class="col-lg-2" id="student_report_religion_select" style="display: none">
+              <label class="control-label" for="religion">Select Religion</label>
+              <%= select_tag "religion", options_for_select(Religion.all.map {|religion| [religion.name, religion.id]},
+                                                         {:selected => params[:caste]}),
+                             class: 'form-control' %>
+            </div>
 
-          <div class="col-lg-2" id="student_report_certificate_select" style="display: none">
-            <label class="control-label" for="certificate">Select Certificate</label>
-            <%= select_tag "certificate", options_for_select([['Please Select'],['Bonafied'], ['Leaving Certificate']], :selected => params[:gender]),
-                           class: 'form-control' %>
-          </div>
+            <div class="col-lg-2" id="student_report_certificate_select" style="display: none">
+              <label class="control-label" for="certificate">Select Certificate</label>
+              <%= select_tag "certificate", options_for_select([['Please Select'],['Bonafide'], ['Leaving Certificate']], :selected => params[:gender]),
+                             class: 'form-control' %>
+            </div>
 
-          <div class="col-lg-2" id="student_report_standard_select">
-            <label class="control-label" for="standard_id">Select Category</label>
-            <%= select_tag "standard_id", options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
-                                                          {:selected => params[:standard_id]}),
-                           class: 'form-control' %>
+            <div class="col-lg-2" id="student_report_standard_select">
+              <label class="control-label" for="standard_id">Select Standard</label>
+              <%= select_tag "standard_id", options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
+                                                            {:selected => params[:standard_id]}),
+                             class: 'form-control' %>
+            </div>
+            <div class="col-lg-4">
+              <label class="control-label" for="standard_id"></label>
+              <div class="">
+                <button class="btn btn-success" type="submit" id="btn-filter">Get Report</button>
+              </div>
+
+            </div>
           </div>
-          <div class="col-lg-1">
-            <label class="control-label" for="standard_id"></label>
-            <button class="btn btn-success" id="btn-filter">Search</button>
+          <div class="row">
+            <div class="col-lg-12">
+              Select which attributes to show
+            </div>
+            <div class="col-lg-3">
+              <%= check_box_tag "student_phone" %>
+              <label class="control-label" for="student_phone">Phone Number</label>
+            </div>
+            <div class="col-lg-3">
+              <%= check_box_tag "student_address" %>
+              <label class="control-label" for="student_address">Address</label>
+            </div>
+            <div class="col-lg-3">
+              <%= check_box_tag "student_parent_info" %>
+              <label class="control-label" for="student_parent_info">Parent info</label>
+            </div>
+            <div class="col-lg-3">
+              <%= check_box_tag "student_academic_details" %>
+              <label class="control-label" for="student_academic_details">Academic details</label>
+            </div>
           </div>
         </div>
       </form>
@@ -79,7 +105,7 @@
       <div class="clearfix"></div>
     </div>
     <div class="x_content">
-      <div class="report_content_block">
+      <div class="report_content_block" style="max-width: 100%; overflow: auto;">
           <div>
             <div></div>
           </div>

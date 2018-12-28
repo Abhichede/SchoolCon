@@ -5,9 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <%= favicon_link_tag SchoolInfo.first.logo.blank? ? 'favicon.ico' : SchoolInfo.first.logo, :rel => 'shortcut icon' %>
   <%= wicked_pdf_stylesheet_link_tag 'application' %>
+
+  <style>
+    @media (max-width: 768px) { /* use the max to specify at each container level */
+      .specifictd {
+        width:360px;  /* adjust to desired wrapping */
+        display:table;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body style="background-color: #FFF !important;">
 <div id="content">
   <%= yield %>
 </div>

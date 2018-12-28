@@ -18,4 +18,14 @@ $(function () {
    $('#students_report_form').bind('ajax:success', function () {
       console.log('success');
    });
+
+   console.log($('form#students_report_form'));
+   $('form#students_report_form').validate({
+       debug: true,
+       rules: {
+           '#report_for': {
+               required: true
+           }
+       }
+   });
 });

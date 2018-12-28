@@ -4,12 +4,35 @@ $('.report_section_bottom').attr('style', 'visibility: visible');
 content_block.empty();
 
 content_block.append(
-    '<table class="table table-bordered">'+
+    '<div class="row"><div class="col-lg-4 col-lg-offset-8"><%= link_to 'Print PDF',
+    {controller: 'reports', action: 'student_report', report_for: params[:report_for],
+    gender: params[:gender], blood_group: params[:blood_group], category: params[:category],
+    caste: params[:caste], religion: params[:religion], certificate: params[:certificate],
+    standard_id: params[:standard_id], student_phone: params[:student_phone], student_address: params[:student_address], student_parent_info: params[:student_parent_info], student_academic_details: params[:student_academic_details], format: 'pdf'}, class: 'btn btn-danger'  %>'+
+    ''+
+    '<%= link_to 'Download Excel', {controller: 'reports', action: 'student_report',
+    report_for: params[:report_for], gender: params[:gender], blood_group: params[:blood_group],
+    category: params[:category], caste: params[:caste], religion: params[:religion],
+    certificate: params[:certificate], standard_id: params[:standard_id], student_phone: params[:student_phone], student_address: params[:student_address], student_parent_info: params[:student_parent_info], student_academic_details: params[:student_academic_details], format: 'xls'},
+    class: 'btn btn-info'  %> </div></div>'
+);
+
+content_block.append(
+    '<table class="table table-bordered" style="max-width: 100%; overflow: auto;">'+
     '<thead> <tr>'+
     '<th>Name</th>'+
-    '<th>Contact</th>'+
-    '<th>Gender</th>'+
-    '</tr> </thead>'+
+    '<% if params[:student_phone] %><th>Contact</th><% end %>'+
+    '<% if params[:student_address] %><th>Address</th><% end %>'+
+    '<% if params[:student_parent_info] %>'+
+      '<th>Father Name</th>'+
+    '<th>Father contact</th>'+
+    '<th>Parent Address</th>'+
+    '<% end %>'+
+    '<% if params[:student_academic_details] %>'+
+    '<th>STD / DIV</th>'+
+    '<th>Roll No.</th>'+
+    '<% end %>'+
+    '</tr></thead>'+
     '<tbody id="student_report_content_report_tbody">'+
 
     '</tbody>'
@@ -20,8 +43,17 @@ content_block.append(
   $('#student_report_content_report_tbody').append(
       '<tr>'+
         '<td><%= student.self_full_name %></td>'+
-      '<td><%= student.student_mobile %></td>'+
-      '<td><%= student.gender %></td>'+
+      '<% if params[:student_phone] %><td><%= student.student_mobile %></td><% end %>'+
+      '<% if params[:student_address] %><td style=""><%= student.residential_address_one %>,<%= student.residential_address_two %>,<%= student.residential_city %>,<%= student.residential_state %>,<%= student.residential_country %>,<%= student.residential_pincode %></td><% end %>'+
+      '<% if params[:student_parent_info] %>'+
+      '<td><%= student.father_full_name %></td>'+
+      '<td><%= student.father_mobile %></td>'+
+      '<td><%= student.permanent_address_one %>,<%= student.permanent_address_two %>,<%= student.permanent_city %>,<%= student.permanent_state %>,<%= student.permanent_country %>,<%= student.permanent_pincode %></td>'+
+      '<% end %>'+
+      '<% if params[:student_academic_details] %>'+
+      '<td><%= student.standards.last.name %> - <%= student.divisions.last.name %></td>'+
+      '<td><%= student.roll_no %></td>'+
+      '<% end %>'+
       '</tr>'
   );
 <% end %>

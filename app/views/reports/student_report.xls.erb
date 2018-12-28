@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:o="urn:schemas-microsoft-com:office:office"
+          xmlns:x="urn:schemas-microsoft-com:office:excel"
+          xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Name</Data></Cell>
+        <% if params[:student_phone] %><Cell><Data ss:Type="String">Contact</Data></Cell><% end %>
+        <% if params[:student_address] %><Cell><Data ss:Type="String">Address</Data></Cell><% end %>
+        <% if params[:student_parent_info] %>
+          <Cell><Data ss:Type="String">Father Name</Data></Cell>
+          <Cell><Data ss:Type="String">Father contact</Data></Cell>
+          <Cell><Data ss:Type="String">Parent Address</Data></Cell>
+        <% end %>
+        <% if params[:student_academic_details] %>
+          <Cell><Data ss:Type="String">STD / DIV</Data></Cell>
+          <Cell><Data ss:Type="String">Roll No.</Data></Cell>
+        <% end %>
+      </Row>
+      <% @students.each do |student| %>
+        <Row>
+          <Cell><Data ss:Type="String"><%= student.self_full_name %></Data></Cell>
+          <% if params[:student_phone] %><Cell><Data ss:Type="String"><%= student.student_mobile %></Data></Cell><% end %>
+          <% if params[:student_address] %><Cell><Data ss:Type="String"><%= student.residential_address_one %>,<%= student.residential_address_two %>,<%= student.residential_city %>,<%= student.residential_state %>,<%= student.residential_country %>,<%= student.residential_pincode %></Data></Cell><% end %>
+          <% if params[:student_parent_info] %>
+            <Cell><Data ss:Type="String"><%= student.father_full_name %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= student.father_mobile %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= student.permanent_address_one %>,<%= student.permanent_address_two %>,<%= student.permanent_city %>,<%= student.permanent_state %>,<%= student.permanent_country %>,<%= student.permanent_pincode %></Data></Cell>
+          <% end %>
+          <% if params[:student_academic_details] %>
+            <Cell><Data ss:Type="String"><%= student.standards.last.name %> - <%= student.divisions.last.name %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= student.roll_no %></Data></Cell>
+          <% end %>
+        </Row>
+      <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

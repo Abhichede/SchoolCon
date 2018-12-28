@@ -1,0 +1,36 @@
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <% if params[:student_phone] %><th>Contact</th><% end %>
+    <% if params[:student_address] %><th>Address</th><% end %>
+    <% if params[:student_parent_info] %>
+      <th>Father Name</th>
+      <th>Father contact</th>
+      <th>Parent Address</th>
+      <% end %>
+    <% if params[:student_academic_details] %>
+      <th>STD / DIV</th>
+      <th>Roll No.</th>
+      <% end %>
+  </tr>
+  </thead>
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.self_full_name %></td>
+        <% if params[:student_phone] %><td><%= student.student_mobile %></td><% end %>
+        <% if params[:student_address] %><td><%= student.residential_address_one %>,<%= student.residential_address_two %>,<%= student.residential_city %>,<%= student.residential_state %>,<%= student.residential_country %>,<%= student.residential_pincode %></td><% end %>
+        <% if params[:student_parent_info] %>
+         <td><%= student.father_full_name %></td>
+         <td><%= student.father_mobile %></td>
+         <td><%= student.permanent_address_one %>,<%= student.permanent_address_two %>,<%= student.permanent_city %>,<%= student.permanent_state %>,<%= student.permanent_country %>,<%= student.permanent_pincode %></td>
+         <% end %>
+        <% if params[:student_academic_details] %>
+         <td><%= student.standards.last.name %> - <%= student.divisions.last.name %></td>
+         <td><%= student.roll_no %></td>
+         <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
