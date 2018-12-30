@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  term_name: MyString
+  start_date: 2018-12-30
+  end_date: 2018-12-30
+
+two:
+  term_name: MyString
+  start_date: 2018-12-30
+  end_date: 2018-12-30

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assessment_type: MyString
+  standard_id: 1
+  division_id: MyString
+  integer: MyString
+  assessment_name: MyString
+  max_marks: 9.99
+
+two:
+  assessment_type: MyString
+  standard_id: 1
+  division_id: MyString
+  integer: MyString
+  assessment_name: MyString
+  max_marks: 9.99

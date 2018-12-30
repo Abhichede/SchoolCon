@@ -1,0 +1,69 @@
+<%= form_for @assessment, :html => { :class => "form-horizontal assessment" } do |f| %>
+
+  <% if @assessment.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@assessment.errors.count, "error") %> prohibited this assessment from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @assessment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :assessment_type, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :assessment_type, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:assessment_type) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :standard_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:standard_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :division_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :division_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:division_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :integer, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :integer, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:integer) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :assessment_name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :assessment_name, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:assessment_name) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :max_marks, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :max_marks, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:max_marks) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                assessments_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

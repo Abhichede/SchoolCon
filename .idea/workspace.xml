@@ -2,16 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/reports/student_report.pdf.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/reports/student_report.xls.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/assessments.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/exam_terms.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/exams.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/total_marks.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/assessments.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/exam_terms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/exams.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/total_marks.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/assessments_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/exam_terms_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/exams_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/total_marks_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/assessments_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/exam_terms_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/exams_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/total_marks_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/assessment.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/exam.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/exam_term.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/total_mark.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/assessments/_assessment.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/assessments/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/assessments/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/assessments/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/assessments/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/assessments/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/assessments/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/assessments/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exam_terms/_exam_term.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exam_terms/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exam_terms/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exam_terms/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exam_terms/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exam_terms/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exam_terms/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exam_terms/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exams/_exam.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exams/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exams/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exams/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exams/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exams/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exams/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exams/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/total_marks/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/total_marks/_total_mark.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/total_marks/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/total_marks/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/total_marks/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/total_marks/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/total_marks/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/total_marks/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20181230084504_create_exam_terms.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20181230084610_create_exams.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20181230085059_create_total_marks.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20181230085922_create_assessments.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/assessments_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/exam_terms_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/exams_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/total_marks_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/assessments.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/exam_terms.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/exams.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/total_marks.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/assessment_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/exam_term_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/exam_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/total_mark_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/assessments_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/exam_terms_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/exams_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/total_marks_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/reports.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/reports.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/reports_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/reports_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reports/student_report.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reports/student_report.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reports/student_report.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reports/student_report.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/standard.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/standard.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -55,7 +123,7 @@
     <session id="1093289141">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="77" />
+          <entry key="project.closed" value="79" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.17" value="1" />
@@ -78,11 +146,11 @@
           <entry key="project.open.time.55" value="3" />
           <entry key="project.open.time.56" value="6" />
           <entry key="project.open.time.57" value="3" />
-          <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.58" value="2" />
           <entry key="project.open.time.59" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.60" value="1" />
-          <entry key="project.open.time.61" value="1" />
+          <entry key="project.open.time.61" value="2" />
           <entry key="project.open.time.62" value="3" />
           <entry key="project.open.time.63" value="2" />
           <entry key="project.open.time.64" value="2" />
@@ -92,7 +160,7 @@
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="81" />
+          <entry key="project.opened" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -101,14 +169,14 @@
           <entry key="Rakefile" value="1" />
           <entry key="attendances" value="5" />
           <entry key="css" value="3" />
-          <entry key="erb" value="90" />
+          <entry key="erb" value="99" />
           <entry key="gif" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="jbuilder" value="45" />
-          <entry key="js" value="13" />
+          <entry key="js" value="23" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
-          <entry key="rb" value="252" />
+          <entry key="rb" value="257" />
           <entry key="scss" value="2" />
           <entry key="sql" value="1" />
           <entry key="student_certificates" value="1" />
@@ -122,10 +190,10 @@
           <entry key="CSS" value="3" />
           <entry key="Database Element" value="24" />
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="13" />
+          <entry key="JavaScript" value="23" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="RHTML" value="90" />
-          <entry key="Ruby" value="301" />
+          <entry key="RHTML" value="99" />
+          <entry key="Ruby" value="306" />
           <entry key="SCSS" value="2" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="9" />
@@ -136,10 +204,10 @@
           <entry key="Gemfile" value="81" />
           <entry key="cell" value="50" />
           <entry key="css" value="42" />
-          <entry key="erb" value="7221" />
+          <entry key="erb" value="7496" />
           <entry key="jbuilder" value="223" />
-          <entry key="js" value="466" />
-          <entry key="rb" value="8083" />
+          <entry key="js" value="495" />
+          <entry key="rb" value="8145" />
           <entry key="scss" value="1" />
           <entry key="txt" value="1580" />
           <entry key="yml" value="143" />
@@ -149,10 +217,10 @@
         <counts>
           <entry key="CSS" value="42" />
           <entry key="HTML" value="5" />
-          <entry key="JavaScript" value="466" />
+          <entry key="JavaScript" value="495" />
           <entry key="PLAIN_TEXT" value="1587" />
-          <entry key="RHTML" value="7216" />
-          <entry key="Ruby" value="8380" />
+          <entry key="RHTML" value="7491" />
+          <entry key="Ruby" value="8442" />
           <entry key="SCSS" value="1" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="143" />
@@ -162,38 +230,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/reports/student_report.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/reports/student_report.pdf.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="31" column="18" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="31" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/reports/student_report.xls.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
+            <state relative-caret-position="219">
+              <caret line="180" column="29" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/students/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6783">
+              <caret line="357" column="68" selection-start-line="355" selection-start-column="10" selection-end-line="357" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -237,15 +287,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/notifications/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/student_fee_payment.rb" />
-        <option value="$PROJECT_DIR$/app/views/api/student_fee_payments/_student_fee_payment.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/views/api/notifications/_notification.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/views/standards/show.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/environments/test.rb" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/controllers/homeworks_controller.rb" />
         <option value="$PROJECT_DIR$/app/uploaders/leaving_certificate_uploader.rb" />
         <option value="$PROJECT_DIR$/app/uploaders/post_attachment_uploader.rb" />
@@ -274,7 +315,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/standards.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/dashboard.css" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/students/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/students.js" />
         <option value="$PROJECT_DIR$/app/views/students/_issue_certificate_form.html.erb" />
@@ -286,8 +326,18 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/reports.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reports/student_report.pdf.erb" />
-        <option value="$PROJECT_DIR$/app/views/reports/student_report.js.erb" />
         <option value="$PROJECT_DIR$/app/views/reports/student_report.xls.erb" />
+        <option value="$PROJECT_DIR$/app/views/reports/student_report.js.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20181228092710_create_exams.rb" />
+        <option value="$PROJECT_DIR$/app/views/exams/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/exams/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/exams/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/exam.rb" />
+        <option value="$PROJECT_DIR$/app/models/standard.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/exams.js" />
+        <option value="$PROJECT_DIR$/app/views/exams/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
       </list>
     </option>
   </component>
@@ -337,7 +387,7 @@
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
@@ -349,28 +399,7 @@
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="attendances" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
@@ -378,31 +407,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="students" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -414,12 +418,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545988153310" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545992479767" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/Swapnil's Work/shop" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Web Contexts" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -5053,6 +5062,58 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="SchoolCon" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="RVM: ruby-2.5.1 [global]" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="puma" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="RVM: ruby-2.5.1 [global]" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="puma" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -5143,14 +5204,9 @@
       <workItem from="1545800762716" duration="4051000" />
       <workItem from="1545890662633" duration="12963000" />
       <workItem from="1545979322281" duration="45000" />
-      <workItem from="1545985731094" duration="2318000" />
-    </task>
-    <task id="LOCAL-00053" summary="Changes made in api call and leave application, homework">
-      <created>1538551935488</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1538551935492</updated>
+      <workItem from="1545985731094" duration="7129000" />
+      <workItem from="1546075439776" duration="1808000" />
+      <workItem from="1546159222074" duration="2273000" />
     </task>
     <task id="LOCAL-00054" summary="Changes made in api call and leave application, homework">
       <created>1538565231604</created>
@@ -5488,11 +5544,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545804421945</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="new reports section added.">
+      <created>1545988202010</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1545988202013</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274807000" />
+    <option name="totallyTimeSpent" value="283699000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5505,9 +5568,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27938214" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28744122" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -5522,9 +5584,9 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.5826667" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.5826667" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32933334" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49832103" weight="0.38666666" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49832103" weight="0.38533333" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501679" side_tool="true" weight="0.7546667" />
       <window_info anchor="bottom" id="REST Client" order="11" sideWeight="0.50369376" weight="0.87333333" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32903227" />
@@ -5556,87 +5618,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="new reports section added." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://ce6cde97-1e0a-46e9-8f8b-796311155d08/schema/SchoolCon_v1_development/table/students" />
-    <entry file="das://ce6cde97-1e0a-46e9-8f8b-796311155d08/schema/SchoolCon_v1_development/table/student_certificates" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/student_certificates_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1311" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/my_template.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/caste.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/issued_certificate.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/my_templates/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="73" column="3" selection-start-line="73" selection-start-column="3" selection-end-line="73" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/divisions/_edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/divisions/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/divisions/_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/divisions/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3591" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sidebars.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/homeworks/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="61" column="9" selection-start-line="4" selection-end-line="61" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/issue_new_certificate.html.erb" />
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181218072046_create_issued_certificates.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/api/posts/_attachment.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/students.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -5666,22 +5647,12 @@
     <entry file="file://$PROJECT_DIR$/app/views/students/_add_leaving_certificate.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="229" column="26" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/leave_applications/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-228" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/api/attendances/show.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/standards.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
@@ -5719,13 +5690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/students.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4788">
-          <caret line="261" column="43" selection-start-line="261" selection-start-column="43" selection-end-line="261" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -5802,24 +5766,175 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/student_report.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        <state relative-caret-position="228">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181228092710_create_exams.rb" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/subjects_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="84" column="72" selection-start-line="84" selection-start-column="64" selection-end-line="84" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/student_report.pdf.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="31" selection-end-column="18" />
+          <caret line="31" column="18" selection-start-line="21" selection-start-column="8" selection-end-line="31" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/student_report.xls.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="646">
           <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/standards/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-551">
+          <caret selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/new.html.erb" />
+    <entry file="file://$PROJECT_DIR$/app/views/exams/edit.html.erb" />
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/date.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/custom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/subjects.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/students.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="261" column="43" selection-start-line="261" selection-start-column="43" selection-end-line="261" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/time_tables.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/teachers.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sidebars.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/standards.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/exam.rb" />
+    <entry file="file://$PROJECT_DIR$/app/models/standard.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/_form.html.erb" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb" />
+    <entry file="file://$PROJECT_DIR$/app/views/exams/index.html.erb" />
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/exams.js" />
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="180" column="29" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6783">
+          <caret line="357" column="68" selection-start-line="355" selection-start-column="10" selection-end-line="357" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>actioncable (v5.1.6, RVM: ruby-2.5.1) [gem]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>RVM: ruby-2.5.1 [global]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SchoolCon</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

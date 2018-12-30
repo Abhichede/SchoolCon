@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :assessments
+  resources :total_marks
+  resources :exams
+  resources :exam_terms
   get 'reports_dashboard', to: 'reports#index'
   get 'student_report', to: 'reports#student_report'
 

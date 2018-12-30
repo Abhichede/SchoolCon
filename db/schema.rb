@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181218072046) do
+ActiveRecord::Schema.define(version: 20181230085922) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "start_month"
@@ -29,6 +29,17 @@ ActiveRecord::Schema.define(version: 20181218072046) do
     t.bigint "student_id"
     t.index ["academic_year_id"], name: "index_academic_years_students_on_academic_year_id"
     t.index ["student_id"], name: "index_academic_years_students_on_student_id"
+  end
+
+  create_table "assessments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "assessment_type"
+    t.integer "standard_id"
+    t.string "division_id"
+    t.string "integer"
+    t.string "assessment_name"
+    t.decimal "max_marks", precision: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -87,6 +98,21 @@ ActiveRecord::Schema.define(version: 20181218072046) do
     t.datetime "start"
     t.datetime "end"
     t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exam_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "term_name"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "exam_term_id"
+    t.string "exam_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -469,6 +495,15 @@ ActiveRecord::Schema.define(version: 20181218072046) do
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_time_tables_on_deleted_at"
+  end
+
+  create_table "total_marks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "exam_term_id"
+    t.integer "exam_id"
+    t.decimal "written_marks", precision: 10
+    t.decimal "assessment_marks", precision: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

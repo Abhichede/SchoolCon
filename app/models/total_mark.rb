@@ -1,0 +1,2 @@
+class TotalMark < ApplicationRecord
+end
