@@ -15,10 +15,10 @@
     </div>
   <% end %>
 
-  <%= f.hidden_field :student_id, value: @student_mark.nil? ? params[:student_id] : @student_mark.student_id %>
-  <%= f.hidden_field :exam_id, value: @student_mark.nil? ? params[:exam_id] : @student_mark.exam_id %>
-  <%= f.hidden_field :subject_id, value: @student_mark.nil? ? params[:subject_id] : @student_mark.subject_id %>
-  <%= f.hidden_field :exam_subject_id, value: @student_mark.nil? ? params[:exam_subject_id] : @student_mark.exam_subject_id %>
+  <%= f.hidden_field :student_id, value: !@student_mark.nil? ? params[:student_id] : @student_mark.student_id %>
+  <%= f.hidden_field :exam_id, value: !@student_mark.nil? ? params[:exam_id] : @student_mark.exam_id %>
+  <%= f.hidden_field :subject_id, value: !@student_mark.nil? ? params[:subject_id] : @student_mark.subject_id %>
+  <%= f.hidden_field :exam_subject_id, value: !@student_mark.nil? ? params[:exam_subject_id] : @student_mark.exam_subject_id %>
 
   <div class="form-group">
     <%= f.label :marks, :class => 'control-label col-lg-2' %>
