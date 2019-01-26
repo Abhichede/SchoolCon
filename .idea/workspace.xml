@@ -2,146 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/exam_marks.coffee" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/exam_subjects.coffee" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/student_marks.coffee" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/exam_marks.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/exam_subjects.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/student_marks.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/exam_marks_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/exam_subjects_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/student_marks_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/exam_marks_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/exam_subjects_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/student_marks_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/exam_mark.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/exam_subject.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/student_mark.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_marks/_exam_mark.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_marks/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_marks/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_marks/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_marks/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_marks/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_marks/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_marks/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_subjects/_exam_subject.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_subjects/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_subjects/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_subjects/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_subjects/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_subjects/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_subjects/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exam_subjects/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exams/fill_marks.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exams/get_divisions_exams.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/_edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/_new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/_student_mark.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/edit.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/new.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/student_marks/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20190107084107_create_exams.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20190111071015_create_exam_subjects.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20190119121220_create_exam_marks.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20190126052945_create_student_marks.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20190126080245_add_column_to_student_marks.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1539935021-1947-0001-0162/sANTOSH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1545024229-4279-0001-0647/ABHIJIT_KAKASAHEB_CHEDE.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/exam_marks_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/exam_subjects_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/student_marks_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/exam_marks.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/exam_subjects.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/student_marks.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/exam_mark_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/exam_subject_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/student_mark_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/exam_marks_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/exam_subjects_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/student_marks_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ce6cde97-1e0a-46e9-8f8b-796311155d08.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ce6cde97-1e0a-46e9-8f8b-796311155d08.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchoolCon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolCon.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/assessments.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/exam_terms.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/total_marks.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/assessments.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/exam_terms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/total_marks.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/assessments_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/exam_terms_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/exams_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/exams_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/total_marks_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/assessments_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/exam_terms_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/total_marks_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/academic_year.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/academic_year.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/assessment.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/division.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/division.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/exam.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/exam.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/exam_term.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/student.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/student.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/subject.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/subject.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/total_mark.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/assessments/_assessment.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/assessments/_edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/assessments/_form.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/assessments/_new.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/assessments/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/assessments/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/assessments/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/assessments/show.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/_edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/_exam_term.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/_form.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/_new.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/show.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exams/_exam.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exams/_exam.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exams/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exams/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exams/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exams/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exams/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exams/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/students/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/students/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/total_marks/_edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/total_marks/_form.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/total_marks/_new.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/total_marks/_total_mark.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/total_marks/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/total_marks/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/total_marks/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/total_marks/show.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181230084504_create_exam_terms.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181230084610_create_exams.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181230085059_create_total_marks.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181230085922_create_assessments.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/assessments_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/exam_terms_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/exams_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/exams_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/total_marks_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/assessments.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/exam_terms.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/exams.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/exams.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/total_marks.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/assessment_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/exam_term_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/total_mark_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/system/assessments_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/system/exam_terms_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/system/total_marks_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/new.html.erb" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -230,7 +93,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Gemfile" value="5" />
+          <entry key="Gemfile" value="6" />
           <entry key="Rakefile" value="1" />
           <entry key="attendances" value="5" />
           <entry key="css" value="4" />
@@ -261,7 +124,7 @@
           <entry key="JavaScript" value="28" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="222" />
-          <entry key="Ruby" value="405" />
+          <entry key="Ruby" value="406" />
           <entry key="SCSS" value="2" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="11" />
@@ -468,7 +331,7 @@
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548492318179" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548493308088" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Examination" />
@@ -5289,21 +5152,7 @@
       <workItem from="1547577596480" duration="726000" />
       <workItem from="1547741650757" duration="5617000" />
       <workItem from="1547881418345" duration="13244000" />
-      <workItem from="1548479690622" duration="9489000" />
-    </task>
-    <task id="LOCAL-00055" summary="Changes made in api call and leave application, homework">
-      <created>1538565569814</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1538565569815</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Changes made in api call and leave application, homework">
-      <created>1538565852546</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1538565852546</updated>
+      <workItem from="1548479690622" duration="10347000" />
     </task>
     <task id="LOCAL-00057" summary="Changes made in api call and leave application, homework">
       <created>1538566429389</created>
@@ -5634,11 +5483,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546161548098</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="new reports section added.">
+      <created>1548492293155</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1548492293156</updated>
+    </task>
+    <task id="LOCAL-00105" summary="new reports section added.">
+      <created>1548492434075</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1548492434076</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353954000" />
+    <option name="totallyTimeSpent" value="354812000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5652,7 +5515,7 @@
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.2827401" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.2827401" />
       <window_info id="Structure" order="1" sideWeight="0.5006784" side_tool="true" weight="0.32975152" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -5667,7 +5530,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.5826667" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.5826667" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32933334" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49764943" weight="0.34266666" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50235057" side_tool="true" weight="0.016" />
@@ -5717,13 +5580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="151" column="59" selection-start-line="151" selection-start-column="59" selection-end-line="151" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
@@ -6016,6 +5872,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="42" column="91" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
