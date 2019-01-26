@@ -7,4 +7,5 @@ class Division < ApplicationRecord
   has_one :class_teacher
 
   has_many :homeworks
+  has_many :exams
 end

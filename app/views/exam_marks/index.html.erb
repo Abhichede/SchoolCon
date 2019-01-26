@@ -1,0 +1,46 @@
+<%- model_class = ExamMark -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:student_id) %></th>
+      <th><%= model_class.human_attribute_name(:exam_id) %></th>
+      <th><%= model_class.human_attribute_name(:exam_subject_id) %></th>
+      <th><%= model_class.human_attribute_name(:written_marks) %></th>
+      <th><%= model_class.human_attribute_name(:assessment_marks) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @exam_marks.each do |exam_mark| %>
+      <tr>
+        <td><%= link_to exam_mark.id, exam_mark_path(exam_mark) %></td>
+        <td><%= exam_mark.student_id %></td>
+        <td><%= exam_mark.exam_id %></td>
+        <td><%= exam_mark.exam_subject_id %></td>
+        <td><%= exam_mark.written_marks %></td>
+        <td><%= exam_mark.assessment_marks %></td>
+        <td><%=l exam_mark.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      exam_mark_path(exam_mark), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_exam_mark_path(exam_mark), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      exam_mark_path(exam_mark),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_exam_mark_path,
+            :class => 'btn btn-primary' %>

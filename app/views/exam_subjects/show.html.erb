@@ -1,0 +1,29 @@
+<%- model_class = ExamSubject -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:subject_id) %>:</strong></dt>
+  <dd><%= @exam_subject.subject_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:exam_id) %>:</strong></dt>
+  <dd><%= @exam_subject.exam_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:max_marks) %>:</strong></dt>
+  <dd><%= @exam_subject.max_marks %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pass_marks) %>:</strong></dt>
+  <dd><%= @exam_subject.pass_marks %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:written_marks) %>:</strong></dt>
+  <dd><%= @exam_subject.written_marks %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:assessment_marks) %>:</strong></dt>
+  <dd><%= @exam_subject.assessment_marks %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              exam_subjects_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_exam_subject_path(@exam_subject), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              exam_subject_path(@exam_subject),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

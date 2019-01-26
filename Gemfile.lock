@@ -323,6 +323,10 @@ GEM
     multi_json (1.13.1)
     multi_xml (0.6.0)
     mysql2 (0.4.10)
+    nested_form_fields (0.8.2)
+      coffee-rails (>= 3.2.1)
+      jquery-rails
+      rails (>= 3.2.0)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (5.0.2)
@@ -479,6 +483,7 @@ DEPENDENCIES
   mini_magick
   momentjs-rails (>= 2.9.0)
   mysql2 (>= 0.3.18, < 0.5)
+  nested_form_fields
   numbers_and_words
   paranoia
   pg (~> 0.18.4)

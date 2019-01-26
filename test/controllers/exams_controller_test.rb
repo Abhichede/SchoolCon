@@ -17,7 +17,7 @@ class ExamsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create exam" do
     assert_difference('Exam.count') do
-      post exams_url, params: { exam: { exam_name: @exam.exam_name, exam_term_id: @exam.exam_term_id } }
+      post exams_url, params: { exam: { academic_year_id: @exam.academic_year_id, division_id: @exam.division_id, name: @exam.name, standard_id: @exam.standard_id } }
     end
 
     assert_redirected_to exam_url(Exam.last)
@@ -34,7 +34,7 @@ class ExamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update exam" do
-    patch exam_url(@exam), params: { exam: { exam_name: @exam.exam_name, exam_term_id: @exam.exam_term_id } }
+    patch exam_url(@exam), params: { exam: { academic_year_id: @exam.academic_year_id, division_id: @exam.division_id, name: @exam.name, standard_id: @exam.standard_id } }
     assert_redirected_to exam_url(@exam)
   end
 

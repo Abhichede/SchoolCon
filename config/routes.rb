@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :assessments
-  resources :total_marks
+  resources :student_marks
+  get 'fill_marks', to: 'exams#fill_marks'
+  resources :exam_marks
+  resources :exam_subjects
   resources :exams
-  resources :exam_terms
+  get 'get_divisions_exams', to: 'exams#get_divisions_exams'
+
+
   get 'reports_dashboard', to: 'reports#index'
   get 'student_report', to: 'reports#student_report'
 

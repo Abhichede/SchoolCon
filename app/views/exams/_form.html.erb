@@ -16,20 +16,31 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :exam_term_id, :class => 'control-label col-lg-2' %>
+    <%= f.label :name, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :exam_term_id, :class => 'form-control' %>
+      <%= f.text_field :name, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:exam_term_id) %>
+    <%=f.error_span(:name) %>
   </div>
   <div class="form-group">
-    <%= f.label :exam_name, :class => 'control-label col-lg-2' %>
+    <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :exam_name, :class => 'form-control' %>
+      <%= f.select(:standard_id, options_for_select(Standard.all.map {|standard| [standard.name, standard.id]},
+                                                     {:selected => (@exam.standard.id unless @exam.standard.nil?)}),
+                   {}, class: 'form-control', required: true) %>
     </div>
-    <%=f.error_span(:exam_name) %>
+    <%=f.error_span(:standard_id) %>
   </div>
-
+  <div class="form-group">
+    <%= f.label :division_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select(:division_id, options_for_select(['Select'],
+                                                     {:selected => (@exam.division.id unless @exam.division.nil?) }),
+                   {}, class: 'form-control', required: true) %>
+    </div>
+    <%=f.error_span(:division_id) %>
+  </div>
+  <%= f.hidden_field :academic_year_id, value: AcademicYear.where(is_active: true).first.id %>
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
@@ -38,4 +49,26 @@
     </div>
   </div>
 
+  <script type="text/javascript" charset="utf-8">
+      $(document).ready(function () {
+          update_divisions_and_subjects();
+      });
+      $('select#exam_standard_id').on('click', function () {
+          update_divisions_and_subjects();
+      });
+      var update_divisions_and_subjects = function () {
+          var standard_id = $('select#exam_standard_id').val();
+
+          if(standard_id) {
+              $.ajax({
+                  url: '<%= get_divisions_exams_url %>',
+                  data: 'standard_id=' + standard_id,
+                  type: 'GET'
+              });
+          }
+      };
+  </script>
+
 <% end %>
+
+

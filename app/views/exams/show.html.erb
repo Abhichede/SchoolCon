@@ -3,16 +3,56 @@
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:exam_term_id) %>:</strong></dt>
-  <dd><%= @exam.exam_term_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:exam_name) %>:</strong></dt>
-  <dd><%= @exam.exam_name %></dd>
-</dl>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <dl class="dl-horizontal">
+          <dt><strong><%= model_class.human_attribute_name(:academic_year_id) %>:</strong></dt>
+          <dd><%= @exam.academic_year.academic_year %></dd>
+          <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+          <dd><%= @exam.name %></dd>
+          <dt><strong><%= model_class.human_attribute_name(:standard_id) %>:</strong></dt>
+          <dd><%= @exam.standard.name %></dd>
+          <dt><strong><%= model_class.human_attribute_name(:division_id) %>:</strong></dt>
+          <dd><%= @exam.division.name %></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-9">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Max Marks</th>
+              <th>Pass Marks</th>
+              <th>Written Marks</th>
+              <th>Assessment Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @exam.exam_subjects.each do |exam_subject| %>
+              <tr>
+                <td><%= exam_subject.subject.name %></td>
+                <td><%= exam_subject.max_marks %></td>
+                <td><%= exam_subject.pass_marks %></td>
+                <td><%= exam_subject.written_marks %></td>
+                <td><%= exam_subject.assessment_marks %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               exams_path, :class => 'btn btn-default'  %>
-<%= link_to t('.edit', :default => t("helpers.links.edit")),
+<% link_to t('.edit', :default => t("helpers.links.edit")),
               edit_exam_path(@exam), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               exam_path(@exam),

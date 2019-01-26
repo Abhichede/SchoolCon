@@ -1,0 +1,96 @@
+<%= form_with(url: exam_subjects_path, :class => "form-horizontal exam_subject", local: true, 'data-remote': false) do |f| %>
+
+  <% @exam.standard.subjects.each do |subject| %>
+    <div class="form-group">
+      <div class="col-lg-2">
+        <%= f.label :subject_id, :class => 'control-label' %>
+        <%= f.text_field 'subject_name', value: subject.name, class: 'form-control', disabled: true %>
+        <%= f.hidden_field 'exam_subject[exam_subject][][subject_id]', value: subject.id %>
+      </div>
+      <div class="col-lg-2">
+        <%= f.label :max_marks, :class => 'control-label' %>
+        <%= f.text_field 'exam_subject[exam_subject][][max_marks]', id: "exam_subject_max_marks_#{subject.id}", :class => 'form-control', required: true %>
+      </div>
+      <%=f.error_span("exam_subject_max_marks_#{subject.id}") %>
+      <div class="col-lg-2">
+        <%= f.label :pass_marks, :class => 'control-label' %>
+        <%= f.text_field 'exam_subject[exam_subject][][pass_marks]', id: "exam_subject_pass_marks_#{subject.id}", :class => 'form-control', required: true %>
+      </div>
+      <%=f.error_span('exam_subject[exam_subject][][pass_marks]') %>
+      <div class="col-lg-2">
+        <%= f.label :written_marks, :class => 'control-label' %>
+        <%= f.text_field 'exam_subject[exam_subject][][written_marks]', id: "exam_subject_written_marks_#{subject.id}", :class => 'form-control', required: true %>
+      </div>
+      <%=f.error_span('exam_subject[exam_subject][][written_marks]') %>
+      <div class="col-lg-2">
+        <%= f.label :assessment_marks, :class => 'control-label' %>
+        <%= f.text_field 'exam_subject[exam_subject][][assessment_marks]', id: "exam_subject_assessment_marks_#{subject.id}", :class => 'form-control', required: true %>
+      </div>
+      <%=f.error_span('exam_subject[exam_subject][][assessment_marks]') %>
+    </div>
+
+    <%= f.hidden_field 'exam_subject[exam_subject][][exam_id]', value: @exam.id %>
+
+
+  <% end %>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                exam_subjects_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
+
+<script type="text/javascript" charset="utf-8">
+    $('form.exam_subject').validate({
+        debug: true,
+        // Specify validation rules
+        rules: {
+            // The key name on the left side is the name attribute
+            // of an input field. Validation rules are defined
+            // on the right side
+            <% @exam.standard.subjects.each do |subject| %>
+            'exam_subject_max_marks_<%= subject.id %>': {
+                required: true,
+                pattern: /^[1-9]\d*(\.\d+)?$/
+            },
+            'exam_subject_pass_marks_<%= subject.id %>': {
+                pattern: /^[1-9]\d*(\.\d+)?$/
+            },
+            'exam_subject_written_marks_<%= subject.id %>': {
+                required: true,
+                pattern: /^[1-9]\d*(\.\d+)?$/
+            },
+            'exam_subject_assessment_marks_<%= subject.id %>': {
+                required: true,
+                pattern: /^[1-9]\d*(\.\d+)?$/
+            },
+            <% end %>
+        },
+        // Specify validation error messages
+        messages: {
+            <% @exam.standard.subjects.each do |subject| %>
+            'exam_subject_max_marks_<%= subject.id %>':{
+                pattern: 'only number starting with 1-9 allowed with an optional decimal point.'
+            },
+            'exam_subject_pass_marks_<%= subject.id %>': {
+                pattern: 'only number starting with 1-9 allowed with an optional decimal point.'
+            },
+            'exam_subject_written_marks_<%= subject.id %>':{
+                pattern: 'only number starting with 1-9 allowed with an optional decimal point.'
+            },
+            'exam_subject_assessment_marks_<%= subject.id %>': {
+                pattern: 'only number starting with 1-9 allowed with an optional decimal point.'
+            },
+            <% end %>
+        },
+        // Make sure the form is submitted to the destination defined
+        // in the "action" attribute of the form when valid
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
+</script>

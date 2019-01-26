@@ -1,2 +1,0 @@
-class Assessment < ApplicationRecord
-end

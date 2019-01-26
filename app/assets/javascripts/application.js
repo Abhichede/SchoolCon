@@ -24,6 +24,7 @@
 //= require bootstrap-datetimepicker
 //= require fullcalendar
 //= require chartkick
+//= require_nested_form_fields
 // require toastr
 // require turbolinks
 //= require_tree .

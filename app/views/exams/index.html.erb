@@ -5,30 +5,31 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:exam_term_id) %></th>
-      <th><%= model_class.human_attribute_name(:exam_name) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:academic_year_id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:standard_id) %></th>
+      <th><%= model_class.human_attribute_name(:division_id) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @exams.each do |exam| %>
       <tr>
-        <td><%= link_to exam.id, exam_path(exam) %></td>
-        <td><%= exam.exam_term_id %></td>
-        <td><%= exam.exam_name %></td>
-        <td><%=l exam.created_at %></td>
+        <td><%= exam.academic_year.academic_year %></td>
+        <td><%= exam.name %></td>
+        <td><%= exam.standard.name %></td>
+        <td><%= exam.division.name %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       exam_path(exam), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <% link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_exam_path(exam), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       exam_path(exam),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
+          <%= link_to 'Fill Marks', fill_marks_path(id: exam), class: 'btn btn-primary btn-xs' %>
         </td>
       </tr>
     <% end %>

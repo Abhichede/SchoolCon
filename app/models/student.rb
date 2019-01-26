@@ -21,6 +21,7 @@ class Student < ApplicationRecord
   has_many :leave_applications
   has_many :parent_messages
   has_many :issued_certificates
+  has_many :student_marks
 
 
   attr_accessor :siblings

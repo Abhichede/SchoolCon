@@ -1,5 +1,5 @@
 class ExamsController < ApplicationController
-  before_action :set_exam, only: [:show, :edit, :update, :destroy]
+  before_action :set_exam, only: [:show, :edit, :update, :destroy, :fill_marks]
 
   # GET /exams
   # GET /exams.json
@@ -15,6 +15,7 @@ class ExamsController < ApplicationController
   # GET /exams/new
   def new
     @exam = Exam.new
+
   end
 
   # GET /exams/1/edit
@@ -28,7 +29,7 @@ class ExamsController < ApplicationController
 
     respond_to do |format|
       if @exam.save
-        format.html { redirect_to @exam, notice: 'Exam was successfully created.' }
+        format.html { redirect_to new_exam_subject_path(exam_id: @exam), notice: 'Exam was successfully created.' }
         format.json { render :show, status: :created, location: @exam }
       else
         format.html { render :new }
@@ -61,6 +62,15 @@ class ExamsController < ApplicationController
     end
   end
 
+  def fill_marks
+    @students = @exam.standard.students
+  end
+
+  def get_divisions_exams
+    @standard = Standard.find(params[:standard_id])
+    @divisions = @standard.divisions
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_exam
@@ -69,6 +79,6 @@ class ExamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exam_params
-      params.require(:exam).permit(:exam_term_id, :exam_name)
+      params.require(:exam).permit(:academic_year_id, :name, :standard_id, :division_id, :exam_subjects_attributes => [:subject_id, :max_marks, :pass_marks, :written_marks, :assessment_marks])
     end
 end

@@ -1,0 +1,2 @@
+class ExamMark < ApplicationRecord
+end

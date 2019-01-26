@@ -8,6 +8,7 @@ class AcademicYear < ApplicationRecord
   has_many :student_wise_fines
   has_many :student_wise_instant_fees
   has_many :attendances, dependent: :destroy
+  has_many :exams, dependent: :destroy
 
   def academic_year
     "#{start_year} - #{end_year}"

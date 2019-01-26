@@ -126,7 +126,7 @@
         <%= f.label :religion_id, :class => 'control-label col-lg-2' %>
         <div class="col-lg-4">
           <%= f.select(:religion_id, options_for_select(Religion.all.map {|religion| [religion.name, religion.id]},
-                                                        {:selected => @student.academic_year_id }),
+                                                        {:selected => @student.religion.id }),
                        {}, class: 'form-control') %>
         </div>
         <%= f.error_span(:religion_id) %>

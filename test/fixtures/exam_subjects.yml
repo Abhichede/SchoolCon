@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject_id: 1
+  exam_id: 1
+  max_marks: 1.5
+  pass_marks: 1.5
+  written_marks: 1.5
+  assessment_marks: 1.5
+
+two:
+  subject_id: 1
+  exam_id: 1
+  max_marks: 1.5
+  pass_marks: 1.5
+  written_marks: 1.5
+  assessment_marks: 1.5

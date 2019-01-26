@@ -1,2 +1,0 @@
-class ExamTerm < ApplicationRecord
-end

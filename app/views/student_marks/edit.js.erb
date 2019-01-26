@@ -1,0 +1,5 @@
+$('#remote_container').html('<%= j render "new" %>');
+$('#new_fill_marks').modal('show');
+$('#new_fill_marks').on('shown.bs.modal', function () {
+    off();
+});

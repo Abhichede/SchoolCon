@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  exam_term_id: 1
-  exam_name: MyString
+  academic_year_id: 1
+  name: MyString
+  standard_id: 1
+  division_id: 1
 
 two:
-  exam_term_id: 1
-  exam_name: MyString
+  academic_year_id: 1
+  name: MyString
+  standard_id: 1
+  division_id: 1
