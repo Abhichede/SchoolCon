@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exam_terms/new.html.erb" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -106,7 +104,7 @@
           <entry key="js" value="28" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
-          <entry key="rb" value="355" />
+          <entry key="rb" value="360" />
           <entry key="scss" value="2" />
           <entry key="sql" value="1" />
           <entry key="student_certificates" value="1" />
@@ -124,7 +122,7 @@
           <entry key="JavaScript" value="28" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="222" />
-          <entry key="Ruby" value="406" />
+          <entry key="Ruby" value="411" />
           <entry key="SCSS" value="2" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="11" />
@@ -163,7 +161,39 @@
     <favorites_list name="SchoolCon" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/school_infos_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-874" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/uploaders/school_logo_uploader.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/uploaders/homework_attachment_uploader.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/uploaders/leaving_certificate_uploader.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/uploaders/post_attachment_uploader.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -216,7 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/assessments/_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/assessments/_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/assessments/new.js.erb" />
         <option value="$PROJECT_DIR$/app/views/assessments/edit.js.erb" />
@@ -267,6 +296,7 @@
         <option value="$PROJECT_DIR$/app/views/student_marks/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/exams/fill_marks.html.erb" />
         <option value="$PROJECT_DIR$/app/models/exam.rb" />
+        <option value="$PROJECT_DIR$/app/uploaders/school_logo_uploader.rb" />
       </list>
     </option>
   </component>
@@ -317,7 +347,13 @@
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="uploaders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,7 +367,7 @@
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548493308088" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548493556131" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Examination" />
@@ -5152,14 +5188,7 @@
       <workItem from="1547577596480" duration="726000" />
       <workItem from="1547741650757" duration="5617000" />
       <workItem from="1547881418345" duration="13244000" />
-      <workItem from="1548479690622" duration="10347000" />
-    </task>
-    <task id="LOCAL-00057" summary="Changes made in api call and leave application, homework">
-      <created>1538566429389</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1538566429389</updated>
+      <workItem from="1548479690622" duration="10697000" />
     </task>
     <task id="LOCAL-00058" summary="Changes made in api call and leave application, homework">
       <created>1538566830928</created>
@@ -5497,11 +5526,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548492434076</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="new reports section added.">
+      <created>1548493371577</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1548493371577</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354812000" />
+    <option name="totallyTimeSpent" value="355162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5514,8 +5550,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.2827401" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.2827401" />
       <window_info id="Structure" order="1" sideWeight="0.5006784" side_tool="true" weight="0.32975152" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -5530,7 +5567,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.5826667" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.5826667" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32933334" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49764943" weight="0.34266666" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50235057" side_tool="true" weight="0.016" />
@@ -5569,37 +5606,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="151" column="59" selection-start-line="151" selection-start-column="59" selection-end-line="151" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/standards/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/get_divisions_students.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="141" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/standard.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/division.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -5879,6 +5885,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/school_infos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-874" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/post_attachment_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/leaving_certificate_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/homework_attachment_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/school_logo_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
