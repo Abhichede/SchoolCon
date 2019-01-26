@@ -134,7 +134,7 @@
           <entry key="Gemfile" value="117" />
           <entry key="cell" value="50" />
           <entry key="css" value="42" />
-          <entry key="erb" value="13365" />
+          <entry key="erb" value="13441" />
           <entry key="jbuilder" value="223" />
           <entry key="js" value="496" />
           <entry key="rb" value="10617" />
@@ -149,7 +149,7 @@
           <entry key="HTML" value="5" />
           <entry key="JavaScript" value="496" />
           <entry key="PLAIN_TEXT" value="1587" />
-          <entry key="RHTML" value="13360" />
+          <entry key="RHTML" value="13436" />
           <entry key="Ruby" value="10950" />
           <entry key="SCSS" value="1" />
           <entry key="Scratch" value="50" />
@@ -166,8 +166,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/student_marks/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            <state relative-caret-position="247">
+              <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -354,7 +354,7 @@
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548493912487" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548495034701" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Examination" />
@@ -5175,14 +5175,7 @@
       <workItem from="1547577596480" duration="726000" />
       <workItem from="1547741650757" duration="5617000" />
       <workItem from="1547881418345" duration="13244000" />
-      <workItem from="1548479690622" duration="11045000" />
-    </task>
-    <task id="LOCAL-00059" summary="Changes made in api call and leave application, homework">
-      <created>1538567073167</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1538567073167</updated>
+      <workItem from="1548479690622" duration="12188000" />
     </task>
     <task id="LOCAL-00060" summary="Changes made in api call and leave application, homework">
       <created>1538567437324</created>
@@ -5520,11 +5513,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548493570717</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="new reports section added.">
+      <created>1548493928892</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1548493928892</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355510000" />
+    <option name="totallyTimeSpent" value="356653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5539,7 +5539,7 @@
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.2827401" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.2827401" />
       <window_info id="Structure" order="1" sideWeight="0.5006784" side_tool="true" weight="0.32975152" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -5891,8 +5891,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/student_marks/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        <state relative-caret-position="247">
+          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
         </state>
       </provider>
     </entry>
