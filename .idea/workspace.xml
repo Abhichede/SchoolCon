@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8004c9af-f7dd-42db-b2cf-ee1119aef1d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/questions/divisions_and_subjects.js.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/student_marks/student_report_card.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/student_marks/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/student_marks/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolCon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolCon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/student_marks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/student_marks_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/division.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/division.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/standard.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/standard.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/subject.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/subject.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/teacher.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/teacher.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/students/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/students/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -47,12 +58,12 @@
     <session id="1093289141">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="95" />
+          <entry key="project.closed" value="100" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.3" value="6" />
           <entry key="project.open.time.4" value="6" />
           <entry key="project.open.time.41" value="1" />
@@ -84,10 +95,13 @@
           <entry key="project.open.time.70" value="2" />
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.73" value="2" />
+          <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.78" value="1" />
+          <entry key="project.open.time.80" value="1" />
           <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="99" />
+          <entry key="project.open.time.92" value="1" />
+          <entry key="project.opened" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -96,16 +110,16 @@
           <entry key="Rakefile" value="1" />
           <entry key="attendances" value="5" />
           <entry key="css" value="4" />
-          <entry key="erb" value="223" />
+          <entry key="erb" value="243" />
           <entry key="exam_marks" value="1" />
           <entry key="exam_subjects" value="1" />
           <entry key="gif" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="jbuilder" value="45" />
-          <entry key="js" value="28" />
+          <entry key="js" value="33" />
           <entry key="parent_messages" value="1" />
           <entry key="parents" value="5" />
-          <entry key="rb" value="360" />
+          <entry key="rb" value="376" />
           <entry key="scss" value="2" />
           <entry key="sql" value="1" />
           <entry key="student_certificates" value="1" />
@@ -120,10 +134,10 @@
           <entry key="CSS" value="4" />
           <entry key="Database Element" value="28" />
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="28" />
+          <entry key="JavaScript" value="33" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="RHTML" value="223" />
-          <entry key="Ruby" value="411" />
+          <entry key="RHTML" value="243" />
+          <entry key="Ruby" value="427" />
           <entry key="SCSS" value="2" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="11" />
@@ -134,10 +148,10 @@
           <entry key="Gemfile" value="117" />
           <entry key="cell" value="50" />
           <entry key="css" value="42" />
-          <entry key="erb" value="13441" />
+          <entry key="erb" value="14525" />
           <entry key="jbuilder" value="223" />
-          <entry key="js" value="496" />
-          <entry key="rb" value="10617" />
+          <entry key="js" value="573" />
+          <entry key="rb" value="11080" />
           <entry key="scss" value="1" />
           <entry key="txt" value="1580" />
           <entry key="yml" value="143" />
@@ -147,10 +161,10 @@
         <counts>
           <entry key="CSS" value="42" />
           <entry key="HTML" value="5" />
-          <entry key="JavaScript" value="496" />
+          <entry key="JavaScript" value="573" />
           <entry key="PLAIN_TEXT" value="1587" />
-          <entry key="RHTML" value="13436" />
-          <entry key="Ruby" value="10950" />
+          <entry key="RHTML" value="14520" />
+          <entry key="Ruby" value="11413" />
           <entry key="SCSS" value="1" />
           <entry key="Scratch" value="50" />
           <entry key="YAML" value="143" />
@@ -163,11 +177,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/student_marks/_form.html.erb">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/questions/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+            <state relative-caret-position="27">
+              <caret line="59" column="98" selection-start-line="59" selection-start-column="98" selection-end-line="59" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20190130190628_create_join_table_question_paper_question.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/questions/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/questions/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/questions/divisions_and_subjects.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="153" selection-start-line="1" selection-start-column="153" selection-end-line="1" selection-end-column="153" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/students/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6916">
+              <caret line="364" column="127" selection-start-line="364" selection-start-column="56" selection-end-line="364" selection-end-column="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/questions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1501">
+              <caret line="79" column="118" selection-start-line="79" selection-start-column="118" selection-end-line="79" selection-end-column="118" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/questions/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/questions/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -225,43 +311,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/assessments/_new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/assessments/new.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/assessments/edit.js.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20181230085922_create_assessments.rb" />
-        <option value="$PROJECT_DIR$/app/views/assessments/get_divisions_assessments.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/assessments/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/assessments/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/set_exams/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/assessments_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/exam_term.rb" />
-        <option value="$PROJECT_DIR$/app/views/set_exams/get_divisions_set_exam.js.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20190104071813_rename_column_from_set_exam.rb" />
-        <option value="$PROJECT_DIR$/app/views/set_exams/get_exams_set_exam.js.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/set_exams_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/set_exams/get_subjects_set_exam.js.erb" />
         <option value="$PROJECT_DIR$/app/views/set_exams/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/set_exams/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/set_exam.rb" />
         <option value="$PROJECT_DIR$/app/views/set_exams/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20190103115328_change_type_of_division_in_assessments.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/subject.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190107084312_create_exam_subjects.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/models/standard.rb" />
-        <option value="$PROJECT_DIR$/app/models/division.rb" />
         <option value="$PROJECT_DIR$/app/views/exams/get_divisions_exams.js.erb" />
         <option value="$PROJECT_DIR$/app/views/exam_subjects/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/exam_subjects_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/exam_subjects/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/students/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/exams/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/academic_year.rb" />
         <option value="$PROJECT_DIR$/app/views/exams/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/exam_marks/_form.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/exams/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/student_marks/edit.js.erb" />
@@ -271,11 +337,31 @@
         <option value="$PROJECT_DIR$/app/models/student.rb" />
         <option value="$PROJECT_DIR$/app/models/student_mark.rb" />
         <option value="$PROJECT_DIR$/app/models/exam_subject.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/student_marks_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/exams/fill_marks.html.erb" />
         <option value="$PROJECT_DIR$/app/models/exam.rb" />
         <option value="$PROJECT_DIR$/app/uploaders/school_logo_uploader.rb" />
         <option value="$PROJECT_DIR$/app/views/student_marks/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/student_marks_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/student_marks/student_report_card.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/students/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/questions/new.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/questions/get_divisions_questions.js.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/questions.js" />
+        <option value="$PROJECT_DIR$/app/views/questions/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/standard.rb" />
+        <option value="$PROJECT_DIR$/app/models/division.rb" />
+        <option value="$PROJECT_DIR$/app/models/teacher.rb" />
+        <option value="$PROJECT_DIR$/app/models/subject.rb" />
+        <option value="$PROJECT_DIR$/app/models/question.rb" />
+        <option value="$PROJECT_DIR$/app/views/questions/divisions_and_subjects.js.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/questions_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190130172040_change_column_from_question.rb" />
+        <option value="$PROJECT_DIR$/app/views/questions/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/questions/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/questions/_form.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190130190628_create_join_table_question_paper_question.rb" />
       </list>
     </option>
   </component>
@@ -307,9 +393,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,6 +406,18 @@
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
@@ -340,13 +437,44 @@
               <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="student_marks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolCon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolCon" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="migrate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,7 +482,7 @@
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548495034701" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548700285490" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Examination" />
@@ -365,9 +493,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/student_marks" />
       <recent name="$PROJECT_DIR$/app/controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/questions" />
       <recent name="$PROJECT_DIR$/app/views" />
       <recent name="$PROJECT_DIR$/app/assets/images" />
       <recent name="$PROJECT_DIR$/app/views/api" />
@@ -5002,7 +5132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.fill_marks">
+  <component name="RunManager" selected="Rails.SchoolCon">
     <configuration name="fill_marks" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://0.0.0.0:3000/exams/fill_marks">
       <method v="2" />
     </configuration>
@@ -5058,13 +5188,7 @@
     </configuration>
     <list>
       <item itemvalue="Rails.SchoolCon" />
-      <item itemvalue="JavaScript Debug.fill_marks" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.fill_marks" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
   <component name="SvnConfiguration">
@@ -5175,14 +5299,11 @@
       <workItem from="1547577596480" duration="726000" />
       <workItem from="1547741650757" duration="5617000" />
       <workItem from="1547881418345" duration="13244000" />
-      <workItem from="1548479690622" duration="12188000" />
-    </task>
-    <task id="LOCAL-00060" summary="Changes made in api call and leave application, homework">
-      <created>1538567437324</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1538567437324</updated>
+      <workItem from="1548479690622" duration="12883000" />
+      <workItem from="1548595255354" duration="2506000" />
+      <workItem from="1548696912379" duration="3696000" />
+      <workItem from="1548868657854" duration="642000" />
+      <workItem from="1548872889210" duration="2612000" />
     </task>
     <task id="LOCAL-00061" summary="Changes made in api call and leave application, homework">
       <created>1538654436635</created>
@@ -5520,11 +5641,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548493928892</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="new reports section added.">
+      <created>1548495044858</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1548495044858</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356653000" />
+    <option name="totallyTimeSpent" value="366804000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -5537,9 +5665,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1537" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.2827401" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.29885828" />
       <window_info id="Structure" order="1" sideWeight="0.5006784" side_tool="true" weight="0.32975152" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -5556,7 +5683,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.5826667" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32933334" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49764943" weight="0.34266666" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49764943" visible="true" weight="0.82" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50235057" side_tool="true" weight="0.016" />
       <window_info anchor="bottom" id="REST Client" order="11" sideWeight="0.50369376" weight="0.87333333" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32903227" />
@@ -5593,194 +5720,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/division.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190107084312_create_exam_subjects.rb" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/teachers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/student_wise_fines_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fixtures/events.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fixtures/time_tables.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/controllers/exams_controller_test.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/controllers/events_controller_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/get_divisions_exams.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="147" selection-start-column="147" selection-end-column="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exam_subjects/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/teachers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="52" column="9" selection-start-line="4" selection-start-column="8" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/student_fee_payments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="96" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/academic_year.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="383" column="131" selection-start-line="383" selection-start-column="100" selection-end-line="383" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190119121220_create_exam_marks.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exam_subjects/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exam_marks/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="20" column="63" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/exam_subjects_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/standards/edit.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/student_marks/new.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/standards/new.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="3" lean-forward="true" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/student_marks/edit.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/standards/_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="22" lean-forward="true" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/standards/_edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/student_marks/_new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="70" selection-start-column="70" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/student_marks/_edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="70" selection-start-column="70" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/student.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ce6cde97-1e0a-46e9-8f8b-796311155d08/schema/SchoolCon_v1_development/table/exam_marks">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ce6cde97-1e0a-46e9-8f8b-796311155d08/schema/SchoolCon_v1_development/table/exam_subjects">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190126080245_add_column_to_student_marks.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20190126052945_create_student_marks.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -5798,20 +5737,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://ce6cde97-1e0a-46e9-8f8b-796311155d08/schema/SchoolCon_v1_development/table/student_marks">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/student_marks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="78" column="103" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://ce6cde97-1e0a-46e9-8f8b-796311155d08/schema/SchoolCon_v1_development/table/student_marks" />
     <entry file="file://$PROJECT_DIR$/app/models/exam.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -5847,20 +5773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="42" column="91" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -5889,10 +5801,227 @@
         <state relative-caret-position="-860" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reports/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-328" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/student_marks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1349">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="153" column="71" selection-start-line="153" selection-start-column="71" selection-end-line="153" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/student_marks/student_report_card.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/attendances/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="41" column="12" selection-start-line="16" selection-start-column="4" selection-end-line="41" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/teachers/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/teachers/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/student_marks/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/get_divisions_exams.js.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="42" column="91" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/standards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="25" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/reports.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/students.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2109" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/student_fee_payments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="10" selection-start-line="12" selection-start-column="9" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/questions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/standard.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/division.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/teacher.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/subject.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/question.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180716092452_change_column_type_from_attendances.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="5" selection-start-line="1" selection-start-column="2" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190130172040_change_column_from_question.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/divisions_and_subjects.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="153" selection-start-line="1" selection-start-column="153" selection-end-line="1" selection-end-column="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6916">
+          <caret line="364" column="127" selection-start-line="364" selection-start-column="56" selection-end-line="364" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/questions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1501">
+          <caret line="79" column="118" selection-start-line="79" selection-start-column="118" selection-end-line="79" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190130190511_create_join_table_question_paper_question.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="59" column="98" selection-start-line="59" selection-start-column="98" selection-end-line="59" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190130190628_create_join_table_question_paper_question.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
         </state>
       </provider>
     </entry>

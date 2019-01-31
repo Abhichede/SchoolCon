@@ -8,4 +8,5 @@ class Division < ApplicationRecord
 
   has_many :homeworks
   has_many :exams
+  has_many :questions, dependent: :destroy
 end

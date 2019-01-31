@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :question_papers
+  resources :questions
+  get 'divisions_and_subjects', to: 'questions#divisions_and_subjects'
   resources :student_marks
   get 'fill_marks', to: 'exams#fill_marks'
+  get 'student_report_card', to: 'student_marks#student_report_card'
   resources :exam_marks
   resources :exam_subjects
   resources :exams

@@ -1,0 +1,7 @@
+<% if @divisions  %>
+  $('select#question_division_id').html("<%= escape_javascript options_for_select(@divisions.map {|division| [division.name, division.id]}.insert(0, '')) %>");
+<% end %>
+
+<% if @subjects %>
+  $('#question_subject_id').html("<%= escape_javascript options_for_select(@subjects.map {|subject| [subject.name, subject.id]}.insert(0, '')) %>")
+<% end %>

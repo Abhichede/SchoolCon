@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form action="<%= attendances_path %>">
+      <div class="form-group">
+        <label class="control-label col-lg-1" for="standard_id">Class</label>
+        <div class="col-lg-2">
+          <%= select_tag "standard_id", options_from_collection_for_select(Standard.all, "id", "name", :selected => params[:standard_id], disabled: 'Classes'), include_blank: 'Classes', class: 'form-control' %>
+        </div>
+        <label class="control-label col-lg-1" for="division">Division</label>
+        <div class="col-lg-1">
+          <%= select_tag "division", options_from_collection_for_select(Division.all, "id", "name", :selected => params[:division], disabled: 'Divisions'), include_blank: 'Divisions', class: 'form-control' %>
+        </div>
+        <label class="control-label col-lg-1" for="division">Subject</label>
+        <div class="col-lg-2">
+          <%= select_tag "subject", options_from_collection_for_select(Subject.all, "id", "name", :selected => params[:subject], disabled: 'Subjects'), include_blank: 'Subjects', class: 'form-control' %>
+        </div>
+        <label class="control-label col-lg-1" for="division">Date</label>
+        <div class="col-lg-2">
+          <%= text_field "date", nil, class: 'form-control', value: params[:date] %>
+        </div>
+        <div class="col-lg-1">
+          <button class="btn btn-success" id="btn-filter">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

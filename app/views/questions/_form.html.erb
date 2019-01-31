@@ -1,0 +1,100 @@
+<%= form_for @question, :html => { :class => "form-horizontal question" } do |f| %>
+
+  <% if @question.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @question.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :standard_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :standard_id, Standard.all.map {|standard| [standard.name, standard.id] }, {}, {:class => 'form-control'} %>
+    </div>
+    <%=f.error_span(:standard_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :division_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :division_id, options_for_select(['Select'],
+                                                    {:selected => (@question.division.id unless @question.division.nil?)  }),
+                   {}, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:division_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :subject_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :subject_id, options_for_select(['Select'],
+                                                   {:selected => (@question.subject.id unless @question.subject.nil?) }),
+                   {},  {:class => 'form-control'} %>
+    </div>
+    <%=f.error_span(:subject_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :teacher_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :teacher_id, Teacher.all.map {|teacher| [teacher.fullname, teacher.id]}, {}, {:class => 'form-control'} %>
+    </div>
+    <%=f.error_span(:teacher_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :question, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_area :question, :class => 'form-control', rows: 5 %>
+    </div>
+    <%=f.error_span(:question) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :question_type, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :question_type, options_for_select([['Long Answer'], ['Short answer'], ['MCQ']]), {}, :class => 'form-control', rows: 5 %>
+    </div>
+    <%=f.error_span(:question_type) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :marks, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :marks, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:marks) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                questions_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+     $(document).ready(function () {
+         update_divisions_and_subjects_question();
+     });
+
+     $('select#question_standard_id').on('change', function () {
+         update_divisions_and_subjects_question();
+     });
+
+     function update_divisions_and_subjects_question() {
+         $.ajax({
+             url: '<%= divisions_and_subjects_path %>',
+             data: 'standard_id='+ $('select#question_standard_id').val(),
+             type: 'GET'
+         })
+     }
+  });
+</script>

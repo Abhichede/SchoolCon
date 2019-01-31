@@ -11,6 +11,7 @@ class Standard < ApplicationRecord
   has_many :class_teachers
   has_many :homeworks
   has_many :exams
+  has_many :questions, dependent: :destroy
 
   def total_allocated_fee
     fee = 0

@@ -1,0 +1,11 @@
+<%- model_class = Question -%>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-md-6 col-md-offset-3">
+      <%= render :partial => 'form' %>
+    </div>
+  </div>
+</div>

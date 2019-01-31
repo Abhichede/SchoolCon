@@ -6,6 +6,7 @@ class Teacher < ApplicationRecord
   has_many :leave_applications
   has_many :parent_messages
 
+  has_many :questions, dependent: :destroy
 
   def fullname
     "#{first_name} #{middle_name} #{last_name}"

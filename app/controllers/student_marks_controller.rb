@@ -68,6 +68,10 @@ class StudentMarksController < ApplicationController
     end
   end
 
+  def student_report_card
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student_mark

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  standard_id: 1
+  division_id: 1
+  subject_id: 1
+  teacher_id: 1
+  question: MyText
+  answer: MyText
+  marks: 1.5
+
+two:
+  standard_id: 1
+  division_id: 1
+  subject_id: 1
+  teacher_id: 1
+  question: MyText
+  answer: MyText
+  marks: 1.5
