@@ -15,10 +15,14 @@ class QuestionPapersController < ApplicationController
   # GET /question_papers/new
   def new
     @question_paper = QuestionPaper.new
+    @subjects = Subject.all
+    @questions = Question.all
   end
 
   # GET /question_papers/1/edit
   def edit
+    @subjects = Subject.all
+    @questions = Question.all
   end
 
   # POST /question_papers
@@ -69,6 +73,6 @@ class QuestionPapersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_paper_params
-      params.require(:question_paper).permit(:subject_id, :name)
+      params.require(:question_paper).permit(:subject_id, :name, question_ids: [])
     end
 end

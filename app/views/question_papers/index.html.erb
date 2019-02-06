@@ -1,29 +1,40 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Question Papers</h1>
-
-<table>
+<%- model_class = QuestionPaper -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Subject</th>
-      <th>Name</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:subject_id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @question_papers.each do |question_paper| %>
       <tr>
+        <td><%= link_to question_paper.id, question_paper_path(question_paper) %></td>
         <td><%= question_paper.subject_id %></td>
         <td><%= question_paper.name %></td>
-        <td><%= link_to 'Show', question_paper %></td>
-        <td><%= link_to 'Edit', edit_question_paper_path(question_paper) %></td>
-        <td><%= link_to 'Destroy', question_paper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l question_paper.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      question_paper_path(question_paper), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_question_paper_path(question_paper), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      question_paper_path(question_paper),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Question Paper', new_question_paper_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_question_paper_path,
+            :class => 'btn btn-primary' %>

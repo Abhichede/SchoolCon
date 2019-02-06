@@ -1,6 +1,5 @@
-<h1>Editing Question Paper</h1>
-
-<%= render 'form', question_paper: @question_paper %>
-
-<%= link_to 'Show', @question_paper %> |
-<%= link_to 'Back', question_papers_path %>
+<%- model_class = QuestionPaper -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>

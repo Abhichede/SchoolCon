@@ -1,0 +1,4 @@
+ul.dropdown-menu.inner.selectpicker > li > a{
+    white-space: pre;
+    max-width: 20px !important;
+}
