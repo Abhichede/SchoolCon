@@ -1,0 +1,2 @@
+$('#student').html("<%= escape_javascript options_for_select(@students.map {|student| [student.self_full_name, student.id]}.insert(0, 'Student')) %>");
+$('#exam').html("<%= escape_javascript options_for_select(@exams.map {|exam| [exam.name, exam.id]}.insert(0, 'Exam')) %>");

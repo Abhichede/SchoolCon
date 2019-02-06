@@ -1,22 +1,37 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    <form action="<%= attendances_path %>">
+    <form action="<%= student_report_card_path %>">
       <div class="form-group">
-        <label class="control-label col-lg-1" for="standard_id">Class</label>
-        <div class="col-lg-2">
-          <%= select_tag "standard_id", options_from_collection_for_select(Standard.all, "id", "name", :selected => params[:standard_id], disabled: 'Classes'), include_blank: 'Classes', class: 'form-control' %>
-        </div>
-        <label class="control-label col-lg-1" for="division">Division</label>
         <div class="col-lg-1">
-          <%= select_tag "division", options_from_collection_for_select(Division.all, "id", "name", :selected => params[:division], disabled: 'Divisions'), include_blank: 'Divisions', class: 'form-control' %>
+          <%= select_tag "standard_id",
+                         options_from_collection_for_select(Standard.all, "id", "name",
+                                                            :selected => params[:standard_id],
+                                                            disabled: 'Classes'),
+                         include_blank: 'Classes', class: 'form-control' %>
         </div>
-        <label class="control-label col-lg-1" for="division">Subject</label>
-        <div class="col-lg-2">
-          <%= select_tag "subject", options_from_collection_for_select(Subject.all, "id", "name", :selected => params[:subject], disabled: 'Subjects'), include_blank: 'Subjects', class: 'form-control' %>
+        <div class="col-lg-1">
+          <%= select_tag "division", options_from_collection_for_select(Division.all, "id", "name",
+                                                                        :selected => params[:division],
+                                                                        disabled: 'Divisions'),
+                         include_blank: 'Divisions', class: 'form-control' %>
         </div>
-        <label class="control-label col-lg-1" for="division">Date</label>
+        <div class="col-lg-1">
+          <%= select_tag "subject", options_from_collection_for_select(Subject.all, "id", "name",
+                                                                       :selected => params[:subject],
+                                                                       disabled: 'Subjects'),
+                         include_blank: 'Subjects', class: 'form-control' %>
+        </div>
         <div class="col-lg-2">
-          <%= text_field "date", nil, class: 'form-control', value: params[:date] %>
+          <%= select_tag "student", options_from_collection_for_select(Student.all, "id", "self_full_name",
+                                                                       :selected => params[:student],
+                                                                       disabled: 'Student'),
+                         include_blank: 'Student', class: 'form-control' %>
+        </div>
+        <div class="col-lg-1">
+          <%= select_tag "exam", options_from_collection_for_select(Exam.all, "id", "name",
+                                                                       :selected => params[:exam],
+                                                                       disabled: 'Exam'),
+                         include_blank: 'Exam', class: 'form-control' %>
         </div>
         <div class="col-lg-1">
           <button class="btn btn-success" id="btn-filter">Search</button>
@@ -25,3 +40,72 @@
     </form>
   </div>
 </div>
+
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+    <% unless @student_marks.blank? %>
+      <div class="panel-heading text-center">
+        <h3><%= @student_marks.first.student.self_full_name %></h3>
+      </div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Max Marks</th>
+              <th>Pass Marks</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @student_marks.each do |student_mark| %>
+              <tr>
+                <td><strong><%= student_mark.subject.name %></strong></td>
+                <td><strong><%= student_mark.exam_subject.max_marks %></strong></td>
+                <td><strong><%= student_mark.exam_subject.pass_marks %></strong></td>
+                <td><strong><%= student_mark.marks %></strong></td>
+              </tr>
+            <% end %>
+            <tr>
+              <th>Total: </th>
+              <th><%= total_max = @student_marks.map { |std_mark| std_mark.exam_subject.max_marks }.sum %></th>
+              <th><%= total_pass = @student_marks.map { |std_mark| std_mark.exam_subject.pass_marks }.sum %></th>
+              <th>
+                <%= obtained_total = @student_marks.sum(:marks) %>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel-footer">
+        <h4>
+          <%= obtained_total > total_pass ? '<span class="label label-success"> Pass</span>'.html_safe :
+                  '<span class="label label-danger"> Fail</span>'.html_safe %>
+          <strong class="pull-right"><%= (total_max * obtained_total) / 100 %> %</strong>
+        </h4>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+      var standard = $('select#standard_id');
+      var division = $('select#division');
+      standard.on('change', function () {
+          $.ajax({
+              url: '<%= divisions_subjects_marks_path %>',
+              data: 'standard_id='+ standard.val(),
+              type: 'GET'
+          });
+      })
+
+      division.on('change', function () {
+          $.ajax({
+              url: '<%= students_marks_path %>',
+              data: 'division_id='+ division.val(),
+              type: 'GET'
+          });
+      })
+  });
+</script>

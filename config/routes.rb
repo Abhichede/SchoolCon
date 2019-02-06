@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :student_marks
   get 'fill_marks', to: 'exams#fill_marks'
   get 'student_report_card', to: 'student_marks#student_report_card'
+  get 'divisions_subjects_marks', to: 'student_marks#divisions_subjects'
+  get 'students_marks', to: 'student_marks#students_exam_by_div'
   resources :exam_marks
   resources :exam_subjects
   resources :exams

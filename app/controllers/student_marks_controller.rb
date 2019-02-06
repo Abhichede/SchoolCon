@@ -69,7 +69,23 @@ class StudentMarksController < ApplicationController
   end
 
   def student_report_card
+    if params[:student] && params[:exam]
+      @exam = Exam.find(params[:exam])
+      @student_marks = @exam.student_marks.where(student_id: params[:student])
+    end
+  end
 
+  def divisions_subjects
+    @standard = Standard.find(params[:standard_id]) if params[:standard_id]
+    @divisions = @standard.divisions
+    @subjects = @standard.subjects
+  end
+
+  def students_exam_by_div
+    @division = Division.find(params[:division_id]) if params[:division_id]
+    @students = @division.students
+    @exams = @division.exams
+    puts "Exams: #{@exams.first}"
   end
 
   private
