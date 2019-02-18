@@ -18,20 +18,21 @@
       <td></td>
       <td></td>
     </tr>
-    <% @exam.exam_subjects.each do |exam_subject| %>
+    <% @exam.exam_subjects.where(student_id: student.id).each do |exam_subject| %>
       <tr>
         <td></td>
         <td><%= exam_subject.subject.name %></td>
         <td><%= exam_subject.max_marks %></td>
         <td>
           <% unless exam_subject.student_mark.nil? %>
+            <%= exam_subject.student_mark.student.self_full_name %>
             <% if exam_subject.student_mark.student.id != student.id  %>
               <%= link_to 'Add', new_student_mark_path(subject_id: exam_subject.subject.id, exam_id: @exam.id, student_id: student.id, exam_subject_id: exam_subject.id), remote: true, class: 'btn btn-warning btn-xs' %>
             <% else %>
               <%= link_to "<i class='fa fa-pencil'></i> #{exam_subject.student_mark.marks}".html_safe, edit_student_mark_path(exam_subject.student_mark), remote: true, class: 'btn btn-danger btn-xs' %>
             <% end %>
           <% else %>
-            <%= link_to 'Add', new_student_mark_path(subject_id: exam_subject.subject.id, exam_id: @exam.id, student_id: student.id, exam_subject_id: exam_subject.id), remote: true, class: 'btn btn-warning btn-xs' %>
+            <%= link_to 'Add-', new_student_mark_path(subject_id: exam_subject.subject.id, exam_id: @exam.id, student_id: student.id, exam_subject_id: exam_subject.id), remote: true, class: 'btn btn-warning btn-xs' %>
           <% end %>
         </td>
       </tr>
