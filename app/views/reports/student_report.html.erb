@@ -13,7 +13,7 @@
               <%= select_tag "report_for", options_for_select([['Please Select'],['Blood group','blood_group'],
                                                                 ['Category','category'], ['Gender','gender'],
                                                                 ['Caste','caste'], ['Religion','religion'],
-                                                                ['Certificate issued','certificate']],
+                                                                ['Certificate issued','certificate'], ['Standard', 'Standard']],
                                                                :selected => params[:report_for]), class: 'form-control', required: true %>
             </div>
             <div class="col-lg-2" id="student_report_gender_select" style="display: none">
