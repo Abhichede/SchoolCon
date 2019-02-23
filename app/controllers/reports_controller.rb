@@ -25,6 +25,7 @@ class ReportsController < ApplicationController
          end
          format.html { }
          format.js { }
+         format.xls
        end
     elsif params[:report_for] === 'category'
       @standard = Standard.find(params[:standard_id])
@@ -38,6 +39,7 @@ class ReportsController < ApplicationController
         end
         format.html { }
         format.js { }
+        format.xls
       end
     elsif params[:report_for] === 'caste'
       @standard = Standard.find(params[:standard_id])
@@ -51,6 +53,7 @@ class ReportsController < ApplicationController
         end
         format.html { }
         format.js { }
+        format.xls
       end
     elsif params[:report_for] === 'religion'
       @standard = Standard.find(params[:standard_id])
@@ -64,6 +67,7 @@ class ReportsController < ApplicationController
         end
         format.html { }
         format.js { }
+        format.xls
       end
 
     elsif params[:report_for] === 'certificate'
@@ -80,6 +84,7 @@ class ReportsController < ApplicationController
         end
         format.html { }
         format.js { }
+        format.xls
       end
 
     else
@@ -96,6 +101,7 @@ class ReportsController < ApplicationController
         end
         format.html { }
         format.js { }
+        format.xls
       end
     end
   end
