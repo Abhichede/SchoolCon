@@ -29,8 +29,6 @@
         <Cell><Data ss:Type="String">Father Email</Data></Cell>
         <Cell><Data ss:Type="String">Mother Email</Data></Cell>
         <Cell><Data ss:Type="String">Student Email</Data></Cell>
-        <Cell><Data ss:Type="String">Standard</Data></Cell>
-        <Cell><Data ss:Type="String">Division</Data></Cell>
 
         <% if params[:student_parent_info] %>
           <Cell><Data ss:Type="String">Father Name</Data></Cell>
@@ -58,16 +56,15 @@
           <Cell><Data ss:Type="String"><%= student.caste.name %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.caste_category.category %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.religion.name %></Data></Cell>
-          <Cell><Data ss:Type="String"><%= student.father_occupation %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.mother_full_name %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= student.father_occupation %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= student.mother_occupation %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.father_adhar %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.mother_adhar %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.mother_mobile %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.father_email %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.mother_email %></Data></Cell>
           <Cell><Data ss:Type="String"><%= student.student_email %></Data></Cell>
-          <Cell><Data ss:Type="String"><%= student.standards.last.name %></Data></Cell>
-          <Cell><Data ss:Type="String"><%= student.divisions.last.name %></Data></Cell>
           <% if params[:student_parent_info] %>
             <Cell><Data ss:Type="String"><%= student.father_full_name %></Data></Cell>
             <Cell><Data ss:Type="String"><%= student.father_mobile %></Data></Cell>
